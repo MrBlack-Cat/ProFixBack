@@ -10,3 +10,4 @@ C:\Users\User\source\repos\ProFix\Common\obj\Debug\net8.0\Common.dll
 C:\Users\User\source\repos\ProFix\Common\obj\Debug\net8.0\refint\Common.dll
 C:\Users\User\source\repos\ProFix\Common\obj\Debug\net8.0\Common.pdb
 C:\Users\User\source\repos\ProFix\Common\obj\Debug\net8.0\ref\Common.dll
+C:\Users\User\source\repos\ProFix\Common\obj\Debug\net8.0\Common.sourcelink.json

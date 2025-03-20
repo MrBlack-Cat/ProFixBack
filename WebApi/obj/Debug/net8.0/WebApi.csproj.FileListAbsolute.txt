@@ -57,3 +57,4 @@ C:\Users\User\source\repos\ProFix\WebApi\bin\Debug\net8.0\Microsoft.IdentityMode
 C:\Users\User\source\repos\ProFix\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\User\source\repos\ProFix\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\User\source\repos\ProFix\WebApi\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\User\source\repos\ProFix\WebApi\obj\Debug\net8.0\WebApi.sourcelink.json
