@@ -413,6 +413,23 @@
           "bin/placeholder/Domain.dll": {}
         }
       },
+      "Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Common": "1.0.0",
+          "Domain": "1.0.0",
+          "FluentValidation": "11.11.0",
+          "MediatR": "11.1.0",
+          "Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Infrastructure.dll": {}
+        }
+      },
       "Repository/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -1265,6 +1282,11 @@
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
     },
+    "Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Infrastructure/Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
+    },
     "Repository/1.0.0": {
       "type": "project",
       "path": "../Repository/Repository.csproj",
@@ -1278,6 +1300,7 @@
       "Domain >= 1.0.0",
       "FluentValidation >= 11.11.0",
       "FluentValidation.DependencyInjectionExtensions >= 11.11.0",
+      "Infrastructure >= 1.0.0",
       "MediatR >= 11.1.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 11.1.0",
       "Microsoft.IdentityModel.Tokens >= 7.5.0",
@@ -1322,6 +1345,9 @@
             },
             "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Domain.csproj": {
               "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Domain.csproj"
+            },
+            "C:\\Users\\User\\source\\repos\\ProFix\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Infrastructure\\Infrastructure.csproj"
             },
             "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repository.csproj": {
               "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repository.csproj"

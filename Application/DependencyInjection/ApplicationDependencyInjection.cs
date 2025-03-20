@@ -6,6 +6,7 @@ using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using AutoMapper;
+using Infrastructure.Behaviors;
 
 namespace Application.DependencyInjection
 {
@@ -26,6 +27,11 @@ namespace Application.DependencyInjection
 
             // Validation pipeline
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationPipelineBehavior<,>));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ExceptionHandlingBehavior<,>));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(PerformanceBehavior<,>));
+
 
             // Infrastructure
             services.AddHttpContextAccessor();
