@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Dapper;
 using Repository.Common;
@@ -37,7 +38,7 @@ namespace DAL.SqlServer.Infrastructure
             throw new System.NotImplementedException("Use specific repository for UPDATE logic.");
         }
 
-        public virtual async Task DeleteAsync(int id)
+        public virtual async Task DeleteAsync(int id , ClaimsPrincipal user)
         {
             var query = $@"
                 UPDATE [{typeof(T).Name}]

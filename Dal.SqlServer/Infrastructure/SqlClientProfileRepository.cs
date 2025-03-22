@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -73,14 +74,16 @@ public class SqlClientProfileRepository : IClientProfileRepository
         });
     }
 
-    public async Task DeleteAsync(int id)
+    public async Task DeleteAsync(int id , ClaimsPrincipal user)
     {
         var profile = await GetByIdAsync(id);
         if (profile == null) return;
 
+        int userId = int.Parse(user.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+
         profile.IsDeleted = true;
         profile.DeletedAt = DateTime.UtcNow;
-        profile.DeletedBy = "System";
+        profile.DeletedBy = userId;
         profile.DeletedReason = "Soft delete by Id";
 
         await DeleteAsync(profile);

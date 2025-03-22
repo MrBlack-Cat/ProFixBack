@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -77,14 +78,16 @@ namespace Dal.SqlServer.Infrastructure
             });
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(int id , ClaimsPrincipal user)
         {
             var entity = await GetByIdAsync(id);
             if (entity == null) return;
 
+            int userId = int.Parse(user.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+
             entity.IsDeleted = true;
             entity.DeletedAt = DateTime.UtcNow;
-            entity.DeletedBy = "System";
+            entity.DeletedBy = userId;
             entity.DeletedReason = "Soft delete by Id";
 
             await DeleteAsync(entity);

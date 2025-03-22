@@ -2,6 +2,7 @@
 using Domain.Entities;
 using Repository.Repositories;
 using System.Data;
+using System.Security.Claims;
 
 public class SqlServiceProviderProfileRepository : IServiceProviderProfileRepository
 {
@@ -68,14 +69,16 @@ public class SqlServiceProviderProfileRepository : IServiceProviderProfileReposi
         });
     }
 
-    public async Task DeleteAsync(int id)
+    public async Task DeleteAsync(int id , ClaimsPrincipal user)
     {
         var profile = await GetByIdAsync(id);
         if (profile == null) return;
 
+        int userId = int.Parse(user.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+
         profile.IsDeleted = true;
         profile.DeletedAt = DateTime.UtcNow;
-        profile.DeletedBy = "System";
+        profile.DeletedBy = userId;
         profile.DeletedReason = "Soft delete by Id";
 
         await DeleteAsync(profile);

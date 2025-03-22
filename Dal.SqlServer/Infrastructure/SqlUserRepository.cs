@@ -2,6 +2,7 @@
 using Domain.Entities;
 using Repository.Repositories;
 using System.Data;
+using System.Security.Claims;
 
 namespace DAL.SqlServer.Infrastructure
 {
@@ -72,14 +73,17 @@ namespace DAL.SqlServer.Infrastructure
             });
         }
 
-        public async Task DeleteAsync(int id)
+        //deyishiklik olunub claimsPrincipal ile 
+        public async Task DeleteAsync(int id , ClaimsPrincipal user1)
         {
             var user = await GetByIdAsync(id);
             if (user == null) return;
 
+            int userId = int.Parse(user1.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+
             user.IsDeleted = true;
             user.DeletedAt = DateTime.UtcNow;
-            user.DeletedBy = "System";
+            user.DeletedBy = userId;
             user.DeletedReason = "Soft delete by Id";
 
             await DeleteAsync(user);

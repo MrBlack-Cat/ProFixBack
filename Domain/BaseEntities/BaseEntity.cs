@@ -8,9 +8,11 @@
         public DateTime? UpdatedAt { get; set; }
         public DateTime? DeletedAt { get; set; }
 
-        public string? CreatedBy { get; set; }
-        public string? UpdatedBy { get; set; }
-        public string? DeletedBy { get; set; }
+
+        //yeni deyishiklikler 
+        public int? CreatedBy { get; set; }
+        public int? UpdatedBy { get; set; }
+        public int? DeletedBy { get; set; }
         public string? DeletedReason { get; set; }
 
         public bool IsDeleted { get; set; } = false;

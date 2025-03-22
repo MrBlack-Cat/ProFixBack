@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\Dal.SqlServer\Dal.SqlServer.csproj" />
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
     <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>

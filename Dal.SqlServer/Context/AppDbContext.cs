@@ -10,6 +10,13 @@ namespace DAL.SqlServer.Context
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Post>Posts { get; set; }
+        public DbSet<Review> Reviews { get; set; }
+        public DbSet<ServiceBooking> ServiceBookings { get; set; }
+        public DbSet<ServiceProviderProfile> ServiceProviderProfiles { get; set; }
+        public DbSet<SubscriptionPlan> SubscriptionPlans { get; set; }
+        public DbSet<SupportTicket> SupportTickets { get; set; }
+
       
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
