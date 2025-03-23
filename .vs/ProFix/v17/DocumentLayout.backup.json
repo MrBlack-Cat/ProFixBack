@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Taleh\\source\\repos\\ProFix\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Taleh\\source\\repos\\ProFix\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\taleh\\source\\repos\\profix\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -102,7 +106,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -118,7 +122,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-23T11:25:00.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ExceptionHandlingMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\WebApi\\Middlewares\\ExceptionHandlingMiddleware.cs",
               "RelativeDocumentMoniker": "WebApi\\Middlewares\\ExceptionHandlingMiddleware.cs",
@@ -131,20 +148,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\WebApi\\Program.cs",
               "RelativeDocumentMoniker": "WebApi\\Program.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\WebApi\\Program.cs*",
-              "RelativeToolTip": "WebApi\\Program.cs*",
-              "ViewState": "AgIAACMAAAAAAAAAAAAIwEMAAAAkAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\WebApi\\Program.cs",
+              "RelativeToolTip": "WebApi\\Program.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAIwDkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-22T14:34:46.531Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Context\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Context\\AppDbContext.cs",
@@ -157,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "SqlUnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
@@ -170,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "BaseSqlRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\BaseSqlRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\BaseSqlRepository.cs",
@@ -183,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\WebApi\\appsettings.json",
               "RelativeDocumentMoniker": "WebApi\\appsettings.json",
@@ -196,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "SqlServerPersistenceInjection.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\DependencyInjection\\SqlServerPersistenceInjection.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\DependencyInjection\\SqlServerPersistenceInjection.cs",
@@ -209,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ResponseModelPagination.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Common\\GlobalResponse\\Generics\\ResponseModelPagination.cs",
               "RelativeDocumentMoniker": "Common\\GlobalResponse\\Generics\\ResponseModelPagination.cs",
@@ -222,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "PostProfile.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\Mappings\\PostProfile.cs",
               "RelativeDocumentMoniker": "Application\\Mappings\\PostProfile.cs",
@@ -235,7 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "SqlUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlUserRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlUserRepository.cs",
@@ -248,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "SqlSupportTickedRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlSupportTickedRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlSupportTickedRepository.cs",
@@ -261,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "SqlServiceProviderProfileRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlServiceProviderProfileRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlServiceProviderProfileRepository.cs",
@@ -274,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "SqlSubscriptionPlanRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlSubscriptionPlanRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlSubscriptionPlanRepository.cs",
@@ -287,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "SqlServiceBookingRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlServiceBookingRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlServiceBookingRepository.cs",
@@ -300,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "SqlReviewRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlReviewRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlReviewRepository.cs",
@@ -313,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "SqlPostRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlPostRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlPostRepository.cs",
@@ -326,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "SqlPortfolioItemRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlPortfolioItemRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlPortfolioItemRepository.cs",
@@ -339,7 +356,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "SqlNotificationRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlNotificationRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlNotificationRepository.cs",
@@ -352,7 +369,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "SqlGuaranteeDocumentRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlGuaranteeDocumentRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlGuaranteeDocumentRepository.cs",
@@ -365,7 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "SqlClientProfileRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlClientProfileRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlClientProfileRepository.cs",
@@ -378,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "SqlCertificateRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlCertificateRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlCertificateRepository.cs",
@@ -391,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "SqlActivityLogRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlActivityLogRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlActivityLogRepository.cs",
@@ -404,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Domain\\BaseEntities\\BaseEntity.cs",
               "RelativeDocumentMoniker": "Domain\\BaseEntities\\BaseEntity.cs",
