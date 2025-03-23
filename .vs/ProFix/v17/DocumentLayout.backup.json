@@ -7,8 +7,24 @@
       "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\taleh\\source\\repos\\profix\\webapi\\middlewares\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\middlewares\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\taleh\\source\\repos\\profix\\webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|c:\\users\\taleh\\source\\repos\\profix\\dal.sqlserver\\unitofwork\\sqlunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|solutionrelative:dal.sqlserver\\unitofwork\\sqlunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|c:\\users\\taleh\\source\\repos\\profix\\dal.sqlserver\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|solutionrelative:dal.sqlserver\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|c:\\users\\taleh\\source\\repos\\profix\\dal.sqlserver\\infrastructure\\basesqlrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|solutionrelative:dal.sqlserver\\infrastructure\\basesqlrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|c:\\users\\taleh\\source\\repos\\profix\\dal.sqlserver\\dependencyinjection\\sqlserverpersistenceinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,20 +35,12 @@
       "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\mappings\\postprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|c:\\users\\taleh\\source\\repos\\profix\\dal.sqlserver\\infrastructure\\basesqlrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|solutionrelative:dal.sqlserver\\infrastructure\\basesqlrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3A9317E7-253D-431E-A522-FD916C94F655}|Common\\Common.csproj|c:\\users\\taleh\\source\\repos\\profix\\common\\globalresponse\\generics\\responsemodelpagination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3A9317E7-253D-431E-A522-FD916C94F655}|Common\\Common.csproj|solutionrelative:common\\globalresponse\\generics\\responsemodelpagination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|c:\\users\\taleh\\source\\repos\\profix\\dal.sqlserver\\infrastructure\\sqlserviceproviderprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|solutionrelative:dal.sqlserver\\infrastructure\\sqlserviceproviderprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\taleh\\source\\repos\\profix\\webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|c:\\users\\taleh\\source\\repos\\profix\\dal.sqlserver\\infrastructure\\sqluserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -111,14 +119,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SqlUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
-              "RelativeDocumentMoniker": "Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
-              "RelativeToolTip": "Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAiwDEAAAAAAAAAAAAAAA==",
+              "Title": "ExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\WebApi\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "WebApi\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\WebApi\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "RelativeToolTip": "WebApi\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAawBkAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T22:12:12.244Z",
+              "WhenOpened": "2025-03-23T09:30:15.733Z",
               "EditorCaption": ""
             },
             {
@@ -129,40 +137,79 @@
               "RelativeDocumentMoniker": "WebApi\\Program.cs",
               "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\WebApi\\Program.cs*",
               "RelativeToolTip": "WebApi\\Program.cs*",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACgAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAIwEMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-22T14:34:46.531Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PostProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\Mappings\\PostProfile.cs",
-              "RelativeDocumentMoniker": "Application\\Mappings\\PostProfile.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\Mappings\\PostProfile.cs",
-              "RelativeToolTip": "Application\\Mappings\\PostProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Dal.SqlServer\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "Dal.SqlServer\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T22:05:03.46Z",
+              "WhenOpened": "2025-03-22T23:22:45.38Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
+              "Title": "SqlUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
+              "RelativeToolTip": "Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T22:12:12.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "BaseSqlRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\BaseSqlRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\BaseSqlRepository.cs",
               "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\BaseSqlRepository.cs",
               "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\BaseSqlRepository.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-22T14:42:13.117Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\WebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\WebApi\\appsettings.json",
+              "RelativeToolTip": "WebApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-22T14:38:43.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SqlServerPersistenceInjection.cs",
+              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\DependencyInjection\\SqlServerPersistenceInjection.cs",
+              "RelativeDocumentMoniker": "Dal.SqlServer\\DependencyInjection\\SqlServerPersistenceInjection.cs",
+              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\DependencyInjection\\SqlServerPersistenceInjection.cs",
+              "RelativeToolTip": "Dal.SqlServer\\DependencyInjection\\SqlServerPersistenceInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAwAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T14:37:43.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ResponseModelPagination.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Common\\GlobalResponse\\Generics\\ResponseModelPagination.cs",
               "RelativeDocumentMoniker": "Common\\GlobalResponse\\Generics\\ResponseModelPagination.cs",
@@ -176,31 +223,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\WebApi\\appsettings.json",
-              "RelativeDocumentMoniker": "WebApi\\appsettings.json",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\WebApi\\appsettings.json",
-              "RelativeToolTip": "WebApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-22T14:38:43.975Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SqlServerPersistenceInjection.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\DependencyInjection\\SqlServerPersistenceInjection.cs",
-              "RelativeDocumentMoniker": "Dal.SqlServer\\DependencyInjection\\SqlServerPersistenceInjection.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\DependencyInjection\\SqlServerPersistenceInjection.cs",
-              "RelativeToolTip": "Dal.SqlServer\\DependencyInjection\\SqlServerPersistenceInjection.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAABAAAAAAAAAAA==",
+              "Title": "PostProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\Mappings\\PostProfile.cs",
+              "RelativeDocumentMoniker": "Application\\Mappings\\PostProfile.cs",
+              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\Mappings\\PostProfile.cs",
+              "RelativeToolTip": "Application\\Mappings\\PostProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T14:37:43.895Z",
+              "WhenOpened": "2025-03-22T22:05:03.46Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "SqlUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlUserRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlUserRepository.cs",
@@ -208,143 +243,155 @@
               "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlUserRepository.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAwwEsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T14:33:24.233Z"
+              "WhenOpened": "2025-03-22T14:33:24.233Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "SqlSupportTickedRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlSupportTickedRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlSupportTickedRepository.cs",
               "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlSupportTickedRepository.cs",
               "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlSupportTickedRepository.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAAAFgAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAABRwFgAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T14:25:51.059Z"
+              "WhenOpened": "2025-03-22T14:25:51.059Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "SqlServiceProviderProfileRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlServiceProviderProfileRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlServiceProviderProfileRepository.cs",
               "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlServiceProviderProfileRepository.cs",
               "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlServiceProviderProfileRepository.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAAAFAAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAABRwFAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T14:25:06.07Z"
+              "WhenOpened": "2025-03-22T14:25:06.07Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "SqlSubscriptionPlanRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlSubscriptionPlanRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlSubscriptionPlanRepository.cs",
               "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlSubscriptionPlanRepository.cs",
               "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlSubscriptionPlanRepository.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAAAFoAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAABRwFoAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T14:25:29.239Z"
+              "WhenOpened": "2025-03-22T14:25:29.239Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "SqlServiceBookingRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlServiceBookingRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlServiceBookingRepository.cs",
               "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlServiceBookingRepository.cs",
               "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlServiceBookingRepository.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAAAF4AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAABRwF4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T14:24:46.689Z"
+              "WhenOpened": "2025-03-22T14:24:46.689Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "SqlReviewRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlReviewRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlReviewRepository.cs",
               "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlReviewRepository.cs",
               "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlReviewRepository.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAAAF4AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAABRwF4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T14:24:25.834Z"
+              "WhenOpened": "2025-03-22T14:24:25.834Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "SqlPostRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlPostRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlPostRepository.cs",
               "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlPostRepository.cs",
               "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlPostRepository.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAAAFkAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAABRwFkAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T14:24:06.97Z"
+              "WhenOpened": "2025-03-22T14:24:06.97Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "SqlPortfolioItemRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlPortfolioItemRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlPortfolioItemRepository.cs",
               "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlPortfolioItemRepository.cs",
               "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlPortfolioItemRepository.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAAAFkAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAABRwFkAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T14:23:44.669Z"
+              "WhenOpened": "2025-03-22T14:23:44.669Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "SqlNotificationRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlNotificationRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlNotificationRepository.cs",
               "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlNotificationRepository.cs",
               "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlNotificationRepository.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAAAFoAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAABRwFoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T14:23:17.114Z"
+              "WhenOpened": "2025-03-22T14:23:17.114Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "SqlGuaranteeDocumentRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlGuaranteeDocumentRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlGuaranteeDocumentRepository.cs",
               "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlGuaranteeDocumentRepository.cs",
               "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlGuaranteeDocumentRepository.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAAAF4AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAABRwF4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T14:22:54.099Z"
+              "WhenOpened": "2025-03-22T14:22:54.099Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "SqlClientProfileRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlClientProfileRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlClientProfileRepository.cs",
               "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlClientProfileRepository.cs",
               "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlClientProfileRepository.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAAAFUAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAABRwFUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T14:22:34.498Z"
+              "WhenOpened": "2025-03-22T14:22:34.498Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "SqlCertificateRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlCertificateRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlCertificateRepository.cs",
               "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlCertificateRepository.cs",
               "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlCertificateRepository.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAAAFIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAABRwFIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T14:22:00.863Z"
+              "WhenOpened": "2025-03-22T14:22:00.863Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "SqlActivityLogRepository.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlActivityLogRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlActivityLogRepository.cs",
@@ -352,11 +399,12 @@
               "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlActivityLogRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T14:14:36.063Z"
+              "WhenOpened": "2025-03-22T14:14:36.063Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Domain\\BaseEntities\\BaseEntity.cs",
               "RelativeDocumentMoniker": "Domain\\BaseEntities\\BaseEntity.cs",
@@ -364,7 +412,8 @@
               "RelativeToolTip": "Domain\\BaseEntities\\BaseEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T14:13:21.48Z"
+              "WhenOpened": "2025-03-22T14:13:21.48Z",
+              "EditorCaption": ""
             }
           ]
         }
