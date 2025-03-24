@@ -6,7 +6,7 @@ public class ResponseModel<T> : ResponseModel
 
     public ResponseModel(List<string> messages) : base(messages) { }
 
-    public ResponseModel() : base()
+    public ResponseModel() 
     {
         Data = default;
     }

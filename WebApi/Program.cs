@@ -5,13 +5,54 @@ using Application.Services;
 using DAL.SqlServer.Context;
 using DAL.SqlServer.DependencyInjection;
 using DAL.SqlServer.UnitOfWork;
+using MediatR;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.OpenApi.Models;
 using Repository.Common;
 
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+
+//yoxlama meqsedi ile burda yazdim daha sonra kenarda service kimi yazim bura elave edecem
+builder.Services.AddSwaggerGen(c =>
+{
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = "Please enter valid token here ",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.Http,
+        Scheme = "Bearer",
+        BearerFormat = "JWT"
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+      {
+        {
+          new OpenApiSecurityScheme
+          {
+            Reference = new OpenApiReference
+              {
+                Type = ReferenceType.SecurityScheme,
+                Id = "Bearer"
+              }
+            },
+            new List<string>()
+          }
+        });
+});
+
+
+//tokenservice 
+builder.Services.AddTransient<ITokenService, TokenService>();
+
+
+
 
 builder.Services.AddControllers(); 
 builder.Services.AddEndpointsApiExplorer();
@@ -23,6 +64,16 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped<IUserContext, UserContext>();
 builder.Services.AddApplicationServices();
+
+
+//registerUser
+builder.Services.AddMediatR(typeof(Application.CQRS.Users.Handlers.RegisterUserHandler.Handler).Assembly);
+
+//builder.Services.AddAuthentication(builder.Configuration);
+
+//user context
+builder.Services.AddScoped<IUserContext , UserContext>();   
+
 
 
 //bizde ayri ayri yazildigina gore bu qaydada vereceyik
@@ -63,11 +114,18 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+
 //yeni elave
 //app.UseMiddleware<ExceptionHandlerMiddleware>();  baglamagimin sebenbi acanda error atir ve esas terefdende deyishiklik elemishdim  , kod bloku icinde esas varianti ise altda commentdedir 
+
 app.UseExceptionHandler("/Error");
 
 app.UseAuthorization();
+
+
+//yeni elave
+app.UseCors("AllowCors");
 
 
 app.MapControllers(); 

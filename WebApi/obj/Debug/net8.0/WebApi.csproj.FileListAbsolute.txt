@@ -146,7 +146,6 @@ C:\Users\Taleh\Source\Repos\ProFix\WebApi\obj\Debug\net8.0\WebApi.GeneratedMSBui
 C:\Users\Taleh\Source\Repos\ProFix\WebApi\obj\Debug\net8.0\WebApi.AssemblyInfoInputs.cache
 C:\Users\Taleh\Source\Repos\ProFix\WebApi\obj\Debug\net8.0\WebApi.AssemblyInfo.cs
 C:\Users\Taleh\Source\Repos\ProFix\WebApi\obj\Debug\net8.0\WebApi.csproj.CoreCompileInputs.cache
-C:\Users\Taleh\Source\Repos\ProFix\WebApi\obj\Debug\net8.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Taleh\Source\Repos\ProFix\WebApi\obj\Debug\net8.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Taleh\Source\Repos\ProFix\WebApi\obj\Debug\net8.0\WebApi.sourcelink.json
 C:\Users\Taleh\Source\Repos\ProFix\WebApi\obj\Debug\net8.0\staticwebassets.build.json
@@ -163,3 +162,4 @@ C:\Users\Taleh\Source\Repos\ProFix\WebApi\obj\Debug\net8.0\refint\WebApi.dll
 C:\Users\Taleh\Source\Repos\ProFix\WebApi\obj\Debug\net8.0\WebApi.pdb
 C:\Users\Taleh\Source\Repos\ProFix\WebApi\obj\Debug\net8.0\WebApi.genruntimeconfig.cache
 C:\Users\Taleh\Source\Repos\ProFix\WebApi\obj\Debug\net8.0\ref\WebApi.dll
+C:\Users\Taleh\Source\Repos\ProFix\WebApi\obj\Debug\net8.0\WebApi.MvcApplicationPartsAssemblyInfo.cs

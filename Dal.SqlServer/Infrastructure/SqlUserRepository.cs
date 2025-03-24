@@ -102,5 +102,24 @@ namespace DAL.SqlServer.Infrastructure
 
             throw new NotImplementedException("UserName field not implemented in Users table");
         }
+
+
+        //yeni elave 
+        public async Task RegisterAsync(User user)
+        {
+
+            var sql = "INSERT INTO Users (UserName , Email , PasswordHash, Role ) Values (@UserName , @Email , @PasswordHash , @Role)";
+
+            var parameters = new
+            {
+                UserName = user.UserName,
+                Email = user.Email,
+                PasswordHash = user.PasswordHash,
+                Role = user.Role
+            };
+
+            await _dbConnection.ExecuteAsync(sql, parameters);
+
+        }
     }
 }

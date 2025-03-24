@@ -1,10 +1,12 @@
 ﻿using Dal.SqlServer.Infrastructure;
+using Dal.SqlServer.Infrastructure.TokenSecurity;
 using DAL.SqlServer.Context;
 using DAL.SqlServer.Infrastructure;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using Repository.Common;
 using Repository.Repositories;
+using Repository.Repositories.TokenSecurity;
 using System.Data;
 
 namespace DAL.SqlServer.UnitOfWork;
@@ -29,6 +31,12 @@ public class SqlUnitOfWork : IUnitOfWork
     private IPostRepository _postRepository;
     private IReviewRepository _reviewRepository;
 
+
+    //yeni elave 
+    public IRefreshTokenRepository _refreshTokenRepository;
+
+
+
     public IUserRepository UserRepository => _userRepository ??= new SqlUserRepository(_dbConnection);
 
     public IClientProfileRepository ClientProfileRepository => _clientProfileRepository ??= new SqlClientProfileRepository(_dbConnection);
@@ -40,6 +48,8 @@ public class SqlUnitOfWork : IUnitOfWork
     public IPostRepository PostRepository =>_postRepository ??= new SqlPostRepository(_dbConnection);
 
     public IReviewRepository ReviewRepository =>_reviewRepository ??= new SqlReviewRepository(_dbConnection);
+
+    public IRefreshTokenRepository RefreshTokenRepository => _refreshTokenRepository ??= new SqlRefreshTokenRepository(_context);
 
     public async Task<int> SaveChangesAsync()
     {
