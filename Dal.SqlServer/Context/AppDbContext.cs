@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Domain.Entities.TokenSecurity;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -16,6 +17,9 @@ namespace DAL.SqlServer.Context
         public DbSet<ServiceProviderProfile> ServiceProviderProfiles { get; set; }
         public DbSet<SubscriptionPlan> SubscriptionPlans { get; set; }
         public DbSet<SupportTicket> SupportTickets { get; set; }
+
+        //sonradan elave
+        public DbSet <RefreshToken> RefreshTokens { get; set; }
 
       
 

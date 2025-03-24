@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Application.Services;
 
-public class PasswordHasher : IPasswordHasher
+public  class PasswordHasher : IPasswordHasher
 {
-    public string HashPassword(string password)
+    public  string HashPassword(string password)
     {
         using var sha256 = SHA256.Create();
         var bytes = Encoding.UTF8.GetBytes(password);
@@ -14,7 +14,7 @@ public class PasswordHasher : IPasswordHasher
         return Convert.ToBase64String(hash);
     }
 
-    public bool VerifyPassword(string hashedPassword, string password)
+    public  bool VerifyPassword(string hashedPassword, string password)
     {
         var hashOfInput = HashPassword(password);
         return hashedPassword == hashOfInput;
