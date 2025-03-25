@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using AutoMapper;
 using Infrastructure.Behaviors;
+using Infrastructure.Services;
 
 namespace Application.DependencyInjection
 {

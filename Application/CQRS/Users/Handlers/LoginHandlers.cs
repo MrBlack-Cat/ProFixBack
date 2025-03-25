@@ -64,12 +64,13 @@ public class LoginHandlers
                     new Claim(ClaimTypes.NameIdentifier, currentUser.Id.ToString()),
                     new Claim(ClaimTypes.Name , currentUser.UserName),
                     new Claim(ClaimTypes.Email, currentUser.Email),
-                    new Claim(ClaimTypes.MobilePhone, currentUser.PhoneNumber ),
-                    new Claim(ClaimTypes.Role, currentUser.Role.ToString())
+                    //new Claim(ClaimTypes.MobilePhone, currentUser.PhoneNumber ),
+                    new Claim(ClaimTypes.Role, currentUser.Role.Name) 
                 ];
 
 
-            JwtSecurityToken token  = _tokenService.CreateToken(authClaim , configuration);
+            //JwtSecurityToken token  = _tokenService.CreateToken(authClaim , configuration);
+            JwtSecurityToken token  = _tokenService.CreateToken(authClaim);
             string tokenString  = new JwtSecurityTokenHandler().WriteToken(token);
 
             string refreshTokenString  = _tokenService.GenerateRefreshToken();

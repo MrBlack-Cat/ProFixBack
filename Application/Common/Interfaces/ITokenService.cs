@@ -11,7 +11,10 @@ namespace Application.Common.Interfaces
 {
     public interface ITokenService
     {
-        JwtSecurityToken CreateToken (List<Claim> authClaims, IConfiguration configuration);
+        //JwtSecurityToken CreateToken (List<Claim> authClaims, IConfiguration configuration);
+
+        JwtSecurityToken CreateToken(List<Claim> authClaims);
+
         public string GenerateRefreshToken();
         
 

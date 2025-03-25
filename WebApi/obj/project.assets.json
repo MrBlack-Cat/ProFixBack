@@ -181,6 +181,25 @@
           "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "7.1.2"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.OpenApi/8.0.14": {
         "type": "package",
         "dependencies": {
@@ -1807,6 +1826,21 @@
         "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll",
         "mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
         "mediatr.extensions.microsoft.dependencyinjection.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.2": {
+      "sha512": "7qJkk5k5jabATZZrMIQgpUB9yjDNAAApSqw+8d0FEyK1AJ4j+wv1qOMl2byUr837xbK+MjehtPnQ32yZ5Gtzlw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/8.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
+        "lib/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
+        "microsoft.aspnetcore.authentication.jwtbearer.8.0.2.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
     "Microsoft.AspNetCore.OpenApi/8.0.14": {
@@ -4976,28 +5010,29 @@
       "FluentValidation.DependencyInjectionExtensions >= 11.11.0",
       "Infrastructure >= 1.0.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 11.1.0",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.2",
       "Microsoft.AspNetCore.OpenApi >= 8.0.14",
       "Swashbuckle.AspNetCore >= 8.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Taleh\\.nuget\\packages\\": {},
+    "C:\\Users\\User\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\WebApi\\WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\WebApi\\WebApi.csproj",
-      "packagesPath": "C:\\Users\\Taleh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\WebApi\\obj\\",
+      "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\WebApi.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Taleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5012,17 +5047,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Application\\Application.csproj"
+            "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Application.csproj"
             },
-            "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj": {
-              "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj"
+            "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Common.csproj"
             },
-            "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Dal.SqlServer\\Dal.SqlServer.csproj": {
-              "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Dal.SqlServer\\Dal.SqlServer.csproj"
+            "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Dal.SqlServer.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Dal.SqlServer.csproj"
             },
-            "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\User\\source\\repos\\ProFix\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
@@ -5057,6 +5092,10 @@
           "MediatR.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[11.1.0, )"
+          },
+          "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "target": "Package",
+            "version": "[8.0.2, )"
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
