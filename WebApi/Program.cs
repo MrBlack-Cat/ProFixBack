@@ -3,27 +3,50 @@ using Application.DependencyInjection;
 using Application.Mappings;
 using Application.Services;
 using DAL.SqlServer.Context;
-using DAL.SqlServer.DependencyInjection;
 using DAL.SqlServer.UnitOfWork;
+using Infrastructure.Behaviors;
+using Infrastructure.Services;
 using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Repository.Common;
-
-
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var jwtSettings = builder.Configuration.GetSection("JWT");
+var secretKey = jwtSettings.GetValue<string>("Secret");
 
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.RequireHttpsMetadata = true;
+    options.SaveToken = true;
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
 
-//yoxlama meqsedi ile burda yazdim daha sonra kenarda service kimi yazim bura elave edecem
+        ValidIssuer = jwtSettings["ValidIssuer"],
+        ValidAudience = jwtSettings["ValidAudience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey!))
+    };
+});
+
 builder.Services.AddSwaggerGen(c =>
 {
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
-        Description = "Please enter valid token here ",
+        Description = "Enter JWT token (Bearer {token})",
         Name = "Authorization",
         In = ParameterLocation.Header,
         Type = SecuritySchemeType.Http,
@@ -31,75 +54,38 @@ builder.Services.AddSwaggerGen(c =>
         BearerFormat = "JWT"
     });
 
-    c.AddSecurityRequirement(new OpenApiSecurityRequirement()
-      {
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
         {
-          new OpenApiSecurityScheme
-          {
-            Reference = new OpenApiReference
-              {
-                Type = ReferenceType.SecurityScheme,
-                Id = "Bearer"
-              }
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
             },
             new List<string>()
-          }
-        });
+        }
+    });
 });
 
-
-//tokenservice 
-builder.Services.AddTransient<ITokenService, TokenService>();
-
-
-
-
-builder.Services.AddControllers(); 
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-// builder.Services.AddApplicationServices();
-// builder.Services.AddInfrastructureServices(builder.Configuration);
-
+builder.Services.AddAutoMapper(typeof(PostProfile).Assembly);
+builder.Services.AddMediatR(typeof(Application.CQRS.Users.Handlers.RegisterUserHandler.Handler).Assembly);
+builder.Services.AddTransient<ITokenService, TokenService>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IUserContext, UserContext>();
 builder.Services.AddApplicationServices();
-
-
-//registerUser
-builder.Services.AddMediatR(typeof(Application.CQRS.Users.Handlers.RegisterUserHandler.Handler).Assembly);
-
-//builder.Services.AddAuthentication(builder.Configuration);
-
-//user context
-builder.Services.AddScoped<IUserContext , UserContext>();   
-
-
-
-//bizde ayri ayri yazildigina gore bu qaydada vereceyik
-builder.Services.AddAutoMapper(typeof(PostProfile).Assembly);
-
-
-//db elave eledim 
-#region database
-
-var conn = builder.Configuration.GetConnectionString("DefaultConnection");
-
-builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(conn));
-
-
-
-//var conn = builder.Configuration.GetConnectionString("DefaultConnection");
-//builder.Services.AddSqlServerPersistence(conn);
-
-//var conn = builder.Configuration.GetConnectionString("DefaultConnection");
-//builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(conn));
-
-
-#endregion
-
 builder.Services.AddScoped<IUnitOfWork, SqlUnitOfWork>();
+builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ExceptionHandlingBehavior<,>));
 
+
+var conn = builder.Configuration.GetConnectionString("myconn");
+builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(conn));
 
 var app = builder.Build();
 
@@ -115,19 +101,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-
-//yeni elave
-//app.UseMiddleware<ExceptionHandlerMiddleware>();  baglamagimin sebenbi acanda error atir ve esas terefdende deyishiklik elemishdim  , kod bloku icinde esas varianti ise altda commentdedir 
-
+app.UseAuthentication(); 
+app.UseAuthorization();
 app.UseExceptionHandler("/Error");
 
-app.UseAuthorization();
-
-
-//yeni elave
 app.UseCors("AllowCors");
 
-
-app.MapControllers(); 
+app.MapControllers();
 
 app.Run();

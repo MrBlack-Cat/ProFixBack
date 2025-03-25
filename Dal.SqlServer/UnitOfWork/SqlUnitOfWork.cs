@@ -19,7 +19,7 @@ public class SqlUnitOfWork : IUnitOfWork
     public SqlUnitOfWork(AppDbContext context, IConfiguration configuration)
     {
         _context = context;
-        _dbConnection = new SqlConnection(configuration.GetConnectionString("DefaultConnection"));
+        _dbConnection = new SqlConnection(configuration.GetConnectionString("myconn"));
         _dbConnection.Open(); 
     }
 

@@ -2,6 +2,7 @@
 using AutoMapper;
 using Common.Exceptions;
 using Common.GlobalResponse;
+using Domain.Entities;
 using MediatR;
 using Repository.Common;
 using System;
@@ -28,8 +29,8 @@ public class GetUserByIdHandler
 
         public async Task<ResponseModel<GetUserByIdDto>> Handle(Query request, CancellationToken cancellationToken)
         {
-            var currentUser = _unitOfWork.UserRepository.GetByIdAsync(request.Id);
-            if (currentUser == null) { throw new BadRequestException("User is not exist "); }
+            var currentUser = await _unitOfWork.UserRepository.GetByIdAsync(request.Id);
+            if (currentUser == null) throw new NotFoundException("User not found");
 
 
             var mappedResponse  = _mapper.Map<GetUserByIdDto>(currentUser);

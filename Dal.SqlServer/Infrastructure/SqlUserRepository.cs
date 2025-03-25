@@ -30,8 +30,8 @@ namespace DAL.SqlServer.Infrastructure
         public async Task AddAsync(User entity)
         {
             var sql = @"
-                INSERT INTO Users (Email, PhoneNumber, PasswordHash, RoleId, IsActive, CreatedAt, CreatedBy)
-                VALUES (@Email, @PhoneNumber, @PasswordHash, @RoleId, @IsActive, @CreatedAt, @CreatedBy)";
+                INSERT INTO Users (Email, PasswordHash, IsActive, CreatedAt)
+                VALUES (@Email, @PasswordHash, @IsActive, @CreatedAt)";
             await _dbConnection.ExecuteAsync(sql, entity);
         }
 
@@ -48,20 +48,20 @@ namespace DAL.SqlServer.Infrastructure
                     UpdatedBy = @UpdatedBy,
                     IsDeleted = @IsDeleted,
                     DeletedAt = @DeletedAt,
-                    DeletedBy = @DeletedBy,
-                    DeleteReason = @DeleteReason
+                    DeletedBy = @DeletedBy, 
+                    DeletedReason = @DeletedReason
                 WHERE Id = @Id";
             await _dbConnection.ExecuteAsync(sql, entity);
         }
-
         public async Task DeleteAsync(User entity)
         {
             var sql = @"
                 UPDATE Users SET 
                     IsDeleted = 1,
+                    IsActive = 0,
                     DeletedAt = @DeletedAt,
                     DeletedBy = @DeletedBy,
-                    DeleteReason = @DeleteReason
+                    DeletedReason = @DeletedReason
                 WHERE Id = @Id";
 
             await _dbConnection.ExecuteAsync(sql, new
@@ -73,26 +73,43 @@ namespace DAL.SqlServer.Infrastructure
             });
         }
 
-        //deyishiklik olunub claimsPrincipal ile 
-        public async Task DeleteAsync(int id , ClaimsPrincipal user1)
+
+        public async Task DeleteAsync(int id, string deletedReason, int deletedBy)
         {
             var user = await GetByIdAsync(id);
             if (user == null) return;
 
-            int userId = int.Parse(user1.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
-
             user.IsDeleted = true;
+            user.IsActive = false;
             user.DeletedAt = DateTime.UtcNow;
-            user.DeletedBy = userId;
-            user.DeletedReason = "Soft delete by Id";
+            user.DeletedBy = deletedBy;
+            user.DeletedReason = deletedReason;
 
             await DeleteAsync(user);
         }
 
+
         public async Task<User?> GetByEmailAsync(string email)
         {
-            var sql = "SELECT * FROM Users WHERE Email = @Email AND IsDeleted = 0";
-            return await _dbConnection.QueryFirstOrDefaultAsync<User>(sql, new { Email = email });
+            const string sql = @"
+            SELECT u.*, r.Id, r.Name
+            FROM Users u
+            LEFT JOIN UserRole r ON u.RoleId = r.Id
+            WHERE u.Email = @Email AND u.IsDeleted = 0
+        ";
+
+            var user = await _dbConnection.QueryAsync<User, UserRole, User>(
+                sql,
+                (user, role) =>
+                {
+                    user.Role = role;
+                    return user;
+                },
+                new { Email = email },
+                splitOn: "Id"
+            );
+
+            return user.FirstOrDefault();
         }
 
         public async Task<User?> GetByUserNameAsync(string username)
@@ -104,22 +121,28 @@ namespace DAL.SqlServer.Infrastructure
         }
 
 
-        //yeni elave 
         public async Task RegisterAsync(User user)
         {
+            var sql = @"
+        INSERT INTO Users (UserName, Email, PasswordHash, RoleId, CreatedAt)
+        VALUES (@UserName, @Email, @PasswordHash, @RoleId, @CreatedAt)";
 
-            var sql = "INSERT INTO Users (UserName , Email , PasswordHash, Role ) Values (@UserName , @Email , @PasswordHash , @Role)";
-
-            var parameters = new
+            await _dbConnection.ExecuteAsync(sql, new
             {
-                UserName = user.UserName,
-                Email = user.Email,
-                PasswordHash = user.PasswordHash,
-                Role = user.Role
-            };
-
-            await _dbConnection.ExecuteAsync(sql, parameters);
-
+                user.UserName,
+                user.Email,
+                user.PasswordHash,
+                user.RoleId,
+                user.CreatedAt
+            });
         }
+
+        public async Task DeleteAsync(int id, ClaimsPrincipal user)
+        {
+            await Task.CompletedTask;
+        }
+
+
+
     }
 }

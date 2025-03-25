@@ -1,102 +1,73 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Taleh\\source\\repos\\ProFix\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\ProFix\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\taleh\\source\\repos\\profix\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\taleh\\source\\repos\\profix\\application\\common\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\common\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\taleh\\source\\repos\\profix\\application\\cqrs\\users\\handlers\\loginhandlers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\users\\handlers\\loginhandlers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\taleh\\source\\repos\\profix\\application\\common\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\common\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\taleh\\source\\repos\\profix\\application\\cqrs\\users\\handlers\\registeruserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\users\\handlers\\registeruserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|c:\\users\\taleh\\source\\repos\\profix\\repository\\repositories\\tokensecurity\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\tokensecurity\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\taleh\\source\\repos\\profix\\application\\cqrs\\users\\dtos\\getalluserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\users\\dtos\\getalluserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\taleh\\source\\repos\\profix\\application\\cqrs\\users\\handlers\\getalluserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\users\\handlers\\getalluserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\taleh\\source\\repos\\profix\\application\\mappings\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\mappings\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|c:\\users\\taleh\\source\\repos\\profix\\dal.sqlserver\\unitofwork\\sqlunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|solutionrelative:dal.sqlserver\\unitofwork\\sqlunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|c:\\users\\taleh\\source\\repos\\profix\\repository\\common\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|solutionrelative:repository\\common\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D55182CB-DF18-4C76-A085-0B2064AC18E3}|Domain\\Domain.csproj|c:\\users\\taleh\\source\\repos\\profix\\domain\\entities\\tokensecurity\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D55182CB-DF18-4C76-A085-0B2064AC18E3}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\tokensecurity\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\taleh\\source\\repos\\profix\\application\\cqrs\\users\\handlers\\deletehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\users\\handlers\\deletehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\taleh\\source\\repos\\profix\\application\\cqrs\\users\\dtos\\userlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\users\\dtos\\userlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\taleh\\source\\repos\\profix\\application\\cqrs\\users\\handlers\\getuserbyidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\users\\handlers\\getuserbyidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|c:\\users\\taleh\\source\\repos\\profix\\dal.sqlserver\\infrastructure\\sqluserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|c:\\users\\user\\source\\repos\\profix\\dal.sqlserver\\infrastructure\\sqluserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|solutionrelative:dal.sqlserver\\infrastructure\\sqluserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\taleh\\source\\repos\\profix\\application\\cqrs\\users\\dtos\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\users\\dtos\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\users\\handlers\\registeruserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\users\\handlers\\registeruserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\taleh\\source\\repos\\profix\\application\\cqrs\\users\\dtos\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\user\\source\\repos\\profix\\webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ProFix/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\users\\dtos\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\users\\dtos\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\taleh\\source\\repos\\profix\\application\\common\\services\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\common\\services\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\mappings\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\mappings\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|c:\\users\\taleh\\source\\repos\\profix\\repository\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\common\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\common\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\common\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\common\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A9317E7-253D-431E-A522-FD916C94F655}|Common\\Common.csproj|c:\\users\\user\\source\\repos\\profix\\common\\exceptions\\forbiddenexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A9317E7-253D-431E-A522-FD916C94F655}|Common\\Common.csproj|solutionrelative:common\\exceptions\\forbiddenexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A9317E7-253D-431E-A522-FD916C94F655}|Common\\Common.csproj|c:\\users\\user\\source\\repos\\profix\\common\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A9317E7-253D-431E-A522-FD916C94F655}|Common\\Common.csproj|solutionrelative:common\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A9317E7-253D-431E-A522-FD916C94F655}|Common\\Common.csproj|c:\\users\\user\\source\\repos\\profix\\common\\exceptions\\badrequestexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A9317E7-253D-431E-A522-FD916C94F655}|Common\\Common.csproj|solutionrelative:common\\exceptions\\badrequestexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D55182CB-DF18-4C76-A085-0B2064AC18E3}|Domain\\Domain.csproj|c:\\users\\user\\source\\repos\\profix\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D55182CB-DF18-4C76-A085-0B2064AC18E3}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|c:\\users\\user\\source\\repos\\profix\\repository\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\taleh\\source\\repos\\profix\\application\\cqrs\\users\\handlers\\updateuserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\users\\handlers\\updateuserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|c:\\users\\user\\source\\repos\\profix\\repository\\repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|solutionrelative:repository\\repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\taleh\\source\\repos\\profix\\application\\common\\interfaces\\ipasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\common\\interfaces\\ipasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\user\\source\\repos\\profix\\webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\taleh\\source\\repos\\profix\\application\\cqrs\\users\\dtos\\deleteuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\users\\dtos\\deleteuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\user\\source\\repos\\profix\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A9317E7-253D-431E-A522-FD916C94F655}|Common\\Common.csproj|c:\\users\\taleh\\source\\repos\\profix\\common\\globalresponse\\generics\\responsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A9317E7-253D-431E-A522-FD916C94F655}|Common\\Common.csproj|solutionrelative:common\\globalresponse\\generics\\responsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\user\\source\\repos\\profix\\webapi\\middlewares\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\middlewares\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -110,10 +81,6 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
@@ -122,297 +89,210 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "dbo.Users [\u0414\u0430\u043D\u043D\u044B\u0435]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ProFix/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "dbo.Users [\u0414\u0430\u043D\u043D\u044B\u0435]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-25T00:58:02.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\Common\\Services\\TokenService.cs",
-              "RelativeDocumentMoniker": "Application\\Common\\Services\\TokenService.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\Common\\Services\\TokenService.cs",
-              "RelativeToolTip": "Application\\Common\\Services\\TokenService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "RegisterUserHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Users\\Handlers\\RegisterUserHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Users\\Handlers\\RegisterUserHandler.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Users\\Handlers\\RegisterUserHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\Users\\Handlers\\RegisterUserHandler.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAwC8AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T11:06:54.726Z",
+              "WhenOpened": "2025-03-25T00:48:23.028Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "LoginHandlers.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\Handlers\\LoginHandlers.cs",
-              "RelativeDocumentMoniker": "Application\\CQRS\\Users\\Handlers\\LoginHandlers.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\Handlers\\LoginHandlers.cs",
-              "RelativeToolTip": "Application\\CQRS\\Users\\Handlers\\LoginHandlers.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAQwEcAAAAcAAAAAAAAAA==",
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\UserController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAiwBkAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T10:35:29.583Z",
+              "WhenOpened": "2025-03-25T00:21:07.618Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\WebApi\\Program.cs",
-              "RelativeDocumentMoniker": "WebApi\\Program.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\WebApi\\Program.cs",
-              "RelativeToolTip": "WebApi\\Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAADIAAAAPAAAAAAAAAA==",
+              "Title": "SqlUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlUserRepository.cs",
+              "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlUserRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlUserRepository.cs",
+              "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T06:48:44.024Z",
+              "WhenOpened": "2025-03-25T00:22:07.939Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "RegisterUserHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\Handlers\\RegisterUserHandler.cs",
-              "RelativeDocumentMoniker": "Application\\CQRS\\Users\\Handlers\\RegisterUserHandler.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\Handlers\\RegisterUserHandler.cs",
-              "RelativeToolTip": "Application\\CQRS\\Users\\Handlers\\RegisterUserHandler.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Title": "RegisterUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Users\\DTOs\\RegisterUserDto.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Users\\DTOs\\RegisterUserDto.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Users\\DTOs\\RegisterUserDto.cs",
+              "RelativeToolTip": "Application\\CQRS\\Users\\DTOs\\RegisterUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T09:14:32.385Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ITokenService.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\Common\\Interfaces\\ITokenService.cs",
-              "RelativeDocumentMoniker": "Application\\Common\\Interfaces\\ITokenService.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\Common\\Interfaces\\ITokenService.cs",
-              "RelativeToolTip": "Application\\Common\\Interfaces\\ITokenService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T11:31:03.047Z",
+              "WhenOpened": "2025-03-25T00:48:00.168Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "RefreshTokenRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Repository\\Repositories\\TokenSecurity\\RefreshTokenRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\TokenSecurity\\RefreshTokenRepository.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Repository\\Repositories\\TokenSecurity\\RefreshTokenRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\TokenSecurity\\RefreshTokenRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA4AAAAAAAAAA==",
+              "Title": "UserProfile.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Mappings\\UserProfile.cs",
+              "RelativeDocumentMoniker": "Application\\Mappings\\UserProfile.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Mappings\\UserProfile.cs",
+              "RelativeToolTip": "Application\\Mappings\\UserProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T12:30:12.733Z",
+              "WhenOpened": "2025-03-25T00:49:28.183Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GetAllUserDto.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\DTOs\\GetAllUserDto.cs",
-              "RelativeDocumentMoniker": "Application\\CQRS\\Users\\DTOs\\GetAllUserDto.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\DTOs\\GetAllUserDto.cs",
-              "RelativeToolTip": "Application\\CQRS\\Users\\DTOs\\GetAllUserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T13:29:36.711Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Repository\\Common\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "Repository\\Common\\IUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Repository\\Common\\IUnitOfWork.cs",
-              "RelativeToolTip": "Repository\\Common\\IUnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T12:28:03.049Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RefreshToken.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Domain\\Entities\\TokenSecurity\\RefreshToken.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\TokenSecurity\\RefreshToken.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Domain\\Entities\\TokenSecurity\\RefreshToken.cs",
-              "RelativeToolTip": "Domain\\Entities\\TokenSecurity\\RefreshToken.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAuwAwAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T12:22:43.239Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GetAllUserHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\Handlers\\GetAllUserHandler.cs",
-              "RelativeDocumentMoniker": "Application\\CQRS\\Users\\Handlers\\GetAllUserHandler.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\Handlers\\GetAllUserHandler.cs",
-              "RelativeToolTip": "Application\\CQRS\\Users\\Handlers\\GetAllUserHandler.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAowC8AAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T13:29:17.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\Mappings\\UserProfile.cs",
-              "RelativeDocumentMoniker": "Application\\Mappings\\UserProfile.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\Mappings\\UserProfile.cs",
-              "RelativeToolTip": "Application\\Mappings\\UserProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T13:35:37.428Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UserListDto.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\DTOs\\UserListDto.cs",
-              "RelativeDocumentMoniker": "Application\\CQRS\\Users\\DTOs\\UserListDto.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\DTOs\\UserListDto.cs",
-              "RelativeToolTip": "Application\\CQRS\\Users\\DTOs\\UserListDto.cs",
+              "Title": "BadRequestException.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Exceptions\\BadRequestException.cs",
+              "RelativeDocumentMoniker": "Common\\Exceptions\\BadRequestException.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Exceptions\\BadRequestException.cs",
+              "RelativeToolTip": "Common\\Exceptions\\BadRequestException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T12:46:25.03Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "DeleteHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\Handlers\\DeleteHandler.cs",
-              "RelativeDocumentMoniker": "Application\\CQRS\\Users\\Handlers\\DeleteHandler.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\Handlers\\DeleteHandler.cs",
-              "RelativeToolTip": "Application\\CQRS\\Users\\Handlers\\DeleteHandler.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACsAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T06:39:32.058Z"
+              "WhenOpened": "2025-03-25T00:22:39.484Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "SqlUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
-              "RelativeDocumentMoniker": "Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
-              "RelativeToolTip": "Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAwDMAAACBAAAAAAAAAA==",
+              "Title": "NotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Exceptions\\NotFoundException.cs",
+              "RelativeDocumentMoniker": "Common\\Exceptions\\NotFoundException.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Exceptions\\NotFoundException.cs",
+              "RelativeToolTip": "Common\\Exceptions\\NotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T13:41:48.497Z"
+              "WhenOpened": "2025-03-25T00:22:42.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ForbiddenException.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Exceptions\\ForbiddenException.cs",
+              "RelativeDocumentMoniker": "Common\\Exceptions\\ForbiddenException.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Exceptions\\ForbiddenException.cs",
+              "RelativeToolTip": "Common\\Exceptions\\ForbiddenException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T00:22:45.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Common\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "Application\\Common\\Services\\TokenService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Common\\Services\\TokenService.cs",
+              "RelativeToolTip": "Application\\Common\\Services\\TokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T00:22:52.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ITokenService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Common\\Interfaces\\ITokenService.cs",
+              "RelativeDocumentMoniker": "Application\\Common\\Interfaces\\ITokenService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Common\\Interfaces\\ITokenService.cs",
+              "RelativeToolTip": "Application\\Common\\Interfaces\\ITokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T00:23:05.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Entities\\User.cs",
+              "RelativeToolTip": "Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T00:22:00.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repositories\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repositories\\IUserRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T00:21:52.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Repository.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repository.csproj",
+              "RelativeDocumentMoniker": "Repository\\Repository.csproj",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repository.csproj",
+              "RelativeToolTip": "Repository\\Repository.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-25T00:21:41.451Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "GetUserByIdHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\Handlers\\GetUserByIdHandler.cs",
-              "RelativeDocumentMoniker": "Application\\CQRS\\Users\\Handlers\\GetUserByIdHandler.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\Handlers\\GetUserByIdHandler.cs",
-              "RelativeToolTip": "Application\\CQRS\\Users\\Handlers\\GetUserByIdHandler.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAgwBwAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T06:49:58.967Z"
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "WebApi\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "WebApi\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-25T00:21:37.799Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "SqlUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlUserRepository.cs",
-              "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlUserRepository.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlUserRepository.cs",
-              "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlUserRepository.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAHQAAAAxAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Program.cs",
+              "RelativeToolTip": "WebApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T14:29:41.502Z"
+              "WhenOpened": "2025-03-25T00:21:23.527Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "LoginResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\DTOs\\LoginResponseDto.cs",
-              "RelativeDocumentMoniker": "Application\\CQRS\\Users\\DTOs\\LoginResponseDto.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\DTOs\\LoginResponseDto.cs",
-              "RelativeToolTip": "Application\\CQRS\\Users\\DTOs\\LoginResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T10:34:52.329Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Repository\\Repositories\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Repository\\Repositories\\IUserRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T09:37:33.318Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "PasswordHasher.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\Common\\Services\\PasswordHasher.cs",
-              "RelativeDocumentMoniker": "Application\\Common\\Services\\PasswordHasher.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\Common\\Services\\PasswordHasher.cs",
-              "RelativeToolTip": "Application\\Common\\Services\\PasswordHasher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T09:31:10.126Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "RegisterUserDto.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\DTOs\\RegisterUserDto.cs",
-              "RelativeDocumentMoniker": "Application\\CQRS\\Users\\DTOs\\RegisterUserDto.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\DTOs\\RegisterUserDto.cs",
-              "RelativeToolTip": "Application\\CQRS\\Users\\DTOs\\RegisterUserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T09:14:16.496Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "IPasswordHasher.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\Common\\Interfaces\\IPasswordHasher.cs",
-              "RelativeDocumentMoniker": "Application\\Common\\Interfaces\\IPasswordHasher.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\Common\\Interfaces\\IPasswordHasher.cs",
-              "RelativeToolTip": "Application\\Common\\Interfaces\\IPasswordHasher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T09:33:06.223Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "UpdateUserHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\Handlers\\UpdateUserHandler.cs",
-              "RelativeDocumentMoniker": "Application\\CQRS\\Users\\Handlers\\UpdateUserHandler.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\Handlers\\UpdateUserHandler.cs",
-              "RelativeToolTip": "Application\\CQRS\\Users\\Handlers\\UpdateUserHandler.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAiwCoAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T07:05:33.53Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ResponseModel.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Common\\GlobalResponse\\Generics\\ResponseModel.cs",
-              "RelativeDocumentMoniker": "Common\\GlobalResponse\\Generics\\ResponseModel.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Common\\GlobalResponse\\Generics\\ResponseModel.cs",
-              "RelativeToolTip": "Common\\GlobalResponse\\Generics\\ResponseModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T06:57:46.278Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "DeleteUserDto.cs",
-              "DocumentMoniker": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\DTOs\\DeleteUserDto.cs",
-              "RelativeDocumentMoniker": "Application\\CQRS\\Users\\DTOs\\DeleteUserDto.cs",
-              "ToolTip": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\CQRS\\Users\\DTOs\\DeleteUserDto.cs",
-              "RelativeToolTip": "Application\\CQRS\\Users\\DTOs\\DeleteUserDto.cs",
+              "Title": "ExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "WebApi\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "RelativeToolTip": "WebApi\\Middlewares\\ExceptionHandlingMiddleware.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T06:39:07.894Z"
+              "WhenOpened": "2025-03-25T00:21:17.614Z"
             }
           ]
         }

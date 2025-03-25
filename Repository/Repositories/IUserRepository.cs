@@ -8,5 +8,8 @@ namespace Repository.Repositories
         Task<User> GetByEmailAsync(string email);
         Task<User> GetByUserNameAsync(string username);
         Task RegisterAsync (User user); //yeni elave eledim 
+        Task DeleteAsync(int id, string deletedReason, int deletedBy);
+
+
     }
 }
