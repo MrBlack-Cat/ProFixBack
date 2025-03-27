@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Taleh\\source\\repos\\ProFix\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Taleh\\source\\repos\\ProFix\\Common\\Common.csproj": {
+    "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Common\\Common.csproj",
+        "projectUniqueName": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Common\\Common.csproj",
+        "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\Taleh\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\obj\\",
         "projectStyle": "PackageReference",
@@ -78,12 +78,12 @@
         }
       }
     },
-    "C:\\Users\\Taleh\\source\\repos\\ProFix\\Domain\\Domain.csproj": {
+    "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Taleh\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Domain\\obj\\",
         "projectStyle": "PackageReference",
@@ -142,14 +142,14 @@
         }
       }
     },
-    "C:\\Users\\Taleh\\source\\repos\\ProFix\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Taleh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -170,14 +170,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Taleh\\source\\repos\\ProFix\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Common\\Common.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj"
               },
-              "C:\\Users\\Taleh\\source\\repos\\ProFix\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Domain\\Domain.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\Taleh\\source\\repos\\ProFix\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Repository\\Repository.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Repository\\Repository.csproj"
               }
             }
           }
@@ -226,14 +226,14 @@
         }
       }
     },
-    "C:\\Users\\Taleh\\source\\repos\\ProFix\\Repository\\Repository.csproj": {
+    "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Repository\\Repository.csproj",
+        "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\Taleh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Repository\\obj\\",
+        "outputPath": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -254,11 +254,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Taleh\\source\\repos\\ProFix\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Common\\Common.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj"
               },
-              "C:\\Users\\Taleh\\source\\repos\\ProFix\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Domain\\Domain.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Domain\\Domain.csproj"
               }
             }
           }

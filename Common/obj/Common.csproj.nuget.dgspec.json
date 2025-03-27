@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Taleh\\source\\repos\\ProFix\\Common\\Common.csproj": {}
+    "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Taleh\\source\\repos\\ProFix\\Common\\Common.csproj": {
+    "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Common\\Common.csproj",
+        "projectUniqueName": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Common\\Common.csproj",
+        "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\Taleh\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\obj\\",
         "projectStyle": "PackageReference",
