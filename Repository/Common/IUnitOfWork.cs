@@ -7,11 +7,13 @@ namespace Repository.Common
     public interface IUnitOfWork
     {
         IUserRepository UserRepository { get; }
-        //yeni elave 
-        public IRefreshTokenRepository RefreshTokenRepository { get; }
-        public IPostRepository PostRepository { get; }
-        public IServiceProviderProfileRepository ServiceProviderProfileRepository { get; }
 
+        IRefreshTokenRepository RefreshTokenRepository { get; }
+        IPostRepository PostRepository { get; }
+        IServiceProviderProfileRepository ServiceProviderProfileRepository { get; }
+        IClientProfileRepository ClientProfileRepository { get; }
+        IUserRoleRepository UserRoleRepository { get; }
+        IActivityLogRepository ActivityLogRepository { get; }
 
         Task<int> SaveChangesAsync();
     }

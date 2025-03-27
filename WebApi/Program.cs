@@ -96,6 +96,7 @@ if (app.Environment.IsDevelopment())
     {
         options.SwaggerEndpoint("/swagger/v1/swagger.json", "ProFix API V1");
         options.RoutePrefix = "swagger";
+
     });
 }
 
