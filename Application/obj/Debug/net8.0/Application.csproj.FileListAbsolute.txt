@@ -42,3 +42,5 @@ C:\Users\Taleh\Source\Repos\ProFix\Application\obj\Debug\net8.0\Application.dll
 C:\Users\Taleh\Source\Repos\ProFix\Application\obj\Debug\net8.0\refint\Application.dll
 C:\Users\Taleh\Source\Repos\ProFix\Application\obj\Debug\net8.0\Application.pdb
 C:\Users\Taleh\Source\Repos\ProFix\Application\obj\Debug\net8.0\ref\Application.dll
+C:\Users\User\source\repos\ProFix\Application\bin\Debug\net8.0\Dal.SqlServer.dll
+C:\Users\User\source\repos\ProFix\Application\bin\Debug\net8.0\Dal.SqlServer.pdb

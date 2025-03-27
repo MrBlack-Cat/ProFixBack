@@ -17,10 +17,13 @@ public class DeleteHandler
         public string DeletedReason { get; set; }
     }
 
-    public sealed class Handler(IUnitOfWork unitOfWork, IUserContext userContext) : IRequestHandler<Command, ResponseModel<Unit>>
+    public sealed class Handler(IUnitOfWork unitOfWork, IUserContext userContext, IActivityLoggerService activityLogger, ILoggerService logger) : IRequestHandler<Command, ResponseModel<Unit>>
     {
         private readonly IUnitOfWork _unitOfWork = unitOfWork;
         private readonly IUserContext _userContext = userContext;
+        private readonly IActivityLoggerService _activityLogger = activityLogger;
+        private readonly ILoggerService _logger = logger;
+
 
         public async Task<ResponseModel<Unit>> Handle(Command request, CancellationToken cancellationToken)
         {
@@ -47,6 +50,18 @@ public class DeleteHandler
 
             await _unitOfWork.UserRepository.DeleteAsync(user);
             await _unitOfWork.SaveChangesAsync();
+
+            await _activityLogger.LogAsync(
+                userId: request.DeletedBy,
+                action: "Delete",
+                entityType: "User",
+                entityId: request.Id,
+                performedBy: request.DeletedBy,
+                description: request.DeletedReason
+            );
+
+            _logger.LogInfo($"User deleted: Id={request.Id}, Reason={request.DeletedReason}");
+
 
             return new ResponseModel<Unit>
             {

@@ -35,6 +35,9 @@
               "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Common.csproj": {
                 "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Common.csproj"
               },
+              "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Dal.SqlServer.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Dal.SqlServer.csproj"
+              },
               "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Domain.csproj"
               },
@@ -73,6 +76,10 @@
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
               "version": "[11.11.0, )"
+            },
+            "Google.Cloud.Storage.V1": {
+              "target": "Package",
+              "version": "[4.11.0, )"
             },
             "MediatR": {
               "target": "Package",
@@ -404,6 +411,10 @@
               "target": "Package",
               "version": "[11.11.0, )"
             },
+            "Google.Cloud.Storage.V1": {
+              "target": "Package",
+              "version": "[4.11.0, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[11.1.0, )"
@@ -569,6 +580,10 @@
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
               "version": "[11.11.0, )"
+            },
+            "Google.Cloud.Storage.V1": {
+              "target": "Package",
+              "version": "[4.11.0, )"
             },
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",

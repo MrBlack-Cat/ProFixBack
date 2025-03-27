@@ -22,34 +22,35 @@ namespace Dal.SqlServer.Infrastructure
 
         public async Task<IEnumerable<ActivityLog>> GetAllAsync()
         {
-            var sql = "SELECT * FROM ActivityLogs WHERE IsDeleted = 0";
+            var sql = "SELECT * FROM ActivityLog WHERE IsDeleted = 0";
             return await _dbConnection.QueryAsync<ActivityLog>(sql);
         }
 
         public async Task<ActivityLog?> GetByIdAsync(int id)
         {
-            var sql = "SELECT * FROM ActivityLogs WHERE Id = @Id AND IsDeleted = 0";
+            var sql = "SELECT * FROM ActivityLog WHERE Id = @Id AND IsDeleted = 0";
             return await _dbConnection.QueryFirstOrDefaultAsync<ActivityLog>(sql, new { Id = id });
         }
 
         public async Task<IEnumerable<ActivityLog>> GetByUserIdAsync(int userId)
         {
-            var sql = "SELECT * FROM ActivityLogs WHERE UserId = @UserId AND IsDeleted = 0";
+            var sql = "SELECT * FROM ActivityLog WHERE UserId = @UserId AND IsDeleted = 0";
             return await _dbConnection.QueryAsync<ActivityLog>(sql, new { UserId = userId });
         }
 
         public async Task AddAsync(ActivityLog entity)
         {
             var sql = @"
-                INSERT INTO ActivityLogs (UserId, Action, EntityType, EntityId, Timestamp, CreatedAt, CreatedBy)
-                VALUES (@UserId, @Action, @EntityType, @EntityId, @Timestamp, @CreatedAt, @CreatedBy)";
+                INSERT INTO ActivityLog (UserId, Action, EntityType, EntityId, CreatedAt, CreatedBy)
+                VALUES (@UserId, @Action, @EntityType, @EntityId, @CreatedAt, @CreatedBy)";
+
             await _dbConnection.ExecuteAsync(sql, entity);
         }
 
         public async Task UpdateAsync(ActivityLog entity)
         {
             var sql = @"
-                UPDATE ActivityLogs SET
+                UPDATE ActivityLog SET
                     Action = @Action,
                     EntityType = @EntityType,
                     EntityId = @EntityId,
@@ -63,7 +64,7 @@ namespace Dal.SqlServer.Infrastructure
         public async Task DeleteAsync(ActivityLog entity)
         {
             var sql = @"
-                UPDATE ActivityLogs SET
+                UPDATE ActivityLog SET
                     IsDeleted = 1,
                     DeletedAt = @DeletedAt,
                     DeletedBy = @DeletedBy,
@@ -78,9 +79,9 @@ namespace Dal.SqlServer.Infrastructure
             });
         }
 
-        
 
-        public async Task DeleteAsync(int id ,ClaimsPrincipal user)
+
+        public async Task DeleteAsync(int id, ClaimsPrincipal user)
         {
             var entity = await GetByIdAsync(id);
             if (entity == null) return;

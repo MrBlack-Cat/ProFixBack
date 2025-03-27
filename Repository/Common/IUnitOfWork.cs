@@ -8,7 +8,10 @@ namespace Repository.Common
     {
         IUserRepository UserRepository { get; }
         //yeni elave 
-       public IRefreshTokenRepository RefreshTokenRepository { get; }
+        IRefreshTokenRepository RefreshTokenRepository { get; }
+        IClientProfileRepository ClientProfileRepository { get; }
+        IUserRoleRepository UserRoleRepository { get; }
+        IActivityLogRepository ActivityLogRepository { get; }
 
 
         Task<int> SaveChangesAsync();

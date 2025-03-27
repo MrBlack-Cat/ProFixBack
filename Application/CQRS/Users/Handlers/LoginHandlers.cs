@@ -30,11 +30,12 @@ public class LoginHandlers
 
 
 
-    public sealed class Handler(IUnitOfWork unitOfWork, IConfiguration configuration, ILoggerService loggerService , ITokenService tokenService) : IRequestHandler<LoginRequest, ResponseModel<LoginResponseDto>>
+    public sealed class Handler(IUnitOfWork unitOfWork, IConfiguration configuration, ILoggerService loggerService , ITokenService tokenService, IActivityLoggerService activityLogger) : IRequestHandler<LoginRequest, ResponseModel<LoginResponseDto>>
     {
 
         private readonly IUnitOfWork _unitOfWork = unitOfWork;
-        private readonly ITokenService _tokenService = tokenService; 
+        private readonly ITokenService _tokenService = tokenService;
+        private readonly IActivityLoggerService _activityLogger = activityLogger;
 
         public async Task<ResponseModel<LoginResponseDto>> Handle(LoginRequest request, CancellationToken cancellationToken)
         {
@@ -85,6 +86,18 @@ public class LoginHandlers
             
             await _unitOfWork.RefreshTokenRepository.SaveRefreshToken(refreshToken);
             await _unitOfWork.SaveChangesAsync();
+
+
+            await _activityLogger.LogAsync(
+                userId: currentUser.Id,
+                action: "Login",
+                entityType: "User",
+                entityId: currentUser.Id,
+                performedBy: currentUser.Id
+            );
+
+
+
 
             LoginResponseDto response = new()
             {

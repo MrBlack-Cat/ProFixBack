@@ -6,6 +6,9 @@ using Common.Exceptions;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Application.CQRS.FileUploads.Commands.Requests;
+using Common.Interfaces;
+using Application.CQRS.FileUploads.DTOs;
 
 namespace WebApi.Controllers;
 
@@ -15,11 +18,13 @@ public class ClientProfileController : ControllerBase
 {
     private readonly IMediator _mediator;
     private readonly IUserContext _userContext;
+    private readonly ICloudStorageService _cloudStorageService;
 
-    public ClientProfileController(IMediator mediator, IUserContext userContext)
+    public ClientProfileController(IMediator mediator, IUserContext userContext, ICloudStorageService cloudStorageService)
     {
         _mediator = mediator;
         _userContext = userContext;
+        _cloudStorageService = cloudStorageService;
     }
 
     [HttpPost]
@@ -75,5 +80,28 @@ public class ClientProfileController : ControllerBase
         var result = await _mediator.Send(query);
         return Ok(result);
     }
+
+    [HttpGet("all")]
+    [Authorize]
+    public async Task<IActionResult> GetAll()
+    {
+        var query = new GetAllClientProfilesQuery();
+        var result = await _mediator.Send(query);
+        return Ok(result);
+    }
+
+    [HttpPost("upload-avatar")]
+    [Authorize]
+    [Consumes("multipart/form-data")]
+    public async Task<IActionResult> UploadAvatar([FromForm] UploadFileDto model)
+    {
+        var command = new UploadClientAvatarCommand(model.File, model.UserId);
+        var result = await _mediator.Send(command);
+        return Ok(result);
+    }
+
+
+
+
 
 }

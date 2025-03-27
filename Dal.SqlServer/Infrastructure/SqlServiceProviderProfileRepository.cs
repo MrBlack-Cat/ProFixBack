@@ -28,8 +28,8 @@ public class SqlServiceProviderProfileRepository : IServiceProviderProfileReposi
     public async Task AddAsync(ServiceProviderProfile entity)
     {
         var sql = @"
-            INSERT INTO ServiceProviderProfiles (UserId, FullName, City, Age, GenderId, ExperienceYears, Description, IsApprovedByAdmin, CreatedAt, CreatedBy)
-            VALUES (@UserId, @FullName, @City, @Age, @GenderId, @ExperienceYears, @Description, @IsApprovedByAdmin, @CreatedAt, @CreatedBy)";
+            INSERT INTO ServiceProviderProfiles (UserId, Name, Surname, City, Age, GenderId, ExperienceYears, Description, IsApprovedByAdmin, CreatedAt, CreatedBy)
+            VALUES (@UserId, @Name, @Surname, @City, @Age, @GenderId, @ExperienceYears, @Description, @IsApprovedByAdmin, @CreatedAt, @CreatedBy)";
         await _dbConnection.ExecuteAsync(sql, entity);
     }
 
@@ -37,7 +37,8 @@ public class SqlServiceProviderProfileRepository : IServiceProviderProfileReposi
     {
         var sql = @"
             UPDATE ServiceProviderProfiles SET
-                FullName = @FullName,
+                Name = @Name,
+                Surname = @Surname,
                 City = @City,
                 Age = @Age,
                 GenderId = @GenderId,
