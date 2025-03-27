@@ -12,5 +12,9 @@ public class ServiceProviderProfileProfile : Profile
         CreateMap<ServiceProviderProfile, UpdateServiceProviderProfileDto>().ReverseMap();
         CreateMap<ServiceProviderProfile, GetServiceProviderProfileByIdDto>().ReverseMap();
         CreateMap<ServiceProviderProfile, ServiceProviderProfileListDto>().ReverseMap();
+
+
+        CreateMap<ServiceProviderProfile, GetServiceProviderProfileByIdDto>()
+            .ForMember(dest => dest.GenderName, opt => opt.MapFrom(src => src.Gender != null ? src.Gender.Name : null));
     }
 }

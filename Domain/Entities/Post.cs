@@ -15,4 +15,7 @@ public class Post : BaseEntity
     public string? ImageUrl { get; set; }
 
     public ServiceProviderProfile? ServiceProviderProfile { get; set; }
+
+    //yeni elave 
+    public bool IsActive { get; set; } 
 }

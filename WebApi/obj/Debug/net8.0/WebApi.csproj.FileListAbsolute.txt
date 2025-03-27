@@ -209,3 +209,4 @@ C:\Users\User\source\repos\ProFix\WebApi\bin\Debug\net8.0\runtimes\win\lib\net8.
 C:\Users\User\source\repos\ProFix\WebApi\bin\Debug\net8.0\Dal.SqlServer.dll
 C:\Users\User\source\repos\ProFix\WebApi\bin\Debug\net8.0\Dal.SqlServer.pdb
 C:\Users\User\source\repos\ProFix\WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Taleh\Source\Repos\ProFix\WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

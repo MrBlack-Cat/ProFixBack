@@ -1,5 +1,238 @@
 [
   {
+    "ContainingType": "WebApi.Controllers.PostController",
+    "Method": "CreatePost",
+    "RelativePath": "api/Post/CreatePost",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Application.CQRS.Posts.Handlers.CreatePostHandler\u002BCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PostController",
+    "Method": "DeletePost",
+    "RelativePath": "api/Post/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DeletedBy",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DeletedReason",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PostController",
+    "Method": "GetPostById",
+    "RelativePath": "api/Post/GetPostById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PostController",
+    "Method": "GetPostsList",
+    "RelativePath": "api/Post/PostList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PostController",
+    "Method": "UpdatePost",
+    "RelativePath": "api/Post/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PostDto.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PostDto.Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PostDto.Content",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PostDto.ImageUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PostDto.UpdatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ServiceProviderProfileController",
+    "Method": "Update",
+    "RelativePath": "api/ServiceProviderProfile",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.CQRS.ServiceProviderProfiles.DTOs.UpdateServiceProviderProfileDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.ServiceProviderProfiles.DTOs.UpdateServiceProviderProfileDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ServiceProviderProfileController",
+    "Method": "Create",
+    "RelativePath": "api/ServiceProviderProfile/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.CQRS.ServiceProviderProfiles.DTOs.CreateServiceProviderProfileDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.ServiceProviderProfiles.DTOs.CreateServiceProviderProfileDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ServiceProviderProfileController",
+    "Method": "Delete",
+    "RelativePath": "api/ServiceProviderProfile/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.CQRS.ServiceProviderProfiles.DTOs.DeleteServiceProviderProfileDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.ServiceProviderProfiles.DTOs.DeleteServiceProviderProfileDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ServiceProviderProfileController",
+    "Method": "GetById",
+    "RelativePath": "api/ServiceProviderProfile/GetById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.ServiceProviderProfiles.DTOs.GetServiceProviderProfileByIdDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ServiceProviderProfileController",
+    "Method": "GetAll",
+    "RelativePath": "api/ServiceProviderProfile/ListOfProfiles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[Application.CQRS.ServiceProviderProfiles.DTOs.ServiceProviderProfileListDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "WebApi.Controllers.UsersController",
     "Method": "GetAll",
     "RelativePath": "api/Users",

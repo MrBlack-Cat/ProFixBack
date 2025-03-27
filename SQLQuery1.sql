@@ -1,11 +1,14 @@
-﻿-- 1. Yeni 'Name' ve 'Surname' sütunlarını ekle
-ALTER TABLE ServiceProviderProfile ADD [Name] NVARCHAR(100) NOT NULL ,
-                           Surname NVARCHAR(100) NOT NULL ;
+﻿--[05:22, 25.03.2025] Novruz (Step Academy): 
+ALTER TABLE Users ADD IsDeleted BIT DEFAULT 0;
 
--- 2. FullName'deki veriyi parçalayarak Name ve Surname sütunlarına aktar
-UPDATE ServiceProviderProfile
-SET Name = LEFT(FullName, CHARINDEX(' ', FullName + ' ') - 1), 
-    Surname = SUBSTRING(FullName, CHARINDEX(' ', FullName + ' ') + 1, LEN(FullName));
+--IsDeleted  əlavə etmək üçün
+--[05:22, 25.03.2025] Novruz (Step Academy):
+CREATE TABLE RefreshTokens (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Token NVARCHAR(4000) NOT NULL,
+    UserId INT NOT NULL,
+    ExpiryDate DATETIME NOT NULL,
+    CONSTRAINT FK_RefreshTokens_Users FOREIGN KEY (UserId) REFERENCES Users(Id)
+);
 
--- 3. FullName sütununu kaldır
-ALTER TABLE ServiceProviderProfile DROP COLUMN FullName;
+--RefreshToken Table üçün

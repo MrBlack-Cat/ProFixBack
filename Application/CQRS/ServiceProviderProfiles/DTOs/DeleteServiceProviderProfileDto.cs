@@ -3,6 +3,6 @@
 public class DeleteServiceProviderProfileDto
 {
     public int Id { get; set; }
-    public string? DeletedByUserId { get; set; }
+    public int? DeletedByUserId { get; set; }  //int etdim 
     public string? Reason { get; set; }
 }
