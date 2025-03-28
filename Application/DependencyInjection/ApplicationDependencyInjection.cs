@@ -19,6 +19,7 @@ namespace Application.DependencyInjection
             // Application core
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddAutoMapper(typeof(ActivityLogProfile).Assembly);
+            services.AddAutoMapper(typeof(MessageProfile).Assembly);
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 

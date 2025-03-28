@@ -45,17 +45,9 @@
     <Folder Include="CQRS\GuaranteeDocuments\Queries\Handlers\" />
     <Folder Include="CQRS\GuaranteeDocuments\Queries\Requests\" />
     <Folder Include="CQRS\GuaranteeDocuments\Queries\Responses\" />
-    <Folder Include="CQRS\Messages\Commands\Handlers\" />
-    <Folder Include="CQRS\Messages\Commands\Requests\" />
     <Folder Include="CQRS\Messages\Commands\Responses\" />
-    <Folder Include="CQRS\Messages\Queries\Handlers\" />
-    <Folder Include="CQRS\Messages\Queries\Requests\" />
     <Folder Include="CQRS\Messages\Queries\Responses\" />
-    <Folder Include="CQRS\Notifications\Commands\Handlers\" />
-    <Folder Include="CQRS\Notifications\Commands\Requests\" />
     <Folder Include="CQRS\Notifications\Commands\Responses\" />
-    <Folder Include="CQRS\Notifications\Queries\Handlers\" />
-    <Folder Include="CQRS\Notifications\Queries\Requests\" />
     <Folder Include="CQRS\Notifications\Queries\Responses\" />
     <Folder Include="CQRS\PortfolioItems\Commands\Handlers\" />
     <Folder Include="CQRS\PortfolioItems\Commands\Requests\" />

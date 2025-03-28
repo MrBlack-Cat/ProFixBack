@@ -16,6 +16,9 @@ namespace Repository.Common
         IActivityLogRepository ActivityLogRepository { get; }
         IGuaranteeDocumentRepository GuaranteeDocumentRepository { get; }
         ICertificateRepository CertificateRepository { get; }
+        IMessageRepository MessageRepository { get; }
+        INotificationRepository NotificationRepository { get; }
+
 
         Task<int> SaveChangesAsync();
     }

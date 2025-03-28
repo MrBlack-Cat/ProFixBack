@@ -33,6 +33,8 @@ public class SqlUnitOfWork : IUnitOfWork
     private IUserRoleRepository userRoleRepository;
     private IActivityLogRepository _activityLogRepository;
     private IGuaranteeDocumentRepository _guaranteeDocumentRepository;
+    private IMessageRepository _messageRepository;
+    private INotificationRepository _notificationRepository;
 
 
     //yeni elave 
@@ -56,6 +58,8 @@ public class SqlUnitOfWork : IUnitOfWork
     public IUserRoleRepository UserRoleRepository => userRoleRepository ??= new SqlUserRoleRepository(_dbConnection);
     public IActivityLogRepository ActivityLogRepository => _activityLogRepository ??= new SqlActivityLogRepository(_dbConnection);
     public IGuaranteeDocumentRepository GuaranteeDocumentRepository => _guaranteeDocumentRepository ??= new SqlGuaranteeDocumentRepository(_dbConnection);
+    public IMessageRepository MessageRepository => _messageRepository ??= new SqlMessageRepository(_dbConnection);
+    public INotificationRepository NotificationRepository => _notificationRepository ??= new SqlNotificationRepository(_dbConnection);
     public async Task<int> SaveChangesAsync()
     {
         return await _context.SaveChangesAsync();
