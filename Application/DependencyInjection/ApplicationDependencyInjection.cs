@@ -5,12 +5,8 @@ using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using AutoMapper;
 using Infrastructure.Behaviors;
 using Infrastructure.Services;
-using Application.Common.Services;
-using Repository.Repositories;
-using Dal.SqlServer.Infrastructure;
 using Application.Mappings;
 using Common.Interfaces;
 

@@ -12,5 +12,7 @@ namespace Repository.Repositories
     {
         Task<IEnumerable<ServiceProviderProfile>> GetByCityAsync(string city);
         Task<IEnumerable<ServiceProviderProfile>> GetApprovedAsync();
+        Task<ServiceProviderProfile?> GetByUserIdAsync(int userId);
+
     }
 }
