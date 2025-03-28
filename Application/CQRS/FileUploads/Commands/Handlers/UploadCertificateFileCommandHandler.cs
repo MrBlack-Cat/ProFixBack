@@ -1,6 +1,4 @@
-﻿// Application.CQRS.FileUploads.Commands.Handlers/UploadCertificateFileCommandHandler.cs
-
-using Application.CQRS.FileUploads.Commands.Requests;
+﻿using Application.CQRS.FileUploads.Commands.Requests;
 using Application.CQRS.FileUploads.DTOs;
 using Application.Common.Interfaces;
 using Common.Exceptions;
