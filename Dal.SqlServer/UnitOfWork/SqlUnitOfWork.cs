@@ -32,6 +32,7 @@ public class SqlUnitOfWork : IUnitOfWork
     private IReviewRepository _reviewRepository;
     private IUserRoleRepository userRoleRepository;
     private IActivityLogRepository _activityLogRepository;
+    private IGuaranteeDocumentRepository _guaranteeDocumentRepository;
 
 
     //yeni elave 
@@ -54,6 +55,7 @@ public class SqlUnitOfWork : IUnitOfWork
     public IRefreshTokenRepository RefreshTokenRepository => _refreshTokenRepository ??= new SqlRefreshTokenRepository(_context);
     public IUserRoleRepository UserRoleRepository => userRoleRepository ??= new SqlUserRoleRepository(_dbConnection);
     public IActivityLogRepository ActivityLogRepository => _activityLogRepository ??= new SqlActivityLogRepository(_dbConnection);
+    public IGuaranteeDocumentRepository GuaranteeDocumentRepository => _guaranteeDocumentRepository ??= new SqlGuaranteeDocumentRepository(_dbConnection);
     public async Task<int> SaveChangesAsync()
     {
         return await _context.SaveChangesAsync();

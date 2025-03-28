@@ -3,20 +3,88 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\ProFix\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|c:\\users\\user\\source\\repos\\profix\\dal.sqlserver\\infrastructure\\sqlserviceproviderprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|solutionrelative:dal.sqlserver\\infrastructure\\sqlserviceproviderprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\user\\source\\repos\\profix\\webapi\\controllers\\serviceproviderprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\serviceproviderprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|c:\\users\\user\\source\\repos\\profix\\repository\\repositories\\iserviceproviderprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\iserviceproviderprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\certificates\\commands\\handlers\\updatecertificatecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\certificates\\commands\\handlers\\updatecertificatecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\certificates\\queries\\handlers\\getallcertificatesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\certificates\\queries\\handlers\\getallcertificatesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|c:\\users\\user\\source\\repos\\profix\\repository\\common\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|solutionrelative:repository\\common\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\certificates\\commands\\handlers\\createcertificatecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\certificates\\commands\\handlers\\createcertificatecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\guaranteedocuments\\commands\\handlers\\createguaranteedocumentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\guaranteedocuments\\commands\\handlers\\createguaranteedocumentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|c:\\users\\user\\source\\repos\\profix\\dal.sqlserver\\unitofwork\\sqlunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|solutionrelative:dal.sqlserver\\unitofwork\\sqlunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\user\\source\\repos\\profix\\webapi\\controllers\\certificatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\certificatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\user\\source\\repos\\profix\\webapi\\controllers\\guaranteedocumentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\guaranteedocumentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\user\\source\\repos\\profix\\webapi\\controllers\\fileuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\fileuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\user\\source\\repos\\profix\\webapi\\controllers\\clientprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\clientprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\user\\source\\repos\\profix\\webapi\\controllers\\activitylogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\activitylogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\dependencyinjection\\applicationdependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\dependencyinjection\\applicationdependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\guaranteedocuments\\commands\\handlers\\deleteguaranteedocumentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\guaranteedocuments\\commands\\handlers\\deleteguaranteedocumentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\guaranteedocuments\\commands\\handlers\\updateguaranteedocumentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\guaranteedocuments\\commands\\handlers\\updateguaranteedocumentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\common\\services\\authorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\common\\services\\authorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\common\\interfaces\\iauthorizationserviceclass1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\common\\interfaces\\iauthorizationserviceclass1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\user\\source\\repos\\profix\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\user\\source\\repos\\profix\\webapi\\controllers\\serviceproviderprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\serviceproviderprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,28 +94,277 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Application",
+              "Title": "SqlServiceProviderProfileRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlServiceProviderProfileRepository.cs",
+              "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlServiceProviderProfileRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlServiceProviderProfileRepository.cs",
+              "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlServiceProviderProfileRepository.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAowGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T22:19:12.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpdateCertificateCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Certificates\\Commands\\Handlers\\UpdateCertificateCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Certificates\\Commands\\Handlers\\UpdateCertificateCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Certificates\\Commands\\Handlers\\UpdateCertificateCommandHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\Certificates\\Commands\\Handlers\\UpdateCertificateCommandHandler.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwCQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T22:19:02.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IServiceProviderProfileRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repositories\\IServiceProviderProfileRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\IServiceProviderProfileRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repositories\\IServiceProviderProfileRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\IServiceProviderProfileRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T22:16:23.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetAllCertificatesQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Certificates\\Queries\\Handlers\\GetAllCertificatesQueryHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Certificates\\Queries\\Handlers\\GetAllCertificatesQueryHandler.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Certificates\\Queries\\Handlers\\GetAllCertificatesQueryHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\Certificates\\Queries\\Handlers\\GetAllCertificatesQueryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T22:18:58.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateCertificateCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Certificates\\Commands\\Handlers\\CreateCertificateCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Certificates\\Commands\\Handlers\\CreateCertificateCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Certificates\\Commands\\Handlers\\CreateCertificateCommandHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\Certificates\\Commands\\Handlers\\CreateCertificateCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T22:17:58.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SqlUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
+              "RelativeToolTip": "Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAACaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T22:14:23.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Common\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Repository\\Common\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Common\\IUnitOfWork.cs",
+              "RelativeToolTip": "Repository\\Common\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T13:57:36.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CertificateController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\CertificateController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\CertificateController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\CertificateController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\CertificateController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T22:14:48.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateGuaranteeDocumentCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\GuaranteeDocuments\\Commands\\Handlers\\CreateGuaranteeDocumentCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\GuaranteeDocuments\\Commands\\Handlers\\CreateGuaranteeDocumentCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\GuaranteeDocuments\\Commands\\Handlers\\CreateGuaranteeDocumentCommandHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\GuaranteeDocuments\\Commands\\Handlers\\CreateGuaranteeDocumentCommandHandler.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T22:05:31.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GuaranteeDocumentController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\GuaranteeDocumentController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\GuaranteeDocumentController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\GuaranteeDocumentController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\GuaranteeDocumentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T22:14:43.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FileUploadController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\FileUploadController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\FileUploadController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\FileUploadController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\FileUploadController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T22:14:38.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ActivityLogController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\ActivityLogController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\ActivityLogController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\ActivityLogController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\ActivityLogController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T22:14:27.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ApplicationDependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\DependencyInjection\\ApplicationDependencyInjection.cs",
+              "RelativeDocumentMoniker": "Application\\DependencyInjection\\ApplicationDependencyInjection.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\DependencyInjection\\ApplicationDependencyInjection.cs",
+              "RelativeToolTip": "Application\\DependencyInjection\\ApplicationDependencyInjection.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T22:14:14.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ClientProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\ClientProfileController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\ClientProfileController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\ClientProfileController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\ClientProfileController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T13:59:27.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UpdateGuaranteeDocumentCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\GuaranteeDocuments\\Commands\\Handlers\\UpdateGuaranteeDocumentCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\GuaranteeDocuments\\Commands\\Handlers\\UpdateGuaranteeDocumentCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\GuaranteeDocuments\\Commands\\Handlers\\UpdateGuaranteeDocumentCommandHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\GuaranteeDocuments\\Commands\\Handlers\\UpdateGuaranteeDocumentCommandHandler.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T22:12:20.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DeleteGuaranteeDocumentCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\GuaranteeDocuments\\Commands\\Handlers\\DeleteGuaranteeDocumentCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\GuaranteeDocuments\\Commands\\Handlers\\DeleteGuaranteeDocumentCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\GuaranteeDocuments\\Commands\\Handlers\\DeleteGuaranteeDocumentCommandHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\GuaranteeDocuments\\Commands\\Handlers\\DeleteGuaranteeDocumentCommandHandler.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T22:12:16.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AuthorizationService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Common\\Services\\AuthorizationService.cs",
+              "RelativeDocumentMoniker": "Application\\Common\\Services\\AuthorizationService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Common\\Services\\AuthorizationService.cs",
+              "RelativeToolTip": "Application\\Common\\Services\\AuthorizationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T22:07:19.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IAuthorizationServiceClass1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Common\\Interfaces\\IAuthorizationServiceClass1.cs",
+              "RelativeDocumentMoniker": "Application\\Common\\Interfaces\\IAuthorizationServiceClass1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Common\\Interfaces\\IAuthorizationServiceClass1.cs",
+              "RelativeToolTip": "Application\\Common\\Interfaces\\IAuthorizationServiceClass1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T22:07:01.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Program.cs",
+              "RelativeToolTip": "WebApi\\Program.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T14:11:06.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Application.csproj",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Application.csproj",
               "RelativeDocumentMoniker": "Application\\Application.csproj",
               "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Application.csproj",
               "RelativeToolTip": "Application\\Application.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-27T14:02:58.014Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T14:02:58.014Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 20,
               "Title": "ServiceProviderProfileController.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\ServiceProviderProfileController.cs",
               "RelativeDocumentMoniker": "WebApi\\Controllers\\ServiceProviderProfileController.cs",
@@ -55,42 +372,7 @@
               "RelativeToolTip": "WebApi\\Controllers\\ServiceProviderProfileController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T14:02:20.163Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ClientProfileController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\ClientProfileController.cs",
-              "RelativeDocumentMoniker": "WebApi\\Controllers\\ClientProfileController.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\ClientProfileController.cs",
-              "RelativeToolTip": "WebApi\\Controllers\\ClientProfileController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T13:59:27.198Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Common\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "Repository\\Common\\IUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Common\\IUnitOfWork.cs",
-              "RelativeToolTip": "Repository\\Common\\IUnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T13:57:36.114Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "WhenOpened": "2025-03-27T14:02:20.163Z"
             }
           ]
         }

@@ -14,6 +14,8 @@ namespace Repository.Common
         IClientProfileRepository ClientProfileRepository { get; }
         IUserRoleRepository UserRoleRepository { get; }
         IActivityLogRepository ActivityLogRepository { get; }
+        IGuaranteeDocumentRepository GuaranteeDocumentRepository { get; }
+        ICertificateRepository CertificateRepository { get; }
 
         Task<int> SaveChangesAsync();
     }

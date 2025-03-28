@@ -96,7 +96,7 @@ public class SqlServiceProviderProfileRepository : IServiceProviderProfileReposi
         var sql = "SELECT * FROM ServiceProviderProfiles WHERE IsApprovedByAdmin = 1 AND IsDeleted = 0";
         return await _dbConnection.QueryAsync<ServiceProviderProfile>(sql);
     }
-    
+
     public async Task<ServiceProviderProfile?> GetByUserIdAsync(int userId)
     {
         var sql = "SELECT * FROM ServiceProviderProfiles WHERE UserId = @UserId AND IsDeleted = 0";
