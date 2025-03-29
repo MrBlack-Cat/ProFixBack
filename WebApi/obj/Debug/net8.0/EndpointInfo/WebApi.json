@@ -1469,13 +1469,9 @@
             "type": "string",
             "nullable": true
           },
-          "image": {
+          "imageUrl": {
             "type": "string",
             "nullable": true
-          },
-          "createdBy": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false

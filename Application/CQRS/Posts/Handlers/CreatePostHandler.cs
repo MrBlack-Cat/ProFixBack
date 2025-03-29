@@ -25,8 +25,7 @@ public class CreatePostHandler
     {
         public string Title { get; set; }
         public string Content { get; set; }
-        public string Image { get; set; }
-        public int CreatedBy { get; set; }
+        public string ImageUrl { get; set; }
     }
 
 
@@ -53,9 +52,24 @@ public class CreatePostHandler
 
             //burada Command i Post a ceviririk //database e elave elemek ucun 
 
-            var newPost = _mapper.Map<Post>(request);
-            newPost.CreatedBy = request.CreatedBy;
+            var profile = await _unitOfWork.ServiceProviderProfileRepository.GetByUserIdAsync(currenUserId.Value);
 
+
+
+            //create by context-den gelmelidi ona göre deyişdim.
+
+            if (profile is null)
+                throw new NotFoundException("Service provider profile not found.");
+
+            var newPost = new Post
+            {
+                Title = request.Title,
+                Content = request.Content,
+                ImageUrl = request.ImageUrl,
+                ServiceProviderProfileId = profile.Id,
+                CreatedAt = DateTime.UtcNow,
+                CreatedBy = currenUserId.Value
+            };
             await _unitOfWork.PostRepository.AddAsync(newPost);
             await _unitOfWork.SaveChangesAsync();
 
@@ -72,6 +86,7 @@ public class CreatePostHandler
                     entityId: newPost.Id,
                     performedBy: currenUserId.Value,
                     description: $"Post with title '{newPost.Title}' was created by user {currenUserId.Value}."
+                    
 
             );
 

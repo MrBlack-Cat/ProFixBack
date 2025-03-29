@@ -22,26 +22,26 @@ namespace Dal.SqlServer.Infrastructure
 
         public async Task<IEnumerable<SupportTicket>> GetAllAsync()
         {
-            var sql = "SELECT * FROM SupportTickets WHERE IsDeleted = 0";
+            var sql = "SELECT * FROM SupportTicket WHERE IsDeleted = 0";
             return await _dbConnection.QueryAsync<SupportTicket>(sql);
         }
 
         public async Task<SupportTicket?> GetByIdAsync(int id)
         {
-            var sql = "SELECT * FROM SupportTickets WHERE Id = @Id AND IsDeleted = 0";
+            var sql = "SELECT * FROM SupportTicket WHERE Id = @Id AND IsDeleted = 0";
             return await _dbConnection.QueryFirstOrDefaultAsync<SupportTicket>(sql, new { Id = id });
         }
 
         public async Task<IEnumerable<SupportTicket>> GetByUserIdAsync(int userId)
         {
-            var sql = "SELECT * FROM SupportTickets WHERE UserId = @UserId AND IsDeleted = 0";
+            var sql = "SELECT * FROM SupportTicket WHERE UserId = @UserId AND IsDeleted = 0";
             return await _dbConnection.QueryAsync<SupportTicket>(sql, new { UserId = userId });
         }
 
         public async Task AddAsync(SupportTicket entity)
         {
             var sql = @"
-                INSERT INTO SupportTickets (UserId, Subject, Message, StatusId, CreatedAt, CreatedBy)
+                INSERT INTO SupportTicket (UserId, Subject, Message, StatusId, CreatedAt, CreatedBy)
                 VALUES (@UserId, @Subject, @Message, @StatusId, @CreatedAt, @CreatedBy)";
             await _dbConnection.ExecuteAsync(sql, entity);
         }
@@ -49,7 +49,7 @@ namespace Dal.SqlServer.Infrastructure
         public async Task UpdateAsync(SupportTicket entity)
         {
             var sql = @"
-                UPDATE SupportTickets SET
+                UPDATE SupportTicket SET
                     Subject = @Subject,
                     Message = @Message,
                     StatusId = @StatusId,
@@ -62,7 +62,7 @@ namespace Dal.SqlServer.Infrastructure
         public async Task DeleteAsync(SupportTicket entity)
         {
             var sql = @"
-                UPDATE SupportTickets SET
+                UPDATE SupportTicket SET
                     IsDeleted = 1,
                     DeletedAt = @DeletedAt,
                     DeletedBy = @DeletedBy,

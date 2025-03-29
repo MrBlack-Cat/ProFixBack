@@ -113,7 +113,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthentication(); 
 app.UseAuthorization();
-app.UseExceptionHandler("/Error");
+app.UseExceptionHandler("/Error"); //eslinde bke eolmali deil bizde 
 
 app.UseCors("AllowCors");
 

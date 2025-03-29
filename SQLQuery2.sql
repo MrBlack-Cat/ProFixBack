@@ -1,15 +1,7 @@
-﻿INSERT INTO UserRole (Name) VALUES ('Admin');
-INSERT INTO UserRole (Name) VALUES ('Client');
-INSERT INTO UserRole (Name) VALUES ('ServiceProvider');
-
-INSERT INTO GenderType (Name) VALUES ('Male');
-INSERT INTO GenderType (Name) VALUES ('Female');
-INSERT INTO GenderType (Name) VALUES ('Other');
-
-INSERT INTO SupportTicketStatus (Name) VALUES ('Open');
-INSERT INTO SupportTicketStatus (Name) VALUES ('In Progress');
-INSERT INTO SupportTicketStatus (Name) VALUES ('Closed');
-
-INSERT INTO ServiceBookingStatus (Name) VALUES ('Pending');
-INSERT INTO ServiceBookingStatus (Name) VALUES ('Confirmed');
-INSERT INTO ServiceBookingStatus (Name) VALUES ('Completed');
+﻿CREATE TABLE RefreshTokens (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Token NVARCHAR(4000) NOT NULL,
+    UserId INT NOT NULL,
+    ExpiryDate DATETIME NOT NULL,
+    CONSTRAINT FK_RefreshTokens_Users FOREIGN KEY (UserId) REFERENCES Users(Id)
+);

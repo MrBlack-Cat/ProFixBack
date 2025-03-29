@@ -22,26 +22,26 @@ namespace Dal.SqlServer.Infrastructure
 
         public async Task<IEnumerable<PortfolioItem>> GetAllAsync()
         {
-            var sql = "SELECT * FROM PortfolioItems WHERE IsDeleted = 0";
+            var sql = "SELECT * FROM PortfolioItem WHERE IsDeleted = 0";
             return await _dbConnection.QueryAsync<PortfolioItem>(sql);
         }
 
         public async Task<PortfolioItem?> GetByIdAsync(int id)
         {
-            var sql = "SELECT * FROM PortfolioItems WHERE Id = @Id AND IsDeleted = 0";
+            var sql = "SELECT * FROM PortfolioItem WHERE Id = @Id AND IsDeleted = 0";
             return await _dbConnection.QueryFirstOrDefaultAsync<PortfolioItem>(sql, new { Id = id });
         }
 
         public async Task<IEnumerable<PortfolioItem>> GetByServiceProviderIdAsync(int serviceProviderProfileId)
         {
-            var sql = "SELECT * FROM PortfolioItems WHERE ServiceProviderProfileId = @ServiceProviderProfileId AND IsDeleted = 0";
+            var sql = "SELECT * FROM PortfolioItem WHERE ServiceProviderProfileId = @ServiceProviderProfileId AND IsDeleted = 0";
             return await _dbConnection.QueryAsync<PortfolioItem>(sql, new { ServiceProviderProfileId = serviceProviderProfileId });
         }
 
         public async Task AddAsync(PortfolioItem entity)
         {
             var sql = @"
-                INSERT INTO PortfolioItems (ServiceProviderProfileId, Title, Description, ImageUrl, CreatedAt, CreatedBy)
+                INSERT INTO PortfolioItem (ServiceProviderProfileId, Title, Description, ImageUrl, CreatedAt, CreatedBy)
                 VALUES (@ServiceProviderProfileId, @Title, @Description, @ImageUrl, @CreatedAt, @CreatedBy)";
             await _dbConnection.ExecuteAsync(sql, entity);
         }
@@ -49,7 +49,7 @@ namespace Dal.SqlServer.Infrastructure
         public async Task UpdateAsync(PortfolioItem entity)
         {
             var sql = @"
-                UPDATE PortfolioItems SET
+                UPDATE PortfolioItem SET
                     Title = @Title,
                     Description = @Description,
                     ImageUrl = @ImageUrl,
@@ -62,7 +62,7 @@ namespace Dal.SqlServer.Infrastructure
         public async Task DeleteAsync(PortfolioItem entity)
         {
             var sql = @"
-                UPDATE PortfolioItems SET
+                UPDATE PortfolioItem SET
                     IsDeleted = 1,
                     DeletedAt = @DeletedAt,
                     DeletedBy = @DeletedBy,

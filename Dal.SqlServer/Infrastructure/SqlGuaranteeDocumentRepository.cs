@@ -22,32 +22,32 @@ namespace Dal.SqlServer.Infrastructure
 
         public async Task<IEnumerable<GuaranteeDocument>> GetAllAsync()
         {
-            var sql = "SELECT * FROM GuaranteeDocuments WHERE IsDeleted = 0";
+            var sql = "SELECT * FROM GuaranteeDocument WHERE IsDeleted = 0";
             return await _dbConnection.QueryAsync<GuaranteeDocument>(sql);
         }
 
         public async Task<GuaranteeDocument?> GetByIdAsync(int id)
         {
-            var sql = "SELECT * FROM GuaranteeDocuments WHERE Id = @Id AND IsDeleted = 0";
+            var sql = "SELECT * FROM GuaranteeDocument WHERE Id = @Id AND IsDeleted = 0";
             return await _dbConnection.QueryFirstOrDefaultAsync<GuaranteeDocument>(sql, new { Id = id });
         }
 
         public async Task<IEnumerable<GuaranteeDocument>> GetByClientIdAsync(int clientProfileId)
         {
-            var sql = "SELECT * FROM GuaranteeDocuments WHERE ClientProfileId = @ClientProfileId AND IsDeleted = 0";
+            var sql = "SELECT * FROM GuaranteeDocument WHERE ClientProfileId = @ClientProfileId AND IsDeleted = 0";
             return await _dbConnection.QueryAsync<GuaranteeDocument>(sql, new { ClientProfileId = clientProfileId });
         }
 
         public async Task<IEnumerable<GuaranteeDocument>> GetByServiceProviderIdAsync(int serviceProviderProfileId)
         {
-            var sql = "SELECT * FROM GuaranteeDocuments WHERE ServiceProviderProfileId = @ServiceProviderProfileId AND IsDeleted = 0";
+            var sql = "SELECT * FROM GuaranteeDocument WHERE ServiceProviderProfileId = @ServiceProviderProfileId AND IsDeleted = 0";
             return await _dbConnection.QueryAsync<GuaranteeDocument>(sql, new { ServiceProviderProfileId = serviceProviderProfileId });
         }
 
         public async Task AddAsync(GuaranteeDocument entity)
         {
             var sql = @"
-                INSERT INTO GuaranteeDocuments (ServiceProviderProfileId, ClientProfileId, Title, Description, FileUrl, CreatedAt, CreatedBy)
+                INSERT INTO GuaranteeDocument (ServiceProviderProfileId, ClientProfileId, Title, Description, FileUrl, CreatedAt, CreatedBy)
                 VALUES (@ServiceProviderProfileId, @ClientProfileId, @Title, @Description, @FileUrl, @CreatedAt, @CreatedBy)";
             await _dbConnection.ExecuteAsync(sql, entity);
         }
@@ -55,7 +55,7 @@ namespace Dal.SqlServer.Infrastructure
         public async Task UpdateAsync(GuaranteeDocument entity)
         {
             var sql = @"
-                UPDATE GuaranteeDocuments SET
+                UPDATE GuaranteeDocument SET
                     Title = @Title,
                     Description = @Description,
                     FileUrl = @FileUrl,
@@ -68,7 +68,7 @@ namespace Dal.SqlServer.Infrastructure
         public async Task DeleteAsync(GuaranteeDocument entity)
         {
             var sql = @"
-                UPDATE GuaranteeDocuments SET
+                UPDATE GuaranteeDocument SET
                     IsDeleted = 1,
                     DeletedAt = @DeletedAt,
                     DeletedBy = @DeletedBy,

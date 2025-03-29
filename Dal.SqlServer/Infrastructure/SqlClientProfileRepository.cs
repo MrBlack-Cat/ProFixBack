@@ -22,20 +22,20 @@ public class SqlClientProfileRepository : IClientProfileRepository
 
     public async Task<IEnumerable<ClientProfile>> GetAllAsync()
     {
-        var sql = "SELECT * FROM ClientProfiles WHERE IsDeleted = 0";
+        var sql = "SELECT * FROM ClientProfile WHERE IsDeleted = 0";
         return await _dbConnection.QueryAsync<ClientProfile>(sql);
     }
 
     public async Task<ClientProfile?> GetByIdAsync(int id)
     {
-        var sql = "SELECT * FROM ClientProfiles WHERE Id = @Id AND IsDeleted = 0";
+        var sql = "SELECT * FROM ClientProfile WHERE Id = @Id AND IsDeleted = 0";
         return await _dbConnection.QueryFirstOrDefaultAsync<ClientProfile>(sql, new { Id = id });
     }
 
     public async Task AddAsync(ClientProfile entity)
     {
         var sql = @"
-                INSERT INTO ClientProfiles (UserId, FullName, City, AvatarUrl, About, OtherContactLinks, CreatedAt, CreatedBy)
+                INSERT INTO ClientProfile (UserId, FullName, City, AvatarUrl, About, OtherContactLinks, CreatedAt, CreatedBy)
                 VALUES (@UserId, @FullName, @City, @AvatarUrl, @About, @OtherContactLinks, @CreatedAt, @CreatedBy)";
         await _dbConnection.ExecuteAsync(sql, entity);
     }
@@ -43,7 +43,7 @@ public class SqlClientProfileRepository : IClientProfileRepository
     public async Task UpdateAsync(ClientProfile entity)
     {
         var sql = @"
-                UPDATE ClientProfiles SET
+                UPDATE ClientProfile SET
                     FullName = @FullName,
                     City = @City,
                     AvatarUrl = @AvatarUrl,
@@ -58,7 +58,7 @@ public class SqlClientProfileRepository : IClientProfileRepository
     public async Task DeleteAsync(ClientProfile entity)
     {
         var sql = @"
-                UPDATE ClientProfiles SET 
+                UPDATE ClientProfile SET 
                     IsDeleted = 1,
                     DeletedAt = @DeletedAt,
                     DeletedBy = @DeletedBy,

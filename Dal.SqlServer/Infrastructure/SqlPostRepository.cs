@@ -22,26 +22,26 @@ namespace Dal.SqlServer.Infrastructure
 
         public async Task<IEnumerable<Post>> GetAllAsync()
         {
-            var sql = "SELECT * FROM Posts WHERE IsDeleted = 0";
+            var sql = "SELECT * FROM Post WHERE IsDeleted = 0";
             return await _dbConnection.QueryAsync<Post>(sql);
         }
 
         public async Task<Post?> GetByIdAsync(int id)
         {
-            var sql = "SELECT * FROM Posts WHERE Id = @Id AND IsDeleted = 0";
+            var sql = "SELECT * FROM Post WHERE Id = @Id AND IsDeleted = 0";
             return await _dbConnection.QueryFirstOrDefaultAsync<Post>(sql, new { Id = id });
         }
 
         public async Task<IEnumerable<Post>> GetByServiceProviderIdAsync(int serviceProviderProfileId)
         {
-            var sql = "SELECT * FROM Posts WHERE ServiceProviderProfileId = @ServiceProviderProfileId AND IsDeleted = 0";
+            var sql = "SELECT * FROM Post WHERE ServiceProviderProfileId = @ServiceProviderProfileId AND IsDeleted = 0";
             return await _dbConnection.QueryAsync<Post>(sql, new { ServiceProviderProfileId = serviceProviderProfileId });
         }
 
         public async Task AddAsync(Post entity)
         {
             var sql = @"
-                INSERT INTO Posts (ServiceProviderProfileId, Title, Content, ImageUrl, CreatedAt, CreatedBy)
+                INSERT INTO Post (ServiceProviderProfileId, Title, Content, ImageUrl, CreatedAt, CreatedBy)
                 VALUES (@ServiceProviderProfileId, @Title, @Content, @ImageUrl, @CreatedAt, @CreatedBy)";
             await _dbConnection.ExecuteAsync(sql, entity);
         }
@@ -49,7 +49,7 @@ namespace Dal.SqlServer.Infrastructure
         public async Task UpdateAsync(Post entity)
         {
             var sql = @"
-                UPDATE Posts SET
+                UPDATE Post SET
                     Title = @Title,
                     Content = @Content,
                     ImageUrl = @ImageUrl,
@@ -62,7 +62,7 @@ namespace Dal.SqlServer.Infrastructure
         public async Task DeleteAsync(Post entity)
         {
             var sql = @"
-                UPDATE Posts SET
+                UPDATE Post SET
                     IsDeleted = 1,
                     DeletedAt = @DeletedAt,
                     DeletedBy = @DeletedBy,
