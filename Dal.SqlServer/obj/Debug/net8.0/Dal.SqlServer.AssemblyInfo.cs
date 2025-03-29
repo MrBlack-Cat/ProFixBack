@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Dal.SqlServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d7d1399e43f22ae4f81e5c3dab4f82689a9ed1d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d0b9db4b9252995674f67afc85dc0eb9aef2d7d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Dal.SqlServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Dal.SqlServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

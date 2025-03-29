@@ -88,7 +88,7 @@ builder.Services.AddScoped<IUserContext, UserContext>();
 builder.Services.AddApplicationServices();
 builder.Services.AddScoped<IUnitOfWork, SqlUnitOfWork>();
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ExceptionHandlingBehavior<,>));
-builder.Services.AddScoped<IActivityLoggerService, ActivityLoggerService>();
+builder.Services.AddScoped<IActivityLoggerService, Application.Common.Services.ActivityLoggerService>();
 
 
 #region Database
@@ -106,6 +106,7 @@ if (app.Environment.IsDevelopment())
     {
         options.SwaggerEndpoint("/swagger/v1/swagger.json", "ProFix API V1");
         options.RoutePrefix = "swagger";
+
     });
 }
 

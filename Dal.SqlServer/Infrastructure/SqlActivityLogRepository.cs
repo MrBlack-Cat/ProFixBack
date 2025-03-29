@@ -41,8 +41,9 @@ namespace Dal.SqlServer.Infrastructure
         public async Task AddAsync(ActivityLog entity)
         {
             var sql = @"
-                INSERT INTO ActivityLog (UserId, Action, EntityType, EntityId, Timestamp, CreatedAt, CreatedBy)
-                VALUES (@UserId, @Action, @EntityType, @EntityId, @Timestamp, @CreatedAt, @CreatedBy)";
+                INSERT INTO ActivityLog (UserId, Action, EntityType, EntityId, CreatedAt, CreatedBy)
+                VALUES (@UserId, @Action, @EntityType, @EntityId, @CreatedAt, @CreatedBy)";
+
             await _dbConnection.ExecuteAsync(sql, entity);
         }
 
@@ -78,9 +79,9 @@ namespace Dal.SqlServer.Infrastructure
             });
         }
 
-        
 
-        public async Task DeleteAsync(int id ,ClaimsPrincipal user)
+
+        public async Task DeleteAsync(int id, ClaimsPrincipal user)
         {
             var entity = await GetByIdAsync(id);
             if (entity == null) return;

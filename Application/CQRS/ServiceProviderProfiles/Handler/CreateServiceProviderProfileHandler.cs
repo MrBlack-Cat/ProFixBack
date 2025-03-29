@@ -49,7 +49,7 @@ public class CreateServiceProviderProfileHandler
                 entityType: "ServiceProviderProfile",  
                 entityId: serviceProviderProfile.Id,  
                 performedBy: serviceProviderProfile.UserId,  
-                description: $"Service provider profile created for {serviceProviderProfile.FullName} in {serviceProviderProfile.City}."  
+                description: $"Service provider profile created for {serviceProviderProfile.Name} in {serviceProviderProfile.City}."  
             );
             #endregion
 

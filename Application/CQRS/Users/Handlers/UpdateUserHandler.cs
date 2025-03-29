@@ -1,4 +1,5 @@
-﻿using Application.CQRS.Users.DTOs;
+﻿using Application.Common.Interfaces;
+using Application.CQRS.Users.DTOs;
 using AutoMapper;
 using Common.Exceptions;
 using Common.GlobalResponse;
@@ -24,17 +25,19 @@ public class UpdateUserHandler
     }
 
 
-    public sealed class Handler(IUnitOfWork unitOfWork, IMapper mapper) : IRequestHandler<UpdateCommand, ResponseModel<UpdateUserDto>>
+    public sealed class Handler(IUnitOfWork unitOfWork, IMapper mapper, ILoggerService logger, IActivityLoggerService activityLogger) : IRequestHandler<UpdateCommand, ResponseModel<UpdateUserDto>>
     {
         private readonly IUnitOfWork _unitOfWork = unitOfWork;
         private readonly IMapper _mapper = mapper;
+        private readonly ILoggerService _logger = logger;
+        private readonly IActivityLoggerService _activityLogger = activityLogger;
 
 
-        public async  Task<ResponseModel<UpdateUserDto>> Handle(UpdateCommand request, CancellationToken cancellationToken)
+        public async Task<ResponseModel<UpdateUserDto>> Handle(UpdateCommand request, CancellationToken cancellationToken)
         {
 
             var currentUser = await _unitOfWork.UserRepository.GetByIdAsync(request.Id);
-            if(currentUser == null) { throw new BadRequestException("User does not exist with provided Id"); }
+            if (currentUser == null) { throw new BadRequestException("User does not exist with provided Id"); }
 
             currentUser.UserName = request.UserName;
             currentUser.Email = request.Email;
@@ -43,7 +46,15 @@ public class UpdateUserHandler
             _unitOfWork.UserRepository.UpdateAsync(currentUser);
             await _unitOfWork.SaveChangesAsync();
 
-            var response  = _mapper.Map<UpdateUserDto>(currentUser);
+            await _activityLogger.LogAsync(
+                userId: currentUser.Id,
+                action: "Update",
+                entityType: "User",
+                entityId: currentUser.Id
+            );
+
+
+            var response = _mapper.Map<UpdateUserDto>(currentUser);
 
             return new ResponseModel<UpdateUserDto> { Data = response, Errors = [], IsSuccess = true };
 

@@ -7,7 +7,7 @@ namespace Repository.Common
     public interface IUnitOfWork
     {
         IUserRepository UserRepository { get; }
-        //yeni elave 
+
         public IRefreshTokenRepository RefreshTokenRepository { get; }
         public IPostRepository PostRepository { get; }
         public IServiceProviderProfileRepository ServiceProviderProfileRepository { get; }
@@ -16,6 +16,14 @@ namespace Repository.Common
         public ISubscriptionPlanRepository SubscriptionPlanRepository { get; }  
         public ISupportTicketRepository SupportTicketRepository { get; }
         public IActivityLogRepository ActivityLogRepository { get; }
+
+        public IClientProfileRepository ClientProfileRepository { get; }
+        public IGuaranteeDocumentRepository GuaranteeDocumentRepository { get; }
+        public ICertificateRepository CertificateRepository { get; }
+        public IMessageRepository MessageRepository { get; }
+        public INotificationRepository NotificationRepository { get; }
+        public IUserRoleRepository UserRoleRepository { get; }
+
 
 
         Task<int> SaveChangesAsync();
