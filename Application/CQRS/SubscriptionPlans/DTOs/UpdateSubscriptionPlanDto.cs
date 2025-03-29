@@ -8,5 +8,5 @@ public class UpdateSubscriptionPlanDto
     public int DurationInDays { get; set; }
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
-    public string? UpdatedBy { get; set; }
+    public int? UpdatedBy { get; set; }
 }

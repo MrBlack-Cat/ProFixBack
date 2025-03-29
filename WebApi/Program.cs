@@ -1,4 +1,5 @@
 using Application.Common.Interfaces;
+using Application.Common.Services;
 using Application.DependencyInjection;
 using Application.Mappings;
 using Application.Services;
@@ -16,6 +17,10 @@ using Repository.Common;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+#region JWTtoken
+
 
 var jwtSettings = builder.Configuration.GetSection("JWT");
 var secretKey = jwtSettings.GetValue<string>("Secret");
@@ -69,6 +74,7 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
+#endregion
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -82,10 +88,14 @@ builder.Services.AddScoped<IUserContext, UserContext>();
 builder.Services.AddApplicationServices();
 builder.Services.AddScoped<IUnitOfWork, SqlUnitOfWork>();
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ExceptionHandlingBehavior<,>));
+builder.Services.AddScoped<IActivityLoggerService, Application.Common.Services.ActivityLoggerService>();
 
+
+#region Database
 
 var conn = builder.Configuration.GetConnectionString("myconn");
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(conn));
+#endregion
 
 var app = builder.Build();
 
@@ -104,7 +114,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthentication(); 
 app.UseAuthorization();
-app.UseExceptionHandler("/Error");
+app.UseExceptionHandler("/Error"); //eslinde bke eolmali deil bizde 
 
 app.UseCors("AllowCors");
 

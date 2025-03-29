@@ -22,26 +22,26 @@ namespace Dal.SqlServer.Infrastructure
 
         public async Task<IEnumerable<Notification>> GetAllAsync()
         {
-            var sql = "SELECT * FROM Notifications WHERE IsDeleted = 0";
+            var sql = "SELECT * FROM Notification WHERE IsDeleted = 0";
             return await _dbConnection.QueryAsync<Notification>(sql);
         }
 
         public async Task<Notification?> GetByIdAsync(int id)
         {
-            var sql = "SELECT * FROM Notifications WHERE Id = @Id AND IsDeleted = 0";
+            var sql = "SELECT * FROM Notification WHERE Id = @Id AND IsDeleted = 0";
             return await _dbConnection.QueryFirstOrDefaultAsync<Notification>(sql, new { Id = id });
         }
 
         public async Task<IEnumerable<Notification>> GetByUserIdAsync(int userId)
         {
-            var sql = "SELECT * FROM Notifications WHERE UserId = @UserId AND IsDeleted = 0";
+            var sql = "SELECT * FROM Notification WHERE UserId = @UserId AND IsDeleted = 0";
             return await _dbConnection.QueryAsync<Notification>(sql, new { UserId = userId });
         }
 
         public async Task AddAsync(Notification entity)
         {
             var sql = @"
-                INSERT INTO Notifications (UserId, TypeId, Message, IsRead, CreatedAt, CreatedBy)
+                INSERT INTO Notification (UserId, TypeId, Message, IsRead, CreatedAt, CreatedBy)
                 VALUES (@UserId, @TypeId, @Message, @IsRead, @CreatedAt, @CreatedBy)";
             await _dbConnection.ExecuteAsync(sql, entity);
         }
@@ -49,7 +49,7 @@ namespace Dal.SqlServer.Infrastructure
         public async Task UpdateAsync(Notification entity)
         {
             var sql = @"
-                UPDATE Notifications SET
+                UPDATE Notification SET
                     TypeId = @TypeId,
                     Message = @Message,
                     IsRead = @IsRead,
@@ -62,7 +62,7 @@ namespace Dal.SqlServer.Infrastructure
         public async Task DeleteAsync(Notification entity)
         {
             var sql = @"
-                UPDATE Notifications SET
+                UPDATE Notification SET
                     IsDeleted = 1,
                     DeletedAt = @DeletedAt,
                     DeletedBy = @DeletedBy,

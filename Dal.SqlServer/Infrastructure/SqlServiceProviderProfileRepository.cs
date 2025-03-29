@@ -15,13 +15,13 @@ public class SqlServiceProviderProfileRepository : IServiceProviderProfileReposi
 
     public async Task<IEnumerable<ServiceProviderProfile>> GetAllAsync()
     {
-        var sql = "SELECT * FROM ServiceProviderProfiles WHERE IsDeleted = 0";
+        var sql = "SELECT * FROM ServiceProviderProfile WHERE IsDeleted = 0";
         return await _dbConnection.QueryAsync<ServiceProviderProfile>(sql);
     }
 
     public async Task<ServiceProviderProfile?> GetByIdAsync(int id)
     {
-        var sql = "SELECT * FROM ServiceProviderProfiles WHERE Id = @Id AND IsDeleted = 0";
+        var sql = "SELECT * FROM ServiceProviderProfile WHERE Id = @Id AND IsDeleted = 0";
         return await _dbConnection.QueryFirstOrDefaultAsync<ServiceProviderProfile>(sql, new { Id = id });
     }
 
@@ -55,7 +55,7 @@ public class SqlServiceProviderProfileRepository : IServiceProviderProfileReposi
     public async Task DeleteAsync(ServiceProviderProfile entity)
     {
         var sql = @"
-            UPDATE ServiceProviderProfiles SET 
+            UPDATE ServiceProviderProfile SET 
                 IsDeleted = 1,
                 DeletedAt = @DeletedAt,
                 DeletedBy = @DeletedBy,
@@ -87,19 +87,19 @@ public class SqlServiceProviderProfileRepository : IServiceProviderProfileReposi
 
     public async Task<IEnumerable<ServiceProviderProfile>> GetByCityAsync(string city)
     {
-        var sql = "SELECT * FROM ServiceProviderProfiles WHERE City = @City AND IsDeleted = 0";
+        var sql = "SELECT * FROM ServiceProviderProfile WHERE City = @City AND IsDeleted = 0";
         return await _dbConnection.QueryAsync<ServiceProviderProfile>(sql, new { City = city });
     }
 
     public async Task<IEnumerable<ServiceProviderProfile>> GetApprovedAsync()
     {
-        var sql = "SELECT * FROM ServiceProviderProfiles WHERE IsApprovedByAdmin = 1 AND IsDeleted = 0";
+        var sql = "SELECT * FROM ServiceProviderProfile WHERE IsApprovedByAdmin = 1 AND IsDeleted = 0";
         return await _dbConnection.QueryAsync<ServiceProviderProfile>(sql);
     }
 
     public async Task<ServiceProviderProfile?> GetByUserIdAsync(int userId)
     {
-        var sql = "SELECT * FROM ServiceProviderProfiles WHERE UserId = @UserId AND IsDeleted = 0";
+        var sql = "SELECT * FROM ServiceProviderProfile WHERE UserId = @UserId AND IsDeleted = 0";
         return await _dbConnection.QueryFirstOrDefaultAsync<ServiceProviderProfile>(sql, new { UserId = userId });
     }
 

@@ -42,7 +42,6 @@ public class SqlUnitOfWork : IUnitOfWork
 
 
 
-    public IUserRepository UserRepository => _userRepository ??= new SqlUserRepository(_dbConnection);
 
     public IClientProfileRepository ClientProfileRepository => _clientProfileRepository ??= new SqlClientProfileRepository(_dbConnection);
 
@@ -50,9 +49,23 @@ public class SqlUnitOfWork : IUnitOfWork
 
     public ICertificateRepository CertificateRepository =>_certificateRepository ??= new SqlCertificateRepository(_dbConnection);
 
+    //_____________________________________________________________________________________________________________________
+
     public IPostRepository PostRepository =>_postRepository ??= new SqlPostRepository(_dbConnection);
 
     public IReviewRepository ReviewRepository =>_reviewRepository ??= new SqlReviewRepository(_dbConnection);
+
+    public IServiceBookingRepository ServiceBookingRepository => new SqlServiceBookingRepository(_dbConnection);
+
+    public ISubscriptionPlanRepository SubscriptionPlanRepository => new SqlSubscriptionPlanRepository(_dbConnection);
+
+    public ISupportTicketRepository SupportTicketRepository => new SqlSupportTicketRepository(_dbConnection);
+
+    public IUserRepository UserRepository => _userRepository ??= new SqlUserRepository(_dbConnection);
+
+
+
+    //______________________________________________________________________________________________________________________
 
     public IRefreshTokenRepository RefreshTokenRepository => _refreshTokenRepository ??= new SqlRefreshTokenRepository(_context);
     public IUserRoleRepository UserRoleRepository => userRoleRepository ??= new SqlUserRoleRepository(_dbConnection);

@@ -15,6 +15,7 @@
     <PackageReference Include="Google.Cloud.Storage.V1" Version="4.11.0" />
     <PackageReference Include="MediatR" Version="11.1.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.3" />
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.5.0" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.5.0" />
     <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
@@ -79,18 +80,6 @@
     <Folder Include="CQRS\ServiceProviderProfiles\Queries\Handlers\" />
     <Folder Include="CQRS\ServiceProviderProfiles\Queries\Requests\" />
     <Folder Include="CQRS\ServiceProviderProfiles\Queries\Responses\" />
-    <Folder Include="CQRS\SubscriptionPlans\Commands\Handlers\" />
-    <Folder Include="CQRS\SubscriptionPlans\Commands\Requests\" />
-    <Folder Include="CQRS\SubscriptionPlans\Commands\Responses\" />
-    <Folder Include="CQRS\SubscriptionPlans\Queries\Handlers\" />
-    <Folder Include="CQRS\SubscriptionPlans\Queries\Requests\" />
-    <Folder Include="CQRS\SubscriptionPlans\Queries\Responses\" />
-    <Folder Include="CQRS\SupportTickets\Commands\Handlers\" />
-    <Folder Include="CQRS\SupportTickets\Commands\Requests\" />
-    <Folder Include="CQRS\SupportTickets\Commands\Responses\" />
-    <Folder Include="CQRS\SupportTickets\Queries\Handlers\" />
-    <Folder Include="CQRS\SupportTickets\Queries\Requests\" />
-    <Folder Include="CQRS\SupportTickets\Queries\Responses\" />
     <Folder Include="CQRS\Users\Commands\Handlers\" />
     <Folder Include="CQRS\Users\Commands\Requests\" />
     <Folder Include="CQRS\Users\Commands\Responses\" />

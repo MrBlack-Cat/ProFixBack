@@ -704,6 +704,274 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WebApi.Controllers.ReviewController",
+    "Method": "Delete",
+    "RelativePath": "api/Review/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "deletedByUserId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "reason",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.Reviews.DTOs.DeleteReviewDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ReviewController",
+    "Method": "Create",
+    "RelativePath": "api/Review/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.CQRS.Reviews.DTOs.CreateReviewDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.Reviews.DTOs.CreateReviewDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ReviewController",
+    "Method": "GetById",
+    "RelativePath": "api/Review/GetById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.Reviews.DTOs.GetReviewByIdDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ReviewController",
+    "Method": "GetAll",
+    "RelativePath": "api/Review/ListOfReviews",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[Application.CQRS.Reviews.DTOs.ReviewListDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ReviewController",
+    "Method": "Update",
+    "RelativePath": "api/Review/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.CQRS.Reviews.DTOs.UpdateReviewDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.Reviews.DTOs.UpdateReviewDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ServiceBookingController",
+    "Method": "Create",
+    "RelativePath": "api/ServiceBooking",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.CQRS.ServiceBookings.DTOs.CreateServiceBookingDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.ServiceBookings.DTOs.CreateServiceBookingDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ServiceBookingController",
+    "Method": "Delete",
+    "RelativePath": "api/ServiceBooking/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "deletedByUserId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "reason",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.ServiceBookings.DTOs.DeleteServiceBookingDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ServiceBookingController",
+    "Method": "GetById",
+    "RelativePath": "api/ServiceBooking/GetById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.ServiceBookings.DTOs.GetServiceBookingByIdDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ServiceBookingController",
+    "Method": "GetAll",
+    "RelativePath": "api/ServiceBooking/ListOfBookings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[Application.CQRS.ServiceBookings.DTOs.ServiceBookingListDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ServiceBookingController",
+    "Method": "Update",
+    "RelativePath": "api/ServiceBooking/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "serviceBookingDto",
+        "Type": "Application.CQRS.ServiceBookings.DTOs.UpdateServiceBookingDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.ServiceBookings.DTOs.UpdateServiceBookingDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "WebApi.Controllers.ServiceProviderProfileController",
     "Method": "Update",
     "RelativePath": "api/ServiceProviderProfile",
@@ -818,6 +1086,274 @@
     "ReturnTypes": [
       {
         "Type": "Common.GlobalResponse.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[Application.CQRS.ServiceProviderProfiles.DTOs.ServiceProviderProfileListDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SubscriptionPlanController",
+    "Method": "DeleteSubscriptionPlan",
+    "RelativePath": "api/SubscriptionPlan/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "deleteDto",
+        "Type": "Application.CQRS.SubscriptionPlans.DTOs.DeleteSubscriptionPlanDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.SubscriptionPlans.DTOs.DeleteSubscriptionPlanDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SubscriptionPlanController",
+    "Method": "CreateSubscriptionPlan",
+    "RelativePath": "api/SubscriptionPlan/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "subscriptionPlanDto",
+        "Type": "Application.CQRS.SubscriptionPlans.DTOs.CreateSubscriptionPlanDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.SubscriptionPlans.DTOs.CreateSubscriptionPlanDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SubscriptionPlanController",
+    "Method": "GetSubscriptionPlanById",
+    "RelativePath": "api/SubscriptionPlan/GetById{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.SubscriptionPlans.DTOs.GetSubscriptionPlanByIdDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SubscriptionPlanController",
+    "Method": "GetListSubscriptionPlan",
+    "RelativePath": "api/SubscriptionPlan/GetList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[Application.CQRS.SubscriptionPlans.DTOs.SubscriptionPlanListDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SubscriptionPlanController",
+    "Method": "UpdateSubscriptionPlan",
+    "RelativePath": "api/SubscriptionPlan/Update{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateDto",
+        "Type": "Application.CQRS.SubscriptionPlans.DTOs.UpdateSubscriptionPlanDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.SubscriptionPlans.DTOs.UpdateSubscriptionPlanDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SupportTicketController",
+    "Method": "DeleteSupportTicket",
+    "RelativePath": "api/SupportTicket/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "supportTicketDto",
+        "Type": "Application.CQRS.SupportTickets.DTOs.DeleteSupportTicketDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.SupportTickets.DTOs.DeleteSupportTicketDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SupportTicketController",
+    "Method": "CreateSupportTicket",
+    "RelativePath": "api/SupportTicket/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "supportTicketDto",
+        "Type": "Application.CQRS.SupportTickets.DTOs.CreateSupportTicketDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.SupportTickets.DTOs.CreateSupportTicketDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SupportTicketController",
+    "Method": "GetSupportTicketById",
+    "RelativePath": "api/SupportTicket/GetById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.SupportTickets.DTOs.GetSupportTicketByIdDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SupportTicketController",
+    "Method": "GetSupportTicketList",
+    "RelativePath": "api/SupportTicket/GetList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[Application.CQRS.SupportTickets.DTOs.SupportTicketListDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SupportTicketController",
+    "Method": "UpdateSupportTicket",
+    "RelativePath": "api/SupportTicket/Update{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "supportTicketDto",
+        "Type": "Application.CQRS.SupportTickets.DTOs.UpdateSupportTicketDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.SupportTickets.DTOs.UpdateSupportTicketDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

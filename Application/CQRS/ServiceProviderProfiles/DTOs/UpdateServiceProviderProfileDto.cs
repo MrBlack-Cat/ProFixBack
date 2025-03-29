@@ -12,5 +12,5 @@ public class UpdateServiceProviderProfileDto
     public string? Description { get; set; }
     public bool IsApprovedByAdmin { get; set; }
     public DateTime? ApprovalDate { get; set; }
-    public string? UpdatedBy { get; set; }
+    public int? UpdatedBy { get; set; }
 }

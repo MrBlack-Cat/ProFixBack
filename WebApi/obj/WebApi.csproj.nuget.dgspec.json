@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\WebApi.csproj": {}
+    "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Application.csproj": {
+    "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\obj\\",
+        "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Taleh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Taleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,20 +32,20 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Common.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj"
               },
-              "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Dal.SqlServer.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Dal.SqlServer.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Dal.SqlServer\\Dal.SqlServer.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Dal.SqlServer\\Dal.SqlServer.csproj"
               },
-              "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Domain.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\User\\source\\repos\\ProFix\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Infrastructure\\Infrastructure.csproj"
               },
-              "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repository.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Repository\\Repository.csproj"
               }
             }
           }
@@ -89,6 +89,10 @@
               "target": "Package",
               "version": "[11.1.0, )"
             },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
               "version": "[7.5.0, )"
@@ -122,20 +126,20 @@
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Common.csproj": {
+    "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Common.csproj",
+        "projectUniqueName": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\ProFix\\Common\\obj\\",
+        "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\Taleh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Taleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -196,20 +200,20 @@
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Dal.SqlServer.csproj": {
+    "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Dal.SqlServer\\Dal.SqlServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Dal.SqlServer.csproj",
+        "projectUniqueName": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Dal.SqlServer\\Dal.SqlServer.csproj",
         "projectName": "Dal.SqlServer",
-        "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Dal.SqlServer.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\obj\\",
+        "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Dal.SqlServer\\Dal.SqlServer.csproj",
+        "packagesPath": "C:\\Users\\Taleh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Dal.SqlServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Taleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -224,14 +228,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Common.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj"
               },
-              "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Domain.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repository.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Repository\\Repository.csproj"
               }
             }
           }
@@ -288,20 +292,20 @@
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Domain.csproj": {
+    "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Taleh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Taleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -352,20 +356,20 @@
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\ProFix\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ProFix\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\ProFix\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Taleh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Taleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -380,14 +384,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Common.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj"
               },
-              "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Domain.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repository.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Repository\\Repository.csproj"
               }
             }
           }
@@ -440,20 +444,20 @@
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repository.csproj": {
+    "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\obj\\",
+        "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\Taleh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Taleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -468,11 +472,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Common.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj"
               },
-              "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Domain.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Domain\\Domain.csproj"
               }
             }
           }
@@ -511,20 +515,20 @@
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\WebApi.csproj": {
+    "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\WebApi.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\obj\\",
+        "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\WebApi\\WebApi.csproj",
+        "packagesPath": "C:\\Users\\Taleh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Taleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -539,17 +543,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Application.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Application\\Application.csproj"
               },
-              "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Common\\Common.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Common\\Common.csproj"
               },
-              "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Dal.SqlServer.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Dal.SqlServer.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Dal.SqlServer\\Dal.SqlServer.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Dal.SqlServer\\Dal.SqlServer.csproj"
               },
-              "C:\\Users\\User\\source\\repos\\ProFix\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ProFix\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }

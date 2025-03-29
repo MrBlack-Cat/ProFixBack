@@ -23,13 +23,14 @@ public class PostController : ControllerBase
     public async Task<IActionResult> CreatePost([FromBody] CreatePostHandler.Command command)
     {
         var response = await _mediator.Send(command);
-    
-        if(response.IsSuccess)
-        {
-            return CreatedAtAction(nameof(GetPostByIdDto) , new { id = response.Data.ServiceProviderProfileId } ,  response.Data);
 
+        if (response.IsSuccess)
+        {
+            return CreatedAtAction(nameof(GetPostById), new { id = response.Data.Id }, response.Data);
         }
 
+
+        //brat mende bele de bir problem var ki exceptionlar custom deil e mende commondan gelir yenui ki ...
         return BadRequest(response.Errors);
     }
 

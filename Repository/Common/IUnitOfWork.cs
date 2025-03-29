@@ -8,16 +8,22 @@ namespace Repository.Common
     {
         IUserRepository UserRepository { get; }
 
-        IRefreshTokenRepository RefreshTokenRepository { get; }
-        IPostRepository PostRepository { get; }
-        IServiceProviderProfileRepository ServiceProviderProfileRepository { get; }
-        IClientProfileRepository ClientProfileRepository { get; }
-        IUserRoleRepository UserRoleRepository { get; }
-        IActivityLogRepository ActivityLogRepository { get; }
-        IGuaranteeDocumentRepository GuaranteeDocumentRepository { get; }
-        ICertificateRepository CertificateRepository { get; }
-        IMessageRepository MessageRepository { get; }
-        INotificationRepository NotificationRepository { get; }
+        public IRefreshTokenRepository RefreshTokenRepository { get; }
+        public IPostRepository PostRepository { get; }
+        public IServiceProviderProfileRepository ServiceProviderProfileRepository { get; }
+        public IReviewRepository ReviewRepository { get; }
+        public IServiceBookingRepository ServiceBookingRepository { get; }
+        public ISubscriptionPlanRepository SubscriptionPlanRepository { get; }  
+        public ISupportTicketRepository SupportTicketRepository { get; }
+        public IActivityLogRepository ActivityLogRepository { get; }
+
+        public IClientProfileRepository ClientProfileRepository { get; }
+        public IGuaranteeDocumentRepository GuaranteeDocumentRepository { get; }
+        public ICertificateRepository CertificateRepository { get; }
+        public IMessageRepository MessageRepository { get; }
+        public INotificationRepository NotificationRepository { get; }
+        public IUserRoleRepository UserRoleRepository { get; }
+
 
 
         Task<int> SaveChangesAsync();

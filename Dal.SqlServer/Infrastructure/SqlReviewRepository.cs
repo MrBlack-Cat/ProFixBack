@@ -22,32 +22,32 @@ namespace Dal.SqlServer.Infrastructure
 
         public async Task<IEnumerable<Review>> GetAllAsync()
         {
-            var sql = "SELECT * FROM Reviews WHERE IsDeleted = 0";
+            var sql = "SELECT * FROM Review WHERE IsDeleted = 0";
             return await _dbConnection.QueryAsync<Review>(sql);
         }
 
         public async Task<Review?> GetByIdAsync(int id)
         {
-            var sql = "SELECT * FROM Reviews WHERE Id = @Id AND IsDeleted = 0";
+            var sql = "SELECT * FROM Review WHERE Id = @Id AND IsDeleted = 0";
             return await _dbConnection.QueryFirstOrDefaultAsync<Review>(sql, new { Id = id });
         }
 
         public async Task<IEnumerable<Review>> GetByServiceProviderIdAsync(int serviceProviderProfileId)
         {
-            var sql = "SELECT * FROM Reviews WHERE ServiceProviderProfileId = @ServiceProviderProfileId AND IsDeleted = 0";
+            var sql = "SELECT * FROM Review WHERE ServiceProviderProfileId = @ServiceProviderProfileId AND IsDeleted = 0";
             return await _dbConnection.QueryAsync<Review>(sql, new { ServiceProviderProfileId = serviceProviderProfileId });
         }
 
         public async Task<IEnumerable<Review>> GetByClientIdAsync(int clientProfileId)
         {
-            var sql = "SELECT * FROM Reviews WHERE ClientProfileId = @ClientProfileId AND IsDeleted = 0";
+            var sql = "SELECT * FROM Review WHERE ClientProfileId = @ClientProfileId AND IsDeleted = 0";
             return await _dbConnection.QueryAsync<Review>(sql, new { ClientProfileId = clientProfileId });
         }
 
         public async Task AddAsync(Review entity)
         {
             var sql = @"
-                INSERT INTO Reviews (ClientProfileId, ServiceProviderProfileId, Rating, Comment, CreatedAt, CreatedBy)
+                INSERT INTO Review (ClientProfileId, ServiceProviderProfileId, Rating, Comment, CreatedAt, CreatedBy)
                 VALUES (@ClientProfileId, @ServiceProviderProfileId, @Rating, @Comment, @CreatedAt, @CreatedBy)";
             await _dbConnection.ExecuteAsync(sql, entity);
         }
@@ -55,7 +55,7 @@ namespace Dal.SqlServer.Infrastructure
         public async Task UpdateAsync(Review entity)
         {
             var sql = @"
-                UPDATE Reviews SET
+                UPDATE Review SET
                     Rating = @Rating,
                     Comment = @Comment,
                     UpdatedAt = @UpdatedAt,
@@ -67,7 +67,7 @@ namespace Dal.SqlServer.Infrastructure
         public async Task DeleteAsync(Review entity)
         {
             var sql = @"
-                UPDATE Reviews SET 
+                UPDATE Review SET 
                     IsDeleted = 1,
                     DeletedAt = @DeletedAt,
                     DeletedBy = @DeletedBy,

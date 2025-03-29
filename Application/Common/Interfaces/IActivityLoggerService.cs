@@ -1,5 +1,11 @@
-﻿namespace Application.Common.Interfaces
-{
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Application.Common.Interfaces;
+
     public interface IActivityLoggerService
     {
         // General
@@ -8,6 +14,7 @@
             string action,
             string entityType,
             int entityId,
+        List<int>? entityIds = null, // yeni elave eledim GetList zamani hamsini ekrana almaq ucun 
             int? performedBy = null,
             string? description = null);
 
@@ -24,4 +31,4 @@
             string entityType,
             string? description = null);
     }
-}
+
