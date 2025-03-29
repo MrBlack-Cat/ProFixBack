@@ -22,32 +22,32 @@ namespace Dal.SqlServer.Infrastructure
 
         public async Task<IEnumerable<ServiceBooking>> GetAllAsync()
         {
-            var sql = "SELECT * FROM ServiceBookings WHERE IsDeleted = 0";
+            var sql = "SELECT * FROM ServiceBooking WHERE IsDeleted = 0";
             return await _dbConnection.QueryAsync<ServiceBooking>(sql);
         }
 
         public async Task<ServiceBooking?> GetByIdAsync(int id)
         {
-            var sql = "SELECT * FROM ServiceBookings WHERE Id = @Id AND IsDeleted = 0";
+            var sql = "SELECT * FROM ServiceBooking WHERE Id = @Id AND IsDeleted = 0";
             return await _dbConnection.QueryFirstOrDefaultAsync<ServiceBooking>(sql, new { Id = id });
         }
 
         public async Task<IEnumerable<ServiceBooking>> GetByClientIdAsync(int clientProfileId)
         {
-            var sql = "SELECT * FROM ServiceBookings WHERE ClientProfileId = @ClientProfileId AND IsDeleted = 0";
+            var sql = "SELECT * FROM ServiceBooking WHERE ClientProfileId = @ClientProfileId AND IsDeleted = 0";
             return await _dbConnection.QueryAsync<ServiceBooking>(sql, new { ClientProfileId = clientProfileId });
         }
 
         public async Task<IEnumerable<ServiceBooking>> GetByServiceProviderIdAsync(int serviceProviderProfileId)
         {
-            var sql = "SELECT * FROM ServiceBookings WHERE ServiceProviderProfileId = @ServiceProviderProfileId AND IsDeleted = 0";
+            var sql = "SELECT * FROM ServiceBooking WHERE ServiceProviderProfileId = @ServiceProviderProfileId AND IsDeleted = 0";
             return await _dbConnection.QueryAsync<ServiceBooking>(sql, new { ServiceProviderProfileId = serviceProviderProfileId });
         }
 
         public async Task AddAsync(ServiceBooking entity)
         {
             var sql = @"
-                INSERT INTO ServiceBookings (ClientProfileId, ServiceProviderProfileId, Description, StatusId, ScheduledDate, CreatedAt, CreatedBy)
+                INSERT INTO ServiceBooking (ClientProfileId, ServiceProviderProfileId, Description, StatusId, ScheduledDate, CreatedAt, CreatedBy)
                 VALUES (@ClientProfileId, @ServiceProviderProfileId, @Description, @StatusId, @ScheduledDate, @CreatedAt, @CreatedBy)";
             await _dbConnection.ExecuteAsync(sql, entity);
         }
@@ -55,7 +55,7 @@ namespace Dal.SqlServer.Infrastructure
         public async Task UpdateAsync(ServiceBooking entity)
         {
             var sql = @"
-                UPDATE ServiceBookings SET
+                UPDATE ServiceBooking SET
                     Description = @Description,
                     StatusId = @StatusId,
                     ScheduledDate = @ScheduledDate,
@@ -68,7 +68,7 @@ namespace Dal.SqlServer.Infrastructure
         public async Task DeleteAsync(ServiceBooking entity)
         {
             var sql = @"
-                UPDATE ServiceBookings SET
+                UPDATE ServiceBooking SET
                     IsDeleted = 1,
                     DeletedAt = @DeletedAt,
                     DeletedBy = @DeletedBy,

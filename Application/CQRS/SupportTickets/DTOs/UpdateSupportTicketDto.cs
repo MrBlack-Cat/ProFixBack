@@ -6,5 +6,5 @@ public class UpdateSupportTicketDto
     public string Subject { get; set; } = null!;
     public string Message { get; set; } = null!;
     public int StatusId { get; set; }
-    public string? UpdatedBy { get; set; }
+    public int? UpdatedBy { get; set; }
 }

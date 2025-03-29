@@ -22,26 +22,26 @@ namespace Dal.SqlServer.Infrastructure
 
         public async Task<IEnumerable<Certificate>> GetAllAsync()
         {
-            var sql = "SELECT * FROM Certificates WHERE IsDeleted = 0";
+            var sql = "SELECT * FROM Certificate WHERE IsDeleted = 0";
             return await _dbConnection.QueryAsync<Certificate>(sql);
         }
 
         public async Task<Certificate?> GetByIdAsync(int id)
         {
-            var sql = "SELECT * FROM Certificates WHERE Id = @Id AND IsDeleted = 0";
+            var sql = "SELECT * FROM Certificate WHERE Id = @Id AND IsDeleted = 0";
             return await _dbConnection.QueryFirstOrDefaultAsync<Certificate>(sql, new { Id = id });
         }
 
         public async Task<IEnumerable<Certificate>> GetByServiceProviderIdAsync(int serviceProviderProfileId)
         {
-            var sql = "SELECT * FROM Certificates WHERE ServiceProviderProfileId = @ServiceProviderProfileId AND IsDeleted = 0";
+            var sql = "SELECT * FROM Certificate WHERE ServiceProviderProfileId = @ServiceProviderProfileId AND IsDeleted = 0";
             return await _dbConnection.QueryAsync<Certificate>(sql, new { ServiceProviderProfileId = serviceProviderProfileId });
         }
 
         public async Task AddAsync(Certificate entity)
         {
             var sql = @"
-                INSERT INTO Certificates (ServiceProviderProfileId, Title, Description, FileUrl, IssuedAt, CreatedAt, CreatedBy)
+                INSERT INTO Certificate (ServiceProviderProfileId, Title, Description, FileUrl, IssuedAt, CreatedAt, CreatedBy)
                 VALUES (@ServiceProviderProfileId, @Title, @Description, @FileUrl, @IssuedAt, @CreatedAt, @CreatedBy)";
             await _dbConnection.ExecuteAsync(sql, entity);
         }
@@ -49,7 +49,7 @@ namespace Dal.SqlServer.Infrastructure
         public async Task UpdateAsync(Certificate entity)
         {
             var sql = @"
-                UPDATE Certificates SET
+                UPDATE Certificate SET
                     Title = @Title,
                     Description = @Description,
                     FileUrl = @FileUrl,
@@ -63,7 +63,7 @@ namespace Dal.SqlServer.Infrastructure
         public async Task DeleteAsync(Certificate entity)
         {
             var sql = @"
-                UPDATE Certificates SET
+                UPDATE Certificate SET
                     IsDeleted = 1,
                     DeletedAt = @DeletedAt,
                     DeletedBy = @DeletedBy,

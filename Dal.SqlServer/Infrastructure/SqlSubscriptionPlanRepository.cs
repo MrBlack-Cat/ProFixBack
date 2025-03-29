@@ -22,26 +22,26 @@ namespace Dal.SqlServer.Infrastructure
 
         public async Task<IEnumerable<SubscriptionPlan>> GetAllAsync()
         {
-            var sql = "SELECT * FROM SubscriptionPlans WHERE IsDeleted = 0";
+            var sql = "SELECT * FROM SubscriptionPlan WHERE IsDeleted = 0";
             return await _dbConnection.QueryAsync<SubscriptionPlan>(sql);
         }
 
         public async Task<SubscriptionPlan?> GetByIdAsync(int id)
         {
-            var sql = "SELECT * FROM SubscriptionPlans WHERE Id = @Id AND IsDeleted = 0";
+            var sql = "SELECT * FROM SubscriptionPlan WHERE Id = @Id AND IsDeleted = 0";
             return await _dbConnection.QueryFirstOrDefaultAsync<SubscriptionPlan>(sql, new { Id = id });
         }
 
         public async Task<IEnumerable<SubscriptionPlan>> GetByServiceProviderIdAsync(int serviceProviderProfileId)
         {
-            var sql = "SELECT * FROM SubscriptionPlans WHERE ServiceProviderProfileId = @ServiceProviderProfileId AND IsDeleted = 0";
+            var sql = "SELECT * FROM SubscriptionPlan WHERE ServiceProviderProfileId = @ServiceProviderProfileId AND IsDeleted = 0";
             return await _dbConnection.QueryAsync<SubscriptionPlan>(sql, new { ServiceProviderProfileId = serviceProviderProfileId });
         }
 
         public async Task AddAsync(SubscriptionPlan entity)
         {
             var sql = @"
-                INSERT INTO SubscriptionPlans (ServiceProviderProfileId, PlanName, Price, DurationInDays, StartDate, EndDate, CreatedAt, CreatedBy)
+                INSERT INTO SubscriptionPlan (ServiceProviderProfileId, PlanName, Price, DurationInDays, StartDate, EndDate, CreatedAt, CreatedBy)
                 VALUES (@ServiceProviderProfileId, @PlanName, @Price, @DurationInDays, @StartDate, @EndDate, @CreatedAt, @CreatedBy)";
             await _dbConnection.ExecuteAsync(sql, entity);
         }
@@ -49,7 +49,7 @@ namespace Dal.SqlServer.Infrastructure
         public async Task UpdateAsync(SubscriptionPlan entity)
         {
             var sql = @"
-                UPDATE SubscriptionPlans SET
+                UPDATE SubscriptionPlan SET
                     PlanName = @PlanName,
                     Price = @Price,
                     DurationInDays = @DurationInDays,
@@ -64,7 +64,7 @@ namespace Dal.SqlServer.Infrastructure
         public async Task DeleteAsync(SubscriptionPlan entity)
         {
             var sql = @"
-                UPDATE SubscriptionPlans SET
+                UPDATE SubscriptionPlan SET
                     IsDeleted = 1,
                     DeletedAt = @DeletedAt,
                     DeletedBy = @DeletedBy,

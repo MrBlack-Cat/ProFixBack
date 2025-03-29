@@ -23,11 +23,12 @@ public class DeletePostHandler
     }
 
 
-    public sealed class Handler(IUnitOfWork unitWork, IUserContext userContext, IMapper mapper) : IRequestHandler<Command, ResponseModel<DeletePostDto>>
+    public sealed class Handler(IUnitOfWork unitWork, IUserContext userContext, IMapper mapper, IActivityLoggerService activityLogger) : IRequestHandler<Command, ResponseModel<DeletePostDto>>
     {
         private readonly IUnitOfWork _unitWork = unitWork;
         private readonly IUserContext _userContext = userContext;
         private readonly IMapper _mapper = mapper;
+        private readonly IActivityLoggerService _activityLogger = activityLogger;
 
 
 
@@ -53,6 +54,21 @@ public class DeletePostHandler
             await _unitWork.PostRepository.DeleteAsync(post);
             await _unitWork.SaveChangesAsync();
 
+            #region ActivityLog
+
+
+            await _activityLogger.LogAsync(
+
+                    userId: currentUserId.Value,
+                    action: "Delete",
+                    entityType: "Post",
+                    entityId: post.Id,
+                    performedBy: currentUserId.Value,
+                    description: $"Post with ID {post.Id} and Title '{post.Title}' was deleted by user {currentUserId.Value}. Reason: {request.DeletedReason}"
+            );
+
+            #endregion
+
             return new ResponseModel<DeletePostDto>
             {
                 Data = _mapper.Map<DeletePostDto>(post),
@@ -61,6 +77,6 @@ public class DeletePostHandler
         }
     }
 
-    
+
 }
 

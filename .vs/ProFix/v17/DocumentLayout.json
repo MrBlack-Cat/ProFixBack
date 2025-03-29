@@ -102,7 +102,7 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Document",
@@ -127,8 +127,7 @@
               "RelativeToolTip": "Application\\CQRS\\Certificates\\Commands\\Handlers\\UpdateCertificateCommandHandler.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAYwCQAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T22:19:02.503Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T22:19:02.503Z"
             },
             {
               "$type": "Document",
@@ -140,8 +139,7 @@
               "RelativeToolTip": "Repository\\Repositories\\IServiceProviderProfileRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T22:16:23.795Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T22:16:23.795Z"
             },
             {
               "$type": "Document",
@@ -153,8 +151,7 @@
               "RelativeToolTip": "Application\\CQRS\\Certificates\\Queries\\Handlers\\GetAllCertificatesQueryHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T22:18:58.884Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T22:18:58.884Z"
             },
             {
               "$type": "Document",
@@ -166,8 +163,7 @@
               "RelativeToolTip": "Application\\CQRS\\Certificates\\Commands\\Handlers\\CreateCertificateCommandHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T22:17:58.367Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T22:17:58.367Z"
             },
             {
               "$type": "Document",
@@ -179,8 +175,7 @@
               "RelativeToolTip": "Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAACaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T22:14:23.692Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T22:14:23.692Z"
             },
             {
               "$type": "Document",
@@ -192,8 +187,7 @@
               "RelativeToolTip": "Repository\\Common\\IUnitOfWork.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T13:57:36.114Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T13:57:36.114Z"
             },
             {
               "$type": "Document",
@@ -205,8 +199,7 @@
               "RelativeToolTip": "WebApi\\Controllers\\CertificateController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T22:14:48.024Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T22:14:48.024Z"
             },
             {
               "$type": "Document",
@@ -218,8 +211,7 @@
               "RelativeToolTip": "Application\\CQRS\\GuaranteeDocuments\\Commands\\Handlers\\CreateGuaranteeDocumentCommandHandler.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAAwCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T22:05:31.531Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T22:05:31.531Z"
             },
             {
               "$type": "Document",
@@ -231,8 +223,7 @@
               "RelativeToolTip": "WebApi\\Controllers\\GuaranteeDocumentController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T22:14:43.618Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T22:14:43.618Z"
             },
             {
               "$type": "Document",
@@ -244,8 +235,7 @@
               "RelativeToolTip": "WebApi\\Controllers\\FileUploadController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T22:14:38.927Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T22:14:38.927Z"
             },
             {
               "$type": "Document",
@@ -257,8 +247,7 @@
               "RelativeToolTip": "WebApi\\Controllers\\ActivityLogController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T22:14:27.804Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T22:14:27.804Z"
             },
             {
               "$type": "Document",
@@ -270,8 +259,7 @@
               "RelativeToolTip": "Application\\DependencyInjection\\ApplicationDependencyInjection.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T22:14:14.418Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T22:14:14.418Z"
             },
             {
               "$type": "Document",
@@ -283,8 +271,7 @@
               "RelativeToolTip": "WebApi\\Controllers\\ClientProfileController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T13:59:27.198Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T13:59:27.198Z"
             },
             {
               "$type": "Document",
@@ -296,8 +283,7 @@
               "RelativeToolTip": "Application\\CQRS\\GuaranteeDocuments\\Commands\\Handlers\\UpdateGuaranteeDocumentCommandHandler.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T22:12:20.495Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T22:12:20.495Z"
             },
             {
               "$type": "Document",
@@ -309,8 +295,7 @@
               "RelativeToolTip": "Application\\CQRS\\GuaranteeDocuments\\Commands\\Handlers\\DeleteGuaranteeDocumentCommandHandler.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T22:12:16.883Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T22:12:16.883Z"
             },
             {
               "$type": "Document",
@@ -322,8 +307,7 @@
               "RelativeToolTip": "Application\\Common\\Services\\AuthorizationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T22:07:19.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T22:07:19.664Z"
             },
             {
               "$type": "Document",
@@ -335,8 +319,7 @@
               "RelativeToolTip": "Application\\Common\\Interfaces\\IAuthorizationServiceClass1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T22:07:01.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T22:07:01.809Z"
             },
             {
               "$type": "Document",
@@ -373,6 +356,10 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T14:02:20.163Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

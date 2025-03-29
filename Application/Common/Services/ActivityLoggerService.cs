@@ -20,6 +20,7 @@ public class ActivityLoggerService : IActivityLoggerService
         string action,
         string entityType,
         int entityId,
+        List<int>? entityIds = null,
         int? performedBy = null,
         string? description = null)
     {
@@ -73,6 +74,8 @@ public class ActivityLoggerService : IActivityLoggerService
 
         await SaveAndLog(log, description);
     }
+
+  
 
     private async Task SaveAndLog(ActivityLog log, string? description)
     {

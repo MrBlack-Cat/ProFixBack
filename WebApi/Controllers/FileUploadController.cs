@@ -26,4 +26,27 @@ public class FileUploadController : ControllerBase
         ResponseModel<UploadFileResultDto> result = await _mediator.Send(command);
         return Ok(result);
     }
+
+
+    [HttpPost("upload-certificate-file")]
+    [Authorize]
+    [Consumes("multipart/form-data")]
+    public async Task<IActionResult> UploadCertificateFile([FromForm] UploadCertificateFileDto model)
+    {
+        var command = new UploadCertificateFileCommand(model.File);
+        var result = await _mediator.Send(command);
+        return Ok(result);
+    }
+
+    [HttpPost("upload-guarantee-file")]
+    [Authorize]
+    [Consumes("multipart/form-data")]
+    public async Task<IActionResult> UploadGuaranteeFile([FromForm] UploadGuaranteeFileDto model)
+    {
+        var command = new UploadGuaranteeFileCommand(model.File);
+        var result = await _mediator.Send(command);
+        return Ok(result);
+    }
+
+
 }
