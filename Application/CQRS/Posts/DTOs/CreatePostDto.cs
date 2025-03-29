@@ -7,4 +7,5 @@ public class CreatePostDto
     public string? Content { get; set; }
     public string? ImageUrl { get; set; }
     public string? CreatedBy { get; set; }
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow; //test ucun qoydum 
 }

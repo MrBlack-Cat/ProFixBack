@@ -876,6 +876,7 @@
           "Infrastructure": "1.0.0",
           "MediatR": "11.1.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.3",
           "Microsoft.IdentityModel.Tokens": "7.5.0",
           "Repository": "1.0.0",
           "System.IdentityModel.Tokens.Jwt": "7.5.0",

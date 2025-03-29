@@ -1,4 +1,5 @@
-﻿using Application.CQRS.ServiceProviderProfiles.DTOs;
+﻿using Application.Common.Interfaces;
+using Application.CQRS.ServiceProviderProfiles.DTOs;
 using AutoMapper;
 using Common.Exceptions;
 using Common.GlobalResponse;
@@ -21,10 +22,11 @@ public class CreateServiceProviderProfileHandler
 
 
 
-    public sealed class Handler(IUnitOfWork unitOfWork, IMapper mapper) : IRequestHandler<Command, ResponseModel<CreateServiceProviderProfileDto>>
+    public sealed class Handler(IUnitOfWork unitOfWork, IMapper mapper, IActivityLoggerService activityLogger) : IRequestHandler<Command, ResponseModel<CreateServiceProviderProfileDto>>
     {
         private readonly IUnitOfWork _unitOfWork = unitOfWork;
         private readonly IMapper _mapper = mapper;
+        private readonly IActivityLoggerService _activityLogger = activityLogger;
 
 
 
@@ -38,6 +40,21 @@ public class CreateServiceProviderProfileHandler
             //db ye elave 
             await _unitOfWork.ServiceProviderProfileRepository.AddAsync(serviceProviderProfile);
             await _unitOfWork.SaveChangesAsync();
+
+
+            #region ActivityLog
+            await _activityLogger.LogAsync(
+                userId: serviceProviderProfile.UserId,  
+                action: "Create",  
+                entityType: "ServiceProviderProfile",  
+                entityId: serviceProviderProfile.Id,  
+                performedBy: serviceProviderProfile.UserId,  
+                description: $"Service provider profile created for {serviceProviderProfile.FullName} in {serviceProviderProfile.City}."  
+            );
+            #endregion
+
+
+
 
             var responseDto = _mapper.Map<CreateServiceProviderProfileDto>(serviceProviderProfile);
 

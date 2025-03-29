@@ -6,11 +6,15 @@ using Common.GlobalResponse;
 using Domain.Entities;
 using MediatR;
 using Repository.Common;
+using Repository.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
+
+
 
 namespace Application.CQRS.Posts.Handlers;
 
@@ -26,12 +30,14 @@ public class CreatePostHandler
     }
 
 
-    public sealed class Handler(IUnitOfWork unitOfWork, IUserContext userContext, IMapper mapper) : IRequestHandler<Command, ResponseModel<CreatePostDto>>
+    public sealed class Handler(IUnitOfWork unitOfWork, IUserContext userContext, IMapper mapper, IActivityLoggerService activityLogger) : IRequestHandler<Command, ResponseModel<CreatePostDto>>
     {
 
         private readonly IUnitOfWork _unitOfWork = unitOfWork;
         private readonly IUserContext _userContext = userContext;
         private readonly IMapper _mapper = mapper;
+        private readonly IActivityLoggerService _activityLogger = activityLogger;
+
 
 
 
@@ -52,10 +58,30 @@ public class CreatePostHandler
 
             await _unitOfWork.PostRepository.AddAsync(newPost);
             await _unitOfWork.SaveChangesAsync();
-            
+
+
+            #region ActivityLog
+
+
+            await _activityLogger.LogAsync(
+
+
+            userId: currenUserId.Value,
+                    action: "Create",
+                    entityType: "Post",
+                    entityId: newPost.Id,
+                    performedBy: currenUserId.Value,
+                    description: $"Post with title '{newPost.Title}' was created by user {currenUserId.Value}."
+
+            );
+
+
+            #endregion
+
+
             //burada ise post u dto ya ceviririk
 
-            var responseDto = _mapper.Map<CreatePostDto>(newPost);  
+            var responseDto = _mapper.Map<CreatePostDto>(newPost);
 
             return new ResponseModel<CreatePostDto>
             {

@@ -1,14 +1,32 @@
-﻿--[05:22, 25.03.2025] Novruz (Step Academy): 
-ALTER TABLE Users ADD IsDeleted BIT DEFAULT 0;
+﻿
+IF OBJECT_ID('dbo.ActivityLog', 'U') IS NOT NULL
+BEGIN
+    DROP TABLE dbo.ActivityLog;
+END
 
---IsDeleted  əlavə etmək üçün
---[05:22, 25.03.2025] Novruz (Step Academy):
-CREATE TABLE RefreshTokens (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    Token NVARCHAR(4000) NOT NULL,
+
+CREATE TABLE dbo.ActivityLog (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
     UserId INT NOT NULL,
-    ExpiryDate DATETIME NOT NULL,
-    CONSTRAINT FK_RefreshTokens_Users FOREIGN KEY (UserId) REFERENCES Users(Id)
+    Action NVARCHAR(255) NOT NULL,
+    EntityType NVARCHAR(255) NOT NULL,
+    EntityId INT NOT NULL,
+
+    CreatedAt DATETIME NOT NULL DEFAULT GETUTCDATE(),
+    UpdatedAt DATETIME NULL,
+    DeletedAt DATETIME NULL,
+
+    CreatedBy INT NULL,
+    UpdatedBy INT NULL,
+    DeletedBy INT NULL,
+
+    DeletedReason NVARCHAR(2000) NULL,
+    IsDeleted BIT NOT NULL DEFAULT 0,
+
+    CONSTRAINT FK_ActivityLog_Users FOREIGN KEY (UserId) REFERENCES Users(Id)
 );
 
---RefreshToken Table üçün
+
+
+ALTER TABLE ClientProfile
+ALTER COLUMN AvatarUrl NVARCHAR(1000);

@@ -3401,6 +3401,7 @@
       "Infrastructure >= 1.0.0",
       "MediatR >= 11.1.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 11.1.0",
+      "Microsoft.Extensions.Logging.Abstractions >= 9.0.3",
       "Microsoft.IdentityModel.Tokens >= 7.5.0",
       "Repository >= 1.0.0",
       "System.IdentityModel.Tokens.Jwt >= 7.5.0",
@@ -3418,7 +3419,7 @@
       "projectName": "Application",
       "projectPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Application\\Application.csproj",
       "packagesPath": "C:\\Users\\Taleh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Taleh\\source\\repos\\ProFix\\Application\\obj\\",
+      "outputPath": "C:\\Users\\Taleh\\Source\\Repos\\ProFix\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3488,6 +3489,10 @@
           "MediatR.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[11.1.0, )"
+          },
+          "Microsoft.Extensions.Logging.Abstractions": {
+            "target": "Package",
+            "version": "[9.0.3, )"
           },
           "Microsoft.IdentityModel.Tokens": {
             "target": "Package",

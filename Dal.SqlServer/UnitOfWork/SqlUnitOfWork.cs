@@ -30,6 +30,7 @@ public class SqlUnitOfWork : IUnitOfWork
     private ICertificateRepository _certificateRepository;
     private IPostRepository _postRepository;
     private IReviewRepository _reviewRepository;
+    private IActivityLogRepository _activityLogRepository; //yeni elave
 
 
     //yeni elave 
@@ -37,7 +38,6 @@ public class SqlUnitOfWork : IUnitOfWork
 
 
 
-    public IUserRepository UserRepository => _userRepository ??= new SqlUserRepository(_dbConnection);
 
     public IClientProfileRepository ClientProfileRepository => _clientProfileRepository ??= new SqlClientProfileRepository(_dbConnection);
 
@@ -45,11 +45,25 @@ public class SqlUnitOfWork : IUnitOfWork
 
     public ICertificateRepository CertificateRepository =>_certificateRepository ??= new SqlCertificateRepository(_dbConnection);
 
+    //_____________________________________________________________________________________________________________________
+
     public IPostRepository PostRepository =>_postRepository ??= new SqlPostRepository(_dbConnection);
 
     public IReviewRepository ReviewRepository =>_reviewRepository ??= new SqlReviewRepository(_dbConnection);
 
-    public IRefreshTokenRepository RefreshTokenRepository => _refreshTokenRepository ??= new SqlRefreshTokenRepository(_context);
+    public IServiceBookingRepository ServiceBookingRepository => new SqlServiceBookingRepository(_dbConnection);
+
+    public ISubscriptionPlanRepository SubscriptionPlanRepository => new SqlSubscriptionPlanRepository(_dbConnection);
+
+    public ISupportTicketRepository SupportTicketRepository => new SqlSupportTicketRepository(_dbConnection);
+
+    public IUserRepository UserRepository => _userRepository ??= new SqlUserRepository(_dbConnection);
+
+    public IRefreshTokenRepository RefreshTokenRepository => _refreshTokenRepository ??= new SqlRefreshTokenRepository(_context); // baxarsan bura 
+
+    public IActivityLogRepository ActivityLogRepository => _activityLogRepository??= new SqlActivityLogRepository(_dbConnection);
+
+    //______________________________________________________________________________________________________________________
 
     public async Task<int> SaveChangesAsync()
     {
