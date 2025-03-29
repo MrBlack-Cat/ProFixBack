@@ -47,7 +47,7 @@ public class UpdateServiceProviderHandlerProfile
                 entityId: profile.Id,  
                 performedBy: request.Dto.UpdatedBy,  
                 description: $"Service provider profile with Id {profile.Id} updated. " +
-                             $"Full Name: {profile.FullName}, City: {profile.City}, " +
+                             $"Full Name: {profile.Name}, City: {profile.City}, " +
                              $"Age: {profile.Age}, Experience: {profile.ExperienceYears}, " +
                              $"Description: {profile.Description}. Updated by: {request.Dto.UpdatedBy}."
             );

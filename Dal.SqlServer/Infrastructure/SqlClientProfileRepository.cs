@@ -35,8 +35,8 @@ public class SqlClientProfileRepository : IClientProfileRepository
     public async Task AddAsync(ClientProfile entity)
     {
         var sql = @"
-                INSERT INTO ClientProfile (UserId, FullName, City, AvatarUrl, About, OtherContactLinks, CreatedAt, CreatedBy)
-                VALUES (@UserId, @FullName, @City, @AvatarUrl, @About, @OtherContactLinks, @CreatedAt, @CreatedBy)";
+                INSERT INTO ClientProfile (UserId, Name, Surname, City, AvatarUrl, About, OtherContactLinks, CreatedAt, CreatedBy)
+                VALUES (@UserId, @Name, @Surname, @City, @AvatarUrl, @About, @OtherContactLinks, @CreatedAt, @CreatedBy)";
         await _dbConnection.ExecuteAsync(sql, entity);
     }
 
@@ -44,7 +44,8 @@ public class SqlClientProfileRepository : IClientProfileRepository
     {
         var sql = @"
                 UPDATE ClientProfile SET
-                    FullName = @FullName,
+                    Name = @Name,
+                    Surname = @Surname,
                     City = @City,
                     AvatarUrl = @AvatarUrl,
                     About = @About,
@@ -88,4 +89,13 @@ public class SqlClientProfileRepository : IClientProfileRepository
 
         await DeleteAsync(profile);
     }
+
+
+    public async Task<ClientProfile?> GetByUserIdAsync(int userId)
+    {
+        var sql = "SELECT * FROM ClientProfile WHERE UserId = @UserId AND IsDeleted = 0";
+        return await _dbConnection.QueryFirstOrDefaultAsync<ClientProfile>(sql, new { UserId = userId });
+    }
+
+
 }

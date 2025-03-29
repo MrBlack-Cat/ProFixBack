@@ -5,9 +5,10 @@ using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using AutoMapper;
 using Infrastructure.Behaviors;
 using Infrastructure.Services;
+using Application.Mappings;
+using Common.Interfaces;
 
 namespace Application.DependencyInjection
 {
@@ -17,6 +18,8 @@ namespace Application.DependencyInjection
         {
             // Application core
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            services.AddAutoMapper(typeof(ActivityLogProfile).Assembly);
+            services.AddAutoMapper(typeof(MessageProfile).Assembly);
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
@@ -24,6 +27,12 @@ namespace Application.DependencyInjection
             services.AddScoped<IUserContext, UserContext>();
             services.AddScoped<IPasswordHasher, PasswordHasher>();
             services.AddScoped<ILoggerService, LoggerService>();
+            services.AddScoped<IAuthorizationService, AuthorizationService>();
+            services.AddScoped<IActivityLoggerService, ActivityLoggerService>();
+            services.AddScoped<ICloudStorageService, GoogleCloudStorageService>();
+
+
+
             //services.AddScoped<ITokenService, TokenService>();
 
             // Validation pipeline

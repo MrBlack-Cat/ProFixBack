@@ -10,7 +10,8 @@ namespace Domain.Entities;
 public class ClientProfile : BaseEntity
 {
     public int UserId { get; set; }
-    public string FullName { get; set; } = null!;
+    public string Name { get; set; } = null!;
+    public string Surname { get; set; } = null!;
     public string? City { get; set; }
     public string? AvatarUrl { get; set; }
     public string? About { get; set; }

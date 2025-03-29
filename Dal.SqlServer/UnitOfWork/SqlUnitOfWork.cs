@@ -30,7 +30,11 @@ public class SqlUnitOfWork : IUnitOfWork
     private ICertificateRepository _certificateRepository;
     private IPostRepository _postRepository;
     private IReviewRepository _reviewRepository;
-    private IActivityLogRepository _activityLogRepository; //yeni elave
+    private IUserRoleRepository userRoleRepository;
+    private IActivityLogRepository _activityLogRepository;
+    private IGuaranteeDocumentRepository _guaranteeDocumentRepository;
+    private IMessageRepository _messageRepository;
+    private INotificationRepository _notificationRepository;
 
 
     //yeni elave 
@@ -59,12 +63,16 @@ public class SqlUnitOfWork : IUnitOfWork
 
     public IUserRepository UserRepository => _userRepository ??= new SqlUserRepository(_dbConnection);
 
-    public IRefreshTokenRepository RefreshTokenRepository => _refreshTokenRepository ??= new SqlRefreshTokenRepository(_context); // baxarsan bura 
 
-    public IActivityLogRepository ActivityLogRepository => _activityLogRepository??= new SqlActivityLogRepository(_dbConnection);
 
     //______________________________________________________________________________________________________________________
 
+    public IRefreshTokenRepository RefreshTokenRepository => _refreshTokenRepository ??= new SqlRefreshTokenRepository(_context);
+    public IUserRoleRepository UserRoleRepository => userRoleRepository ??= new SqlUserRoleRepository(_dbConnection);
+    public IActivityLogRepository ActivityLogRepository => _activityLogRepository ??= new SqlActivityLogRepository(_dbConnection);
+    public IGuaranteeDocumentRepository GuaranteeDocumentRepository => _guaranteeDocumentRepository ??= new SqlGuaranteeDocumentRepository(_dbConnection);
+    public IMessageRepository MessageRepository => _messageRepository ??= new SqlMessageRepository(_dbConnection);
+    public INotificationRepository NotificationRepository => _notificationRepository ??= new SqlNotificationRepository(_dbConnection);
     public async Task<int> SaveChangesAsync()
     {
         return await _context.SaveChangesAsync();

@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <ProjectReference Include="..\Dal.SqlServer\Dal.SqlServer.csproj" />
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
     <ProjectReference Include="..\Repository\Repository.csproj" />
@@ -11,6 +12,7 @@
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="FluentValidation" Version="11.11.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
+    <PackageReference Include="Google.Cloud.Storage.V1" Version="4.11.0" />
     <PackageReference Include="MediatR" Version="11.1.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.3" />
@@ -32,35 +34,21 @@
     <Folder Include="CQRS\Certificates\Queries\Handlers\" />
     <Folder Include="CQRS\Certificates\Queries\Requests\" />
     <Folder Include="CQRS\Certificates\Queries\Responses\" />
-    <Folder Include="CQRS\ClientProfiles\Commands\Handlers\" />
     <Folder Include="CQRS\ClientProfiles\Commands\Requests\" />
     <Folder Include="CQRS\ClientProfiles\Commands\Responses\" />
     <Folder Include="CQRS\ClientProfiles\Queries\Handlers\" />
     <Folder Include="CQRS\ClientProfiles\Queries\Requests\" />
     <Folder Include="CQRS\ClientProfiles\Queries\Responses\" />
-    <Folder Include="CQRS\Complaintы\Commands\Handlers\" />
-    <Folder Include="CQRS\Complaintы\Commands\Requests\" />
-    <Folder Include="CQRS\Complaintы\Commands\Responses\" />
-    <Folder Include="CQRS\Complaintы\Queries\Handlers\" />
-    <Folder Include="CQRS\Complaintы\Queries\Requests\" />
-    <Folder Include="CQRS\Complaintы\Queries\Responses\" />
+    <Folder Include="CQRS\FileUploads\Queries\" />
     <Folder Include="CQRS\GuaranteeDocuments\Commands\Handlers\" />
     <Folder Include="CQRS\GuaranteeDocuments\Commands\Requests\" />
     <Folder Include="CQRS\GuaranteeDocuments\Commands\Responses\" />
     <Folder Include="CQRS\GuaranteeDocuments\Queries\Handlers\" />
     <Folder Include="CQRS\GuaranteeDocuments\Queries\Requests\" />
     <Folder Include="CQRS\GuaranteeDocuments\Queries\Responses\" />
-    <Folder Include="CQRS\Messages\Commands\Handlers\" />
-    <Folder Include="CQRS\Messages\Commands\Requests\" />
     <Folder Include="CQRS\Messages\Commands\Responses\" />
-    <Folder Include="CQRS\Messages\Queries\Handlers\" />
-    <Folder Include="CQRS\Messages\Queries\Requests\" />
     <Folder Include="CQRS\Messages\Queries\Responses\" />
-    <Folder Include="CQRS\Notifications\Commands\Handlers\" />
-    <Folder Include="CQRS\Notifications\Commands\Requests\" />
     <Folder Include="CQRS\Notifications\Commands\Responses\" />
-    <Folder Include="CQRS\Notifications\Queries\Handlers\" />
-    <Folder Include="CQRS\Notifications\Queries\Requests\" />
     <Folder Include="CQRS\Notifications\Queries\Responses\" />
     <Folder Include="CQRS\PortfolioItems\Commands\Handlers\" />
     <Folder Include="CQRS\PortfolioItems\Commands\Requests\" />

@@ -35,7 +35,7 @@ public class RegisterUserHandler
                 UserName = request.UserName,
                 Email = request.Email.ToLower(),
                 PasswordHash = new PasswordHasher().HashPassword(request.Password),
-                RoleId = request.RoleId, // 👈 обязательно указываем роль!
+                RoleId = request.RoleId,
                 CreatedAt = DateTime.UtcNow
             };
 

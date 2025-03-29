@@ -12,5 +12,7 @@ public class ClientProfileProfile : Profile
         CreateMap<ClientProfile, UpdateClientProfileDto>().ReverseMap();
         CreateMap<ClientProfile, GetClientProfileByIdDto>().ReverseMap();
         CreateMap<ClientProfile, ClientProfileListDto>().ReverseMap();
+        CreateMap<ClientProfile, ClientProfileDto>().ReverseMap();
+
     }
 }
