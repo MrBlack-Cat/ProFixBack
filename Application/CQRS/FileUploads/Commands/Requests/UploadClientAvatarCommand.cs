@@ -5,5 +5,6 @@ using Microsoft.AspNetCore.Http;
 
 namespace Application.CQRS.FileUploads.Commands.Requests;
 
-public record UploadClientAvatarCommand(IFormFile File, int UserId)
+public record UploadClientAvatarCommand(IFormFile File)
     : IRequest<ResponseModel<UploadFileResultDto>>;
+

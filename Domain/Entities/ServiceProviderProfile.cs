@@ -18,9 +18,16 @@ public class ServiceProviderProfile : BaseEntity
     public int? GenderId { get; set; }
     public int? ExperienceYears { get; set; }
     public string? Description { get; set; }
-    public bool IsApprovedByAdmin { get; set; } = false;
+    public bool IsActive { get; set; } = false;
     public DateTime? ApprovalDate { get; set; }
-
+    public string? AvatarUrl { get; set; }
     public User? User { get; set; }
     public GenderType? Gender { get; set; }
+    public int? ParentCategoryId { get; set; }
+    public ParentCategory? ParentCategory { get; set; }  // optional
+
+    public List<string> ServiceTypes { get; set; } = new();
+    public string? GenderName { get; set; } // Dapper ilə SQL-dən oxumaq üçün
+    public string? ParentCategoryName { get; set; } // Dapper ilə SQL-dən oxumaq üçün
+
 }

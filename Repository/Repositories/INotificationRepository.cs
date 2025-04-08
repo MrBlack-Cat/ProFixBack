@@ -11,4 +11,6 @@ namespace Repository.Repositories;
 public interface INotificationRepository : IRepository<Notification>
 {
     Task<IEnumerable<Notification>> GetByUserIdAsync(int userId);
+    Task<List<Notification>> GetUnreadByUserIdAsync(int userId); 
+
 }

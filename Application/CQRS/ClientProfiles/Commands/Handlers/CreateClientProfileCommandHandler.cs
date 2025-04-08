@@ -16,43 +16,45 @@ public class CreateClientProfileCommandHandler : IRequestHandler<CreateClientPro
     private readonly IMapper _mapper;
     private readonly IActivityLoggerService _activityLogger;
 
-
-    public CreateClientProfileCommandHandler(IUnitOfWork unitOfWork, IMapper mapper, IActivityLoggerService activityLogger)
+    public CreateClientProfileCommandHandler(
+        IUnitOfWork unitOfWork,
+        IMapper mapper,
+        IActivityLoggerService activityLogger)
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper;
         _activityLogger = activityLogger;
-
-
     }
 
     public async Task<ResponseModel<CreateClientProfileDto>> Handle(CreateClientProfileCommand request, CancellationToken cancellationToken)
     {
-        var existing = await _unitOfWork.ClientProfileRepository.GetByUserIdAsync(request.Profile.UserId);
+        var existing = await _unitOfWork.ClientProfileRepository.GetByUserIdAsync(request.UserId);
         if (existing is not null)
             throw new ConflictException("Client profile already exists for this user.");
 
         var profile = new ClientProfile
         {
-            UserId = request.Profile.UserId,
+            UserId = request.UserId,
             Name = request.Profile.Name,
             Surname = request.Profile.Surname,
             City = request.Profile.City,
             AvatarUrl = request.Profile.AvatarUrl,
             About = request.Profile.About,
             OtherContactLinks = request.Profile.OtherContactLinks,
-            CreatedAt = DateTime.UtcNow
+            CreatedAt = DateTime.UtcNow,
+            CreatedBy = request.UserId
         };
 
         await _unitOfWork.ClientProfileRepository.AddAsync(profile);
         await _unitOfWork.SaveChangesAsync();
 
         await _activityLogger.LogAsync(
-        userId: request.Profile.UserId,
-        action: "Create",
-        entityType: "ClientProfile",
-        entityId: profile.Id);
-
+            userId: request.UserId,
+            action: "Create",
+            entityType: "ClientProfile",
+            entityId: profile.Id,
+            performedBy: request.UserId
+        );
 
         var result = _mapper.Map<CreateClientProfileDto>(profile);
         return new ResponseModel<CreateClientProfileDto> { Data = result, IsSuccess = true };

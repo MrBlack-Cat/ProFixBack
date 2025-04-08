@@ -1,0 +1,7 @@
+C:\Users\User\source\repos\ProFix\ProFix.Tests\bin\Debug\net8.0\CoverletSourceRootsMapping_ProFix.Tests
+C:\Users\User\source\repos\ProFix\ProFix.Tests\obj\Debug\net8.0\ProFix.Tests.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ProFix\ProFix.Tests\obj\Debug\net8.0\ProFix.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ProFix\ProFix.Tests\obj\Debug\net8.0\ProFix.Tests.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ProFix\ProFix.Tests\obj\Debug\net8.0\ProFix.Tests.AssemblyInfo.cs
+C:\Users\User\source\repos\ProFix\ProFix.Tests\obj\Debug\net8.0\ProFix.Tests.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ProFix\ProFix.Tests\obj\Debug\net8.0\ProFix.Tests.sourcelink.json

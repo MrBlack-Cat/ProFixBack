@@ -6,5 +6,4 @@ public class UpdateNotificationDto
     public int TypeId { get; set; }
     public string Message { get; set; } = null!;
     public bool IsRead { get; set; }
-    public string? UpdatedBy { get; set; }
 }

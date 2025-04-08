@@ -12,5 +12,6 @@ public class MessageProfile : Profile
         CreateMap<Message, UpdateMessageDto>().ReverseMap();
         CreateMap<Message, GetMessageByIdDto>().ReverseMap();
         CreateMap<Message, MessageListDto>().ReverseMap();
+
     }
 }

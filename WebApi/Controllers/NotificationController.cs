@@ -11,6 +11,7 @@ namespace WebApi.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class NotificationController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -23,7 +24,6 @@ public class NotificationController : ControllerBase
     }
 
     [HttpPost]
-    [Authorize]
     public async Task<IActionResult> Create([FromBody] CreateNotificationDto dto)
     {
         var userId = _userContext.MustGetUserId();
@@ -33,7 +33,6 @@ public class NotificationController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    [Authorize]
     public async Task<IActionResult> Update(int id, [FromBody] UpdateNotificationDto dto)
     {
         var userId = _userContext.MustGetUserId();
@@ -43,7 +42,6 @@ public class NotificationController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    [Authorize]
     public async Task<IActionResult> Delete(int id, [FromQuery] string reason)
     {
         if (string.IsNullOrWhiteSpace(reason))
@@ -56,7 +54,6 @@ public class NotificationController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    [Authorize]
     public async Task<IActionResult> GetById(int id)
     {
         var query = new GetNotificationByIdQuery(id);
@@ -65,7 +62,6 @@ public class NotificationController : ControllerBase
     }
 
     [HttpGet("user")]
-    [Authorize]
     public async Task<IActionResult> GetByUser()
     {
         var userId = _userContext.MustGetUserId();
@@ -82,4 +78,23 @@ public class NotificationController : ControllerBase
         var result = await _mediator.Send(query);
         return Ok(result);
     }
+
+    [HttpGet("unread")]
+    public async Task<IActionResult> GetUnread()
+    {
+        var userId = _userContext.MustGetUserId();
+        var query = new GetUnreadNotificationsQuery(userId);
+        var result = await _mediator.Send(query);
+        return Ok(result);
+    }
+
+    [HttpPut("{id}/mark-as-read")]
+    public async Task<IActionResult> MarkAsRead(int id)
+    {
+        var userId = _userContext.MustGetUserId();
+        var command = new MarkAsReadCommand(id, userId);
+        var result = await _mediator.Send(command);
+        return Ok(result);
+    }
 }
+

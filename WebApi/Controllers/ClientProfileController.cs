@@ -31,12 +31,12 @@ public class ClientProfileController : ControllerBase
     [Authorize]
     public async Task<IActionResult> Create([FromBody] CreateClientProfileDto dto)
     {
-        dto.UserId = _userContext.MustGetUserId();
-
-        var command = new CreateClientProfileCommand(dto);
+        var userId = _userContext.MustGetUserId();
+        var command = new CreateClientProfileCommand(dto, userId);
         var result = await _mediator.Send(command);
         return Ok(result);
     }
+
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(int id)
@@ -94,8 +94,11 @@ public class ClientProfileController : ControllerBase
     [Consumes("multipart/form-data")]
     public async Task<IActionResult> UploadAvatar([FromForm] UploadFileDto model)
     {
-        var command = new UploadClientAvatarCommand(model.File, model.UserId);
+        var command = new UploadClientAvatarCommand(model.File);
         var result = await _mediator.Send(command);
         return Ok(result);
     }
+
+
+
 }

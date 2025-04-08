@@ -1,0 +1,8 @@
+C:\Users\User\source\repos\ProFix\ProFix.IntegrationTests\bin\Debug\net8.0\CoverletSourceRootsMapping_ProFix.IntegrationTests
+C:\Users\User\source\repos\ProFix\ProFix.IntegrationTests\obj\Debug\net8.0\ProFix.IntegrationTests.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ProFix\ProFix.IntegrationTests\obj\Debug\net8.0\MvcTestingAppManifest.json
+C:\Users\User\source\repos\ProFix\ProFix.IntegrationTests\obj\Debug\net8.0\ProFix.IntegrationTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ProFix\ProFix.IntegrationTests\obj\Debug\net8.0\ProFix.IntegrationTests.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ProFix\ProFix.IntegrationTests\obj\Debug\net8.0\ProFix.IntegrationTests.AssemblyInfo.cs
+C:\Users\User\source\repos\ProFix\ProFix.IntegrationTests\obj\Debug\net8.0\ProFix.IntegrationTests.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ProFix\ProFix.IntegrationTests\obj\Debug\net8.0\ProFix.IntegrationTests.sourcelink.json

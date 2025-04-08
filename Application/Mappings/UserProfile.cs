@@ -10,11 +10,6 @@ public class UserProfile : Profile
 {
     public UserProfile()
     {
-        //CreateMap<User, RegisterUserDto>().ReverseMap();
-        //CreateMap<User, UpdateUserDto>().ReverseMap();
-        //CreateMap<User, GetUserByIdDto>().ReverseMap();
-        //CreateMap<User, UserListDto>().ReverseMap();
-        //CreateMap<User, GetAllUserDto>().ReverseMap();
 
 
         CreateMap<RegisterCommand, User>();
@@ -23,7 +18,9 @@ public class UserProfile : Profile
         CreateMap<User, UpdateUserDto>().ReverseMap();
 
         CreateMap<User, GetUserByIdDto>();
-        CreateMap<User, GetAllUserDto>();
-        CreateMap<User, UserListDto>();
+        CreateMap<User, GetAllUserDto>()
+            .ForMember(dest => dest.RoleName, opt => opt.MapFrom(src => src.Role != null ? src.Role.Name : null));
+        CreateMap<User, UserListDto>()
+            .ForMember(dest => dest.RoleName, opt => opt.MapFrom(src => src.Role != null ? src.Role.Name : null));
     }
 }

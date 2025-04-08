@@ -20,7 +20,7 @@ public class SqlUnitOfWork : IUnitOfWork
     {
         _context = context;
         _dbConnection = new SqlConnection(configuration.GetConnectionString("myconn"));
-        _dbConnection.Open(); 
+        //_dbConnection.Open(); 
     }
 
     // Repositories
@@ -30,15 +30,17 @@ public class SqlUnitOfWork : IUnitOfWork
     private ICertificateRepository _certificateRepository;
     private IPostRepository _postRepository;
     private IReviewRepository _reviewRepository;
-    private IUserRoleRepository userRoleRepository;
+    private IUserRoleRepository _userRoleRepository;
     private IActivityLogRepository _activityLogRepository;
     private IGuaranteeDocumentRepository _guaranteeDocumentRepository;
     private IMessageRepository _messageRepository;
     private INotificationRepository _notificationRepository;
+    private IPortfolioItemRepository _portfolioItemRepository;
+    private IRefreshTokenRepository _refreshTokenRepository;
+    private IServiceTypeRepository _serviceTypeRepository;
+    private IParentCategoryRepository _parentCategoryRepository;
+    private IServiceProviderServiceTypeRepository serviceProviderServiceTypeRepository;
 
-
-    //yeni elave 
-    public IRefreshTokenRepository _refreshTokenRepository;
 
 
 
@@ -62,17 +64,21 @@ public class SqlUnitOfWork : IUnitOfWork
     public ISupportTicketRepository SupportTicketRepository => new SqlSupportTicketRepository(_dbConnection);
 
     public IUserRepository UserRepository => _userRepository ??= new SqlUserRepository(_dbConnection);
+    public IPortfolioItemRepository PortfolioItemRepository => _portfolioItemRepository ??= new SqlPortfolioItemRepository(_dbConnection);
+    public IServiceTypeRepository ServiceTypeRepository => _serviceTypeRepository ??= new SqlServiceTypeRepository(_dbConnection);
 
 
 
     //______________________________________________________________________________________________________________________
 
     public IRefreshTokenRepository RefreshTokenRepository => _refreshTokenRepository ??= new SqlRefreshTokenRepository(_context);
-    public IUserRoleRepository UserRoleRepository => userRoleRepository ??= new SqlUserRoleRepository(_dbConnection);
+    public IUserRoleRepository UserRoleRepository => _userRoleRepository ??= new SqlUserRoleRepository(_dbConnection);
     public IActivityLogRepository ActivityLogRepository => _activityLogRepository ??= new SqlActivityLogRepository(_dbConnection);
     public IGuaranteeDocumentRepository GuaranteeDocumentRepository => _guaranteeDocumentRepository ??= new SqlGuaranteeDocumentRepository(_dbConnection);
     public IMessageRepository MessageRepository => _messageRepository ??= new SqlMessageRepository(_dbConnection);
     public INotificationRepository NotificationRepository => _notificationRepository ??= new SqlNotificationRepository(_dbConnection);
+    public IParentCategoryRepository ParentCategoryRepository => _parentCategoryRepository ??= new SqlParentCategoryRepository(_dbConnection);
+    public IServiceProviderServiceTypeRepository ServiceProviderServiceTypeRepository => serviceProviderServiceTypeRepository ??= new SqlServiceProviderServiceTypeRepository(_dbConnection);
     public async Task<int> SaveChangesAsync()
     {
         return await _context.SaveChangesAsync();

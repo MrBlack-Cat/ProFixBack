@@ -1,152 +1,198 @@
-﻿
-using Common.Exceptions;
+﻿using Common.Exceptions;
 using Common.GlobalResponse;
+using FluentValidation;
+using Microsoft.AspNetCore.Http;
 using System.Net;
 using System.Text.Json;
+using FluentValidationException = FluentValidation.ValidationException;
+using CommonValidationException = Common.Exceptions.ValidationException;
 
-namespace Api.Middleware
+namespace Api.Middleware;
+
+public class ExceptionHandlingMiddleware
 {
-    public class ExceptionHandlingMiddleware
+    private readonly RequestDelegate _next;
+
+    public ExceptionHandlingMiddleware(RequestDelegate next)
     {
-        private readonly RequestDelegate _next;
+        _next = next;
+    }
 
-        public ExceptionHandlingMiddleware(RequestDelegate next)
+    public async Task Invoke(HttpContext context)
+    {
+        try
         {
-            _next = next;
+            await _next(context);
+        }
+        catch (Exception ex)
+        {
+            if (context.Request.Path.StartsWithSegments("/Error"))
+                throw;
+
+            await HandleExceptionAsync(context, ex);
+        }
+    }
+
+    private static async Task HandleExceptionAsync(HttpContext context, Exception exception)
+    {
+        HttpStatusCode statusCode;
+        List<string> messages;
+
+        switch (exception)
+        {
+            case BadRequestException:
+                statusCode = HttpStatusCode.BadRequest;
+                messages = [exception.Message];
+                break;
+
+            case UnauthorizedException:
+            case UnauthorizedAccessException:
+                statusCode = HttpStatusCode.Unauthorized;
+                messages = [exception.Message];
+                break;
+
+
+            case NotFoundException:
+                statusCode = HttpStatusCode.NotFound;
+                messages = [exception.Message];
+                break;
+
+            case ConflictException:
+                statusCode = HttpStatusCode.Conflict;
+                messages = [exception.Message];
+                break;
+
+            case ForbiddenException:
+                statusCode = HttpStatusCode.Forbidden;
+                messages = [exception.Message];
+                break;
+
+            case InternalServerException:
+                statusCode = HttpStatusCode.InternalServerError;
+                messages = [exception.Message];
+                break;
+
+            case FluentValidationException validationEx:
+                await WriteFluentValidationErrorsAsync(context, validationEx);
+                return;
+
+            case CommonValidationException customValidationEx:
+                statusCode = HttpStatusCode.BadRequest;
+                messages = customValidationEx.Errors;
+                break;
+
+            default:
+                statusCode = HttpStatusCode.InternalServerError;
+                messages = ["An unexpected error occurred."];
+                break;
         }
 
-        public async Task Invoke(HttpContext context)
+        await WriteErrorAsync(context, statusCode, messages);
+    }
+
+    private static async Task WriteErrorAsync(HttpContext context, HttpStatusCode statusCode, List<string> messages)
+    {
+        context.Response.Clear();
+        context.Response.StatusCode = (int)statusCode;
+        context.Response.ContentType = "application/json";
+
+        var response = new ResponseModel(messages);
+
+        var options = new JsonSerializerOptions
         {
-            try
-            {
-                await _next(context);
-            }
-            catch (Exception error)
-            {
-                if (context.Request.Path.StartsWithSegments("/Error"))
-                {
-                    throw;
-                }
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            WriteIndented = false
+        };
 
-                var message = new List<string> { error.Message };
+        var json = JsonSerializer.Serialize(response, options);
+        await context.Response.WriteAsync(json);
+    }
 
-                switch (error)
-                {
+    private static async Task WriteFluentValidationErrorsAsync(HttpContext context, FluentValidationException ex)
+    {
+        context.Response.Clear();
+        context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+        context.Response.ContentType = "application/json";
 
-                    case BadRequestException:
-                        await WriteError(context, HttpStatusCode.BadRequest, message);
-                        break;
+        var errors = ex.Errors
+            .GroupBy(e => e.PropertyName)
+            .ToDictionary(
+                g => g.Key,
+                g => g.Select(e => e.ErrorMessage).Distinct().ToArray()
+            );
 
-                    case NotFoundException:
-                        await WriteError(context, HttpStatusCode.NotFound, message);
-                        break;
-
-                    case FluentValidation.ValidationException ex :
-                        await WriteValidationErrors(context, HttpStatusCode.BadRequest, ex);
-                        break;
-
-                    case ConflictException:
-                        await WriteError(context, HttpStatusCode.Conflict, message);
-                        break;
-
-                    case ForbiddenException:
-                        await WriteError(context, HttpStatusCode.Forbidden, message);
-                        break;
-
-                    case InternalServerException ise:
-                        await WriteError(context, HttpStatusCode.InternalServerError, message);
-                        break;
-
-                    default:
-                        await WriteError(context, HttpStatusCode.BadRequest, message);
-                        break;
-                }
-
-            }
-        }
-
-        private static async Task WriteError(HttpContext context, HttpStatusCode statusCode, List<string> messages)
+        var response = new
         {
-            context.Response.Clear();
-            context.Response.StatusCode = (int)statusCode;
-            context.Response.ContentType = "application/json";
+            isSuccess = false,
+            errors
+        };
 
-            var json = JsonSerializer.Serialize(new ResponseModel(messages));
-            await context.Response.WriteAsync(json);
-        }
-
-      
-
-        private static async Task WriteValidationErrors(HttpContext context, HttpStatusCode statusCode,FluentValidation. ValidationException ex)
+        var options = new JsonSerializerOptions
         {
-            context.Response.Clear();
-            context.Response.StatusCode = (int)statusCode;
-            context.Response.ContentType = "application/json";
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            WriteIndented = false
+        };
 
-            var validationErrors = ex.Errors.Select(e => new { field = e.PropertyName, message = e.ErrorMessage });
-            var json = JsonSerializer.Serialize(new { errors = validationErrors });
-
-            await context.Response.WriteAsync(json);
-        }
-
-
+        var json = JsonSerializer.Serialize(response, options);
+        await context.Response.WriteAsync(json);
     }
 }
 
-        //private static async Task HandleExceptionAsync(HttpContext context, Exception exception)
-        //{
-        //    //yeni elave 
-        //    if (context.Response.HasStarted)
-        //    {
-        //        Console.WriteLine("Response in fact has started , exception handling does't");
-        //        return;
-        //    }
+
+//private static async Task HandleExceptionAsync(HttpContext context, Exception exception)
+//{
+//    //yeni elave 
+//    if (context.Response.HasStarted)
+//    {
+//        Console.WriteLine("Response in fact has started , exception handling does't");
+//        return;
+//    }
 
 
-        //    context.Response.ContentType = "application/json";
-        //    var responseModel = new ResponseModel();
+//    context.Response.ContentType = "application/json";
+//    var responseModel = new ResponseModel();
 
-        //    switch (exception)
-        //    {
-        //        case NotFoundException nf:
-        //            context.Response.StatusCode = (int)HttpStatusCode.NotFound;
-        //            responseModel.Errors = new List<string> { nf.Message };
-        //            break;
+//    switch (exception)
+//    {
+//        case NotFoundException nf:
+//            context.Response.StatusCode = (int)HttpStatusCode.NotFound;
+//            responseModel.Errors = new List<string> { nf.Message };
+//            break;
 
-        //        case BadRequestException br:
-        //            context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
-        //            responseModel.Errors = br.Errors ?? new List<string> { br.Message };
-        //            break;
+//        case BadRequestException br:
+//            context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+//            responseModel.Errors = br.Errors ?? new List<string> { br.Message };
+//            break;
 
-        //        case FluentValidation.ValidationException ve:
-        //            context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
-        //            responseModel.Errors = ve.Errors.Select(e => $"{e.PropertyName}: {e.ErrorMessage}").ToList();
-        //            break;
+//        case FluentValidation.ValidationException ve:
+//            context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+//            responseModel.Errors = ve.Errors.Select(e => $"{e.PropertyName}: {e.ErrorMessage}").ToList();
+//            break;
 
-        //        case ConflictException cf:
-        //            context.Response.StatusCode = (int)HttpStatusCode.Conflict;
-        //            responseModel.Errors = new List<string> { cf.Message };
-        //            break;
+//        case ConflictException cf:
+//            context.Response.StatusCode = (int)HttpStatusCode.Conflict;
+//            responseModel.Errors = new List<string> { cf.Message };
+//            break;
 
-        //        case ForbiddenException ff:
-        //            context.Response.StatusCode = (int)HttpStatusCode.Forbidden;
-        //            responseModel.Errors = new List<string> { ff.Message };
-        //            break;
+//        case ForbiddenException ff:
+//            context.Response.StatusCode = (int)HttpStatusCode.Forbidden;
+//            responseModel.Errors = new List<string> { ff.Message };
+//            break;
 
-        //        case InternalServerException ise:
-        //            context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-        //            responseModel.Errors = new List<string> { ise.Message };
-        //            break;
+//        case InternalServerException ise:
+//            context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+//            responseModel.Errors = new List<string> { ise.Message };
+//            break;
 
-        //        default:
-        //            context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-        //            responseModel.Errors = new List<string> { "An unexpected error occurred." };
-        //            break;
-        //    }
+//        default:
+//            context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+//            responseModel.Errors = new List<string> { "An unexpected error occurred." };
+//            break;
+//    }
 
 
-        //    //deyishiklik eledim 
-        //    var json = JsonSerializer.Serialize(responseModel , new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
+//    //deyishiklik eledim 
+//    var json = JsonSerializer.Serialize(responseModel , new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
 
-        //    await context.Response.WriteAsync(json);
-        //}
+//    await context.Response.WriteAsync(json);
+//}

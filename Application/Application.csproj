@@ -15,6 +15,7 @@
     <PackageReference Include="Google.Cloud.Storage.V1" Version="4.11.0" />
     <PackageReference Include="MediatR" Version="11.1.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.2" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.3" />
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.5.0" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.5.0" />
@@ -50,17 +51,9 @@
     <Folder Include="CQRS\Messages\Queries\Responses\" />
     <Folder Include="CQRS\Notifications\Commands\Responses\" />
     <Folder Include="CQRS\Notifications\Queries\Responses\" />
-    <Folder Include="CQRS\PortfolioItems\Commands\Handlers\" />
-    <Folder Include="CQRS\PortfolioItems\Commands\Requests\" />
     <Folder Include="CQRS\PortfolioItems\Commands\Responses\" />
-    <Folder Include="CQRS\PortfolioItems\Queries\Handlers\" />
-    <Folder Include="CQRS\PortfolioItems\Queries\Requests\" />
     <Folder Include="CQRS\PortfolioItems\Queries\Responses\" />
-    <Folder Include="CQRS\Posts\Commands\Handlers\" />
-    <Folder Include="CQRS\Posts\Commands\Requests\" />
     <Folder Include="CQRS\Posts\Commands\Responses\" />
-    <Folder Include="CQRS\Posts\Queries\Handlers\" />
-    <Folder Include="CQRS\Posts\Queries\Requests\" />
     <Folder Include="CQRS\Posts\Queries\Responses\" />
     <Folder Include="CQRS\Reviews\Commands\Handlers\" />
     <Folder Include="CQRS\Reviews\Commands\Requests\" />
@@ -74,12 +67,6 @@
     <Folder Include="CQRS\ServiceBookings\Queries\Handlers\" />
     <Folder Include="CQRS\ServiceBookings\Queries\Requests\" />
     <Folder Include="CQRS\ServiceBookings\Queries\Responses\" />
-    <Folder Include="CQRS\ServiceProviderProfiles\Commands\Handlers\" />
-    <Folder Include="CQRS\ServiceProviderProfiles\Commands\Requests\" />
-    <Folder Include="CQRS\ServiceProviderProfiles\Commands\Responses\" />
-    <Folder Include="CQRS\ServiceProviderProfiles\Queries\Handlers\" />
-    <Folder Include="CQRS\ServiceProviderProfiles\Queries\Requests\" />
-    <Folder Include="CQRS\ServiceProviderProfiles\Queries\Responses\" />
     <Folder Include="CQRS\Users\Commands\Handlers\" />
     <Folder Include="CQRS\Users\Commands\Requests\" />
     <Folder Include="CQRS\Users\Commands\Responses\" />
@@ -88,7 +75,8 @@
     <Folder Include="CQRS\Users\Queries\Responses\" />
   </ItemGroup>
 
-  <PropertyGroup>
+
+	<PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>

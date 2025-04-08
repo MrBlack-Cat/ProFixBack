@@ -32,8 +32,6 @@ public class MessageController : ControllerBase
         return Ok(result);
     }
 
-
-
     [HttpGet("{id}")]
     [Authorize]
     public async Task<IActionResult> GetById(int id)
@@ -53,6 +51,26 @@ public class MessageController : ControllerBase
         var userId = _userContext.MustGetUserId();
         var command = new DeleteMessageCommand(id, userId, reason);
         var result = await _mediator.Send(command);
+        return Ok(result);
+    }
+
+    [HttpGet("user")]
+    [Authorize]
+    public async Task<IActionResult> GetAllByUser()
+    {
+        var userId = _userContext.MustGetUserId();
+        var query = new GetAllMessagesByUserIdQuery(userId);
+        var result = await _mediator.Send(query);
+        return Ok(result);
+    }
+
+    [HttpGet("between")]
+    [Authorize]
+    public async Task<IActionResult> GetAllBetweenUsers([FromQuery] int otherUserId)
+    {
+        var currentUserId = _userContext.MustGetUserId();
+        var query = new GetAllMessagesBetweenUsersQuery(currentUserId, otherUserId);
+        var result = await _mediator.Send(query);
         return Ok(result);
     }
 }

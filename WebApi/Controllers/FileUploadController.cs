@@ -21,11 +21,14 @@ public class FileUploadController : ControllerBase
     [HttpPost("upload-client-avatar")]
     [Authorize]
     [Consumes("multipart/form-data")]
-    public async Task<IActionResult> UploadClientAvatar([FromForm] UploadClientAvatarCommand command)
+    public async Task<IActionResult> UploadClientAvatar([FromForm] UploadFileDto model)
     {
-        ResponseModel<UploadFileResultDto> result = await _mediator.Send(command);
+        var command = new UploadClientAvatarCommand(model.File);
+        var result = await _mediator.Send(command);
         return Ok(result);
     }
+
+
 
 
     [HttpPost("upload-certificate-file")]

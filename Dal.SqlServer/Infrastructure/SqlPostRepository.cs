@@ -9,6 +9,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Dal.SqlServer.Infrastructure
 {
     public class SqlPostRepository : IPostRepository
@@ -66,7 +67,7 @@ namespace Dal.SqlServer.Infrastructure
                     IsDeleted = 1,
                     DeletedAt = @DeletedAt,
                     DeletedBy = @DeletedBy,
-                    DeleteReason = @DeleteReason
+                    DeletedReason = @DeletedReason
                 WHERE Id = @Id";
 
             await _dbConnection.ExecuteAsync(sql, new
@@ -92,5 +93,19 @@ namespace Dal.SqlServer.Infrastructure
 
             await DeleteAsync(entity);
         }
+
+        public async Task<IEnumerable<Post>> GetPostsByProviderIdAsync(int serviceProviderProfileId)
+        {
+            var query = @"
+                        SELECT Id, ServiceProviderProfileId, Title, Content, ImageUrl, CreatedBy, CreatedAt
+                        FROM Post
+                        WHERE ServiceProviderProfileId = @ServiceProviderProfileId AND IsDeleted = 0
+                        ORDER BY CreatedAt DESC;
+                    ";
+
+            var result = await _dbConnection.QueryAsync<Post>(query, new { ServiceProviderProfileId = serviceProviderProfileId });
+            return result;
+        }
+
     }
 }

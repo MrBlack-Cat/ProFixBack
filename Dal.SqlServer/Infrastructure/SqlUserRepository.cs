@@ -17,20 +17,53 @@ namespace DAL.SqlServer.Infrastructure
 
         public async Task<IEnumerable<User>> GetAllAsync()
         {
-            var sql = "SELECT * FROM User WHERE IsDeleted = 0";
-            return await _dbConnection.QueryAsync<User>(sql);
+            const string sql = @"
+        SELECT u.*, r.Id AS RoleId, r.Name AS RoleName
+        FROM Users u
+        LEFT JOIN UserRole r ON u.RoleId = r.Id
+        WHERE u.IsDeleted = 0";
+
+            var result = await _dbConnection.QueryAsync<User, UserRole, User>(
+                sql,
+                (user, role) =>
+                {
+                    user.Role = role;
+                    return user;
+                },
+                splitOn: "RoleId"
+            );
+
+            return result;
         }
+
 
         public async Task<User?> GetByIdAsync(int id)
         {
-            var sql = "SELECT * FROM User WHERE Id = @Id AND IsDeleted = 0";
-            return await _dbConnection.QueryFirstOrDefaultAsync<User>(sql, new { Id = id });
+            const string sql = @"
+        SELECT u.*, r.Id, r.Name
+        FROM Users u
+        LEFT JOIN UserRole r ON u.RoleId = r.Id
+        WHERE u.Id = @Id AND u.IsDeleted = 0";
+
+            var result = await _dbConnection.QueryAsync<User, UserRole, User>(
+                sql,
+                (user, role) =>
+                {
+                    user.Role = role;
+                    return user;
+                },
+                new { Id = id },
+                splitOn: "Id"
+            );
+
+            return result.FirstOrDefault();
         }
+
 
         public async Task AddAsync(User entity)
         {
             var sql = @"
-                INSERT INTO User (Email, PasswordHash, IsActive, CreatedAt)
+                INSERT INTO Users (Email, PasswordHash, IsActive, CreatedAt)
                 VALUES (@Email, @PasswordHash, @IsActive, @CreatedAt)";
             await _dbConnection.ExecuteAsync(sql, entity);
         }
@@ -38,7 +71,7 @@ namespace DAL.SqlServer.Infrastructure
         public async Task UpdateAsync(User entity)
         {
             var sql = @"
-                UPDATE User SET 
+                UPDATE Users SET 
                     Email = @Email,
                     PhoneNumber = @PhoneNumber,
                     PasswordHash = @PasswordHash,
@@ -56,7 +89,7 @@ namespace DAL.SqlServer.Infrastructure
         public async Task DeleteAsync(User entity)
         {
             var sql = @"
-                UPDATE User SET 
+                UPDATE Users SET 
                     IsDeleted = 1,
                     IsActive = 0,
                     DeletedAt = @DeletedAt,
@@ -93,7 +126,7 @@ namespace DAL.SqlServer.Infrastructure
         {
             const string sql = @"
             SELECT u.*, r.Id, r.Name
-            FROM User u
+            FROM Users u
             LEFT JOIN UserRole r ON u.RoleId = r.Id
             WHERE u.Email = @Email AND u.IsDeleted = 0
         ";
@@ -114,7 +147,7 @@ namespace DAL.SqlServer.Infrastructure
 
         public async Task<User?> GetByUserNameAsync(string username)
         {
-            var sql = "SELECT * FROM User WHERE UserName = @UserName AND IsDeleted = 0";
+            var sql = "SELECT * FROM Users WHERE UserName = @UserName AND IsDeleted = 0";
             return await _dbConnection.QueryFirstOrDefaultAsync<User>(sql, new { UserName = username });
 
             throw new NotImplementedException("UserName field not implemented in Users table");
@@ -124,7 +157,7 @@ namespace DAL.SqlServer.Infrastructure
         public async Task RegisterAsync(User user)
         {
             var sql = @"
-        INSERT INTO User (UserName, Email, PasswordHash, RoleId, CreatedAt)
+        INSERT INTO Users (UserName, Email, PasswordHash, RoleId, CreatedAt)
         VALUES (@UserName, @Email, @PasswordHash, @RoleId, @CreatedAt)";
 
             await _dbConnection.ExecuteAsync(sql, new

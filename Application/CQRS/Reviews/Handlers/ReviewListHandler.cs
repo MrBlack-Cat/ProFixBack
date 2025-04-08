@@ -1,6 +1,7 @@
 ﻿using Application.Common.Interfaces;
 using Application.CQRS.Reviews.DTOs;
 using AutoMapper;
+using Common.Exceptions;
 using Common.GlobalResponse;
 using MediatR;
 using Repository.Common;
@@ -38,7 +39,7 @@ public class ReviewListHandler
 
             var currentUserId = _userContext.GetCurrentUserId();
             if (!currentUserId.HasValue)
-                throw new UnauthorizedAccessException("User is not authenticated.");
+                throw new UnauthorizedException("User is not authenticated.");
 
             await _activityLogger.LogAsync(
                 userId: 0,

@@ -416,26 +416,18 @@
             "multipart/form-data": {
               "schema": {
                 "required": [
-                  "file",
-                  "userId"
+                  "file"
                 ],
                 "type": "object",
                 "properties": {
                   "file": {
                     "type": "string",
                     "format": "binary"
-                  },
-                  "userId": {
-                    "type": "integer",
-                    "format": "int32"
                   }
                 }
               },
               "encoding": {
                 "file": {
-                  "style": "form"
-                },
-                "userId": {
                   "style": "form"
                 }
               }
@@ -458,23 +450,19 @@
           "content": {
             "multipart/form-data": {
               "schema": {
+                "required": [
+                  "file"
+                ],
                 "type": "object",
                 "properties": {
-                  "File": {
+                  "file": {
                     "type": "string",
                     "format": "binary"
-                  },
-                  "UserId": {
-                    "type": "integer",
-                    "format": "int32"
                   }
                 }
               },
               "encoding": {
-                "File": {
-                  "style": "form"
-                },
-                "UserId": {
+                "file": {
                   "style": "form"
                 }
               }
@@ -820,6 +808,40 @@
         }
       }
     },
+    "/api/Message/user": {
+      "get": {
+        "tags": [
+          "Message"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Message/between": {
+      "get": {
+        "tags": [
+          "Message"
+        ],
+        "parameters": [
+          {
+            "name": "otherUserId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Notification": {
       "post": {
         "tags": [
@@ -964,6 +986,244 @@
         }
       }
     },
+    "/api/Notification/unread": {
+      "get": {
+        "tags": [
+          "Notification"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Notification/{id}/mark-as-read": {
+      "put": {
+        "tags": [
+          "Notification"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ParentCategory": {
+      "get": {
+        "tags": [
+          "ParentCategory"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ParentCategoryListDtoListResponseModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ParentCategoryListDtoListResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ParentCategoryListDtoListResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ParentCategory/{id}": {
+      "get": {
+        "tags": [
+          "ParentCategory"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ParentCategoryListDtoResponseModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ParentCategoryListDtoResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ParentCategoryListDtoResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PortfolioItem": {
+      "post": {
+        "tags": [
+          "PortfolioItem"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePortfolioItemDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePortfolioItemDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePortfolioItemDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PortfolioItem/{id}": {
+      "get": {
+        "tags": [
+          "PortfolioItem"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "PortfolioItem"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePortfolioItemDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePortfolioItemDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePortfolioItemDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "PortfolioItem"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "reason",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PortfolioItem/my": {
+      "get": {
+        "tags": [
+          "PortfolioItem"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Post/CreatePost": {
       "post": {
         "tags": [
@@ -1035,44 +1295,25 @@
         "tags": [
           "Post"
         ],
-        "parameters": [
-          {
-            "name": "PostDto.Id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "PostDto.Title",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "PostDto.Content",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "PostDto.ImageUrl",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "PostDto.UpdatedBy",
-            "in": "query",
-            "schema": {
-              "type": "string"
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePostCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePostCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePostCommand"
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -1080,7 +1321,7 @@
         }
       }
     },
-    "/api/Post/Delete/{id}": {
+    "/api/Post/{id}": {
       "delete": {
         "tags": [
           "Post"
@@ -1096,26 +1337,45 @@
             }
           },
           {
-            "name": "Id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "DeletedBy",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "DeletedReason",
+            "name": "Reason",
             "in": "query",
             "schema": {
               "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Post/provider": {
+      "get": {
+        "tags": [
+          "Post"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Post/GetPostsByProvider/{providerId}": {
+      "get": {
+        "tags": [
+          "Post"
+        ],
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],
@@ -1190,14 +1450,6 @@
             }
           },
           {
-            "name": "deletedByUserId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
             "name": "reason",
             "in": "query",
             "schema": {
@@ -1207,24 +1459,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/DeleteReviewDtoResponseModel"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DeleteReviewDtoResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DeleteReviewDtoResponseModel"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -1298,10 +1533,21 @@
         }
       }
     },
-    "/api/Review/Update": {
+    "/api/Review/Update/{id}": {
       "put": {
         "tags": [
           "Review"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "requestBody": {
           "content": {
@@ -1592,77 +1838,80 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/CreateServiceProviderProfileDtoResponseModel"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CreateServiceProviderProfileDtoResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CreateServiceProviderProfileDtoResponseModel"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
     },
-    "/api/ServiceProviderProfile/Delete": {
-      "delete": {
+    "/api/ServiceProviderProfile/{id}": {
+      "put": {
         "tags": [
           "ServiceProviderProfile"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DeleteServiceProviderProfileDto"
+                "$ref": "#/components/schemas/UpdateServiceProviderProfileDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/DeleteServiceProviderProfileDto"
+                "$ref": "#/components/schemas/UpdateServiceProviderProfileDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/DeleteServiceProviderProfileDto"
+                "$ref": "#/components/schemas/UpdateServiceProviderProfileDto"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/DeleteServiceProviderProfileDtoResponseModel"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DeleteServiceProviderProfileDtoResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DeleteServiceProviderProfileDtoResponseModel"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
-      }
-    },
-    "/api/ServiceProviderProfile/GetById/{id}": {
+      },
+      "delete": {
+        "tags": [
+          "ServiceProviderProfile"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "reason",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
       "get": {
         "tags": [
           "ServiceProviderProfile"
@@ -1680,24 +1929,19 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetServiceProviderProfileByIdDtoResponseModel"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetServiceProviderProfileByIdDtoResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetServiceProviderProfileByIdDtoResponseModel"
-                }
-              }
-            }
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ServiceProviderProfile/user": {
+      "get": {
+        "tags": [
+          "ServiceProviderProfile"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -1709,21 +1953,56 @@
         ],
         "responses": {
           "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ServiceProviderProfile/by-category/{categoryId}": {
+      "get": {
+        "tags": [
+          "ServiceProviderProfile"
+        ],
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ServiceType/parent-categories": {
+      "get": {
+        "tags": [
+          "ServiceType"
+        ],
+        "responses": {
+          "200": {
             "description": "OK",
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ServiceProviderProfileListDtoListResponseModel"
+                  "$ref": "#/components/schemas/ParentCategoryListDtoListResponseModel"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ServiceProviderProfileListDtoListResponseModel"
+                  "$ref": "#/components/schemas/ParentCategoryListDtoListResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ServiceProviderProfileListDtoListResponseModel"
+                  "$ref": "#/components/schemas/ParentCategoryListDtoListResponseModel"
                 }
               }
             }
@@ -1731,50 +2010,136 @@
         }
       }
     },
-    "/api/ServiceProviderProfile": {
-      "put": {
+    "/api/ServiceType": {
+      "get": {
         "tags": [
-          "ServiceProviderProfile"
+          "ServiceType"
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateServiceProviderProfileDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateServiceProviderProfileDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateServiceProviderProfileDto"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "OK",
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateServiceProviderProfileDtoResponseModel"
+                  "$ref": "#/components/schemas/ServiceTypeListDtoListResponseModel"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateServiceProviderProfileDtoResponseModel"
+                  "$ref": "#/components/schemas/ServiceTypeListDtoListResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateServiceProviderProfileDtoResponseModel"
+                  "$ref": "#/components/schemas/ServiceTypeListDtoListResponseModel"
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/ServiceType/by-category/{parentCategoryId}": {
+      "get": {
+        "tags": [
+          "ServiceType"
+        ],
+        "parameters": [
+          {
+            "name": "parentCategoryId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceTypeListDtoListResponseModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceTypeListDtoListResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceTypeListDtoListResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ServiceType/search": {
+      "get": {
+        "tags": [
+          "ServiceType"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ServiceType/by-category": {
+      "get": {
+        "tags": [
+          "ServiceType"
+        ],
+        "parameters": [
+          {
+            "name": "category",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ServiceType/{id}": {
+      "get": {
+        "tags": [
+          "ServiceType"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -2464,10 +2829,6 @@
       "CreateCertificateDto": {
         "type": "object",
         "properties": {
-          "serviceProviderProfileId": {
-            "type": "integer",
-            "format": "int32"
-          },
           "title": {
             "type": "string",
             "nullable": true
@@ -2484,10 +2845,6 @@
             "type": "string",
             "format": "date-time",
             "nullable": true
-          },
-          "createdBy": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2495,10 +2852,6 @@
       "CreateClientProfileDto": {
         "type": "object",
         "properties": {
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
           "surname": {
             "type": "string",
             "nullable": true
@@ -2522,10 +2875,6 @@
           "otherContactLinks": {
             "type": "string",
             "nullable": true
-          },
-          "createdBy": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2533,10 +2882,6 @@
       "CreateGuaranteeDocumentDto": {
         "type": "object",
         "properties": {
-          "serviceProviderProfileId": {
-            "type": "integer",
-            "format": "int32"
-          },
           "clientProfileId": {
             "type": "integer",
             "format": "int32"
@@ -2550,10 +2895,6 @@
             "nullable": true
           },
           "fileUrl": {
-            "type": "string",
-            "nullable": true
-          },
-          "createdBy": {
             "type": "string",
             "nullable": true
           }
@@ -2594,8 +2935,22 @@
           },
           "isRead": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreatePortfolioItemDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "nullable": true
           },
-          "createdBy": {
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageUrl": {
             "type": "string",
             "nullable": true
           }
@@ -2618,10 +2973,6 @@
             "format": "int32"
           },
           "comment": {
-            "type": "string",
-            "nullable": true
-          },
-          "createdBy": {
             "type": "string",
             "nullable": true
           }
@@ -2700,10 +3051,6 @@
       "CreateServiceProviderProfileDto": {
         "type": "object",
         "properties": {
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
           "name": {
             "type": "string",
             "nullable": true
@@ -2718,45 +3065,31 @@
           },
           "age": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "genderId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "experienceYears": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
-          "description": {
+          "avatarUrl": {
             "type": "string",
             "nullable": true
           },
-          "createdBy": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreateServiceProviderProfileDtoResponseModel": {
-        "type": "object",
-        "properties": {
-          "isSuccess": {
-            "type": "boolean"
+          "parentCategoryId": {
+            "type": "integer",
+            "format": "int32"
           },
-          "errors": {
+          "serviceTypeIds": {
             "type": "array",
             "items": {
-              "type": "string"
+              "type": "integer",
+              "format": "int32"
             },
             "nullable": true
-          },
-          "data": {
-            "$ref": "#/components/schemas/CreateServiceProviderProfileDto"
           }
         },
         "additionalProperties": false
@@ -2859,44 +3192,6 @@
         },
         "additionalProperties": false
       },
-      "DeleteReviewDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "deletedByUserId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "reason": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "DeleteReviewDtoResponseModel": {
-        "type": "object",
-        "properties": {
-          "isSuccess": {
-            "type": "boolean"
-          },
-          "errors": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
-          },
-          "data": {
-            "$ref": "#/components/schemas/DeleteReviewDto"
-          }
-        },
-        "additionalProperties": false
-      },
       "DeleteServiceBookingDto": {
         "type": "object",
         "properties": {
@@ -2931,44 +3226,6 @@
           },
           "data": {
             "$ref": "#/components/schemas/DeleteServiceBookingDto"
-          }
-        },
-        "additionalProperties": false
-      },
-      "DeleteServiceProviderProfileDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "deletedByUserId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "reason": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "DeleteServiceProviderProfileDtoResponseModel": {
-        "type": "object",
-        "properties": {
-          "isSuccess": {
-            "type": "boolean"
-          },
-          "errors": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
-          },
-          "data": {
-            "$ref": "#/components/schemas/DeleteServiceProviderProfileDto"
           }
         },
         "additionalProperties": false
@@ -3151,81 +3408,6 @@
         },
         "additionalProperties": false
       },
-      "GetServiceProviderProfileByIdDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "surname": {
-            "type": "string",
-            "nullable": true
-          },
-          "city": {
-            "type": "string",
-            "nullable": true
-          },
-          "age": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "genderName": {
-            "type": "string",
-            "nullable": true
-          },
-          "experienceYears": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "isApprovedByAdmin": {
-            "type": "boolean"
-          },
-          "approvalDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "additionalProperties": false
-      },
-      "GetServiceProviderProfileByIdDtoResponseModel": {
-        "type": "object",
-        "properties": {
-          "isSuccess": {
-            "type": "boolean"
-          },
-          "errors": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
-          },
-          "data": {
-            "$ref": "#/components/schemas/GetServiceProviderProfileByIdDto"
-          }
-        },
-        "additionalProperties": false
-      },
       "GetSubscriptionPlanByIdDto": {
         "type": "object",
         "properties": {
@@ -3342,6 +3524,62 @@
           "password": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ParentCategoryListDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ParentCategoryListDtoListResponseModel": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ParentCategoryListDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ParentCategoryListDtoResponseModel": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/ParentCategoryListDto"
           }
         },
         "additionalProperties": false
@@ -3463,7 +3701,7 @@
         },
         "additionalProperties": false
       },
-      "ServiceProviderProfileListDto": {
+      "ServiceTypeListDto": {
         "type": "object",
         "properties": {
           "id": {
@@ -3474,26 +3712,18 @@
             "type": "string",
             "nullable": true
           },
-          "surame": {
+          "description": {
             "type": "string",
             "nullable": true
           },
-          "city": {
-            "type": "string",
-            "nullable": true
-          },
-          "experienceYears": {
+          "parentCategoryId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "isApprovedByAdmin": {
-            "type": "boolean"
+            "format": "int32"
           }
         },
         "additionalProperties": false
       },
-      "ServiceProviderProfileListDtoListResponseModel": {
+      "ServiceTypeListDtoListResponseModel": {
         "type": "object",
         "properties": {
           "isSuccess": {
@@ -3509,7 +3739,7 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ServiceProviderProfileListDto"
+              "$ref": "#/components/schemas/ServiceTypeListDto"
             },
             "nullable": true
           }
@@ -3617,10 +3847,6 @@
       "UpdateCertificateDto": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "title": {
             "type": "string",
             "nullable": true
@@ -3636,10 +3862,6 @@
           "issuedAt": {
             "type": "string",
             "format": "date-time",
-            "nullable": true
-          },
-          "updatedBy": {
-            "type": "string",
             "nullable": true
           }
         },
@@ -3686,10 +3908,6 @@
       "UpdateGuaranteeDocumentDto": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "title": {
             "type": "string",
             "nullable": true
@@ -3699,10 +3917,6 @@
             "nullable": true
           },
           "fileUrl": {
-            "type": "string",
-            "nullable": true
-          },
-          "updatedBy": {
             "type": "string",
             "nullable": true
           }
@@ -3726,6 +3940,63 @@
           },
           "isRead": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdatePortfolioItemDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "updatedBy": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdatePostCommand": {
+        "type": "object",
+        "properties": {
+          "postDto": {
+            "$ref": "#/components/schemas/UpdatePostDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdatePostDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "content": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
           },
           "updatedBy": {
             "type": "string",
@@ -3737,19 +4008,11 @@
       "UpdateReviewDto": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "rating": {
             "type": "integer",
             "format": "int32"
           },
           "comment": {
-            "type": "string",
-            "nullable": true
-          },
-          "updatedBy": {
             "type": "string",
             "nullable": true
           }
@@ -3824,10 +4087,6 @@
       "UpdateServiceProviderProfileDto": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "name": {
             "type": "string",
             "nullable": true
@@ -3855,11 +4114,11 @@
             "format": "int32",
             "nullable": true
           },
-          "description": {
+          "avatarUrl": {
             "type": "string",
             "nullable": true
           },
-          "isApprovedByAdmin": {
+          "isActive": {
             "type": "boolean"
           },
           "approvalDate": {
@@ -3867,29 +4126,13 @@
             "format": "date-time",
             "nullable": true
           },
-          "updatedBy": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateServiceProviderProfileDtoResponseModel": {
-        "type": "object",
-        "properties": {
-          "isSuccess": {
-            "type": "boolean"
-          },
-          "errors": {
+          "serviceTypeIds": {
             "type": "array",
             "items": {
-              "type": "string"
+              "type": "integer",
+              "format": "int32"
             },
             "nullable": true
-          },
-          "data": {
-            "$ref": "#/components/schemas/UpdateServiceProviderProfileDto"
           }
         },
         "additionalProperties": false
@@ -3997,10 +4240,6 @@
       "UpdateUserDto": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "userName": {
             "type": "string",
             "nullable": true
@@ -4009,15 +4248,7 @@
             "type": "string",
             "nullable": true
           },
-          "userRoleId": {
-            "type": "integer",
-            "format": "int32"
-          },
           "phoneNumber": {
-            "type": "string",
-            "nullable": true
-          },
-          "updatedBy": {
             "type": "string",
             "nullable": true
           }

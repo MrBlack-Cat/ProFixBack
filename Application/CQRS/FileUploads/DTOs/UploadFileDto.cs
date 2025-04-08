@@ -10,7 +10,7 @@ public class UploadFileDto
     [FromForm(Name = "file")]
     public IFormFile File { get; set; }
 
-    [Required]
-    [FromForm(Name = "userId")]
-    public int UserId { get; set; }
+    //[Required]
+    //[FromForm(Name = "userId")]
+    //public int UserId { get; set; }
 }

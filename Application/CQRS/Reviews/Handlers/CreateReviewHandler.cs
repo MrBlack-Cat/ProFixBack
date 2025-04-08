@@ -16,11 +16,14 @@ namespace Application.CQRS.Reviews.Handlers;
 
 public class CreateReviewHandler
 {
-    public record struct CreateReviewCommand(CreateReviewDto Dto) : IRequest<ResponseModel<CreateReviewDto>>;
+    public record struct CreateReviewCommand(int CreatedByUserId, CreateReviewDto Dto)
+        : IRequest<ResponseModel<CreateReviewDto>>;
 
-
-    public sealed class Handler(IUnitOfWork unitOfWork, IMapper mapper , IActivityLoggerService activityLogger)
-    : IRequestHandler<CreateReviewCommand, ResponseModel<CreateReviewDto>>
+    public sealed class Handler(
+        IUnitOfWork unitOfWork,
+        IMapper mapper,
+        IActivityLoggerService activityLogger)
+        : IRequestHandler<CreateReviewCommand, ResponseModel<CreateReviewDto>>
     {
         private readonly IUnitOfWork _unitOfWork = unitOfWork;
         private readonly IMapper _mapper = mapper;
@@ -31,26 +34,23 @@ public class CreateReviewHandler
             if (request.Dto.Rating < 1 || request.Dto.Rating > 5)
                 throw new BadRequestException("Rating must be between 1 and 5.");
 
-            var newReview = _mapper.Map<Review>(request.Dto);
+            var userId = request.CreatedByUserId;
+            var dto = request.Dto;
+
+            var newReview = _mapper.Map<Review>(dto);
             newReview.CreatedAt = DateTime.UtcNow;
+            newReview.CreatedBy = userId;
 
             await _unitOfWork.ReviewRepository.AddAsync(newReview);
             await _unitOfWork.SaveChangesAsync();
 
-            #region ActivityLog
-
             await _activityLogger.LogAsync(
-                     userId: newReview.ClientProfileId,
-                     action: "Create",
-                     entityType: "Review",
-                     entityId: newReview.Id,
-                     performedBy: newReview.ClientProfileId,
-                     description: $"Review created for service provider {newReview.ServiceProviderProfileId} with rating {newReview.Rating}. Comment: '{newReview.Comment}'."
-                 );
-
-            #endregion
-
-
+                userId: newReview.ClientProfileId,
+                action: "Create",
+                entityType: "Review",
+                entityId: newReview.Id,
+                performedBy: userId,
+                description: $"Review created for service provider {newReview.ServiceProviderProfileId} with rating {newReview.Rating}. Comment: '{newReview.Comment}'.");
 
             var responseDto = _mapper.Map<CreateReviewDto>(newReview);
 
@@ -61,6 +61,5 @@ public class CreateReviewHandler
                 Errors = ["Review created successfully."]
             };
         }
-
     }
 }

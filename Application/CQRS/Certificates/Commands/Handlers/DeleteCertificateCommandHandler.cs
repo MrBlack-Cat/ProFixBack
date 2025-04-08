@@ -47,7 +47,7 @@ public class DeleteCertificateCommandHandler : IRequestHandler<DeleteCertificate
         entity.DeletedBy = request.DeletedByUserId;
         entity.DeletedReason = request.Reason;
 
-        await _unitOfWork.CertificateRepository.UpdateAsync(entity);
+        await _unitOfWork.CertificateRepository.DeleteAsync(entity);
         await _unitOfWork.SaveChangesAsync();
 
         await _activityLogger.LogAsync(

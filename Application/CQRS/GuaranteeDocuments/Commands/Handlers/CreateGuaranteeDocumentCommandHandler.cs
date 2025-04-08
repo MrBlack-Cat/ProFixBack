@@ -41,7 +41,7 @@ public class CreateGuaranteeDocumentCommandHandler : IRequestHandler<CreateGuara
 
         var profile = await _unitOfWork.ServiceProviderProfileRepository.GetByUserIdAsync(userId);
         if (profile is null)
-            throw new NotFoundException("ServiceProvider profile not found.");
+            throw new NotFoundException("'ServiceProvider 'profile not found.");
 
         var dto = request.Dto;
 

@@ -6,5 +6,4 @@ public class CreateNotificationDto
     public int TypeId { get; set; }
     public string Message { get; set; } = null!;
     public bool IsRead { get; set; } = false;
-    public string? CreatedBy { get; set; }
 }

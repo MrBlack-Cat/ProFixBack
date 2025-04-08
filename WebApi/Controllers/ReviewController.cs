@@ -1,4 +1,5 @@
-﻿using Application.CQRS.Reviews.DTOs;
+﻿using Application.Common.Interfaces;
+using Application.CQRS.Reviews.DTOs;
 using Common.GlobalResponse;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -16,6 +17,14 @@ namespace WebApi.Controllers
     public class ReviewController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly IUserContext _userContext;
+
+        public ReviewController(IMediator mediator, IUserContext userContext)
+        {
+            _mediator = mediator;
+            _userContext = userContext;
+        }
+
 
 
         [HttpPost("Create")]
@@ -28,35 +37,29 @@ namespace WebApi.Controllers
                     Errors = ["Invalid data."]
                 });
 
-            var command = new CreateReviewCommand(dto);
+            var userId = _userContext.MustGetUserId();
+            var command = new CreateReviewCommand(userId, dto);
             var result = await _mediator.Send(command);
 
-            if (!result.IsSuccess)
-                return BadRequest(result);
-
-            return Ok(result);
+            return result.IsSuccess ? Ok(result) : BadRequest(result);
         }
+
 
 
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<ResponseModel<DeleteReviewDto>>> Delete(int id, [FromQuery] int? deletedByUserId, [FromQuery] string? reason)
+        public async Task<IActionResult> Delete(int id, [FromQuery] string reason)
         {
-            if (id <= 0)
-                return BadRequest(new ResponseModel<DeleteReviewDto>
-                {
-                    IsSuccess = false,
-                    Errors =[ "Invalid ID."]
-                });
+            if (string.IsNullOrWhiteSpace(reason))
+                return BadRequest("Delete reason is required.");
 
-            var command = new DeleteReviewCommand(id, deletedByUserId, reason);
+            var userId = _userContext.MustGetUserId();
+            var command = new DeleteReviewCommand(id, userId, reason);
             var result = await _mediator.Send(command);
-
-            if (!result.IsSuccess)
-                return NotFound(result);
-
             return Ok(result);
         }
+
+
 
 
         [HttpGet("GetById/{id}")]
@@ -88,20 +91,22 @@ namespace WebApi.Controllers
         }
 
 
-        [HttpPut("Update")]
-        public async Task<ActionResult<ResponseModel<UpdateReviewDto>>> Update([FromBody] UpdateReviewDto dto)
+        [HttpPut("Update/{id}")]
+        public async Task<ActionResult<ResponseModel<UpdateReviewDto>>> Update(int id, [FromBody] UpdateReviewDto dto)
         {
-            if (dto.Id <= 0 || dto.Rating < 1 || dto.Rating > 5)
+            if (id <= 0 || dto.Rating < 1 || dto.Rating > 5)
                 return BadRequest(new ResponseModel<UpdateReviewDto>
                 {
                     IsSuccess = false,
-                    Errors =[ "Invalid data."]
+                    Errors = ["Invalid data."]
                 });
 
-            var command = new UpdateReviewCommand(dto);
+            var userId = _userContext.MustGetUserId();
+            var command = new UpdateReviewCommand(id, userId, dto); 
             var result = await _mediator.Send(command);
 
             return result.IsSuccess ? Ok(result) : NotFound(result);
         }
+
     }
 }

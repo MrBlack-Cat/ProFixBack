@@ -24,7 +24,7 @@ public class CertificateController : ControllerBase
 
 
     [HttpPost]
-    [Authorize]
+    [Authorize(Roles = "ServiceProvider,Admin")]
     public async Task<IActionResult> Create([FromBody] CreateCertificateDto dto)
     {
         var userId = _userContext.MustGetUserId();
@@ -35,7 +35,7 @@ public class CertificateController : ControllerBase
 
 
     [HttpPut("{id}")]
-    [Authorize]
+    [Authorize(Roles = "ServiceProvider,Admin")]
     public async Task<IActionResult> Update(int id, [FromBody] UpdateCertificateDto dto)
     {
         var userId = _userContext.MustGetUserId();
@@ -45,7 +45,7 @@ public class CertificateController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    [Authorize]
+    [Authorize(Roles = "ServiceProvider,Admin")]
     public async Task<IActionResult> Delete(int id, [FromQuery] string reason)
     {
         var userId = _userContext.MustGetUserId();

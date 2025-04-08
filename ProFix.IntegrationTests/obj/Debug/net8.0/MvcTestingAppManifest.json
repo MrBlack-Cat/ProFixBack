@@ -1,0 +1,9 @@
+{
+  "Application": "C:\\Users\\User\\source\\repos\\ProFix\\Application",
+  "Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\User\\source\\repos\\ProFix\\Common",
+  "Dal.SqlServer": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer",
+  "Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\User\\source\\repos\\ProFix\\Domain",
+  "Infrastructure": "C:\\Users\\User\\source\\repos\\ProFix\\Infrastructure",
+  "Repository": "C:\\Users\\User\\source\\repos\\ProFix\\Repository",
+  "WebApi": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi"
+}

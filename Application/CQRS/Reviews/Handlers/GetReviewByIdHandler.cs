@@ -36,7 +36,7 @@ public class GetReviewByIdHandler
 
             var currentUserId = _userContext.GetCurrentUserId();
             if (!currentUserId.HasValue)
-                throw new UnauthorizedAccessException("User is not authenticated.");
+                throw new UnauthorizedException("User is not authenticated.");
 
             await _activityLogger.LogAsync(
                 userId: currentUserId.Value,

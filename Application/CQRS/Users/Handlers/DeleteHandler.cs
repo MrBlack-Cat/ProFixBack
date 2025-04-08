@@ -29,7 +29,7 @@ public class DeleteHandler
         {
             var currentUserId = _userContext.GetCurrentUserId();
             if (!currentUserId.HasValue)
-                throw new UnauthorizedAccessException("User is not authenticated.");
+                throw new UnauthorizedException("User is not authenticated.");
 
             var userRole = _userContext.GetUserRole();
             if (userRole != "Admin")

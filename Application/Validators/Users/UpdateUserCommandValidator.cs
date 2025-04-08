@@ -1,24 +1,16 @@
-﻿//using Application.CQRS.Users.Commands.Requests;
-//using FluentValidation;
+﻿using Application.CQRS.Users.Handlers;
+using FluentValidation;
 
-//namespace Application.Validators.Users;
+namespace Application.Validators.Users;
 
-//public class UpdateUserCommandValidator : AbstractValidator<UpdateUserCommand>
-//{
-//    public UpdateUserCommandValidator()
-//    {
-//        RuleFor(x => x.Id)
-//            .GreaterThan(0).WithMessage("User ID must be provided");
+public class UpdateUserCommandValidator : AbstractValidator<UpdateUserHandler.UpdateCommand>
+{
+    public UpdateUserCommandValidator()
+    {
+        RuleFor(x => x.Id).GreaterThan(0);
+        RuleFor(x => x.Dto.UserName).NotEmpty().MaximumLength(100);
+        RuleFor(x => x.Dto.Email).NotEmpty().EmailAddress();
+        RuleFor(x => x.Dto.PhoneNumber).MaximumLength(20);
+    }
+}
 
-//        RuleFor(x => x.UserName)
-//            .NotEmpty().WithMessage("Username is required")
-//            .MinimumLength(3).WithMessage("Username must be at least 3 characters");
-
-//        RuleFor(x => x.Email)
-//            .NotEmpty().WithMessage("Email is required")
-//            .EmailAddress().WithMessage("Invalid email format");
-
-//        RuleFor(x => x.UserRoleId)
-//            .GreaterThan(0).WithMessage("UserRoleId must be specified");
-//    }
-//}

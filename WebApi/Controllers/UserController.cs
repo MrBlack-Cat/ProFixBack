@@ -23,12 +23,18 @@ public class UsersController : ControllerBase
     }
 
     [HttpPost("register")]
+    [AllowAnonymous]
     public async Task<IActionResult> Register([FromBody] RegisterUserDto dto)
     {
+        var user = _userContext.GetCurrentUser();
+        if (user?.Identity is { IsAuthenticated: true })
+            throw new ForbiddenException("You are already authenticated and cannot register again.");
+
         var command = new RegisterUserHandler.RegisterCommand(dto.UserName, dto.Email, dto.Password, dto.RoleId);
         var result = await _mediator.Send(command);
         return Ok(result);
     }
+
 
 
 
@@ -49,19 +55,15 @@ public class UsersController : ControllerBase
     }
 
     [HttpPut("{id}")]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Update(int id, [FromBody] UpdateUserDto dto)
     {
-        var command = new UpdateUserHandler.UpdateCommand
-        {
-            Id = id,
-            UserName = dto.UserName,
-            Email = dto.Email,
-            PhoneNumber = dto.PhoneNumber
-        };
-
+        var currentUserId = _userContext.MustGetUserId();
+        var command = new UpdateUserHandler.UpdateCommand(id, currentUserId, dto);
         var result = await _mediator.Send(command);
         return Ok(result);
     }
+
 
     [HttpDelete("{id}")]
     [Authorize]
@@ -95,4 +97,6 @@ public class UsersController : ControllerBase
         var result = await _mediator.Send(request);
         return Ok(result);
     }
+
+
 }

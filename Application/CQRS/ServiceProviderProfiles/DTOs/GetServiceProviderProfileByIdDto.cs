@@ -11,6 +11,9 @@ public class GetServiceProviderProfileByIdDto
     public string? GenderName { get; set; }
     public int? ExperienceYears { get; set; }
     public string? Description { get; set; }
+    public string? AvatarUrl { get; set; }            
+    public string? ParentCategoryName { get; set; }   
+    public List<string> ServiceTypes { get; set; } = new(); 
     public bool IsApprovedByAdmin { get; set; }
     public DateTime? ApprovalDate { get; set; }
     public DateTime CreatedAt { get; set; }

@@ -16,13 +16,17 @@ namespace Repository.Common
         public ISubscriptionPlanRepository SubscriptionPlanRepository { get; }  
         public ISupportTicketRepository SupportTicketRepository { get; }
         public IActivityLogRepository ActivityLogRepository { get; }
-
         public IClientProfileRepository ClientProfileRepository { get; }
         public IGuaranteeDocumentRepository GuaranteeDocumentRepository { get; }
         public ICertificateRepository CertificateRepository { get; }
         public IMessageRepository MessageRepository { get; }
         public INotificationRepository NotificationRepository { get; }
         public IUserRoleRepository UserRoleRepository { get; }
+        public IPortfolioItemRepository PortfolioItemRepository { get; }
+        public IServiceTypeRepository ServiceTypeRepository { get; }
+        public IParentCategoryRepository ParentCategoryRepository { get; }
+        IServiceProviderServiceTypeRepository ServiceProviderServiceTypeRepository { get; }
+
 
 
 
