@@ -1,10 +1,14 @@
 ﻿using Application.Common.Interfaces;
+using Application.CQRS.Reviews.Commands.Requests;
 using Application.CQRS.Reviews.DTOs;
+using Application.CQRS.Reviews.Queries.Requests;
 using Common.GlobalResponse;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using static Application.CQRS.Reviews.Handlers.CreateReviewHandler;
+using Repository.Repositories;
+//using static Application.CQRS.Reviews.Handlers.CreateReviewHandler;
 using static Application.CQRS.Reviews.Handlers.DeleteReviewHandler;
 using static Application.CQRS.Reviews.Handlers.GetReviewByIdHandler;
 using static Application.CQRS.Reviews.Handlers.ReviewListHandler;
@@ -18,31 +22,59 @@ namespace WebApi.Controllers
     {
         private readonly IMediator _mediator;
         private readonly IUserContext _userContext;
+        private readonly IClientProfileRepository _clientProfileRepository;
+        private readonly IReviewRepository _reviewRepository;
 
-        public ReviewController(IMediator mediator, IUserContext userContext)
+        public ReviewController(IMediator mediator, IUserContext userContext, IClientProfileRepository clientProfileRepository, IReviewRepository reviewRepository)
         {
             _mediator = mediator;
             _userContext = userContext;
+            _clientProfileRepository = clientProfileRepository;
+            _reviewRepository = reviewRepository;
         }
 
 
+
+        //[HttpPost("Create")]
+        //public async Task<ActionResult<ResponseModel<CreateReviewDto>>> Create([FromBody] CreateReviewDto dto)
+        //{
+        //    if (dto == null || dto.ClientProfileId <= 0 || dto.ServiceProviderProfileId <= 0)
+        //        return BadRequest(new ResponseModel<CreateReviewDto>
+        //        {
+        //            IsSuccess = false,
+        //            Errors = ["Invalid data."]
+        //        });
+
+        //    var userId = _userContext.MustGetUserId();
+        //    var command = new CreateReviewCommand(userId, dto);
+        //    var result = await _mediator.Send(command);
+
+        //    return result.IsSuccess ? Ok(result) : BadRequest(result);
+        //}
 
         [HttpPost("Create")]
-        public async Task<ActionResult<ResponseModel<CreateReviewDto>>> Create([FromBody] CreateReviewDto dto)
+        [Authorize(Roles = "Client")]
+        public async Task<IActionResult> CreateReview([FromBody] CreateReviewCommandDto dto)
         {
-            if (dto == null || dto.ClientProfileId <= 0 || dto.ServiceProviderProfileId <= 0)
-                return BadRequest(new ResponseModel<CreateReviewDto>
-                {
-                    IsSuccess = false,
-                    Errors = ["Invalid data."]
-                });
-
             var userId = _userContext.MustGetUserId();
-            var command = new CreateReviewCommand(userId, dto);
-            var result = await _mediator.Send(command);
 
+            var clientProfile = await _clientProfileRepository.GetByUserIdAsync(userId);
+            if (clientProfile == null)
+                return BadRequest("Client profile not found");
+
+            var command = new CreateReviewCommand(
+                clientProfile.Id,
+                dto.ServiceProviderProfileId,
+                dto.Rating,
+                dto.Comment,
+                $"{clientProfile.Name} {clientProfile.Surname}",
+                clientProfile.AvatarUrl
+            );
+
+            var result = await _mediator.Send(command);
             return result.IsSuccess ? Ok(result) : BadRequest(result);
         }
+
 
 
 
@@ -107,6 +139,39 @@ namespace WebApi.Controllers
 
             return result.IsSuccess ? Ok(result) : NotFound(result);
         }
+
+        [HttpGet("by-provider/{providerId}")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetByProvider(int providerId)
+        {
+            var query = new GetReviewsByServiceProviderIdQuery(providerId);
+            var result = await _mediator.Send(query);
+            return result.IsSuccess ? Ok(result) :  NotFound(result);
+        }
+
+        [HttpGet("average-rating/{providerId}")]
+        public async Task<ActionResult<ResponseModel<double>>> GetAverageRating(int providerId)
+        {
+            var result = await _mediator.Send(new GetAverageRatingQuery(providerId));
+            return Ok(result);
+        }
+
+        [HttpGet("has-reviewed")]
+        [Authorize(Roles = "Client")]
+        public async Task<IActionResult> HasClientReviewed([FromQuery] int providerId)
+        {
+            var userId = _userContext.MustGetUserId();
+            var clientProfile = await _clientProfileRepository.GetByUserIdAsync(userId);
+            if (clientProfile == null)
+                return BadRequest("Client profile not found");
+
+            var existingReview = await _reviewRepository.GetByClientAndProviderAsync(clientProfile.Id, providerId);
+            return Ok(new
+            {
+                hasReviewed = existingReview != null
+            });
+        }
+
 
     }
 }

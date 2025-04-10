@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.Mvc;
 using Application.CQRS.FileUploads.Commands.Requests;
 using Common.Interfaces;
 using Application.CQRS.FileUploads.DTOs;
+using Common.GlobalResponse;
+using Repository.Repositories;
+using AutoMapper;
 
 namespace WebApi.Controllers;
 
@@ -19,11 +22,15 @@ public class ClientProfileController : ControllerBase
     private readonly IMediator _mediator;
     private readonly IUserContext _userContext;
     private readonly ICloudStorageService _cloudStorageService;
+    private readonly IMapper _mapper;
+    private readonly IClientProfileRepository _clientProfileRepository;
 
-    public ClientProfileController(IMediator mediator, IUserContext userContext, ICloudStorageService cloudStorageService)
+    public ClientProfileController(IClientProfileRepository clientProfileRepository,IMapper mapper, IMediator mediator, IUserContext userContext, ICloudStorageService cloudStorageService)
     {
+        _clientProfileRepository = clientProfileRepository;
         _mediator = mediator;
         _userContext = userContext;
+        _mapper = mapper;
         _cloudStorageService = cloudStorageService;
     }
 
@@ -98,6 +105,16 @@ public class ClientProfileController : ControllerBase
         var result = await _mediator.Send(command);
         return Ok(result);
     }
+
+    [HttpGet("user")]
+    [Authorize(Roles = "Client")]
+    public async Task<IActionResult> GetByUser()
+    {
+        var userId = _userContext.MustGetUserId();
+        var result = await _mediator.Send(new GetClientProfileByUserIdQuery(userId));
+        return Ok(result);
+    }
+
 
 
 

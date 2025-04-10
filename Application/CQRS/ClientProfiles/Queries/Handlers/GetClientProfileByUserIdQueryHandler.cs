@@ -6,44 +6,41 @@ using Common.Exceptions;
 using Common.GlobalResponse;
 using MediatR;
 using Repository.Common;
+using Repository.Repositories;
 
 namespace Application.CQRS.ClientProfiles.Queries.Handlers;
 
-public class GetClientProfileByUserIdQueryHandler : IRequestHandler<GetClientProfileByUserIdQuery, ResponseModel<GetClientProfileByIdDto>>
+public class GetClientProfileByUserIdQueryHandler
+    : IRequestHandler<GetClientProfileByUserIdQuery, ResponseModel<GetClientProfileDto>>
 {
-    private readonly IUnitOfWork _unitOfWork;
+    private readonly IClientProfileRepository _repository;
     private readonly IMapper _mapper;
-    private readonly IActivityLoggerService _activityLogger;
 
-    public GetClientProfileByUserIdQueryHandler(
-        IUnitOfWork unitOfWork,
-        IMapper mapper,
-        IActivityLoggerService activityLogger)
+    public GetClientProfileByUserIdQueryHandler(IClientProfileRepository repository, IMapper mapper)
     {
-        _unitOfWork = unitOfWork;
+        _repository = repository;
         _mapper = mapper;
-        _activityLogger = activityLogger;
     }
 
-    public async Task<ResponseModel<GetClientProfileByIdDto>> Handle(GetClientProfileByUserIdQuery request, CancellationToken cancellationToken)
+    public async Task<ResponseModel<GetClientProfileDto>> Handle(GetClientProfileByUserIdQuery request, CancellationToken cancellationToken)
     {
-        var profile = await _unitOfWork.ClientProfileRepository.GetByUserIdAsync(request.UserId);
-        if (profile is null)
-            throw new NotFoundException("Client profile not found by user ID");
+        var profile = await _repository.GetByUserIdAsync(request.UserId);
 
-        var dto = _mapper.Map<GetClientProfileByIdDto>(profile);
-
-        await _activityLogger.LogAsync(
-            userId: request.UserId,
-            action: "GetByUserId",
-            entityType: "ClientProfile",
-            entityId: profile.Id
-        );
-
-        return new ResponseModel<GetClientProfileByIdDto>
+        if (profile == null)
         {
-            Data = dto,
-            IsSuccess = true
+            return new ResponseModel<GetClientProfileDto>
+            {
+                IsSuccess = false,
+                Errors = new List<string> { "Client profile not found." }
+            };
+        }
+
+        var dto = _mapper.Map<GetClientProfileDto>(profile);
+
+        return new ResponseModel<GetClientProfileDto>
+        {
+            IsSuccess = true,
+            Data = dto
         };
     }
 }

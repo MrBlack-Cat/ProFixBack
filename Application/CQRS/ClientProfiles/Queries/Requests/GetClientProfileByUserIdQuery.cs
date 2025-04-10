@@ -4,4 +4,4 @@ using MediatR;
 
 namespace Application.CQRS.ClientProfiles.Queries.Requests;
 
-public record GetClientProfileByUserIdQuery(int UserId) : IRequest<ResponseModel<GetClientProfileByIdDto>>;
+public record GetClientProfileByUserIdQuery(int UserId) : IRequest<ResponseModel<GetClientProfileDto>>;

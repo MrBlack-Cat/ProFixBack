@@ -73,7 +73,7 @@ public class Program
             options.AddPolicy("ProFixCors", policy =>
             {
                 policy.WithOrigins(
-                    "http://localhost:5173", "http://localhost:5174", "http://localhost:5175",    // Front
+                    "http://localhost:5173", "http://localhost:5174", "http://localhost:5175", "http://localhost:5176",    // Front
                     "https://admin.profix.com"     // Test Admin
                 )
                 .AllowAnyHeader()

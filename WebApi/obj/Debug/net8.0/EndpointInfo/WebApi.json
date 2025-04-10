@@ -441,6 +441,18 @@
         }
       }
     },
+    "/api/ClientProfile/user": {
+      "get": {
+        "tags": [
+          "ClientProfile"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/FileUpload/upload-client-avatar": {
       "post": {
         "tags": [
@@ -1395,41 +1407,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateReviewDto"
+                "$ref": "#/components/schemas/CreateReviewCommandDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateReviewDto"
+                "$ref": "#/components/schemas/CreateReviewCommandDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateReviewDto"
+                "$ref": "#/components/schemas/CreateReviewCommandDto"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/CreateReviewDtoResponseModel"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CreateReviewDtoResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CreateReviewDtoResponseModel"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -1588,6 +1583,91 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/Review/by-provider/{providerId}": {
+      "get": {
+        "tags": [
+          "Review"
+        ],
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Review/average-rating/{providerId}": {
+      "get": {
+        "tags": [
+          "Review"
+        ],
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DoubleResponseModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DoubleResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DoubleResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Review/has-reviewed": {
+      "get": {
+        "tags": [
+          "Review"
+        ],
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -2957,13 +3037,9 @@
         },
         "additionalProperties": false
       },
-      "CreateReviewDto": {
+      "CreateReviewCommandDto": {
         "type": "object",
         "properties": {
-          "clientProfileId": {
-            "type": "integer",
-            "format": "int32"
-          },
           "serviceProviderProfileId": {
             "type": "integer",
             "format": "int32"
@@ -2975,25 +3051,6 @@
           "comment": {
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreateReviewDtoResponseModel": {
-        "type": "object",
-        "properties": {
-          "isSuccess": {
-            "type": "boolean"
-          },
-          "errors": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
-          },
-          "data": {
-            "$ref": "#/components/schemas/CreateReviewDto"
           }
         },
         "additionalProperties": false
@@ -3301,6 +3358,26 @@
           },
           "data": {
             "$ref": "#/components/schemas/DeleteSupportTicketDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DoubleResponseModel": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "data": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
@@ -3624,6 +3701,14 @@
           "createdAt": {
             "type": "string",
             "format": "date-time"
+          },
+          "clientName": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientAvatarUrl": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

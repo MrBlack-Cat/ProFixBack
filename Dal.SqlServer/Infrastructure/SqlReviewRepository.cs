@@ -13,6 +13,7 @@ namespace Dal.SqlServer.Infrastructure
 {
     public class SqlReviewRepository : IReviewRepository
     {
+
         private readonly IDbConnection _dbConnection;
 
         public SqlReviewRepository(IDbConnection dbConnection)
@@ -47,8 +48,8 @@ namespace Dal.SqlServer.Infrastructure
         public async Task AddAsync(Review entity)
         {
             var sql = @"
-                INSERT INTO Review (ClientProfileId, ServiceProviderProfileId, Rating, Comment, CreatedAt, CreatedBy)
-                VALUES (@ClientProfileId, @ServiceProviderProfileId, @Rating, @Comment, @CreatedAt, @CreatedBy)";
+                INSERT INTO Review (ClientProfileId, ServiceProviderProfileId, Rating, Comment, CreatedAt, CreatedBy, ClientName, ClientAvatarUrl)
+                VALUES (@ClientProfileId, @ServiceProviderProfileId, @Rating, @Comment, @CreatedAt, @CreatedBy, @ClientName, @ClientAvatarUrl)";
             await _dbConnection.ExecuteAsync(sql, entity);
         }
 
@@ -97,5 +98,22 @@ namespace Dal.SqlServer.Infrastructure
 
             await DeleteAsync(entity);
         }
+
+        public async Task<double> GetAverageRatingByProviderIdAsync(int providerId)
+        {
+            var sql = @"SELECT AVG(CAST(Rating AS FLOAT)) 
+                FROM Review 
+                WHERE ServiceProviderProfileId = @ProviderId AND IsDeleted = 0";
+
+            var avg = await _dbConnection.ExecuteScalarAsync<double?>(sql, new { ProviderId = providerId });
+            return Math.Round(avg ?? 0, 2);
+        }
+
+        public async Task<Review?> GetByClientAndProviderAsync(int clientId, int providerId)
+        {
+            var sql = "SELECT * FROM Review WHERE ClientProfileId = @clientId AND ServiceProviderProfileId = @providerId AND IsDeleted = 0";
+            return await _dbConnection.QueryFirstOrDefaultAsync<Review>(sql, new { clientId, providerId });
+        }
+
     }
 }

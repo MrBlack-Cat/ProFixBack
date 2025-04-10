@@ -1,13 +1,8 @@
 ﻿using Dapper;
 using Domain.Entities;
 using Repository.Repositories;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Dal.SqlServer.Infrastructure;
 
@@ -35,36 +30,38 @@ public class SqlClientProfileRepository : IClientProfileRepository
     public async Task AddAsync(ClientProfile entity)
     {
         var sql = @"
-                INSERT INTO ClientProfile (UserId, Name, Surname, City, AvatarUrl, About, OtherContactLinks, CreatedAt, CreatedBy)
-                VALUES (@UserId, @Name, @Surname, @City, @AvatarUrl, @About, @OtherContactLinks, @CreatedAt, @CreatedBy)";
+            INSERT INTO ClientProfile 
+                (UserId, Name, Surname, City, AvatarUrl, About, OtherContactLinks, CreatedAt, CreatedBy)
+            VALUES 
+                (@UserId, @Name, @Surname, @City, @AvatarUrl, @About, @OtherContactLinks, @CreatedAt, @CreatedBy)";
         await _dbConnection.ExecuteAsync(sql, entity);
     }
 
     public async Task UpdateAsync(ClientProfile entity)
     {
         var sql = @"
-                UPDATE ClientProfile SET
-                    Name = @Name,
-                    Surname = @Surname,
-                    City = @City,
-                    AvatarUrl = @AvatarUrl,
-                    About = @About,
-                    OtherContactLinks = @OtherContactLinks,
-                    UpdatedAt = @UpdatedAt,
-                    UpdatedBy = @UpdatedBy
-                WHERE Id = @Id";
+            UPDATE ClientProfile SET
+                Name = @Name,
+                Surname = @Surname,
+                City = @City,
+                AvatarUrl = @AvatarUrl,
+                About = @About,
+                OtherContactLinks = @OtherContactLinks,
+                UpdatedAt = @UpdatedAt,
+                UpdatedBy = @UpdatedBy
+            WHERE Id = @Id";
         await _dbConnection.ExecuteAsync(sql, entity);
     }
 
     public async Task DeleteAsync(ClientProfile entity)
     {
         var sql = @"
-                UPDATE ClientProfile SET 
-                    IsDeleted = 1,
-                    DeletedAt = @DeletedAt,
-                    DeletedBy = @DeletedBy,
-                    DeleteReason = @DeleteReason
-                WHERE Id = @Id";
+            UPDATE ClientProfile SET 
+                IsDeleted = 1,
+                DeletedAt = @DeletedAt,
+                DeletedBy = @DeletedBy,
+                DeleteReason = @DeleteReason
+            WHERE Id = @Id";
 
         await _dbConnection.ExecuteAsync(sql, new
         {
@@ -75,7 +72,7 @@ public class SqlClientProfileRepository : IClientProfileRepository
         });
     }
 
-    public async Task DeleteAsync(int id , ClaimsPrincipal user)
+    public async Task DeleteAsync(int id, ClaimsPrincipal user)
     {
         var profile = await GetByIdAsync(id);
         if (profile == null) return;
@@ -90,12 +87,9 @@ public class SqlClientProfileRepository : IClientProfileRepository
         await DeleteAsync(profile);
     }
 
-
     public async Task<ClientProfile?> GetByUserIdAsync(int userId)
     {
         var sql = "SELECT * FROM ClientProfile WHERE UserId = @UserId AND IsDeleted = 0";
         return await _dbConnection.QueryFirstOrDefaultAsync<ClientProfile>(sql, new { UserId = userId });
     }
-
-
 }

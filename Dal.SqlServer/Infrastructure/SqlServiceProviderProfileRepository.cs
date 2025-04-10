@@ -177,12 +177,43 @@ public class SqlServiceProviderProfileRepository : IServiceProviderProfileReposi
     //    return profile;
     //}
 
+    //public async Task<ServiceProviderProfile?> GetByUserIdAsync(int userId)
+    //{
+    //    var sql = @"SELECT * FROM ServiceProviderProfile WHERE UserId = @UserId AND IsDeleted = 0";
+    //    return await _dbConnection.QueryFirstOrDefaultAsync<ServiceProviderProfile>(sql, new { UserId = userId });
+    //}
+
     public async Task<ServiceProviderProfile?> GetByUserIdAsync(int userId)
     {
-        var sql = @"SELECT * FROM ServiceProviderProfile WHERE UserId = @UserId AND IsDeleted = 0";
-        return await _dbConnection.QueryFirstOrDefaultAsync<ServiceProviderProfile>(sql, new { UserId = userId });
-    }
+        var sql = @"
+        SELECT 
+            sp.*, 
+            g.Name AS GenderName,
+            pc.Name AS ParentCategoryName
+        FROM ServiceProviderProfile sp
+        LEFT JOIN GenderType g ON sp.GenderId = g.Id
+        LEFT JOIN ParentCategory pc ON sp.ParentCategoryId = pc.Id
+        WHERE sp.UserId = @UserId AND sp.IsDeleted = 0;
 
+        SELECT st.Name 
+        FROM ServiceProviderServiceTypes sst
+        JOIN ServiceType st ON sst.ServiceTypeId = st.Id
+        WHERE sst.ServiceProviderProfileId = (
+            SELECT Id FROM ServiceProviderProfile WHERE UserId = @UserId AND IsDeleted = 0
+        );
+    ";
+
+        using var multi = await _dbConnection.QueryMultipleAsync(sql, new { UserId = userId });
+
+        var profile = await multi.ReadFirstOrDefaultAsync<ServiceProviderProfile>();
+        if (profile == null)
+            return null;
+
+        var serviceTypes = (await multi.ReadAsync<string>()).ToList();
+        profile.ServiceTypes = serviceTypes;
+
+        return profile;
+    }
 
 
     public async Task<List<ServiceProviderProfile>> GetByParentCategoryIdAsync(int categoryId)

@@ -13,6 +13,8 @@ public class Review : BaseEntity
     public int ServiceProviderProfileId { get; set; }
     public int Rating { get; set; }
     public string? Comment { get; set; }
+    public string? ClientName { get; set; }         
+    public string? ClientAvatarUrl { get; set; }
 
     public ClientProfile? ClientProfile { get; set; }
     public ServiceProviderProfile? ServiceProviderProfile { get; set; }

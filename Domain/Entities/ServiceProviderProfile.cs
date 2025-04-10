@@ -18,7 +18,12 @@ public class ServiceProviderProfile : BaseEntity
     public int? GenderId { get; set; }
     public int? ExperienceYears { get; set; }
     public string? Description { get; set; }
-    public bool IsActive { get; set; } = false;
+    public bool IsActive { get; set; } = true;
+    public bool IsApprovedByAdmin
+    {
+        get => IsActive;
+        set => IsActive = value;
+    }
     public DateTime? ApprovalDate { get; set; }
     public string? AvatarUrl { get; set; }
     public User? User { get; set; }

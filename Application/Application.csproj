@@ -37,8 +37,6 @@
     <Folder Include="CQRS\Certificates\Queries\Responses\" />
     <Folder Include="CQRS\ClientProfiles\Commands\Requests\" />
     <Folder Include="CQRS\ClientProfiles\Commands\Responses\" />
-    <Folder Include="CQRS\ClientProfiles\Queries\Handlers\" />
-    <Folder Include="CQRS\ClientProfiles\Queries\Requests\" />
     <Folder Include="CQRS\ClientProfiles\Queries\Responses\" />
     <Folder Include="CQRS\FileUploads\Queries\" />
     <Folder Include="CQRS\GuaranteeDocuments\Commands\Handlers\" />
@@ -55,11 +53,7 @@
     <Folder Include="CQRS\PortfolioItems\Queries\Responses\" />
     <Folder Include="CQRS\Posts\Commands\Responses\" />
     <Folder Include="CQRS\Posts\Queries\Responses\" />
-    <Folder Include="CQRS\Reviews\Commands\Handlers\" />
-    <Folder Include="CQRS\Reviews\Commands\Requests\" />
     <Folder Include="CQRS\Reviews\Commands\Responses\" />
-    <Folder Include="CQRS\Reviews\Queries\Handlers\" />
-    <Folder Include="CQRS\Reviews\Queries\Requests\" />
     <Folder Include="CQRS\Reviews\Queries\Responses\" />
     <Folder Include="CQRS\ServiceBookings\Commands\Handlers\" />
     <Folder Include="CQRS\ServiceBookings\Commands\Requests\" />

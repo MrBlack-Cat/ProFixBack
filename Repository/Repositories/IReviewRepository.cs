@@ -12,5 +12,9 @@ namespace Repository.Repositories
     {
         Task<IEnumerable<Review>> GetByServiceProviderIdAsync(int serviceProviderProfileId);
         Task<IEnumerable<Review>> GetByClientIdAsync(int clientProfileId);
+        Task<double> GetAverageRatingByProviderIdAsync(int providerId);
+        Task<Review?> GetByClientAndProviderAsync(int clientId, int providerId);
+
+
     }
 }

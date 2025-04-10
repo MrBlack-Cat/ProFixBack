@@ -1,5 +1,6 @@
 ﻿using Application.Common.Behaviors;
 using Application.Common.Interfaces;
+using Application.CQRS.ClientProfiles.Queries.Handlers;
 using Application.Mappings;
 using Application.Services;
 using Common.Interfaces;
@@ -34,6 +35,8 @@ public static class ApplicationDependencyInjection
 
         //MediatR
         services.AddMediatR(Assembly.GetExecutingAssembly());
+        services.AddMediatR(typeof(GetClientProfileByUserIdQueryHandler).Assembly);
+
 
         //FluentValidation
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
@@ -54,6 +57,13 @@ public static class ApplicationDependencyInjection
         services.AddScoped<ITokenService, TokenService>();
         services.AddScoped<IServiceProviderProfileRepository, SqlServiceProviderProfileRepository>();
         services.AddScoped<IPostRepository, SqlPostRepository>();
+        services.AddScoped<IClientProfileRepository, SqlClientProfileRepository>();
+        services.AddScoped<IReviewRepository, SqlReviewRepository>();
+        services.AddScoped<IReviewRepository, SqlReviewRepository>();
+
+
+
+
 
         // === HttpContext ===
         services.AddHttpContextAccessor();

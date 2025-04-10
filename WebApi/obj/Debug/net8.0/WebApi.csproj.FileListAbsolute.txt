@@ -944,3 +944,4 @@ C:\Users\User\source\repos\ProFix — копия (15)\WebApi\obj\Debug\net8.0\re
 C:\Users\User\source\repos\ProFix — копия (15)\WebApi\obj\Debug\net8.0\WebApi.pdb
 C:\Users\User\source\repos\ProFix — копия (15)\WebApi\obj\Debug\net8.0\WebApi.genruntimeconfig.cache
 C:\Users\User\source\repos\ProFix — копия (15)\WebApi\obj\Debug\net8.0\ref\WebApi.dll
+C:\Users\User\source\repos\ProFix\WebApi\obj\Debug\net8.0\WebApi.MvcApplicationPartsAssemblyInfo.cs

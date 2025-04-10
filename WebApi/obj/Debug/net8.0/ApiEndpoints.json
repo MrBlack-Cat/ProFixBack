@@ -274,6 +274,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WebApi.Controllers.ClientProfileController",
+    "Method": "GetByUser",
+    "RelativePath": "api/ClientProfile/user",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApi.Controllers.FileUploadController",
     "Method": "UploadCertificateFile",
     "RelativePath": "api/FileUpload/upload-certificate-file",
@@ -894,21 +904,21 @@
   },
   {
     "ContainingType": "WebApi.Controllers.ReviewController",
-    "Method": "Create",
-    "RelativePath": "api/Review/Create",
-    "HttpMethod": "POST",
+    "Method": "GetAverageRating",
+    "RelativePath": "api/Review/average-rating/{providerId}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
-        "Type": "Application.CQRS.Reviews.DTOs.CreateReviewDto",
+        "Name": "providerId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.Reviews.DTOs.CreateReviewDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Common.GlobalResponse.ResponseModel\u00601[[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -917,6 +927,38 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ReviewController",
+    "Method": "GetByProvider",
+    "RelativePath": "api/Review/by-provider/{providerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "providerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ReviewController",
+    "Method": "CreateReview",
+    "RelativePath": "api/Review/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.CQRS.Reviews.DTOs.CreateReviewCommandDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "WebApi.Controllers.ReviewController",
@@ -943,6 +985,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ReviewController",
+    "Method": "HasClientReviewed",
+    "RelativePath": "api/Review/has-reviewed",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "providerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "WebApi.Controllers.ReviewController",

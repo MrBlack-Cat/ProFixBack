@@ -24,6 +24,7 @@ public class GoogleCloudStorageService : ICloudStorageService
             objectName: fileName,
             contentType: contentType,
             source: fileStream
+
         );
 
         return $"https://storage.googleapis.com/{_bucketName}/{fileName}";
