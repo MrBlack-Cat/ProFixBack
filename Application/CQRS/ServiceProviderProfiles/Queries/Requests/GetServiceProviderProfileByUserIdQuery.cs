@@ -2,6 +2,16 @@
 using Common.GlobalResponse;
 using MediatR;
 
-namespace Application.CQRS.ServiceProviderProfiles.Queries.Requests;
+namespace Application.CQRS.ServiceProviderProfiles.Queries.Requests
+{
+    public class GetServiceProviderProfileByUserIdQuery
+        : IRequest<ResponseModel<GetServiceProviderProfileByUserIdDto>>
+    {
+        public int UserId { get; set; }
 
-public record GetServiceProviderProfileByUserIdQuery(int UserId) : IRequest<ResponseModel<GetServiceProviderProfileByIdDto>>;
+        public GetServiceProviderProfileByUserIdQuery(int userId)
+        {
+            UserId = userId;
+        }
+    }
+}

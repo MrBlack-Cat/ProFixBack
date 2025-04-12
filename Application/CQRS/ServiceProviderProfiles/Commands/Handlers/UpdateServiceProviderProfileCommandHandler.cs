@@ -4,6 +4,7 @@ using Application.CQRS.ServiceProviderProfiles.DTOs;
 using AutoMapper;
 using Common.Exceptions;
 using Common.GlobalResponse;
+using Common.Interfaces;
 using Domain.Entities;
 using Domain.Types;
 using MediatR;
@@ -17,15 +18,21 @@ public class UpdateServiceProviderProfileCommandHandler
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
     private readonly IActivityLoggerService _activityLogger;
+    private readonly ICloudStorageService _cloudStorage; 
+
 
     public UpdateServiceProviderProfileCommandHandler(
         IUnitOfWork unitOfWork,
         IMapper mapper,
-        IActivityLoggerService activityLogger)
+        IActivityLoggerService activityLogger,
+        ICloudStorageService cloudStorage)
+
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper;
         _activityLogger = activityLogger;
+        _cloudStorage = cloudStorage;
+
     }
 
     public async Task<ResponseModel<UpdateServiceProviderProfileDto>> Handle(UpdateServiceProviderProfileCommand request, CancellationToken cancellationToken)
@@ -40,17 +47,33 @@ public class UpdateServiceProviderProfileCommandHandler
         profile.Age = request.Profile.Age;
         profile.GenderId = request.Profile.GenderId;
         profile.ExperienceYears = request.Profile.ExperienceYears;
-        //profile.Description = request.Profile.Description;
+        profile.Description = request.Profile.Description;
         profile.IsActive = request.Profile.IsActive;
         profile.ApprovalDate = request.Profile.ApprovalDate;
         profile.UpdatedAt = DateTime.UtcNow;
         profile.UpdatedBy = request.UpdatedBy;
+        profile.ParentCategoryId = request.Profile.ParentCategoryId;
+        profile.ServiceTypeIds = request.Profile.ServiceTypeIds;
+        profile.ServiceTypeIds = request.Profile.ServiceTypeIds ?? new List<int>();
+
+        if (request.Profile.AvatarFile is not null)
+            if (request.Profile.AvatarFile is not null)
+            {
+                using var stream = request.Profile.AvatarFile.OpenReadStream();
+                var fileName = request.Profile.AvatarFile.FileName;
+                var contentType = request.Profile.AvatarFile.ContentType;
+
+                var uploadedUrl = await _cloudStorage.UploadFileAsync(stream, fileName, contentType);
+                profile.AvatarUrl = uploadedUrl;
+            }
+
 
         await _unitOfWork.ServiceProviderProfileRepository.UpdateAsync(profile);
 
+
+
         if (request.Profile.ServiceTypeIds is not null && request.Profile.ServiceTypeIds.Any())
         {
-            
             await _unitOfWork.ServiceProviderServiceTypeRepository.DeleteAllByServiceProviderProfileIdAsync(profile.Id);
 
             foreach (var serviceTypeId in request.Profile.ServiceTypeIds)
@@ -63,6 +86,11 @@ public class UpdateServiceProviderProfileCommandHandler
                 await _unitOfWork.ServiceProviderServiceTypeRepository.AddAsync(link);
             }
         }
+        else
+        {
+            await _unitOfWork.ServiceProviderServiceTypeRepository.DeleteAllByServiceProviderProfileIdAsync(profile.Id);
+        }
+
 
         await _unitOfWork.SaveChangesAsync();
 

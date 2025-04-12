@@ -29,8 +29,21 @@ public class ServiceProviderProfileProfile : Profile
         CreateMap<CreateServiceProviderProfileDto, ServiceProviderProfile>()
             .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(_ => DateTime.UtcNow));
 
+        CreateMap<ServiceProviderProfile, GetServiceProviderProfileByUserIdDto>()
+            .ForMember(dest => dest.ServiceTypeIds, opt => opt.MapFrom(src => src.ServiceTypeIds)) 
+            .ForMember(dest => dest.ServiceTypes, opt => opt.MapFrom(src => src.ServiceTypes))
+            .ForMember(dest => dest.ParentCategoryName, opt => opt.MapFrom(src => src.ParentCategoryName))
+            .ForMember(dest => dest.GenderName, opt => opt.MapFrom(src => src.GenderName))
+            .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description));
+
         CreateMap<UpdateServiceProviderProfileDto, ServiceProviderProfile>()
-            .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(_ => DateTime.UtcNow));
+            .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(_ => DateTime.UtcNow))
+            .ForMember(dest => dest.ParentCategoryId, opt => opt.MapFrom(src => src.ParentCategoryId))
+            .ForMember(dest => dest.ServiceTypeIds, opt => opt.MapFrom(src => src.ServiceTypeIds))
+            .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description));
+
+
+
 
 
     }

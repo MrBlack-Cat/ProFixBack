@@ -30,7 +30,7 @@ public class ServiceProviderProfileController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> Update(int id, [FromBody] UpdateServiceProviderProfileDto dto)
+    public async Task<IActionResult> Update(int id, [FromForm] UpdateServiceProviderProfileDto dto)
     {
         var userId = GetCurrentUserId();
 

@@ -8,7 +8,7 @@ using Repository.Common;
 
 namespace Application.CQRS.ServiceProviderProfiles.Queries.Handlers;
 
-public class GetServiceProviderProfileByUserIdQueryHandler : IRequestHandler<GetServiceProviderProfileByUserIdQuery, ResponseModel<GetServiceProviderProfileByIdDto>>
+public class GetServiceProviderProfileByUserIdQueryHandler : IRequestHandler<GetServiceProviderProfileByUserIdQuery, ResponseModel<GetServiceProviderProfileByUserIdDto>>
 {
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
@@ -19,13 +19,19 @@ public class GetServiceProviderProfileByUserIdQueryHandler : IRequestHandler<Get
         _mapper = mapper;
     }
 
-    public async Task<ResponseModel<GetServiceProviderProfileByIdDto>> Handle(GetServiceProviderProfileByUserIdQuery request, CancellationToken cancellationToken)
+    public async Task<ResponseModel<GetServiceProviderProfileByUserIdDto>> Handle(GetServiceProviderProfileByUserIdQuery request, CancellationToken cancellationToken)
     {
         var profile = await _unitOfWork.ServiceProviderProfileRepository.GetByUserIdAsync(request.UserId);
-        if (profile is null)
+
+        if (profile == null)
             throw new NotFoundException("Service provider profile not found");
 
-        var result = _mapper.Map<GetServiceProviderProfileByIdDto>(profile);
-        return new ResponseModel<GetServiceProviderProfileByIdDto> { Data = result, IsSuccess = true };
+        var dto = _mapper.Map<GetServiceProviderProfileByUserIdDto>(profile);
+
+        return new ResponseModel<GetServiceProviderProfileByUserIdDto>
+        {
+            Data = dto,
+            IsSuccess = true
+        };
     }
 }

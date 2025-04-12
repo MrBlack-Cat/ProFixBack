@@ -1941,19 +1941,101 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateServiceProviderProfileDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateServiceProviderProfileDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateServiceProviderProfileDto"
+                "type": "object",
+                "properties": {
+                  "Name": {
+                    "type": "string"
+                  },
+                  "Surname": {
+                    "type": "string"
+                  },
+                  "City": {
+                    "type": "string"
+                  },
+                  "GenderName": {
+                    "type": "string"
+                  },
+                  "Age": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "GenderId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "ExperienceYears": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Description": {
+                    "type": "string"
+                  },
+                  "AvatarFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "ParentCategoryId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "IsActive": {
+                    "type": "boolean"
+                  },
+                  "ApprovalDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "ServiceTypeIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer",
+                      "format": "int32"
+                    }
+                  }
+                }
+              },
+              "encoding": {
+                "Name": {
+                  "style": "form"
+                },
+                "Surname": {
+                  "style": "form"
+                },
+                "City": {
+                  "style": "form"
+                },
+                "GenderName": {
+                  "style": "form"
+                },
+                "Age": {
+                  "style": "form"
+                },
+                "GenderId": {
+                  "style": "form"
+                },
+                "ExperienceYears": {
+                  "style": "form"
+                },
+                "Description": {
+                  "style": "form"
+                },
+                "AvatarFile": {
+                  "style": "form"
+                },
+                "ParentCategoryId": {
+                  "style": "form"
+                },
+                "IsActive": {
+                  "style": "form"
+                },
+                "ApprovalDate": {
+                  "style": "form"
+                },
+                "ServiceTypeIds": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -2976,6 +3058,16 @@
           },
           "fileUrl": {
             "type": "string",
+            "nullable": true
+          },
+          "issueDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "expirationDate": {
+            "type": "string",
+            "format": "date-time",
             "nullable": true
           }
         },
@@ -4165,59 +4257,6 @@
           },
           "data": {
             "$ref": "#/components/schemas/UpdateServiceBookingDto"
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateServiceProviderProfileDto": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "surname": {
-            "type": "string",
-            "nullable": true
-          },
-          "city": {
-            "type": "string",
-            "nullable": true
-          },
-          "age": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "genderId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "experienceYears": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "avatarUrl": {
-            "type": "string",
-            "nullable": true
-          },
-          "isActive": {
-            "type": "boolean"
-          },
-          "approvalDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "serviceTypeIds": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false

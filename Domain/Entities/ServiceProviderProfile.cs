@@ -32,7 +32,11 @@ public class ServiceProviderProfile : BaseEntity
     public ParentCategory? ParentCategory { get; set; }  // optional
 
     public List<string> ServiceTypes { get; set; } = new();
+    public List<int> ServiceTypeIds { get; set; } = new();
+
     public string? GenderName { get; set; } // Dapper ilə SQL-dən oxumaq üçün
     public string? ParentCategoryName { get; set; } // Dapper ilə SQL-dən oxumaq üçün
+    public List<ServiceProviderServiceType>? ServiceProviderServiceTypes { get; set; }
+
 
 }

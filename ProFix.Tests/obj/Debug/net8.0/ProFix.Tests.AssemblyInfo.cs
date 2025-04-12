@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProFix.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fc430f619fb36135ba45ea1431289bdae2c8792")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e17963823cbd0c2718004c533059c613d6bab203")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProFix.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProFix.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -47,23 +47,30 @@ namespace Dal.SqlServer.Infrastructure
         public async Task AddAsync(GuaranteeDocument entity)
         {
             var sql = @"
-                INSERT INTO GuaranteeDocument (ServiceProviderProfileId, ClientProfileId, Title, Description, FileUrl, CreatedAt, CreatedBy)
-                VALUES (@ServiceProviderProfileId, @ClientProfileId, @Title, @Description, @FileUrl, @CreatedAt, @CreatedBy)";
+        INSERT INTO GuaranteeDocument 
+        (ServiceProviderProfileId, ClientProfileId, Title, Description, FileUrl, CreatedAt, CreatedBy, IssueDate, ExpirationDate)
+        VALUES 
+        (@ServiceProviderProfileId, @ClientProfileId, @Title, @Description, @FileUrl, @CreatedAt, @CreatedBy, @IssueDate, @ExpirationDate)";
+
             await _dbConnection.ExecuteAsync(sql, entity);
         }
 
         public async Task UpdateAsync(GuaranteeDocument entity)
         {
             var sql = @"
-                UPDATE GuaranteeDocument SET
-                    Title = @Title,
-                    Description = @Description,
-                    FileUrl = @FileUrl,
-                    UpdatedAt = @UpdatedAt,
-                    UpdatedBy = @UpdatedBy
-                WHERE Id = @Id";
+                    UPDATE GuaranteeDocument SET
+                        Title = @Title,
+                        Description = @Description,
+                        FileUrl = @FileUrl,
+                        UpdatedAt = @UpdatedAt,
+                        UpdatedBy = @UpdatedBy,
+                        IssueDate = @IssueDate,
+                        ExpirationDate = @ExpirationDate
+                    WHERE Id = @Id";
+
             await _dbConnection.ExecuteAsync(sql, entity);
         }
+
 
         public async Task DeleteAsync(GuaranteeDocument entity)
         {

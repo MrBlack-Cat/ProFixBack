@@ -1,8 +1,10 @@
 ﻿using Dapper;
 using Domain.Entities;
+using Domain.Types;
 using Microsoft.EntityFrameworkCore;
 using Repository.Repositories;
 using System.Data;
+using System.Reflection;
 using System.Security.Claims;
 
 public class SqlServiceProviderProfileRepository : IServiceProviderProfileRepository
@@ -77,22 +79,39 @@ public class SqlServiceProviderProfileRepository : IServiceProviderProfileReposi
     public async Task UpdateAsync(ServiceProviderProfile entity)
     {
         var sql = @"
-            UPDATE ServiceProviderProfile SET
-                Name = @Name,
-                Surname = @Surname,
-                City = @City,
-                Age = @Age,
-                GenderId = @GenderId,
-                ExperienceYears = @ExperienceYears,
-                Description = @Description,
-                AvatarUrl = @AvatarUrl,
-                IsApprovedByAdmin = @IsActive,
-                ApprovalDate = @ApprovalDate,
-                UpdatedAt = @UpdatedAt,
-                UpdatedBy = @UpdatedBy
-            WHERE Id = @Id";
+        UPDATE ServiceProviderProfile SET
+            Name = @Name,
+            Surname = @Surname,
+            City = @City,
+            Age = @Age,
+            GenderId = @GenderId,
+            ExperienceYears = @ExperienceYears,
+            Description = @Description,
+            AvatarUrl = @AvatarUrl,
+            ParentCategoryId = @ParentCategoryId,
+            IsApprovedByAdmin = @IsActive,
+            ApprovalDate = @ApprovalDate,
+            UpdatedAt = @UpdatedAt,
+            UpdatedBy = @UpdatedBy
+        WHERE Id = @Id";
+
         await _dbConnection.ExecuteAsync(sql, entity);
+
+        // ❗ ВАЖНО: Используем @Id, и передаём { Id = ... }
+        await _dbConnection.ExecuteAsync(
+            "DELETE FROM ServiceProviderServiceTypes WHERE ServiceProviderProfileId = @ServiceProviderProfileId",
+            new { ServiceProviderProfileId = entity.Id });
+
+
+        foreach (var serviceTypeId in entity.ServiceTypeIds)
+        {
+            await _dbConnection.ExecuteAsync(@"
+            INSERT INTO ServiceProviderServiceTypes (ServiceProviderProfileId, ServiceTypeId)
+            VALUES (@ProfileId, @ServiceTypeId)",
+                new { ProfileId = entity.Id, ServiceTypeId = serviceTypeId });
+        }
     }
+
 
     public async Task DeleteAsync(ServiceProviderProfile entity)
     {
@@ -112,7 +131,7 @@ public class SqlServiceProviderProfileRepository : IServiceProviderProfileReposi
         });
     }
 
-    public async Task DeleteAsync(int id , ClaimsPrincipal user)
+    public async Task DeleteAsync(int id, ClaimsPrincipal user)
     {
         var profile = await GetByIdAsync(id);
         if (profile == null) return;
@@ -183,55 +202,58 @@ public class SqlServiceProviderProfileRepository : IServiceProviderProfileReposi
     //    return await _dbConnection.QueryFirstOrDefaultAsync<ServiceProviderProfile>(sql, new { UserId = userId });
     //}
 
-    public async Task<ServiceProviderProfile?> GetByUserIdAsync(int userId)
-    {
-        var sql = @"
-        SELECT 
-            sp.*, 
-            g.Name AS GenderName,
-            pc.Name AS ParentCategoryName
-        FROM ServiceProviderProfile sp
-        LEFT JOIN GenderType g ON sp.GenderId = g.Id
-        LEFT JOIN ParentCategory pc ON sp.ParentCategoryId = pc.Id
-        WHERE sp.UserId = @UserId AND sp.IsDeleted = 0;
+    //public async Task<ServiceProviderProfile?> GetByUserIdAsync(int userId)
+    //{
+    //    var sql = @"
+    //    SELECT 
+    //        sp.*, 
+    //        g.Name AS GenderName,
+    //        pc.Name AS ParentCategoryName
+    //    FROM ServiceProviderProfile sp
+    //    LEFT JOIN GenderType g ON sp.GenderId = g.Id
+    //    LEFT JOIN ParentCategory pc ON sp.ParentCategoryId = pc.Id
+    //    WHERE sp.UserId = @UserId AND sp.IsDeleted = 0;
 
-        SELECT st.Name 
-        FROM ServiceProviderServiceTypes sst
-        JOIN ServiceType st ON sst.ServiceTypeId = st.Id
-        WHERE sst.ServiceProviderProfileId = (
-            SELECT Id FROM ServiceProviderProfile WHERE UserId = @UserId AND IsDeleted = 0
-        );
-    ";
+    //    SELECT st.Name 
+    //    FROM ServiceProviderServiceTypes sst
+    //    JOIN ServiceType st ON sst.ServiceTypeId = st.Id
+    //    WHERE sst.ServiceProviderProfileId = (
+    //        SELECT Id FROM ServiceProviderProfile WHERE UserId = @UserId AND IsDeleted = 0
+    //    );
+    //";
 
-        using var multi = await _dbConnection.QueryMultipleAsync(sql, new { UserId = userId });
+    //    using var multi = await _dbConnection.QueryMultipleAsync(sql, new { UserId = userId });
 
-        var profile = await multi.ReadFirstOrDefaultAsync<ServiceProviderProfile>();
-        if (profile == null)
-            return null;
+    //    var profile = await multi.ReadFirstOrDefaultAsync<ServiceProviderProfile>();
+    //    if (profile == null)
+    //        return null;
 
-        var serviceTypes = (await multi.ReadAsync<string>()).ToList();
-        profile.ServiceTypes = serviceTypes;
+    //    var serviceTypes = (await multi.ReadAsync<string>()).ToList();
+    //    profile.ServiceTypes = serviceTypes;
 
-        return profile;
-    }
+    //    return profile;
+    //}
 
 
     public async Task<List<ServiceProviderProfile>> GetByParentCategoryIdAsync(int categoryId)
     {
         var sql = @"
-            SELECT 
-                spp.Id, 
-                spp.Name, 
-                spp.Surname, 
-                spp.City,
-                spp.ExperienceYears,
-                spp.AvatarUrl,
-                st.Name as ServiceTypeName
-            FROM ServiceProviderProfile spp
-            JOIN ServiceProviderServiceTypes sps ON sps.ServiceProviderProfileId = spp.Id
-            JOIN ServiceType st ON st.Id = sps.ServiceTypeId
-            WHERE spp.ParentCategoryId = @categoryId AND spp.IsDeleted = 0";
-
+        SELECT 
+            spp.Id,
+            spp.Name,
+            spp.Surname,
+            spp.City,
+            spp.ExperienceYears,
+            spp.Age,
+            spp.AvatarUrl,
+            spp.IsApprovedByAdmin AS IsApproved,
+            g.Name AS GenderName,
+            st.Name AS ServiceTypeName
+        FROM ServiceProviderProfile spp
+        LEFT JOIN GenderType g ON spp.GenderId = g.Id
+        JOIN ServiceProviderServiceTypes sps ON sps.ServiceProviderProfileId = spp.Id
+        JOIN ServiceType st ON st.Id = sps.ServiceTypeId
+        WHERE spp.ParentCategoryId = @categoryId AND spp.IsDeleted = 0";
 
         var providerDict = new Dictionary<int, ServiceProviderProfile>();
 
@@ -256,6 +278,40 @@ public class SqlServiceProviderProfileRepository : IServiceProviderProfileReposi
         return providerDict.Values.ToList();
     }
 
+
+    public async Task<ServiceProviderProfile?> GetByUserIdAsync(int userId)
+    {
+        var sql = @"
+        SELECT 
+            sp.*, 
+            g.Name AS GenderName,
+            pc.Name AS ParentCategoryName
+        FROM ServiceProviderProfile sp
+        LEFT JOIN GenderType g ON sp.GenderId = g.Id
+        LEFT JOIN ParentCategory pc ON sp.ParentCategoryId = pc.Id
+        WHERE sp.UserId = @UserId AND sp.IsDeleted = 0;
+
+        SELECT 
+            st.Id, st.Name
+        FROM ServiceProviderServiceTypes sst
+        JOIN ServiceType st ON sst.ServiceTypeId = st.Id
+        JOIN ServiceProviderProfile sp ON sst.ServiceProviderProfileId = sp.Id
+        WHERE sp.UserId = @UserId AND sp.IsDeleted = 0;
+    ";
+
+        using var multi = await _dbConnection.QueryMultipleAsync(sql, new { UserId = userId });
+
+        var profile = await multi.ReadFirstOrDefaultAsync<ServiceProviderProfile>();
+        if (profile == null)
+            return null;
+
+        var serviceTypes = (await multi.ReadAsync<ServiceType>()).ToList();
+        profile.ServiceTypes = serviceTypes.Select(s => s.Name).ToList();
+        profile.ServiceTypeIds = serviceTypes.Select(s => s.Id).ToList();
+
+        return profile;
+    }
+        
 
 
 }

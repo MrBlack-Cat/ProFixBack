@@ -3,6 +3,7 @@ using Domain.Entities;
 using Domain.Types;
 using Repository.Repositories;
 using System.Data;
+using System.Data.Common;
 
 namespace Dal.SqlServer.Infrastructure;
 
@@ -40,7 +41,9 @@ public class SqlServiceProviderServiceTypeRepository : IServiceProviderServiceTy
 
     public async Task DeleteAllByServiceProviderProfileIdAsync(int profileId)
     {
-        const string sql = "DELETE FROM ServiceProviderServiceTypes WHERE ServiceProviderProfileId = @ProfileId";
-        await _db.ExecuteAsync(sql, new { ProfileId = profileId });
+        Console.WriteLine("⚠️ УДАЛЯЮ старые типы для профиля ID: " + profileId);
+        var sql = "DELETE FROM ServiceProviderServiceTypes WHERE ServiceProviderProfileId = @ServiceProviderProfileId";
+        await _db.ExecuteAsync(sql, new { ServiceProviderProfileId = profileId });
     }
+
 }

@@ -14,5 +14,5 @@ public class ServiceProviderServiceType
     public int ServiceTypeId { get; set; }
 
     public ServiceProviderProfile? ServiceProviderProfile { get; set; }
-    public ServiceTypesssssss? ServiceType { get; set; }
+    public ServiceType? ServiceType { get; set; }
 }

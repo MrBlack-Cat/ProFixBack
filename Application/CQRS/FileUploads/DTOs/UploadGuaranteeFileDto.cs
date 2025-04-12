@@ -6,5 +6,5 @@ namespace Application.CQRS.FileUploads.DTOs;
 public class UploadGuaranteeFileDto
 {
     [Required]
-    public IFormFile File { get; set; }
+    public IFormFile File { get; set; } = null!;
 }

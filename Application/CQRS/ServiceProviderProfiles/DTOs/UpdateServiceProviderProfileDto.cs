@@ -1,17 +1,22 @@
-﻿namespace Application.CQRS.ServiceProviderProfiles.DTOs;
+﻿using Microsoft.AspNetCore.Http;
+
+namespace Application.CQRS.ServiceProviderProfiles.DTOs;
 
 public class UpdateServiceProviderProfileDto
 {
     public string Name { get; set; } = null!;
     public string Surname { get; set; } = null!;
     public string? City { get; set; }
+    public string? GenderName { get; set; }
     public int? Age { get; set; }
     public int? GenderId { get; set; }
     public int? ExperienceYears { get; set; }
-    //public string? Description { get; set; }
-    public string? AvatarUrl { get; set; }
+    public string? Description { get; set; }
+    //public string? AvatarUrl { get; set; }
+    public IFormFile? AvatarFile { get; set; }
+    public int? ParentCategoryId { get; set; }
     public bool IsActive { get; set; }
     public DateTime? ApprovalDate { get; set; }
-    public List<int>? ServiceTypeIds { get; set; }
+    public List<int> ServiceTypeIds { get; set; } = new();
 
 }

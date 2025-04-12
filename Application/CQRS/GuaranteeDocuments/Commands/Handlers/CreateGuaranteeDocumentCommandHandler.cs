@@ -52,6 +52,8 @@ public class CreateGuaranteeDocumentCommandHandler : IRequestHandler<CreateGuara
             Title = dto.Title,
             Description = dto.Description,
             FileUrl = dto.FileUrl,
+            IssueDate = dto.IssueDate,
+            ExpirationDate = dto.ExpirationDate,
             CreatedAt = DateTime.UtcNow,
             CreatedBy = userId
         };

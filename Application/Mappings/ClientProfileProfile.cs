@@ -13,6 +13,9 @@ public class ClientProfileProfile : Profile
         CreateMap<ClientProfile, GetClientProfileByIdDto>().ReverseMap();
         CreateMap<ClientProfile, ClientProfileListDto>().ReverseMap();
         CreateMap<ClientProfile, ClientProfileDto>().ReverseMap();
+        CreateMap<ClientProfile, GetClientProfileDto>()
+            .ForMember(dest => dest.ClientProfileId, opt => opt.MapFrom(src => src.Id));
+
 
     }
 }
