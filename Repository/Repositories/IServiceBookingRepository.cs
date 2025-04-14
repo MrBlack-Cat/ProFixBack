@@ -1,16 +1,13 @@
-﻿using Domain.Entities;
-using Repository.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Repository.Common;
 
-namespace Repository.Repositories
+
+public interface IServiceBookingRepository : IRepository<ServiceBooking>
 {
-    public interface IServiceBookingRepository : IRepository<ServiceBooking>
-    {
-        Task<IEnumerable<ServiceBooking>> GetByClientIdAsync(int clientProfileId);
-        Task<IEnumerable<ServiceBooking>> GetByServiceProviderIdAsync(int serviceProviderProfileId);
-    }
+    Task<List<ServiceBooking>> GetByClientProfileIdAsync(int clientProfileId);
+    Task<List<ServiceBooking>> GetByProviderProfileIdAsync(int providerProfileId);
+    Task<ServiceBooking?> GetDetailedByIdAsync(int id);
+    Task<IEnumerable<ServiceBooking>> GetAllAsync();
+    Task<bool> IsTimeSlotAvailableAsync(int providerId, DateTime date, TimeSpan start, TimeSpan end);
+    Task<List<ServiceBooking>> GetByDateAsync(int providerId, DateTime date);
+
 }

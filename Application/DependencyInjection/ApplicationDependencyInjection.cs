@@ -3,6 +3,7 @@ using Application.Common.Interfaces;
 using Application.CQRS.ClientProfiles.Queries.Handlers;
 using Application.Mappings;
 using Application.Services;
+using Application.Validators.ServiceBookings;
 using Common.Interfaces;
 using Common.Options;
 using Dal.SqlServer.Infrastructure;
@@ -20,7 +21,10 @@ public static class ApplicationDependencyInjection
 {
     public static IServiceCollection AddApplicationServices(this IServiceCollection services)
     {
-        
+
+        services.AddValidatorsFromAssembly(typeof(CreateServiceBookingCommandValidator).Assembly);
+
+
         services.AddOptions<ValidationOptions>()
             .BindConfiguration("Validation")
             .ValidateDataAnnotations();
@@ -30,7 +34,8 @@ public static class ApplicationDependencyInjection
             Assembly.GetExecutingAssembly(),
             typeof(ActivityLogProfile).Assembly,
             typeof(MessageProfile).Assembly,
-            typeof(PortfolioItemProfile).Assembly
+            typeof(PortfolioItemProfile).Assembly,
+            typeof(ServiceBookingProfile).Assembly
         );
 
         //MediatR
@@ -60,6 +65,7 @@ public static class ApplicationDependencyInjection
         services.AddScoped<IClientProfileRepository, SqlClientProfileRepository>();
         services.AddScoped<IReviewRepository, SqlReviewRepository>();
         services.AddScoped<IReviewRepository, SqlReviewRepository>();
+        services.AddScoped<IServiceBookingRepository, SqlServiceBookingRepository>();
 
 
 

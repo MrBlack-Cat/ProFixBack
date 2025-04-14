@@ -55,11 +55,7 @@
     <Folder Include="CQRS\Posts\Queries\Responses\" />
     <Folder Include="CQRS\Reviews\Commands\Responses\" />
     <Folder Include="CQRS\Reviews\Queries\Responses\" />
-    <Folder Include="CQRS\ServiceBookings\Commands\Handlers\" />
-    <Folder Include="CQRS\ServiceBookings\Commands\Requests\" />
     <Folder Include="CQRS\ServiceBookings\Commands\Responses\" />
-    <Folder Include="CQRS\ServiceBookings\Queries\Handlers\" />
-    <Folder Include="CQRS\ServiceBookings\Queries\Requests\" />
     <Folder Include="CQRS\ServiceBookings\Queries\Responses\" />
     <Folder Include="CQRS\Users\Commands\Handlers\" />
     <Folder Include="CQRS\Users\Commands\Requests\" />

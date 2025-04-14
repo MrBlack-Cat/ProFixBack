@@ -1055,29 +1055,24 @@
   },
   {
     "ContainingType": "WebApi.Controllers.ServiceBookingController",
-    "Method": "Create",
-    "RelativePath": "api/ServiceBooking",
-    "HttpMethod": "POST",
+    "Method": "Update",
+    "RelativePath": "api/ServiceBooking/{id}",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
         "Name": "dto",
-        "Type": "Application.CQRS.ServiceBookings.DTOs.CreateServiceBookingDto",
+        "Type": "Application.CQRS.ServiceBookings.DTOs.UpdateServiceBookingDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.ServiceBookings.DTOs.CreateServiceBookingDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "WebApi.Controllers.ServiceBookingController",
@@ -1093,32 +1088,17 @@
         "IsRequired": true
       },
       {
-        "Name": "deletedByUserId",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
         "Name": "reason",
         "Type": "System.String",
         "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.ServiceBookings.DTOs.DeleteServiceBookingDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "WebApi.Controllers.ServiceBookingController",
     "Method": "GetById",
-    "RelativePath": "api/ServiceBooking/GetById/{id}",
+    "RelativePath": "api/ServiceBooking/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -1129,63 +1109,154 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.ServiceBookings.DTOs.GetServiceBookingByIdDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "WebApi.Controllers.ServiceBookingController",
-    "Method": "GetAll",
-    "RelativePath": "api/ServiceBooking/ListOfBookings",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "Common.GlobalResponse.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[Application.CQRS.ServiceBookings.DTOs.ServiceBookingListDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "WebApi.Controllers.ServiceBookingController",
-    "Method": "Update",
-    "RelativePath": "api/ServiceBooking/Update",
-    "HttpMethod": "PUT",
+    "Method": "ApproveBooking",
+    "RelativePath": "api/ServiceBooking/{id}/approve",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "serviceBookingDto",
-        "Type": "Application.CQRS.ServiceBookings.DTOs.UpdateServiceBookingDto",
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ServiceBookingController",
+    "Method": "CancelBooking",
+    "RelativePath": "api/ServiceBooking/{id}/cancel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Type": "Common.GlobalResponse.ResponseModel\u00601[[Application.CQRS.ServiceBookings.DTOs.UpdateServiceBookingDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
       }
-    ]
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ServiceBookingController",
+    "Method": "CompleteBooking",
+    "RelativePath": "api/ServiceBooking/{id}/complete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ServiceBookingController",
+    "Method": "RejectBooking",
+    "RelativePath": "api/ServiceBooking/{id}/reject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ServiceBookingController",
+    "Method": "StartBooking",
+    "RelativePath": "api/ServiceBooking/{id}/start",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ServiceBookingController",
+    "Method": "GetAll",
+    "RelativePath": "api/ServiceBooking/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ServiceBookingController",
+    "Method": "GetBookedTimes",
+    "RelativePath": "api/ServiceBooking/booked-times",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "providerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "date",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ServiceBookingController",
+    "Method": "GetByClient",
+    "RelativePath": "api/ServiceBooking/client",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ServiceBookingController",
+    "Method": "Create",
+    "RelativePath": "api/ServiceBooking/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Application.CQRS.ServiceBookings.Commands.Create.CreateServiceBookingCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ServiceBookingController",
+    "Method": "GetByProvider",
+    "RelativePath": "api/ServiceBooking/provider",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Api.Controllers.ServiceProviderProfileController",

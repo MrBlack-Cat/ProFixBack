@@ -42,7 +42,7 @@ namespace DAL.SqlServer.Infrastructure
         {
             var query = $@"
                 UPDATE [{typeof(T).Name}]
-                SET IsDeleted = 1, DeletedAt = GETUTCDATE(), DeletedBy = 'System', DeleteReason = 'Soft delete by ID'
+                SET IsDeleted = 1, DeletedAt = GETUTCDATE(), DeletedBy = 'System', DeletedReason = 'Soft delete by ID'
                 WHERE Id = @Id";
 
             await _dbConnection.ExecuteAsync(query, new { Id = id });
@@ -52,7 +52,7 @@ namespace DAL.SqlServer.Infrastructure
         {
             var query = $@"
                 UPDATE [{typeof(T).Name}]
-                SET IsDeleted = 1, DeletedAt = GETUTCDATE(), DeletedBy = 'System', DeleteReason = 'Soft delete'
+                SET IsDeleted = 1, DeletedAt = GETUTCDATE(), DeletedBy = 'System', DeletedReason = 'Soft delete'
                 WHERE Id = @Id";
 
             var entityType = typeof(T);

@@ -8,9 +8,24 @@ public class ServiceBookingProfile : Profile
 {
     public ServiceBookingProfile()
     {
-        CreateMap<ServiceBooking, CreateServiceBookingDto>().ReverseMap();
-        CreateMap<ServiceBooking, UpdateServiceBookingDto>().ReverseMap();
-        CreateMap<ServiceBooking, GetServiceBookingByIdDto>().ReverseMap();
-        CreateMap<ServiceBooking, ServiceBookingListDto>().ReverseMap();
+        // Entity → GetByIdDto
+        CreateMap<ServiceBooking, GetServiceBookingByIdDto>()
+            .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status ?? ""))
+            .ForMember(dest => dest.ClientProfileId, opt => opt.MapFrom(src => src.ClientProfileId))
+            .ForMember(dest => dest.ServiceProviderProfileId, opt => opt.MapFrom(src => src.ServiceProviderProfileId));
+
+        // ✅ ЕДИНСТВЕННЫЙ правильный маппинг на ListDto
+        CreateMap<ServiceBooking, ServiceBookingListDto>()
+            .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status ?? ""))
+            .ForMember(dest => dest.ClientName, opt => opt.MapFrom(src => src.ClientName))
+            .ForMember(dest => dest.ClientAvatarUrl, opt => opt.MapFrom(src => src.ClientAvatarUrl))
+            .ForMember(dest => dest.ClientProfileId, opt => opt.MapFrom(src => src.ClientProfileId))
+            .ForMember(dest => dest.ServiceProviderName, opt => opt.MapFrom(src => src.ServiceProviderName))
+            .ForMember(dest => dest.ServiceProviderAvatarUrl, opt => opt.MapFrom(src => src.ServiceProviderAvatarUrl))
+            .ForMember(dest => dest.ServiceProviderProfileId, opt => opt.MapFrom(src => src.ServiceProviderProfileId));
+
+        // DTO → Entity (если нужно)
+        CreateMap<CreateServiceBookingDto, ServiceBooking>();
+        CreateMap<UpdateServiceBookingDto, ServiceBooking>();
     }
 }

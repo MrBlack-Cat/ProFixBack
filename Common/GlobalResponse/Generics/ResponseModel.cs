@@ -30,4 +30,17 @@ public class ResponseModel<T> : ResponseModel
             Errors = errors.ToList()
         };
     }
+
+    public static ResponseModel<T> Success(T data, string message)
+    {
+        return new ResponseModel<T>
+        {
+            IsSuccess = true,
+            Data = data,
+            Message = message
+        };
+    }
+
+    public string? Message { get; set; } 
+
 }

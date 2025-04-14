@@ -120,7 +120,7 @@ public class SqlServiceProviderProfileRepository : IServiceProviderProfileReposi
                 IsDeleted = 1,
                 DeletedAt = @DeletedAt,
                 DeletedBy = @DeletedBy,
-                DeleteReason = @DeleteReason
+                DeletedReason = @DeletedReason
             WHERE Id = @Id";
         await _dbConnection.ExecuteAsync(sql, new
         {
