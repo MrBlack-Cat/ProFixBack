@@ -73,4 +73,16 @@ public class MessageController : ControllerBase
         var result = await _mediator.Send(query);
         return Ok(result);
     }
+
+    [HttpGet("chats")]
+    [Authorize]
+    public async Task<IActionResult> GetChatList()
+    {
+        var userId = _userContext.MustGetUserId();
+        var query = new GetChatSummariesQuery(userId);
+        var result = await _mediator.Send(query);
+        return Ok(result);
+    }
+
+
 }

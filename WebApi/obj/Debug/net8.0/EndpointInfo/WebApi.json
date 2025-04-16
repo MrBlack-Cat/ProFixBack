@@ -854,6 +854,18 @@
         }
       }
     },
+    "/api/Message/chats": {
+      "get": {
+        "tags": [
+          "Message"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Notification": {
       "post": {
         "tags": [
@@ -1018,6 +1030,29 @@
         "parameters": [
           {
             "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Notification/mark-all-from-user/{senderUserId}": {
+      "put": {
+        "tags": [
+          "Notification"
+        ],
+        "parameters": [
+          {
+            "name": "senderUserId",
             "in": "path",
             "required": true,
             "schema": {

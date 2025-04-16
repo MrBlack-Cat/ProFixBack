@@ -20,18 +20,15 @@ public class GetAllMessagesBetweenUsersQueryHandler : IRequestHandler<GetAllMess
 
     public async Task<ResponseModel<List<MessageListDto>>> Handle(GetAllMessagesBetweenUsersQuery request, CancellationToken cancellationToken)
     {
-        var messages = await _unitOfWork.MessageRepository.GetAllAsync();
+        var messages = await _unitOfWork.MessageRepository
+            .GetAllBetweenUsersAsync(request.UserId1, request.UserId2);
 
-        var filtered = messages
-            .Where(m =>
-                ((m.SenderUserId == request.UserId1 && m.ReceiverUserId == request.UserId2) ||
-                 (m.SenderUserId == request.UserId2 && m.ReceiverUserId == request.UserId1)) &&
-                !m.IsDeleted)
-            .OrderBy(m => m.CreatedAt)
-            .ToList();
+        var result = _mapper.Map<List<MessageListDto>>(messages);
 
-        var result = _mapper.Map<List<MessageListDto>>(filtered);
-
-        return new ResponseModel<List<MessageListDto>> { Data = result, IsSuccess = true };
+        return new ResponseModel<List<MessageListDto>>
+        {
+            Data = result,
+            IsSuccess = true
+        };
     }
 }

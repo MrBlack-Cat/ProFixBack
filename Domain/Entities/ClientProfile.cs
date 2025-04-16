@@ -16,6 +16,5 @@ public class ClientProfile : BaseEntity
     public string? AvatarUrl { get; set; }
     public string? About { get; set; }
     public string? OtherContactLinks { get; set; }
-
     public User? User { get; set; }
 }

@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Domain.Constants;
 using Domain.Entities;
 using Repository.Repositories;
 using System.Data;
@@ -95,4 +96,26 @@ public class SqlNotificationRepository : INotificationRepository
 
         await DeleteAsync(entity);
     }
+
+    public async Task MarkAllFromUserAsReadAsync(int currentUserId, int senderUserId)
+    {
+        var sql = @"
+        UPDATE Notification
+        SET IsRead = 1, UpdatedAt = @Now
+        WHERE UserId = @CurrentUserId 
+          AND CreatedBy = @SenderUserId
+          AND TypeId = @NewMessageTypeId
+          AND IsRead = 0
+    ";
+
+        await _dbConnection.ExecuteAsync(sql, new
+        {
+            CurrentUserId = currentUserId,
+            SenderUserId = senderUserId,
+            NewMessageTypeId = NotificationTypeConstants.NewMessage,
+            Now = DateTime.UtcNow
+        });
+    }
+
+
 }

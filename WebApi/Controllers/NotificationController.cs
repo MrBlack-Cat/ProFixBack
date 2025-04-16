@@ -96,5 +96,15 @@ public class NotificationController : ControllerBase
         var result = await _mediator.Send(command);
         return Ok(result);
     }
+
+    [HttpPut("mark-all-from-user/{senderUserId}")]
+    public async Task<IActionResult> MarkAllFromUser(int senderUserId)
+    {
+        var currentUserId = _userContext.MustGetUserId();
+        var command = new MarkNotificationsFromUserAsReadCommand(currentUserId, senderUserId);
+        var result = await _mediator.Send(command);
+        return Ok(result);
+    }
+
 }
 

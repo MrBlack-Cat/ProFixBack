@@ -518,6 +518,16 @@
   },
   {
     "ContainingType": "WebApi.Controllers.MessageController",
+    "Method": "GetChatList",
+    "RelativePath": "api/Message/chats",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.MessageController",
     "Method": "GetAllByUser",
     "RelativePath": "api/Message/user",
     "HttpMethod": "GET",
@@ -620,6 +630,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.NotificationController",
+    "Method": "MarkAllFromUser",
+    "RelativePath": "api/Notification/mark-all-from-user/{senderUserId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "senderUserId",
         "Type": "System.Int32",
         "IsRequired": true
       }
