@@ -1,4 +1,5 @@
 ﻿using Application.Common.Interfaces;
+using Application.CQRS.Notifications.DTOs;
 using Domain.Entities;
 using Repository.Repositories;
 
@@ -13,6 +14,7 @@ public class NotificationService : INotificationService
         _notificationRepository = notificationRepository;
     }
 
+    // Message
     public async Task CreateAsync(int receiverUserId, int typeId, string message, int createdBy)
     {
         var notification = new Notification
@@ -23,6 +25,22 @@ public class NotificationService : INotificationService
             IsRead = false,
             CreatedAt = DateTime.UtcNow,
             CreatedBy = createdBy
+        };
+
+        await _notificationRepository.AddAsync(notification);
+    }
+
+    // booking
+    public async Task CreateAsync(CreateNotificationDto dto)
+    {
+        var notification = new Notification
+        {
+            UserId = dto.UserId,
+            TypeId = dto.TypeId,
+            Message = dto.Message,
+            IsRead = false,
+            CreatedAt = DateTime.UtcNow,
+            CreatedBy = dto.CreatedBy
         };
 
         await _notificationRepository.AddAsync(notification);

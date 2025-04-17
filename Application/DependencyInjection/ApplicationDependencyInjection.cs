@@ -68,6 +68,7 @@ public static class ApplicationDependencyInjection
         services.AddScoped<IServiceBookingRepository, SqlServiceBookingRepository>();
         services.AddScoped<INotificationService, NotificationService>();
         services.AddScoped<INotificationRepository, SqlNotificationRepository>();
+        services.AddScoped<IPostLikeRepository, SqlPostLikeRepository>();
 
 
 

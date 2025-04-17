@@ -92,4 +92,11 @@ public class SqlClientProfileRepository : IClientProfileRepository
         var sql = "SELECT * FROM ClientProfile WHERE UserId = @UserId AND IsDeleted = 0";
         return await _dbConnection.QueryFirstOrDefaultAsync<ClientProfile>(sql, new { UserId = userId });
     }
+
+    public async Task<(string Name, string Surname)?> GetNameSurnameByUserIdAsync(int userId)
+    {
+        var sql = "SELECT Name, Surname FROM ClientProfile WHERE UserId = @UserId";
+        return await _dbConnection.QueryFirstOrDefaultAsync<(string, string)?>(sql, new { UserId = userId });
+    }
+
 }

@@ -13,6 +13,7 @@ public interface INotificationRepository : IRepository<Notification>
     Task<IEnumerable<Notification>> GetByUserIdAsync(int userId);
     Task<List<Notification>> GetUnreadByUserIdAsync(int userId);
     Task MarkAllFromUserAsReadAsync(int currentUserId, int senderUserId);
+    Task MarkAllBookingNotificationsFromUserAsync(int currentUserId, int senderUserId);
 
 
 }

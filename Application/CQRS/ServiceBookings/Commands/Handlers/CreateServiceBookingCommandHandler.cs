@@ -1,34 +1,38 @@
 ﻿using Application.Common.Interfaces;
+using Application.CQRS.Notifications.DTOs;
 using Application.CQRS.ServiceBookings.DTOs;
 using Common.Exceptions;
 using Common.GlobalResponse;
+using Domain.Constants;
 using Domain.Entities;
 using Domain.Enums;
 using MediatR;
 using Repository.Common;
 using Repository.Repositories;
-using static Dapper.SqlMapper;
 
 namespace Application.CQRS.ServiceBookings.Commands.Create;
 
 public class CreateServiceBookingCommandHandler
-    : IRequestHandler<CreateServiceBookingCommandRequest, ResponseModel<int>> // ✅
+    : IRequestHandler<CreateServiceBookingCommandRequest, ResponseModel<int>>
 {
     private readonly IUserContext _userContext;
     private readonly IClientProfileRepository _clientProfileRepository;
     private readonly IServiceBookingRepository _serviceBookingRepository;
     private readonly IUnitOfWork _unitOfWork;
+    private readonly INotificationService _notificationService;
 
     public CreateServiceBookingCommandHandler(
         IUserContext userContext,
         IClientProfileRepository clientProfileRepository,
         IServiceBookingRepository serviceBookingRepository,
-        IUnitOfWork unitOfWork)
+        IUnitOfWork unitOfWork,
+        INotificationService notificationService)
     {
         _userContext = userContext;
         _clientProfileRepository = clientProfileRepository;
         _serviceBookingRepository = serviceBookingRepository;
         _unitOfWork = unitOfWork;
+        _notificationService = notificationService;
     }
 
     public async Task<ResponseModel<int>> Handle(CreateServiceBookingCommandRequest request, CancellationToken cancellationToken)
@@ -54,6 +58,15 @@ public class CreateServiceBookingCommandHandler
         if (!isAvailable)
             return ResponseModel<int>.Fail("Selected time slot is already taken");
 
+        var serviceProviderProfile = await _unitOfWork.ServiceProviderProfileRepository
+            .GetByIdAsync(dto.ServiceProviderProfileId);
+
+        if (serviceProviderProfile is null)
+            throw new NotFoundException("Service provider profile not found");
+
+        var providerUserId = serviceProviderProfile.UserId;
+        var clientUserId = userId;
+
         var booking = new ServiceBooking
         {
             ClientProfileId = clientProfile.Id,
@@ -72,6 +85,19 @@ public class CreateServiceBookingCommandHandler
 
         await _serviceBookingRepository.AddAsync(booking);
         await _unitOfWork.SaveChangesAsync();
+
+        var nameSurname = await _clientProfileRepository.GetNameSurnameByUserIdAsync(clientUserId);
+        var fullName = nameSurname != null
+            ? $"{nameSurname.Value.Name} {nameSurname.Value.Surname}"
+            : $"User {clientUserId}";
+
+        await _notificationService.CreateAsync(new CreateNotificationDto
+        {
+            UserId = providerUserId,
+            TypeId = NotificationTypeConstants.NewBooking,
+            Message = $"You have a new booking from {fullName}!",
+            CreatedBy = clientUserId
+        });
 
         return ResponseModel<int>.Success(booking.Id);
     }

@@ -11,6 +11,7 @@ namespace Repository.Repositories
     public interface IClientProfileRepository : IRepository<ClientProfile>
     {
         Task<ClientProfile?> GetByUserIdAsync(int userId);
+        Task<(string Name, string Surname)?> GetNameSurnameByUserIdAsync(int userId);
 
     }
 }

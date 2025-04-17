@@ -3,8 +3,160 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\ProFix\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\posts\\dtos\\postdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\posts\\dtos\\postdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\posts\\queries\\handlers\\getpostsbyprovideridhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\posts\\queries\\handlers\\getpostsbyprovideridhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\posts\\dtos\\postlikedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\posts\\dtos\\postlikedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\posts\\queries\\requests\\getpostsbyprovideridquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\posts\\queries\\requests\\getpostsbyprovideridquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\posts\\queries\\requests\\getpostsbyproviderquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\posts\\queries\\requests\\getpostsbyproviderquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\postlikes\\queries\\handlers\\getpostslistqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\postlikes\\queries\\handlers\\getpostslistqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\postlikes\\queries\\requests\\getpostslistquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\postlikes\\queries\\requests\\getpostslistquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\postlikes\\commands\\handlers\\likepostcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\postlikes\\commands\\handlers\\likepostcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\postlikes\\commands\\handlers\\unlikepostcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\postlikes\\commands\\handlers\\unlikepostcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\posts\\commands\\requests\\likepostcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\posts\\commands\\requests\\likepostcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\posts\\commands\\handlers\\likepostcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\posts\\commands\\handlers\\likepostcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\postlikes\\commands\\requests\\unlikepostcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\postlikes\\commands\\requests\\unlikepostcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\postlikes\\commands\\requests\\likepostcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\postlikes\\commands\\requests\\likepostcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\user\\source\\repos\\profix\\webapi\\controllers\\postlikecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\postlikecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D55182CB-DF18-4C76-A085-0B2064AC18E3}|Domain\\Domain.csproj|c:\\users\\user\\source\\repos\\profix\\domain\\entities\\postlike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D55182CB-DF18-4C76-A085-0B2064AC18E3}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\postlike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|c:\\users\\user\\source\\repos\\profix\\dal.sqlserver\\infrastructure\\sqlpostlikerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|solutionrelative:dal.sqlserver\\infrastructure\\sqlpostlikerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\postlikes\\queries\\handlers\\getpostlikescountqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\postlikes\\queries\\handlers\\getpostlikescountqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\postlikes\\queries\\requests\\getpostlikescountquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\postlikes\\queries\\requests\\getpostlikescountquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|c:\\users\\user\\source\\repos\\profix\\dal.sqlserver\\infrastructure\\sqlnotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|solutionrelative:dal.sqlserver\\infrastructure\\sqlnotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\dependencyinjection\\applicationdependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\dependencyinjection\\applicationdependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|c:\\users\\user\\source\\repos\\profix\\repository\\repositories\\ipostlikerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\ipostlikerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\servicebookings\\commands\\handlers\\createservicebookingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\servicebookings\\commands\\handlers\\createservicebookingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\notifications\\commands\\handlers\\createnotificationcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\notifications\\commands\\handlers\\createnotificationcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\user\\source\\repos\\profix\\webapi\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|c:\\users\\user\\source\\repos\\profix\\repository\\repositories\\inotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\inotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\notifications\\queries\\handlers\\markbookingnotificationsfromuserasreadcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\notifications\\queries\\handlers\\markbookingnotificationsfromuserasreadcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\user\\source\\repos\\profix\\webapi\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\notifications\\queries\\requests\\markbookingnotificationsfromuserasreadcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\notifications\\queries\\requests\\markbookingnotificationsfromuserasreadcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\common\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\common\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\common\\interfaces\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\common\\interfaces\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\mappings\\notificationprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\mappings\\notificationprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\mappings\\servicebookingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\mappings\\servicebookingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\mappings\\clientprofileprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\mappings\\clientprofileprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|c:\\users\\user\\source\\repos\\profix\\repository\\repositories\\iclientprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\iclientprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|c:\\users\\user\\source\\repos\\profix\\dal.sqlserver\\infrastructure\\sqlclientprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|solutionrelative:dal.sqlserver\\infrastructure\\sqlclientprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|c:\\users\\user\\source\\repos\\profix\\dal.sqlserver\\infrastructure\\sqlservicebookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|solutionrelative:dal.sqlserver\\infrastructure\\sqlservicebookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\notifications\\dtos\\createnotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\notifications\\dtos\\createnotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\messages\\commands\\handlers\\createmessagecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\messages\\commands\\handlers\\createmessagecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D55182CB-DF18-4C76-A085-0B2064AC18E3}|Domain\\Domain.csproj|c:\\users\\user\\source\\repos\\profix\\domain\\types\\notificationtypeconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D55182CB-DF18-4C76-A085-0B2064AC18E3}|Domain\\Domain.csproj|solutionrelative:domain\\types\\notificationtypeconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\notifications\\dtos\\notificationlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,10 +165,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D55182CB-DF18-4C76-A085-0B2064AC18E3}|Domain\\Domain.csproj|c:\\users\\user\\source\\repos\\profix\\domain\\types\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D55182CB-DF18-4C76-A085-0B2064AC18E3}|Domain\\Domain.csproj|solutionrelative:domain\\types\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D55182CB-DF18-4C76-A085-0B2064AC18E3}|Domain\\Domain.csproj|c:\\users\\user\\source\\repos\\profix\\domain\\types\\notificationtypeconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D55182CB-DF18-4C76-A085-0B2064AC18E3}|Domain\\Domain.csproj|solutionrelative:domain\\types\\notificationtypeconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D55182CB-DF18-4C76-A085-0B2064AC18E3}|Domain\\Domain.csproj|c:\\users\\user\\source\\repos\\profix\\domain\\enums\\notificationtypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,24 +191,8 @@
       "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\notifications\\dtos\\updatenotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|c:\\users\\user\\source\\repos\\profix\\dal.sqlserver\\infrastructure\\sqlnotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|solutionrelative:dal.sqlserver\\infrastructure\\sqlnotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|c:\\users\\user\\source\\repos\\profix\\webapi\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|c:\\users\\user\\source\\repos\\profix\\repository\\repositories\\inotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\inotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\notifications\\queries\\requests\\marknotificationsfromuserasreadcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\notifications\\queries\\requests\\marknotificationsfromuserasreadcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\dependencyinjection\\applicationdependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\dependencyinjection\\applicationdependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|c:\\users\\user\\source\\repos\\profix\\dal.sqlserver\\dependencyinjection\\sqlserverpersistenceinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -69,22 +201,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|c:\\users\\user\\source\\repos\\profix\\dal.sqlserver\\unitofwork\\sqlunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|solutionrelative:dal.sqlserver\\unitofwork\\sqlunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|c:\\users\\user\\source\\repos\\profix\\dal.sqlserver\\infrastructure\\sqlservicebookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AECB5EE0-D669-44B4-BA8B-C34BC4CBB832}|Dal.SqlServer\\Dal.SqlServer.csproj|solutionrelative:dal.sqlserver\\infrastructure\\sqlservicebookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\cqrs\\messages\\commands\\handlers\\createmessagecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\cqrs\\messages\\commands\\handlers\\createmessagecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\common\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\common\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|c:\\users\\user\\source\\repos\\profix\\application\\common\\interfaces\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EECFB273-8CDB-4B04-A556-B8A90B39B873}|Application\\Application.csproj|solutionrelative:application\\common\\interfaces\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D55182CB-DF18-4C76-A085-0B2064AC18E3}|Domain\\Domain.csproj|c:\\users\\user\\source\\repos\\profix\\domain\\types\\gendertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -194,11 +310,193 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetPostsByProviderIdHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Posts\\Queries\\Handlers\\GetPostsByProviderIdHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Posts\\Queries\\Handlers\\GetPostsByProviderIdHandler.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Posts\\Queries\\Handlers\\GetPostsByProviderIdHandler.cs*",
+              "RelativeToolTip": "Application\\CQRS\\Posts\\Queries\\Handlers\\GetPostsByProviderIdHandler.cs*",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAIwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T19:59:51.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetPostsByProviderIdQuery.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Posts\\Queries\\Requests\\GetPostsByProviderIdQuery.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Posts\\Queries\\Requests\\GetPostsByProviderIdQuery.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Posts\\Queries\\Requests\\GetPostsByProviderIdQuery.cs",
+              "RelativeToolTip": "Application\\CQRS\\Posts\\Queries\\Requests\\GetPostsByProviderIdQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T19:59:39.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PostDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Posts\\DTOs\\PostDto.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Posts\\DTOs\\PostDto.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Posts\\DTOs\\PostDto.cs",
+              "RelativeToolTip": "Application\\CQRS\\Posts\\DTOs\\PostDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:55:12.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PostLikeDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Posts\\DTOs\\PostLikeDto.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Posts\\DTOs\\PostLikeDto.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Posts\\DTOs\\PostLikeDto.cs",
+              "RelativeToolTip": "Application\\CQRS\\Posts\\DTOs\\PostLikeDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:33:26.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetPostsByProviderQuery.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Posts\\Queries\\Requests\\GetPostsByProviderQuery.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Posts\\Queries\\Requests\\GetPostsByProviderQuery.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Posts\\Queries\\Requests\\GetPostsByProviderQuery.cs",
+              "RelativeToolTip": "Application\\CQRS\\Posts\\Queries\\Requests\\GetPostsByProviderQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T19:59:37.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UnlikePostCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\PostLikes\\Commands\\Handlers\\UnlikePostCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\PostLikes\\Commands\\Handlers\\UnlikePostCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\PostLikes\\Commands\\Handlers\\UnlikePostCommandHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\PostLikes\\Commands\\Handlers\\UnlikePostCommandHandler.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAIAwwCIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:41:25.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LikePostCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\PostLikes\\Commands\\Handlers\\LikePostCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\PostLikes\\Commands\\Handlers\\LikePostCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\PostLikes\\Commands\\Handlers\\LikePostCommandHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\PostLikes\\Commands\\Handlers\\LikePostCommandHandler.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAIwCkAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:41:01.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GetPostsListQuery.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\PostLikes\\Queries\\Requests\\GetPostsListQuery.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\PostLikes\\Queries\\Requests\\GetPostsListQuery.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\PostLikes\\Queries\\Requests\\GetPostsListQuery.cs",
+              "RelativeToolTip": "Application\\CQRS\\PostLikes\\Queries\\Requests\\GetPostsListQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:55:45.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GetPostsListQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\PostLikes\\Queries\\Handlers\\GetPostsListQueryHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\PostLikes\\Queries\\Handlers\\GetPostsListQueryHandler.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\PostLikes\\Queries\\Handlers\\GetPostsListQueryHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\PostLikes\\Queries\\Handlers\\GetPostsListQueryHandler.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAIwEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:54:25.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LikePostCommand.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Posts\\Commands\\Requests\\LikePostCommand.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Posts\\Commands\\Requests\\LikePostCommand.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Posts\\Commands\\Requests\\LikePostCommand.cs*",
+              "RelativeToolTip": "Application\\CQRS\\Posts\\Commands\\Requests\\LikePostCommand.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:35:11.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LikePostCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Posts\\Commands\\Handlers\\LikePostCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Posts\\Commands\\Handlers\\LikePostCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Posts\\Commands\\Handlers\\LikePostCommandHandler.cs*",
+              "RelativeToolTip": "Application\\CQRS\\Posts\\Commands\\Handlers\\LikePostCommandHandler.cs*",
+              "ViewState": "AgIAACAAAAAAAAAAAADwv0AAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:35:33.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UnlikePostCommand.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\PostLikes\\Commands\\Requests\\UnlikePostCommand.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\PostLikes\\Commands\\Requests\\UnlikePostCommand.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\PostLikes\\Commands\\Requests\\UnlikePostCommand.cs",
+              "RelativeToolTip": "Application\\CQRS\\PostLikes\\Commands\\Requests\\UnlikePostCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:41:14.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PostLikeController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\PostLikeController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\PostLikeController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\PostLikeController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\PostLikeController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAuwCIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:43:41.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LikePostCommand.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\PostLikes\\Commands\\Requests\\LikePostCommand.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\PostLikes\\Commands\\Requests\\LikePostCommand.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\PostLikes\\Commands\\Requests\\LikePostCommand.cs",
+              "RelativeToolTip": "Application\\CQRS\\PostLikes\\Commands\\Requests\\LikePostCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:40:35.736Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -206,33 +504,319 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 15,
+              "Title": "SqlPostLikeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlPostLikeRepository.cs",
+              "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlPostLikeRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlPostLikeRepository.cs",
+              "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlPostLikeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:39:04.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PostLike.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Entities\\PostLike.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\PostLike.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Entities\\PostLike.cs",
+              "RelativeToolTip": "Domain\\Entities\\PostLike.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:31:44.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GetPostLikesCountQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\PostLikes\\Queries\\Handlers\\GetPostLikesCountQueryHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\PostLikes\\Queries\\Handlers\\GetPostLikesCountQueryHandler.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\PostLikes\\Queries\\Handlers\\GetPostLikesCountQueryHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\PostLikes\\Queries\\Handlers\\GetPostLikesCountQueryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:42:11.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GetPostLikesCountQuery.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\PostLikes\\Queries\\Requests\\GetPostLikesCountQuery.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\PostLikes\\Queries\\Requests\\GetPostLikesCountQuery.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\PostLikes\\Queries\\Requests\\GetPostLikesCountQuery.cs",
+              "RelativeToolTip": "Application\\CQRS\\PostLikes\\Queries\\Requests\\GetPostLikesCountQuery.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:41:53.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IPostLikeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repositories\\IPostLikeRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\IPostLikeRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repositories\\IPostLikeRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\IPostLikeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:32:22.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ApplicationDependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\DependencyInjection\\ApplicationDependencyInjection.cs",
+              "RelativeDocumentMoniker": "Application\\DependencyInjection\\ApplicationDependencyInjection.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\DependencyInjection\\ApplicationDependencyInjection.cs",
+              "RelativeToolTip": "Application\\DependencyInjection\\ApplicationDependencyInjection.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAIwEUAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T11:46:05.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SqlNotificationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlNotificationRepository.cs",
+              "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlNotificationRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlNotificationRepository.cs",
+              "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlNotificationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBgAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T16:42:03.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CreateNotificationCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Notifications\\Commands\\Handlers\\CreateNotificationCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Notifications\\Commands\\Handlers\\CreateNotificationCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Notifications\\Commands\\Handlers\\CreateNotificationCommandHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\Notifications\\Commands\\Handlers\\CreateNotificationCommandHandler.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:29:22.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "PostController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\PostController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\PostController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\PostController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\PostController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T11:05:00.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "INotificationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repositories\\INotificationRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\INotificationRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repositories\\INotificationRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\INotificationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T16:41:41.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CreateServiceBookingCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\ServiceBookings\\Commands\\Handlers\\CreateServiceBookingCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\ServiceBookings\\Commands\\Handlers\\CreateServiceBookingCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\ServiceBookings\\Commands\\Handlers\\CreateServiceBookingCommandHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\ServiceBookings\\Commands\\Handlers\\CreateServiceBookingCommandHandler.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAkwFgAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T09:56:53.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "MarkBookingNotificationsFromUserAsReadCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Notifications\\Queries\\Handlers\\MarkBookingNotificationsFromUserAsReadCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Notifications\\Queries\\Handlers\\MarkBookingNotificationsFromUserAsReadCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Notifications\\Queries\\Handlers\\MarkBookingNotificationsFromUserAsReadCommandHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\Notifications\\Queries\\Handlers\\MarkBookingNotificationsFromUserAsReadCommandHandler.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAQwBgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T10:40:45.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "NotificationController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\NotificationController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\NotificationController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\NotificationController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\NotificationController.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAwwHQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T16:41:49.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "MarkBookingNotificationsFromUserAsReadCommand.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Notifications\\Queries\\Requests\\MarkBookingNotificationsFromUserAsReadCommand.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Notifications\\Queries\\Requests\\MarkBookingNotificationsFromUserAsReadCommand.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Notifications\\Queries\\Requests\\MarkBookingNotificationsFromUserAsReadCommand.cs",
+              "RelativeToolTip": "Application\\CQRS\\Notifications\\Queries\\Requests\\MarkBookingNotificationsFromUserAsReadCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T10:40:24.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Common\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "Application\\Common\\Services\\NotificationService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Common\\Services\\NotificationService.cs",
+              "RelativeToolTip": "Application\\Common\\Services\\NotificationService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwCAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T17:00:16.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "NotificationProfile.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Mappings\\NotificationProfile.cs",
+              "RelativeDocumentMoniker": "Application\\Mappings\\NotificationProfile.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Mappings\\NotificationProfile.cs",
+              "RelativeToolTip": "Application\\Mappings\\NotificationProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T16:41:06.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "INotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Common\\Interfaces\\INotificationService.cs",
+              "RelativeDocumentMoniker": "Application\\Common\\Interfaces\\INotificationService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Common\\Interfaces\\INotificationService.cs",
+              "RelativeToolTip": "Application\\Common\\Interfaces\\INotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T17:00:03.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ServiceBookingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Mappings\\ServiceBookingProfile.cs",
+              "RelativeDocumentMoniker": "Application\\Mappings\\ServiceBookingProfile.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Mappings\\ServiceBookingProfile.cs",
+              "RelativeToolTip": "Application\\Mappings\\ServiceBookingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T10:09:58.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ClientProfileProfile.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Mappings\\ClientProfileProfile.cs",
+              "RelativeDocumentMoniker": "Application\\Mappings\\ClientProfileProfile.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Mappings\\ClientProfileProfile.cs",
+              "RelativeToolTip": "Application\\Mappings\\ClientProfileProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T10:09:52.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "IClientProfileRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repositories\\IClientProfileRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\IClientProfileRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repositories\\IClientProfileRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\IClientProfileRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T10:08:26.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "SqlClientProfileRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlClientProfileRepository.cs",
+              "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlClientProfileRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlClientProfileRepository.cs",
+              "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlClientProfileRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T10:03:29.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "SqlServiceBookingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlServiceBookingRepository.cs",
+              "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlServiceBookingRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlServiceBookingRepository.cs",
+              "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlServiceBookingRepository.cs",
+              "ViewState": "AgIAANIAAAAAAAAAAAAwwPMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T17:14:13.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "CreateNotificationDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Notifications\\DTOs\\CreateNotificationDto.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Notifications\\DTOs\\CreateNotificationDto.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Notifications\\DTOs\\CreateNotificationDto.cs",
+              "RelativeToolTip": "Application\\CQRS\\Notifications\\DTOs\\CreateNotificationDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T10:02:51.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
               "Title": "NotificationTypeConstants.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Types\\NotificationTypeConstants.cs",
               "RelativeDocumentMoniker": "Domain\\Types\\NotificationTypeConstants.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Types\\NotificationTypeConstants.cs",
               "RelativeToolTip": "Domain\\Types\\NotificationTypeConstants.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAuwAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-15T16:56:14.925Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NotificationType.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Types\\NotificationType.cs",
-              "RelativeDocumentMoniker": "Domain\\Types\\NotificationType.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Types\\NotificationType.cs",
-              "RelativeToolTip": "Domain\\Types\\NotificationType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T16:49:03.68Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 39,
               "Title": "NotificationListDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Notifications\\DTOs\\NotificationListDto.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Notifications\\DTOs\\NotificationListDto.cs",
@@ -240,25 +824,36 @@
               "RelativeToolTip": "Application\\CQRS\\Notifications\\DTOs\\NotificationListDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T18:13:34.883Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T18:13:34.883Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NotificationProfile.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Mappings\\NotificationProfile.cs",
-              "RelativeDocumentMoniker": "Application\\Mappings\\NotificationProfile.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Mappings\\NotificationProfile.cs",
-              "RelativeToolTip": "Application\\Mappings\\NotificationProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 37,
+              "Title": "CreateMessageCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Messages\\Commands\\Handlers\\CreateMessageCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Messages\\Commands\\Handlers\\CreateMessageCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Messages\\Commands\\Handlers\\CreateMessageCommandHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\Messages\\Commands\\Handlers\\CreateMessageCommandHandler.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAYwDgAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T16:41:06.645Z",
+              "WhenOpened": "2025-04-14T11:45:59.191Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 40,
+              "Title": "NotificationType.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Types\\NotificationType.cs",
+              "RelativeDocumentMoniker": "Domain\\Types\\NotificationType.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Types\\NotificationType.cs",
+              "RelativeToolTip": "Domain\\Types\\NotificationType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T16:49:03.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
               "Title": "NotificationTypeEnum.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Enums\\NotificationTypeEnum.cs",
               "RelativeDocumentMoniker": "Domain\\Enums\\NotificationTypeEnum.cs",
@@ -266,12 +861,11 @@
               "RelativeToolTip": "Domain\\Enums\\NotificationTypeEnum.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T16:47:09.141Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T16:47:09.141Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 42,
               "Title": "MarkNotificationsFromUserAsReadCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Notifications\\Queries\\Handlers\\MarkNotificationsFromUserAsReadCommandHandler.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Notifications\\Queries\\Handlers\\MarkNotificationsFromUserAsReadCommandHandler.cs",
@@ -279,12 +873,11 @@
               "RelativeToolTip": "Application\\CQRS\\Notifications\\Queries\\Handlers\\MarkNotificationsFromUserAsReadCommandHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T18:33:02.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T18:33:02.013Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 43,
               "Title": "MarkAsReadCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Notifications\\Queries\\Handlers\\MarkAsReadCommandHandler.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Notifications\\Queries\\Handlers\\MarkAsReadCommandHandler.cs",
@@ -292,12 +885,11 @@
               "RelativeToolTip": "Application\\CQRS\\Notifications\\Queries\\Handlers\\MarkAsReadCommandHandler.cs",
               "ViewState": "AgIAABQAAAAAAAAAAADwvzUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T18:56:14.196Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T18:56:14.196Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 44,
               "Title": "GetAllNotificationsByUserIdQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Notifications\\Queries\\Handlers\\GetAllNotificationsByUserIdQueryHandler.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Notifications\\Queries\\Handlers\\GetAllNotificationsByUserIdQueryHandler.cs",
@@ -305,12 +897,11 @@
               "RelativeToolTip": "Application\\CQRS\\Notifications\\Queries\\Handlers\\GetAllNotificationsByUserIdQueryHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T18:56:12.031Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T18:56:12.031Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 45,
               "Title": "GetNotificationByIdDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Notifications\\DTOs\\GetNotificationByIdDto.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Notifications\\DTOs\\GetNotificationByIdDto.cs",
@@ -318,12 +909,11 @@
               "RelativeToolTip": "Application\\CQRS\\Notifications\\DTOs\\GetNotificationByIdDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T18:55:54.977Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T18:55:54.977Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 46,
               "Title": "UpdateNotificationDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Notifications\\DTOs\\UpdateNotificationDto.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Notifications\\DTOs\\UpdateNotificationDto.cs",
@@ -331,51 +921,11 @@
               "RelativeToolTip": "Application\\CQRS\\Notifications\\DTOs\\UpdateNotificationDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T18:55:44.877Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T18:55:44.877Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SqlNotificationRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlNotificationRepository.cs",
-              "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlNotificationRepository.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlNotificationRepository.cs",
-              "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlNotificationRepository.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAowEAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T16:42:03.568Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "INotificationRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repositories\\INotificationRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\INotificationRepository.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repositories\\INotificationRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\INotificationRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T16:41:41.818Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "NotificationController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\NotificationController.cs",
-              "RelativeDocumentMoniker": "WebApi\\Controllers\\NotificationController.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\NotificationController.cs",
-              "RelativeToolTip": "WebApi\\Controllers\\NotificationController.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAuwFoAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T16:41:49.707Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 47,
               "Title": "MarkNotificationsFromUserAsReadCommand.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Notifications\\Queries\\Requests\\MarkNotificationsFromUserAsReadCommand.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Notifications\\Queries\\Requests\\MarkNotificationsFromUserAsReadCommand.cs",
@@ -383,12 +933,11 @@
               "RelativeToolTip": "Application\\CQRS\\Notifications\\Queries\\Requests\\MarkNotificationsFromUserAsReadCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T18:32:43.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T18:32:43.589Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 49,
               "Title": "SqlUnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
@@ -396,25 +945,11 @@
               "RelativeToolTip": "Dal.SqlServer\\UnitOfWork\\SqlUnitOfWork.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T17:13:36.094Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T17:13:36.094Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ApplicationDependencyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\DependencyInjection\\ApplicationDependencyInjection.cs",
-              "RelativeDocumentMoniker": "Application\\DependencyInjection\\ApplicationDependencyInjection.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\DependencyInjection\\ApplicationDependencyInjection.cs",
-              "RelativeToolTip": "Application\\DependencyInjection\\ApplicationDependencyInjection.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAIwEYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T11:46:05.313Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 48,
               "Title": "SqlServerPersistenceInjection.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\DependencyInjection\\SqlServerPersistenceInjection.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\DependencyInjection\\SqlServerPersistenceInjection.cs",
@@ -422,64 +957,11 @@
               "RelativeToolTip": "Dal.SqlServer\\DependencyInjection\\SqlServerPersistenceInjection.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T17:15:16.294Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T17:15:16.294Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "SqlServiceBookingRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlServiceBookingRepository.cs",
-              "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlServiceBookingRepository.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlServiceBookingRepository.cs",
-              "RelativeToolTip": "Dal.SqlServer\\Infrastructure\\SqlServiceBookingRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T17:14:13.715Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "NotificationService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Common\\Services\\NotificationService.cs",
-              "RelativeDocumentMoniker": "Application\\Common\\Services\\NotificationService.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Common\\Services\\NotificationService.cs",
-              "RelativeToolTip": "Application\\Common\\Services\\NotificationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T17:00:16.908Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "INotificationService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Common\\Interfaces\\INotificationService.cs",
-              "RelativeDocumentMoniker": "Application\\Common\\Interfaces\\INotificationService.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Common\\Interfaces\\INotificationService.cs",
-              "RelativeToolTip": "Application\\Common\\Interfaces\\INotificationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T17:00:03.657Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "CreateMessageCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Messages\\Commands\\Handlers\\CreateMessageCommandHandler.cs",
-              "RelativeDocumentMoniker": "Application\\CQRS\\Messages\\Commands\\Handlers\\CreateMessageCommandHandler.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Messages\\Commands\\Handlers\\CreateMessageCommandHandler.cs",
-              "RelativeToolTip": "Application\\CQRS\\Messages\\Commands\\Handlers\\CreateMessageCommandHandler.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAYwDgAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T11:45:59.191Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 50,
               "Title": "GenderType.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Types\\GenderType.cs",
               "RelativeDocumentMoniker": "Domain\\Types\\GenderType.cs",
@@ -487,12 +969,11 @@
               "RelativeToolTip": "Domain\\Types\\GenderType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T16:50:06.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T16:50:06.51Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 51,
               "Title": "Notification.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Entities\\Notification.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Notification.cs",
@@ -500,12 +981,11 @@
               "RelativeToolTip": "Domain\\Entities\\Notification.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T16:41:13.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T16:41:13.166Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 55,
               "Title": "IMessageRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Repository\\Repositories\\IMessageRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\IMessageRepository.cs",
@@ -517,7 +997,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 54,
               "Title": "SqlMessageRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Infrastructure\\SqlMessageRepository.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Infrastructure\\SqlMessageRepository.cs",
@@ -529,7 +1009,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 53,
               "Title": "ChatSummaryDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Messages\\DTOs\\ChatSummaryDto.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Messages\\DTOs\\ChatSummaryDto.cs",
@@ -541,7 +1021,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 52,
               "Title": "GetChatSummariesQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Messages\\Queries\\Handlers\\GetChatSummariesQueryHandler.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Messages\\Queries\\Handlers\\GetChatSummariesQueryHandler.cs",
@@ -553,7 +1033,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 56,
               "Title": "ChatSummaryModel.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Dal.SqlServer\\Models\\ChatSummaryModel.cs",
               "RelativeDocumentMoniker": "Dal.SqlServer\\Models\\ChatSummaryModel.cs",
@@ -565,7 +1045,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 57,
               "Title": "MessageController.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\WebApi\\Controllers\\MessageController.cs",
               "RelativeDocumentMoniker": "WebApi\\Controllers\\MessageController.cs",
@@ -577,7 +1057,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 58,
               "Title": "GetChatSummariesQuery.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Messages\\Queries\\Requests\\GetChatSummariesQuery.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Messages\\Queries\\Requests\\GetChatSummariesQuery.cs",
@@ -589,7 +1069,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 61,
               "Title": "GetMessageByIdDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Messages\\DTOs\\GetMessageByIdDto.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Messages\\DTOs\\GetMessageByIdDto.cs",
@@ -601,7 +1081,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 64,
               "Title": "MessageProfile.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\Mappings\\MessageProfile.cs",
               "RelativeDocumentMoniker": "Application\\Mappings\\MessageProfile.cs",
@@ -613,7 +1093,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 60,
               "Title": "MessageListDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Messages\\DTOs\\MessageListDto.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Messages\\DTOs\\MessageListDto.cs",
@@ -625,7 +1105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 59,
               "Title": "GetAllMessagesBetweenUsersQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Messages\\Queries\\Handlers\\GetAllMessagesBetweenUsersQueryHandler.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Messages\\Queries\\Handlers\\GetAllMessagesBetweenUsersQueryHandler.cs",
@@ -637,7 +1117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 62,
               "Title": "Message.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Entities\\Message.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Message.cs",
@@ -649,7 +1129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 63,
               "Title": "CreateMessageDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Messages\\DTOs\\CreateMessageDto.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Messages\\DTOs\\CreateMessageDto.cs",
@@ -661,7 +1141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 65,
               "Title": "CreateMessageCommand.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Messages\\Commands\\Requests\\CreateMessageCommand.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Messages\\Commands\\Requests\\CreateMessageCommand.cs",
@@ -673,7 +1153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 66,
               "Title": "UpdateMessageDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Messages\\DTOs\\UpdateMessageDto.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Messages\\DTOs\\UpdateMessageDto.cs",
@@ -685,7 +1165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 67,
               "Title": "GetAllMessagesByUserIdQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Messages\\Queries\\Handlers\\GetAllMessagesByUserIdQueryHandler.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Messages\\Queries\\Handlers\\GetAllMessagesByUserIdQueryHandler.cs",
@@ -697,7 +1177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 68,
               "Title": "GetMessageByIdQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Messages\\Queries\\Handlers\\GetMessageByIdQueryHandler.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Messages\\Queries\\Handlers\\GetMessageByIdQueryHandler.cs",
@@ -709,7 +1189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 69,
               "Title": "GetAllMessagesBetweenUsersQuery.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Messages\\Queries\\Requests\\GetAllMessagesBetweenUsersQuery.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Messages\\Queries\\Requests\\GetAllMessagesBetweenUsersQuery.cs",
@@ -721,7 +1201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 70,
               "Title": "GetAllMessagesByUserIdQuery.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Messages\\Queries\\Requests\\GetAllMessagesByUserIdQuery.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Messages\\Queries\\Requests\\GetAllMessagesByUserIdQuery.cs",
@@ -733,7 +1213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 71,
               "Title": "GetMessageByIdQuery.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\Messages\\Queries\\Requests\\GetMessageByIdQuery.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\Messages\\Queries\\Requests\\GetMessageByIdQuery.cs",
@@ -745,7 +1225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 72,
               "Title": "ClientProfile.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Domain\\Entities\\ClientProfile.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\ClientProfile.cs",
@@ -757,7 +1237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 73,
               "Title": "GetClientProfileByIdDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\ClientProfiles\\DTOs\\GetClientProfileByIdDto.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\ClientProfiles\\DTOs\\GetClientProfileByIdDto.cs",
@@ -769,7 +1249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 74,
               "Title": "GetClientProfileDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProFix\\Application\\CQRS\\ClientProfiles\\DTOs\\GetClientProfileDto.cs",
               "RelativeDocumentMoniker": "Application\\CQRS\\ClientProfiles\\DTOs\\GetClientProfileDto.cs",

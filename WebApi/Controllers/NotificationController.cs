@@ -106,5 +106,14 @@ public class NotificationController : ControllerBase
         return Ok(result);
     }
 
+    [HttpPut("mark-all-booking-from-user/{senderUserId}")]
+    public async Task<IActionResult> MarkAllBookingFromUser(int senderUserId)
+    {
+        var currentUserId = _userContext.MustGetUserId();
+        var command = new MarkBookingNotificationsFromUserAsReadCommand(currentUserId, senderUserId);
+        var result = await _mediator.Send(command);
+        return Ok(result);
+    }
+
 }
 

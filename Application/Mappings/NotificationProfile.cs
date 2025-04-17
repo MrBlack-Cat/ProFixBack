@@ -11,10 +11,10 @@ public class NotificationProfile : Profile
         CreateMap<Notification, CreateNotificationDto>().ReverseMap();
         CreateMap<Notification, UpdateNotificationDto>().ReverseMap();
         CreateMap<Notification, GetNotificationByIdDto>().ReverseMap();
-        CreateMap<Notification, NotificationListDto>().ReverseMap();
 
         CreateMap<Notification, NotificationListDto>()
             .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy));
+
 
     }
 }

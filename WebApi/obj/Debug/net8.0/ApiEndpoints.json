@@ -638,6 +638,22 @@
   },
   {
     "ContainingType": "WebApi.Controllers.NotificationController",
+    "Method": "MarkAllBookingFromUser",
+    "RelativePath": "api/Notification/mark-all-booking-from-user/{senderUserId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "senderUserId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.NotificationController",
     "Method": "MarkAllFromUser",
     "RelativePath": "api/Notification/mark-all-from-user/{senderUserId}",
     "HttpMethod": "PUT",
@@ -902,6 +918,54 @@
       {
         "Name": "command",
         "Type": "Application.CQRS.Posts.Commands.Handlers.UpdatePostHandler\u002BUpdatePostCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.PostLikeController",
+    "Method": "LikePost",
+    "RelativePath": "api/PostLike/{postId}/like",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.PostLikeController",
+    "Method": "GetLikesCount",
+    "RelativePath": "api/PostLike/{postId}/likes-count",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.PostLikeController",
+    "Method": "UnlikePost",
+    "RelativePath": "api/PostLike/{postId}/unlike",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

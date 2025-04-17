@@ -15,5 +15,7 @@ namespace Application.CQRS.Posts.DTOs
         public string? ImageUrl { get; set; }
         public string? CreatedBy { get; set; }
         public DateTime CreatedAt { get; set; }
+        public int LikesCount { get; set; }
+        public bool HasLiked { get; set; }
     }
 }

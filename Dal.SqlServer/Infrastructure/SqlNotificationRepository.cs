@@ -117,5 +117,24 @@ public class SqlNotificationRepository : INotificationRepository
         });
     }
 
+    public async Task MarkAllBookingNotificationsFromUserAsync(int currentUserId, int senderUserId)
+    {
+        var sql = @"
+        UPDATE Notification
+        SET IsRead = 1, UpdatedAt = @Now
+        WHERE UserId = @CurrentUserId 
+          AND CreatedBy = @SenderUserId
+          AND TypeId = @BookingTypeId
+          AND IsRead = 0";
+
+        await _dbConnection.ExecuteAsync(sql, new
+        {
+            CurrentUserId = currentUserId,
+            SenderUserId = senderUserId,
+            BookingTypeId = NotificationTypeConstants.NewBooking,
+            Now = DateTime.UtcNow
+        });
+    }
+
 
 }

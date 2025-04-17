@@ -6,4 +6,5 @@ public static class NotificationTypeConstants
     public const int NewReview = 2;
     public const int LikePost = 3;
     public const int NewGuarantee = 4;
+    public const int NewBooking = 5;
 }
