@@ -90,4 +90,13 @@ public class ServiceProviderProfileController : ControllerBase
         return Ok(result);
     }
 
+    [HttpGet("top-rated")]
+    [AllowAnonymous]
+    public async Task<IActionResult> GetTopRated()
+    {
+        var result = await _mediator.Send(new GetTopRatedServiceProvidersQuery());
+        return Ok(result);
+    }
+
+
 }

@@ -102,35 +102,35 @@ public class SqlMessageRepository : IMessageRepository
     public async Task<IEnumerable<dynamic>> GetRawChatSummariesByUserIdAsync(int userId)
     {
         var sql = @"
-        WITH LastMessages AS (
-            SELECT *,
-                   ROW_NUMBER() OVER (
-                       PARTITION BY 
-                           CASE 
-                               WHEN SenderUserId < ReceiverUserId THEN CONCAT(SenderUserId, '_', ReceiverUserId)
-                               ELSE CONCAT(ReceiverUserId, '_', SenderUserId)
-                           END
-                       ORDER BY CreatedAt DESC
-                   ) AS rn
-            FROM Message m
-            WHERE (SenderUserId = @UserId OR ReceiverUserId = @UserId) AND m.IsDeleted = 0
-        )
-        SELECT 
-            CASE 
-                WHEN SenderUserId = @UserId THEN ReceiverUserId 
-                ELSE SenderUserId 
-            END AS OtherUserId,
-            u.UserName AS OtherUserName,
-            Content AS LastMessageContent,
-            m.CreatedAt AS LastMessageTime
-        FROM LastMessages m
-        JOIN Users u ON u.Id = CASE 
-            WHEN m.SenderUserId = @UserId THEN m.ReceiverUserId 
-            ELSE m.SenderUserId 
-        END
-        WHERE rn = 1
-        ORDER BY m.CreatedAt DESC;
-    ";
+                WITH LastMessages AS (
+                    SELECT *,
+                           ROW_NUMBER() OVER (
+                               PARTITION BY 
+                                   CASE 
+                                       WHEN SenderUserId < ReceiverUserId THEN CONCAT(SenderUserId, '_', ReceiverUserId)
+                                       ELSE CONCAT(ReceiverUserId, '_', SenderUserId)
+                                   END
+                               ORDER BY CreatedAt DESC
+                           ) AS rn
+                    FROM Message m
+                    WHERE (SenderUserId = @UserId OR ReceiverUserId = @UserId) AND m.IsDeleted = 0
+                )
+                SELECT 
+                    CASE 
+                        WHEN SenderUserId = @UserId THEN ReceiverUserId 
+                        ELSE SenderUserId 
+                    END AS OtherUserId,
+                    u.UserName AS OtherUserName,
+                    Content AS LastMessageContent,
+                    m.CreatedAt AS LastMessageTime
+                FROM LastMessages m
+                JOIN Users u ON u.Id = CASE 
+                    WHEN m.SenderUserId = @UserId THEN m.ReceiverUserId 
+                    ELSE m.SenderUserId 
+                END
+                WHERE rn = 1
+                ORDER BY m.CreatedAt DESC;
+            ";
 
         return await _dbConnection.QueryAsync(sql, new { UserId = userId });
     }

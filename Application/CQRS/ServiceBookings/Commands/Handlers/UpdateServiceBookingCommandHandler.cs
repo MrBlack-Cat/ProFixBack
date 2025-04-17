@@ -46,8 +46,7 @@ public class UpdateServiceBookingCommandHandler : IRequestHandler<UpdateServiceB
         if (dto.StartTime.HasValue && dto.EndTime.HasValue && dto.EndTime <= dto.StartTime)
             throw new ValidationException(new List<string> { "End time must be after start time" });
 
-
-        // Проверка времени, если изменяются дата или время
+        //vaxti yoxlama
         if (dto.ScheduledDate.HasValue || dto.StartTime.HasValue || dto.EndTime.HasValue)
         {
             var date = dto.ScheduledDate ?? booking.ScheduledDate;
@@ -62,7 +61,7 @@ public class UpdateServiceBookingCommandHandler : IRequestHandler<UpdateServiceB
                 throw new ConflictException("Selected time slot is already taken");
         }
 
-        // Обновление полей
+        
         if (dto.Description != null)
             booking.Description = dto.Description;
 

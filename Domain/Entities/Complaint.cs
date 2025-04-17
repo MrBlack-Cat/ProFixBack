@@ -18,4 +18,6 @@ public class Complaint : BaseEntity
     public User? FromUser { get; set; }
     public User? ToUser { get; set; }
     public ComplaintType? Type { get; set; }
+    public bool IsViewed { get; set; } = false;  
+    public bool IsResolved { get; set; } = false; 
 }

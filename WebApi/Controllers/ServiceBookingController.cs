@@ -111,7 +111,7 @@ public class ServiceBookingController : ControllerBase
     }
 
     [HttpPost("{id}/cancel")]
-    [Authorize] // Клиент, либо иные роли в зависимости от логики
+    [Authorize]
     public async Task<IActionResult> CancelBooking(int id)
     {
         await _mediator.Send(new CancelBookingCommandRequest(id));

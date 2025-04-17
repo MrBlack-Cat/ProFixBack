@@ -20,7 +20,6 @@ public class ParentCategoryController : ControllerBase
         _mediator = mediator;
     }
 
-    // GET: api/ParentCategory
     [HttpGet]
     public async Task<ActionResult<ResponseModel<List<ParentCategoryListDto>>>> GetAll()
     {
@@ -29,7 +28,6 @@ public class ParentCategoryController : ControllerBase
         return Ok(result);
     }
 
-    // GET: api/ParentCategory/{id}
     [HttpGet("{id}")]
     public async Task<ActionResult<ResponseModel<ParentCategoryListDto>>> GetById(int id)
     {

@@ -40,6 +40,8 @@ public class SqlUnitOfWork : IUnitOfWork
     private IServiceTypeRepository _serviceTypeRepository;
     private IParentCategoryRepository _parentCategoryRepository;
     private IServiceProviderServiceTypeRepository serviceProviderServiceTypeRepository;
+    private IComplaintRepository _complaintRepository;
+    private IComplaintTypeRepository _complaintTypeRepository;
 
 
 
@@ -79,6 +81,8 @@ public class SqlUnitOfWork : IUnitOfWork
     public INotificationRepository NotificationRepository => _notificationRepository ??= new SqlNotificationRepository(_dbConnection);
     public IParentCategoryRepository ParentCategoryRepository => _parentCategoryRepository ??= new SqlParentCategoryRepository(_dbConnection);
     public IServiceProviderServiceTypeRepository ServiceProviderServiceTypeRepository => serviceProviderServiceTypeRepository ??= new SqlServiceProviderServiceTypeRepository(_dbConnection);
+    public IComplaintRepository ComplaintRepository => _complaintRepository ??= new SqlComplaintRepository(_dbConnection);
+    public IComplaintTypeRepository ComplaintTypeRepository => _complaintTypeRepository ??= new SqlComplaintTypeRepository(_dbConnection);
     public async Task<int> SaveChangesAsync()
     {
         return await _context.SaveChangesAsync();

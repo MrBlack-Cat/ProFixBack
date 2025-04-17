@@ -36,11 +36,11 @@ public class ApproveServiceBookingCommandHandler : IRequestHandler<ApproveServic
         var booking = await _bookingRepository.GetByIdAsync(request.Id)
             ?? throw new NotFoundException("Service booking not found");
 
-        // 🔒 Проверка принадлежности
+        // Yoxlama
         if (booking.ServiceProviderProfileId != provider.Id)
             throw new ForbiddenException("You can only approve your own bookings");
 
-        // ❗ Бизнес-логика: запрещаем одобрять отменённые, отклонённые или завершённые брони
+        // Biznes logika, bookingin statusunu yoxlayırıq
         if (booking.StatusId == (int)ServiceBookingStatusEnum.Cancelled ||
             booking.StatusId == (int)ServiceBookingStatusEnum.Rejected ||
             booking.StatusId == (int)ServiceBookingStatusEnum.Completed)
@@ -48,7 +48,7 @@ public class ApproveServiceBookingCommandHandler : IRequestHandler<ApproveServic
             throw new ConflictException("You cannot approve a cancelled, rejected or completed booking");
         }
 
-        // ✅ Установка полей подтверждения
+        // Bookingi təsdiq edirik
         booking.IsConfirmedByProvider = true;
         booking.ConfirmationDate = DateTime.UtcNow;
         booking.StatusId = (int)ServiceBookingStatusEnum.Approved;

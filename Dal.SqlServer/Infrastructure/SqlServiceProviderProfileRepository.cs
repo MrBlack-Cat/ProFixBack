@@ -72,7 +72,7 @@ public class SqlServiceProviderProfileRepository : IServiceProviderProfileReposi
 
 
         var id = await _dbConnection.ExecuteScalarAsync<int>(sql, entity);
-        entity.Id = id; // Id to object
+        entity.Id = id; 
     }
 
 
@@ -311,7 +311,37 @@ public class SqlServiceProviderProfileRepository : IServiceProviderProfileReposi
 
         return profile;
     }
-        
+
+    public async Task<IEnumerable<dynamic>> GetTopRatedServiceProvidersRawAsync()
+    {
+        var sql = @"
+            SELECT TOP 8
+                spp.Id,
+                spp.Name,
+                spp.Surname,
+                spp.City,
+                spp.Age,
+                spp.ExperienceYears,
+                spp.AvatarUrl,
+                ISNULL(AVG(CAST(r.Rating AS FLOAT)), 0) AS AverageRating,
+                pc.Name AS ParentCategoryName,
+                spp.CreatedAt
+            FROM ServiceProviderProfile spp
+            LEFT JOIN Review r ON spp.Id = r.ServiceProviderProfileId AND r.IsDeleted = 0
+            LEFT JOIN ParentCategory pc ON spp.ParentCategoryId = pc.Id
+            WHERE spp.IsDeleted = 0
+            GROUP BY 
+                spp.Id, spp.Name, spp.Surname, spp.City, spp.Age, spp.ExperienceYears, spp.AvatarUrl, pc.Name, spp.CreatedAt
+            ORDER BY AverageRating DESC, spp.CreatedAt DESC
+            ";
+
+        var result = await _dbConnection.QueryAsync(sql);
+        return result;
+    }
+
+
+
+
 
 
 }

@@ -26,6 +26,10 @@ namespace Repository.Common
         public IServiceTypeRepository ServiceTypeRepository { get; }
         public IParentCategoryRepository ParentCategoryRepository { get; }
         IServiceProviderServiceTypeRepository ServiceProviderServiceTypeRepository { get; }
+        IComplaintRepository ComplaintRepository { get; }
+        public IComplaintTypeRepository ComplaintTypeRepository { get; }
+
+
 
 
 

@@ -107,5 +107,23 @@ namespace Dal.SqlServer.Infrastructure
             return result;
         }
 
+        public async Task<IEnumerable<Post>> GetPostsByLikedAsync()
+        {
+            var sql = @"
+                SELECT p.Id, p.ServiceProviderProfileId, p.Title, p.Content, p.ImageUrl, p.CreatedBy, p.CreatedAt
+                FROM Post p
+                WHERE p.Id IN (
+                    SELECT PostId FROM PostLikes
+                )
+                AND p.IsDeleted = 0
+                ORDER BY p.CreatedAt DESC
+            ";
+
+            return await _dbConnection.QueryAsync<Post>(sql);
+        }
+
+
+
+
     }
 }

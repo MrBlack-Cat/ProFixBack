@@ -27,7 +27,7 @@ public class GetPostsByProviderIdHandler : IRequestHandler<GetPostsByProviderIdQ
     public async Task<ResponseModel<List<PostDto>>> Handle(GetPostsByProviderIdQuery request, CancellationToken cancellationToken)
     {
         var posts = await _postRepository.GetPostsByProviderIdAsync(request.ServiceProviderProfileId);
-        var userId = _userContext.GetCurrentUserId(); // или MustGetUserId(), если всегда авторизован
+        var userId = _userContext.GetCurrentUserId();
 
         int? clientProfileId = null;
         if (userId != null)

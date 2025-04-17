@@ -1,33 +1,4 @@
-﻿//using Application.CQRS.Posts.DTOs;
-//using Application.CQRS.Posts.Queries.Requests;
-//using Common.GlobalResponse;
-//using AutoMapper;
-//using MediatR;
-//using Repository.Repositories;
-
-//namespace Application.CQRS.Posts.Handlers;
-
-//public class GetPostsByProviderHandler : IRequestHandler<GetPostsByProviderQuery, ResponseModel<List<PostListDto>>>
-//{
-//    private readonly IPostRepository _postRepository;
-//    private readonly IMapper _mapper;
-
-//    public GetPostsByProviderHandler(IPostRepository postRepository, IMapper mapper)
-//    {
-//        _postRepository = postRepository;
-//        _mapper = mapper;
-//    }
-
-//    public async Task<ResponseModel<List<PostListDto>>> Handle(GetPostsByProviderQuery request, CancellationToken cancellationToken)
-//    {
-//        var posts = await _postRepository.GetPostsByProviderIdAsync(request.UserId);
-//        var dto = _mapper.Map<List<PostListDto>>(posts);
-
-//        return ResponseModel<List<PostListDto>>.Success(dto);
-//    }
-//}
-
-using Application.CQRS.Posts.DTOs;
+﻿using Application.CQRS.Posts.DTOs;
 using Application.CQRS.Posts.Queries.Requests;
 using AutoMapper;
 using Common.GlobalResponse;

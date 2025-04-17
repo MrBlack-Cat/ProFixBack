@@ -14,6 +14,8 @@ namespace Repository.Repositories
         Task<IEnumerable<ServiceProviderProfile>> GetApprovedAsync();
         Task<ServiceProviderProfile?> GetByUserIdAsync(int userId);
         Task<List<ServiceProviderProfile>> GetByParentCategoryIdAsync(int categoryId);
+        Task<IEnumerable<dynamic>> GetTopRatedServiceProvidersRawAsync();
+
 
 
     }

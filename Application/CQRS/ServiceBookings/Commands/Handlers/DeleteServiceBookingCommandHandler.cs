@@ -30,7 +30,7 @@ public class DeleteServiceBookingCommandHandler : IRequestHandler<DeleteServiceB
         if (booking is null || booking.IsDeleted)
             throw new NotFoundException("Service booking not found");
 
-        // Только владелец (Client) может удалить бронирование
+        // yalniz klient sile biler
         if (booking.ClientProfile?.UserId != userId)
             throw new ForbiddenException("You can only delete your own bookings");
 

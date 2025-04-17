@@ -203,7 +203,6 @@ public class SqlServiceBookingRepository : IServiceBookingRepository
             LEFT JOIN ServiceBookingStatus s ON b.StatusId = s.Id
             WHERE b.Id = @id AND b.IsDeleted = 0";
 
-        // здесь ты можешь использовать multi-mapping, если нужно включить объекты навигации
         var result = await _db.QueryFirstOrDefaultAsync<ServiceBooking>(sql, new { id });
         return result;
     }

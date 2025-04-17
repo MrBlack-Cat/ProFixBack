@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Repository.Repositories;
-//using static Application.CQRS.Reviews.Handlers.CreateReviewHandler;
 using static Application.CQRS.Reviews.Handlers.DeleteReviewHandler;
 using static Application.CQRS.Reviews.Handlers.GetReviewByIdHandler;
 using static Application.CQRS.Reviews.Handlers.ReviewListHandler;

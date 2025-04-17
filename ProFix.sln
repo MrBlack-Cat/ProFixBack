@@ -17,14 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dal.SqlServer", "Dal.SqlSer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProFix.Tests", "ProFix.Tests\ProFix.Tests.csproj", "{102DD085-B3B4-4D20-8048-0644EC009B7D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProFix.IntegrationTests", "ProFix.IntegrationTests\ProFix.IntegrationTests.csproj", "{24811474-4398-45F9-A7AB-EEB633404C23}"
-	ProjectSection(ProjectDependencies) = postProject
-		{102DD085-B3B4-4D20-8048-0644EC009B7D} = {102DD085-B3B4-4D20-8048-0644EC009B7D}
-		{194D502A-5DFB-483D-A970-1D1A6CD3BEE1} = {194D502A-5DFB-483D-A970-1D1A6CD3BEE1}
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,14 +51,6 @@ Global
 		{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{194D502A-5DFB-483D-A970-1D1A6CD3BEE1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{102DD085-B3B4-4D20-8048-0644EC009B7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{102DD085-B3B4-4D20-8048-0644EC009B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{102DD085-B3B4-4D20-8048-0644EC009B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{102DD085-B3B4-4D20-8048-0644EC009B7D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{24811474-4398-45F9-A7AB-EEB633404C23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{24811474-4398-45F9-A7AB-EEB633404C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{24811474-4398-45F9-A7AB-EEB633404C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{24811474-4398-45F9-A7AB-EEB633404C23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

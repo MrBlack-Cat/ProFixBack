@@ -7,4 +7,6 @@ public class ComplaintListDto
     public int ToUserId { get; set; }
     public string? Description { get; set; }
     public DateTime CreatedAt { get; set; }
+    public bool IsViewed { get; set; }   
+    public bool IsResolved { get; set; } 
 }

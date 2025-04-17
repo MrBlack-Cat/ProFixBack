@@ -31,14 +31,13 @@ public class StartBookingCommandHandler : IRequestHandler<StartBookingCommandReq
         if (booking == null || booking.IsDeleted)
             throw new NotFoundException("Service booking not found");
 
-        // Например, только подтвержденная бронь может перейти в InProgress
+        // Tesdiqlenmish booking InProgress statusuna kece biler
         if (!booking.IsConfirmedByProvider)
             throw new ConflictException("Booking must be confirmed before starting");
 
         booking.StatusId = (int)ServiceBookingStatusEnum.InProgress;
         booking.UpdatedAt = DateTime.UtcNow;
         booking.UpdatedBy = userId;
-        // При необходимости, можно добавить поле StartedAt = DateTime.UtcNow;
 
         await _serviceBookingRepository.UpdateAsync(booking);
         await _unitOfWork.SaveChangesAsync();

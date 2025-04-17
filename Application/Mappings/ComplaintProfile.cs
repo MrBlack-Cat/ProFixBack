@@ -12,5 +12,6 @@ public class ComplaintProfile : Profile
         CreateMap<Complaint, UpdateComplaintDto>().ReverseMap();
         CreateMap<Complaint, GetComplaintByIdDto>().ReverseMap();
         CreateMap<Complaint, ComplaintListDto>().ReverseMap();
+
     }
 }

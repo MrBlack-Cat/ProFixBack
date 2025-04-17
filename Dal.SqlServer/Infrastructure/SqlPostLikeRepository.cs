@@ -40,11 +40,14 @@ public class SqlPostLikeRepository : IPostLikeRepository
         await _db.ExecuteAsync(sql, new { postId, clientProfileId });
     }
 
-    // ==== НЕ ИСПОЛЬЗУЕМЫЕ МЕТОДЫ ====
+
+
     public Task<IEnumerable<PostLike>> GetAllAsync()
     {
         throw new NotImplementedException();
     }
+
+    //Istifade olunmayanlar
 
     public Task<PostLike?> GetByIdAsync(int id)
     {
@@ -58,16 +61,16 @@ public class SqlPostLikeRepository : IPostLikeRepository
 
     public Task UpdateAsync(PostLike entity)
     {
-        throw new NotImplementedException(); // <--- можно реализовать, но не нужно
+        throw new NotImplementedException();
     }
 
     public Task DeleteAsync(int id, ClaimsPrincipal user)
     {
-        throw new NotImplementedException(); // <--- тоже заглушка
+        throw new NotImplementedException(); 
     }
 
     public Task DeleteAsync(PostLike entity)
     {
-        throw new NotImplementedException(); // тоже можно игнорировать
+        throw new NotImplementedException(); 
     }
 }

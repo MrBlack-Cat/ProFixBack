@@ -145,4 +145,16 @@ public class PostController : ControllerBase
         return response.IsSuccess ? Ok(response.Data) : BadRequest(response.Errors);
     }
 
+    [HttpGet("liked-posts")]
+    public async Task<IActionResult> GetPostsByLiked()
+    {
+        var response = await _mediator.Send(new GetPostsByLikedQuery());
+
+        return response.IsSuccess
+            ? Ok(response.Data)
+            : BadRequest(response.Errors);
+    }
+
+
+
 }

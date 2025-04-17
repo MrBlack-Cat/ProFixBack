@@ -1,8 +1,12 @@
 ﻿public class GetClientProfileDto
 {
     public int Id { get; set; }
-    public int ClientProfileId { get; set; }
-    public string? Name { get; set; }
-    public string? Surname { get; set; }
-    public string AvatarUrl { get; set; }
+    public int UserId { get; set; }
+    public string Name { get; set; } = null!;
+    public string Surname { get; set; } = null!;
+    public string? City { get; set; }
+    public string? AvatarUrl { get; set; }
+    public string? About { get; set; }
+    public string? OtherContactLinks { get; set; }
+    public DateTime CreatedAt { get; set; }
 }

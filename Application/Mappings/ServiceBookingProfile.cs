@@ -14,7 +14,6 @@ public class ServiceBookingProfile : Profile
             .ForMember(dest => dest.ClientProfileId, opt => opt.MapFrom(src => src.ClientProfileId))
             .ForMember(dest => dest.ServiceProviderProfileId, opt => opt.MapFrom(src => src.ServiceProviderProfileId));
 
-        // ✅ ЕДИНСТВЕННЫЙ правильный маппинг на ListDto
         CreateMap<ServiceBooking, ServiceBookingListDto>()
             .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status ?? ""))
             .ForMember(dest => dest.ClientName, opt => opt.MapFrom(src => src.ClientName))
@@ -24,7 +23,6 @@ public class ServiceBookingProfile : Profile
             .ForMember(dest => dest.ServiceProviderAvatarUrl, opt => opt.MapFrom(src => src.ServiceProviderAvatarUrl))
             .ForMember(dest => dest.ServiceProviderProfileId, opt => opt.MapFrom(src => src.ServiceProviderProfileId));
 
-        // DTO → Entity (если нужно)
         CreateMap<CreateServiceBookingDto, ServiceBooking>();
         CreateMap<UpdateServiceBookingDto, ServiceBooking>();
     }
