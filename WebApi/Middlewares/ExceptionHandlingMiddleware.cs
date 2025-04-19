@@ -6,6 +6,7 @@ using System.Net;
 using System.Text.Json;
 using FluentValidationException = FluentValidation.ValidationException;
 using CommonValidationException = Common.Exceptions.ValidationException;
+using Microsoft.Data.SqlClient;
 
 namespace Api.Middleware;
 
@@ -80,6 +81,11 @@ public class ExceptionHandlingMiddleware
             case CommonValidationException customValidationEx:
                 statusCode = HttpStatusCode.BadRequest;
                 messages = customValidationEx.Errors;
+                break;
+
+            case SqlException sqlEx when sqlEx.Number == 2627 || sqlEx.Number == 2601:
+                statusCode = HttpStatusCode.Conflict;
+                messages = ["Duplicate entry detected. Value already exists."];
                 break;
 
             default:
