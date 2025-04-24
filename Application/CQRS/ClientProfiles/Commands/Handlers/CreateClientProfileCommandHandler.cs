@@ -45,6 +45,11 @@ public class CreateClientProfileCommandHandler : IRequestHandler<CreateClientPro
             CreatedBy = request.UserId
         };
 
+        if (string.IsNullOrWhiteSpace(profile.AvatarUrl))
+        {
+            profile.AvatarUrl = "https://storage.googleapis.com/profixstcl/Defaults/MenDefaultAvatar.svg";
+        }
+
         await _unitOfWork.ClientProfileRepository.AddAsync(profile);
         await _unitOfWork.SaveChangesAsync();
 

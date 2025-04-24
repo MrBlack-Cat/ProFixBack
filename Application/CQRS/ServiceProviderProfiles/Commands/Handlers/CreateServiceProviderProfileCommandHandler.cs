@@ -87,6 +87,14 @@ public class CreateServiceProviderProfileCommandHandler
             ParentCategoryId = profile.ParentCategoryId.Value,
             ServiceTypeIds = request.Profile.ServiceTypeIds
         };
+
+        if (string.IsNullOrWhiteSpace(profile.AvatarUrl))
+        {
+            profile.AvatarUrl = profile.GenderId == 2
+                ? "https://storage.googleapis.com/profixstcl/Defaults/WomenDefaultAvatar.svg"
+                : "https://storage.googleapis.com/profixstcl/Defaults/MenDefaultAvatar.svg";
+        }
+
         return new ResponseModel<CreateServiceProviderProfileDto>
         {
             Data = result,
