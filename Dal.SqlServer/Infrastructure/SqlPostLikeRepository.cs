@@ -15,6 +15,13 @@ public class SqlPostLikeRepository : IPostLikeRepository
         _db = db;
     }
 
+    public async Task<IEnumerable<PostLike>> GetAllPostLikesAsync()
+    {
+        const string sql = @"SELECT Id, PostId, ClientProfileId, CreatedAt FROM PostLikes";
+        var likes = await _db.QueryAsync<PostLike>(sql);
+        return likes;
+    }
+
     public async Task<bool> HasLikedAsync(int postId, int clientProfileId)
     {
         var sql = @"SELECT COUNT(1) FROM PostLikes WHERE PostId = @postId AND ClientProfileId = @clientProfileId";

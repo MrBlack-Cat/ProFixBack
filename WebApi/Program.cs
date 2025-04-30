@@ -9,6 +9,7 @@ using DAL.SqlServer.DependencyInjection;
 using DAL.SqlServer.UnitOfWork;
 using Infrastructure.Authentication;
 using Infrastructure.Behaviors;
+using Infrastructure.DependencyInjection;
 using Infrastructure.Services;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -20,6 +21,7 @@ using Microsoft.OpenApi.Models;
 using Repository.Common;
 using System.Data;
 using System.Text;
+using WebApi.Hubs;
 
 
 namespace WebApi;
@@ -77,7 +79,8 @@ public class Program
                     "https://admin.profix.com"     // Test Admin
                 )
                 .AllowAnyHeader()
-                .AllowAnyMethod();
+                .AllowAnyMethod()
+                .AllowCredentials();
             });
         });
         #endregion
@@ -114,6 +117,9 @@ public class Program
         builder.Services.AddScoped<IUnitOfWork, SqlUnitOfWork>();
         builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ExceptionHandlingBehavior<,>));
         builder.Services.AddScoped<IActivityLoggerService, Application.Common.Services.ActivityLoggerService>();
+        builder.Services.AddSignalR();
+        builder.Services.AddInfrastructureServices();
+
 
 
 
@@ -141,6 +147,8 @@ public class Program
         app.UseCors("ProFixCors");
         app.UseAuthentication();
         app.UseAuthorization();
+        app.MapHub<ChatHub>("/chatHub");
+
 
         app.UseMiddleware<ExceptionHandlingMiddleware>();
 

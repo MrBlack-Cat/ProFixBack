@@ -122,8 +122,36 @@ namespace Dal.SqlServer.Infrastructure
             return await _dbConnection.QueryAsync<Post>(sql);
         }
 
+        public async Task<IEnumerable<Post>> GetPostsByUserIdAsync(int userId)
+        {
+            const string sql = @"
+                SELECT p.*
+                FROM Post p
+                INNER JOIN ServiceProviderProfile spp ON p.ServiceProviderProfileId = spp.Id
+                WHERE spp.UserId = @UserId AND p.IsDeleted = 0;
+            ";
+
+            return await _dbConnection.QueryAsync<Post>(sql, new { UserId = userId });
+        }
 
 
+        public async Task<int> GetTotalLikesByUserIdAsync(int userId)
+        {
+            const string sql = @"
+                SELECT COUNT(pl.PostId)
+                FROM PostLikes pl
+                INNER JOIN Post p ON pl.PostId = p.Id
+                INNER JOIN ServiceProviderProfile spp ON p.ServiceProviderProfileId = spp.Id
+                WHERE spp.UserId = @UserId AND p.IsDeleted = 0;
+            ";
+
+            return await _dbConnection.ExecuteScalarAsync<int>(sql, new { UserId = userId });
+        }
+        public async Task<IEnumerable<Post>> GetAllPostsAsync()
+        {
+            var sql = "SELECT * FROM Post WHERE IsDeleted = 0";
+            return await _dbConnection.QueryAsync<Post>(sql);
+        }
 
     }
 }

@@ -4,7 +4,6 @@ using Application.CQRS.SupportTickets.Queries.Requests;
 using AutoMapper;
 using Common.Exceptions;
 using Common.GlobalResponse;
-using Infrastructure.Services;
 using MediatR;
 using Repository.Common;
 using System;

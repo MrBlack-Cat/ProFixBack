@@ -1,0 +1,140 @@
+﻿[
+  {
+    "intent": "OpenProfile",
+    "description": "Откройте свой профиль, нажав на аватар в правом верхнем углу и выбрав 'Профиль'.",
+    "targetPath": "/service-profile",
+    "parameters": {}
+  },
+  {
+    "intent": "OpenSettings",
+    "description": "Перейдите в 'Настройки' профиля, чтобы изменить личные данные или пароль.",
+    "targetPath": "/service-profile?tab=Settings",
+    "parameters": {}
+  },
+  {
+    "intent": "AddPost",
+    "description": "Чтобы создать новый пост, перейдите в 'Мои посты' и нажмите 'Добавить пост'.",
+    "targetPath": "/posts/new",
+    "parameters": {}
+  },
+  {
+    "intent": "ManagePosts",
+    "description": "Перейдите в 'Мои посты', чтобы редактировать или удалять свои публикации.",
+    "targetPath": "/posts",
+    "parameters": {}
+  },
+  {
+    "intent": "AddCertificate",
+    "description": "Чтобы добавить сертификат, откройте раздел 'Сертификаты' и нажмите 'Добавить сертификат'.",
+    "targetPath": "/certificates/new",
+    "parameters": {}
+  },
+  {
+    "intent": "ViewCertificates",
+    "description": "Просмотрите список всех ваших сертификатов в разделе 'Сертификаты'.",
+    "targetPath": "/certificates",
+    "parameters": {}
+  },
+  {
+    "intent": "AddGuarantee",
+    "description": "Чтобы создать гарантийный документ, перейдите в раздел 'Гарантии' и нажмите 'Добавить гарантию'.",
+    "targetPath": "/guarantees/new",
+    "parameters": {}
+  },
+  {
+    "intent": "ViewGuarantees",
+    "description": "Просмотрите все созданные вами гарантийные документы в разделе 'Гарантии'.",
+    "targetPath": "/guarantees",
+    "parameters": {}
+  },
+  {
+    "intent": "ViewBookings",
+    "description": "Откройте раздел 'Мои бронирования', чтобы увидеть все свои записи.",
+    "targetPath": "/bookings",
+    "parameters": {}
+  },
+  {
+    "intent": "ViewTodayBookings",
+    "description": "Посмотрите все бронирования, запланированные на сегодня.",
+    "targetPath": "/bookings",
+    "parameters": {
+      "filter": "today"
+    }
+  },
+  {
+    "intent": "ViewCompletedBookings",
+    "description": "Посмотрите список всех завершённых бронирований.",
+    "targetPath": "/bookings",
+    "parameters": {
+      "filter": "completed"
+    }
+  },
+  {
+    "intent": "NewBooking",
+    "description": "Чтобы создать бронирование, выберите нужного сервис-провайдера и нажмите 'Забронировать'.",
+    "targetPath": "/providers",
+    "parameters": {}
+  },
+  {
+    "intent": "FindProvider",
+    "description": "Найдите сервис-провайдера по категории или городу в разделе 'Поиск сервисов'.",
+    "targetPath": "/service-providers",
+    "parameters": {}
+  },
+  {
+    "intent": "FilterProvidersByCity",
+    "description": "Отфильтруйте сервис-провайдеров по городу.",
+    "targetPath": "/service-providers",
+    "parameters": {
+      "filter": "city"
+    }
+  },
+  {
+    "intent": "FilterProvidersByRating",
+    "description": "Отсортируйте сервис-провайдеров по рейтингу от лучших к худшим.",
+    "targetPath": "/service-providers",
+    "parameters": {
+      "filter": "rating"
+    }
+  },
+  {
+    "intent": "ViewReviews",
+    "description": "Перейдите в раздел 'Отзывы', чтобы посмотреть отзывы о вас или оставить новый отзыв.",
+    "targetPath": "/reviews",
+    "parameters": {}
+  },
+  {
+    "intent": "LeaveReview",
+    "description": "Чтобы оставить отзыв, откройте профиль сервис-провайдера или клиента и выберите 'Оставить отзыв'.",
+    "targetPath": "/leave-review",
+    "parameters": {}
+  },
+  {
+    "intent": "SendMessage",
+    "description": "Чтобы отправить сообщение пользователю, перейдите в его профиль и нажмите 'Сообщение'.",
+    "targetPath": "/chat",
+    "parameters": {
+      "receiverId": ""
+    }
+  },
+  {
+    "intent": "OpenChat",
+    "description": "Перейдите в раздел 'Сообщения', чтобы продолжить общение с пользователями.",
+    "targetPath": "/chat",
+    "parameters": {}
+  },
+  {
+    "intent": "ChangeAvatar",
+    "description": "Чтобы сменить аватар, зайдите в 'Настройки' и загрузите новое изображение.",
+    "targetPath": "/profile/settings",
+    "parameters": {
+      "tab": "avatar"
+    }
+  },
+  {
+    "intent": "Logout",
+    "description": "Чтобы выйти из аккаунта, нажмите на аватар в правом верхнем углу и выберите 'Выйти'.",
+    "targetPath": "/logout",
+    "parameters": {}
+  }
+]

@@ -34,6 +34,14 @@ public class CreateServiceProviderProfileCommandHandler
         if (existing is not null)
             throw new ConflictException("Service Provider profile already exists for this user.");
 
+
+
+        var avatarUrl = string.IsNullOrWhiteSpace(request.Profile.AvatarUrl)
+            ? (request.Profile.GenderId == 2
+                ? "https://storage.googleapis.com/profixstcl/Defaults/servicewomen.png"
+                : "https://storage.googleapis.com/profixstcl/Defaults/servicemen.png")
+            : request.Profile.AvatarUrl;
+
         var profile = new ServiceProviderProfile
         {
             UserId = request.UserId,
@@ -47,8 +55,9 @@ public class CreateServiceProviderProfileCommandHandler
             CreatedBy = request.UserId,
             IsActive = true,
             ParentCategoryId = request.Profile.ParentCategoryId,
-
+            AvatarUrl = avatarUrl,
         };
+
 
         await _unitOfWork.ServiceProviderProfileRepository.AddAsync(profile);
         await _unitOfWork.SaveChangesAsync(); 
@@ -88,12 +97,7 @@ public class CreateServiceProviderProfileCommandHandler
             ServiceTypeIds = request.Profile.ServiceTypeIds
         };
 
-        if (string.IsNullOrWhiteSpace(profile.AvatarUrl))
-        {
-            profile.AvatarUrl = profile.GenderId == 2
-                ? "https://storage.googleapis.com/profixstcl/Defaults/WomenDefaultAvatar.svg"
-                : "https://storage.googleapis.com/profixstcl/Defaults/MenDefaultAvatar.svg";
-        }
+
 
         return new ResponseModel<CreateServiceProviderProfileDto>
         {

@@ -28,6 +28,9 @@ namespace Repository.Common
         IServiceProviderServiceTypeRepository ServiceProviderServiceTypeRepository { get; }
         IComplaintRepository ComplaintRepository { get; }
         public IComplaintTypeRepository ComplaintTypeRepository { get; }
+        public IChatMessageRepository ChatMessageRepository { get; }
+        public IPostLikeRepository PostLikeRepository { get; }
+
 
 
 

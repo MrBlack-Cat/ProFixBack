@@ -136,5 +136,21 @@ public class SqlNotificationRepository : INotificationRepository
         });
     }
 
+    public async Task<int> GetUnreadCountByUserIdAsync(int userId)
+    {
+        const string sql = @"
+        SELECT COUNT(*)
+        FROM Notification
+        SELECT COUNT(*) FROM Notifications WHERE UserId = @UserId AND IsRead = 0
+    ";
+
+        return await _dbConnection.ExecuteScalarAsync<int>(sql, new { UserId = userId });
+    }
+
+    public async Task<IEnumerable<Notification>> GetAllNotificationsAsync()
+    {
+        var sql = "SELECT * FROM Notification WHERE IsDeleted = 0";
+        return await _dbConnection.QueryAsync<Notification>(sql);
+    }
 
 }

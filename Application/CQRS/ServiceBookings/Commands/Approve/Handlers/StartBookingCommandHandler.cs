@@ -1,5 +1,4 @@
-﻿// StartBookingCommandHandler.cs
-using Application.Common.Interfaces;
+﻿using Application.Common.Interfaces;
 using Common.Exceptions;
 using Domain.Entities;
 using Domain.Enums;

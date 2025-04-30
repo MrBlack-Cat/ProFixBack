@@ -9,5 +9,8 @@ public interface IServiceBookingRepository : IRepository<ServiceBooking>
     Task<IEnumerable<ServiceBooking>> GetAllAsync();
     Task<bool> IsTimeSlotAvailableAsync(int providerId, DateTime date, TimeSpan start, TimeSpan end);
     Task<List<ServiceBooking>> GetByDateAsync(int providerId, DateTime date);
+    Task<IEnumerable<ServiceBooking>> GetByUserIdAsync(int userId);
+    Task<IEnumerable<ServiceBooking>> GetAllBookingsAsync();
+
 
 }

@@ -1478,7 +1478,6 @@
           "FluentValidation": "11.11.0",
           "FluentValidation.DependencyInjectionExtensions": "11.11.0",
           "Google.Cloud.Storage.V1": "4.11.0",
-          "Infrastructure": "1.0.0",
           "MediatR": "11.1.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.2",
@@ -1546,6 +1545,7 @@
       },
       "Infrastructure/1.0.0": {
         "dependencies": {
+          "Application": "1.0.0",
           "Common": "1.0.0",
           "Domain": "1.0.0",
           "FluentValidation": "11.11.0",

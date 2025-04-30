@@ -3,7 +3,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Dal.SqlServer\Dal.SqlServer.csproj" />
     <ProjectReference Include="..\Domain\Domain.csproj" />
-    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+    <!--<ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />-->
     <ProjectReference Include="..\Repository\Repository.csproj" />
     <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>

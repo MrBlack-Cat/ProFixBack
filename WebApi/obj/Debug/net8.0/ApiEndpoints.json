@@ -158,6 +158,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ChatController",
+    "Method": "GetMessagesByUserId",
+    "RelativePath": "api/Chat/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApi.Controllers.ClientProfileController",
     "Method": "Create",
     "RelativePath": "api/ClientProfile",
@@ -409,6 +425,22 @@
     "Parameters": [
       {
         "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.FileUploadController",
+    "Method": "UploadPostImage",
+    "RelativePath": "api/FileUpload/upload-post-image",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
       }

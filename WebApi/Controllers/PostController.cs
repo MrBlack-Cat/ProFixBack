@@ -2,7 +2,6 @@
 using Application.CQRS.Posts.Commands.Requests;
 using Application.CQRS.Posts.DTOs;
 using Application.CQRS.Posts.Queries.Requests;
-using Infrastructure.Services;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -82,19 +81,6 @@ public class PostController : ControllerBase
     }
 
 
-    //[HttpPut("Update")]
-    //public async Task<IActionResult> UpdatePost([FromQuery] UpdatePostHandler.Command command)
-    //{
-    //    var response = await _mediator.Send(command);
-
-    //    if (response.IsSuccess)
-    //    {
-    //        return Ok(response.Data);
-    //    }
-
-    //    return BadRequest(response.Errors);
-    //}
-
     //qeyd : frombody yazanda error olur sebebi ise id ni hem route dan hemde body icersinden alir buda uygun gelmir error aliriq 
     //query olanda  query string de olmayan property leri null kimi qebul edir ve xeta olmur ,, eger body dede hamsi nullable olsaydi problem olmazdi 
 
@@ -116,17 +102,6 @@ public class PostController : ControllerBase
 
 
 
-    //[HttpGet("provider")]
-    //public async Task<IActionResult> GetPostsByProvider()
-    //{
-    //    var userId = _userContext.MustGetUserId(); // ← userId
-    //    var response = await _mediator.Send(new GetPostsByProviderIdQuery(userId));
-
-
-    //    return response.IsSuccess
-    //        ? Ok(response.Data)
-    //        : BadRequest(response.Errors);
-    //}
 
     [HttpGet("provider")]
     public async Task<IActionResult> GetPostsByProvider()

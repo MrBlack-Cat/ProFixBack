@@ -51,5 +51,16 @@ public class FileUploadController : ControllerBase
         return Ok(result);
     }
 
+    [HttpPost("upload-post-image")]
+    [Authorize]
+    [Consumes("multipart/form-data")]
+    public async Task<IActionResult> UploadPostImage([FromForm] UploadFileDto model)
+    {
+        var command = new UploadPostImageCommand(model.File);
+        var result = await _mediator.Send(command);
+        return Ok(result);
+    }
+
+
 
 }

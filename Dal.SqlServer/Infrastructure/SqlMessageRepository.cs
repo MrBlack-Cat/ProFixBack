@@ -135,4 +135,21 @@ public class SqlMessageRepository : IMessageRepository
         return await _dbConnection.QueryAsync(sql, new { UserId = userId });
     }
 
+    public async Task<int> GetUnreadCountByUserIdAsync(int userId)
+    {
+        const string sql = @"
+        SELECT COUNT(*)
+        FROM Message
+        WHERE ReceiverUserId = @UserId AND IsRead = 0 AND IsDeleted = 0;
+    ";
+
+        return await _dbConnection.ExecuteScalarAsync<int>(sql, new { UserId = userId });
+    }
+
+    public async Task<IEnumerable<Message>> GetAllMessagesAsync()
+    {
+        var sql = "SELECT * FROM Message WHERE IsDeleted = 0";
+        return await _dbConnection.QueryAsync<Message>(sql);
+    }
+
 }

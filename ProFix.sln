@@ -8,6 +8,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{EECFB273-8CDB-4B04-A556-B8A90B39B873}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{DC8A52CB-9DB9-4492-BF09-FB30437AF1B3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EECFB273-8CDB-4B04-A556-B8A90B39B873} = {EECFB273-8CDB-4B04-A556-B8A90B39B873}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{D2564FC8-2715-4B4D-BC12-5E63BBCAEA70}"
 EndProject

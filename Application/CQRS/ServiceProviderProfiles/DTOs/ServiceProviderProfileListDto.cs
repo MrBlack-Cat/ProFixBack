@@ -12,5 +12,8 @@ public class ServiceProviderProfileListDto
     public double Rating { get; set; }
     public string? GenderName { get; set; }
     public DateTime? ApprovalDate { get; set; }
+    public int? ParentCategoryId { get; set; }
+    public string? ParentCategoryName { get; set; }
+    public List<int> ServiceTypeIds { get; set; } = new();
     public List<string> ServiceTypes { get; set; } = new();
 }

@@ -236,6 +236,62 @@ public class SqlServiceBookingRepository : IServiceBookingRepository
         return result.ToList();
     }
 
+    public async Task<IEnumerable<ServiceBooking>> GetByUserIdAsync(int userId)
+    {
+        const string sql = @"
+        SELECT sb.*
+        FROM ServiceBooking sb
+        INNER JOIN ClientProfile cp ON sb.ClientProfileId = cp.Id
+        WHERE cp.UserId = @UserId AND sb.IsDeleted = 0;
+    ";
+
+        return await _db.QueryAsync<ServiceBooking>(sql, new { UserId = userId });
+    }
+
+    public async Task<IEnumerable<ServiceBooking>> GetAllBookingsAsync()
+    {
+        var sql = "SELECT * FROM ServiceBooking WHERE IsDeleted = 0";
+        return await _db.QueryAsync<ServiceBooking>(sql);
+    }
+
+    public async Task<IEnumerable<ServiceBookingDetailedDto>> GetAllDetailedBookingsAsync()
+    {
+        var sql = @"
+        SELECT 
+            b.Id, 
+            b.ClientProfileId, 
+            b.ServiceProviderProfileId, 
+            b.Description,
+            b.StatusId,
+            b.ScheduledDate,
+            b.StartTime,
+            b.EndTime,
+            b.IsConfirmedByProvider,
+            b.IsCompleted,
+            s.Name AS StatusName
+        FROM ServiceBooking b
+        LEFT JOIN ServiceBookingStatus s ON b.StatusId = s.Id
+        WHERE b.IsDeleted = 0
+        ORDER BY ScheduledDate DESC, StartTime";
+
+        var bookings = await _db.QueryAsync<ServiceBookingDetailedDto>(sql);
+        return bookings;
+    }
+
+    public class ServiceBookingDetailedDto
+    {
+        public int Id { get; set; }
+        public int ClientProfileId { get; set; }
+        public int ServiceProviderProfileId { get; set; }
+        public string? Description { get; set; }
+        public int StatusId { get; set; }
+        public DateTime ScheduledDate { get; set; }
+        public TimeSpan StartTime { get; set; }
+        public TimeSpan EndTime { get; set; }
+        public bool IsConfirmedByProvider { get; set; }
+        public bool IsCompleted { get; set; }
+        public string StatusName { get; set; } = string.Empty;
+    }
 
 
 

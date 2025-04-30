@@ -6,7 +6,6 @@ using Common.GlobalResponse;
 using Domain.Entities;
 using MediatR;
 using Repository.Common;
-using Infrastructure.Services;
 using Domain.Constants;
 
 namespace Application.CQRS.Messages.Commands.Handlers;

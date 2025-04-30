@@ -42,29 +42,26 @@ public class SqlUnitOfWork : IUnitOfWork
     private IServiceProviderServiceTypeRepository serviceProviderServiceTypeRepository;
     private IComplaintRepository _complaintRepository;
     private IComplaintTypeRepository _complaintTypeRepository;
+    private IChatMessageRepository _chatMessageRepository;
+    private IPostLikeRepository _postLikeRepository;
+
+
 
 
 
 
 
     public IClientProfileRepository ClientProfileRepository => _clientProfileRepository ??= new SqlClientProfileRepository(_dbConnection);
-
     public IServiceProviderProfileRepository ServiceProviderProfileRepository =>_serviceProviderProfileRepository ??= new SqlServiceProviderProfileRepository(_dbConnection);
-
     public ICertificateRepository CertificateRepository =>_certificateRepository ??= new SqlCertificateRepository(_dbConnection);
 
     //_____________________________________________________________________________________________________________________
 
     public IPostRepository PostRepository =>_postRepository ??= new SqlPostRepository(_dbConnection);
-
     public IReviewRepository ReviewRepository =>_reviewRepository ??= new SqlReviewRepository(_dbConnection);
-
     public IServiceBookingRepository ServiceBookingRepository => new SqlServiceBookingRepository(_dbConnection);
-
     public ISubscriptionPlanRepository SubscriptionPlanRepository => new SqlSubscriptionPlanRepository(_dbConnection);
-
     public ISupportTicketRepository SupportTicketRepository => new SqlSupportTicketRepository(_dbConnection);
-
     public IUserRepository UserRepository => _userRepository ??= new SqlUserRepository(_dbConnection);
     public IPortfolioItemRepository PortfolioItemRepository => _portfolioItemRepository ??= new SqlPortfolioItemRepository(_dbConnection);
     public IServiceTypeRepository ServiceTypeRepository => _serviceTypeRepository ??= new SqlServiceTypeRepository(_dbConnection);
@@ -83,6 +80,10 @@ public class SqlUnitOfWork : IUnitOfWork
     public IServiceProviderServiceTypeRepository ServiceProviderServiceTypeRepository => serviceProviderServiceTypeRepository ??= new SqlServiceProviderServiceTypeRepository(_dbConnection);
     public IComplaintRepository ComplaintRepository => _complaintRepository ??= new SqlComplaintRepository(_dbConnection);
     public IComplaintTypeRepository ComplaintTypeRepository => _complaintTypeRepository ??= new SqlComplaintTypeRepository(_dbConnection);
+    public IChatMessageRepository ChatMessageRepository => _chatMessageRepository ??= new SqlChatMessageRepository(_dbConnection);
+    public IPostLikeRepository PostLikeRepository => _postLikeRepository ??= new SqlPostLikeRepository(_dbConnection);
+
+
     public async Task<int> SaveChangesAsync()
     {
         return await _context.SaveChangesAsync();

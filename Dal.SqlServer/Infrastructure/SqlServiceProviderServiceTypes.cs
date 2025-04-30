@@ -41,7 +41,7 @@ public class SqlServiceProviderServiceTypeRepository : IServiceProviderServiceTy
 
     public async Task DeleteAllByServiceProviderProfileIdAsync(int profileId)
     {
-        Console.WriteLine("⚠️ УДАЛЯЮ старые типы для профиля ID: " + profileId);
+        Console.WriteLine(": " + profileId);
         var sql = "DELETE FROM ServiceProviderServiceTypes WHERE ServiceProviderProfileId = @ServiceProviderProfileId";
         await _db.ExecuteAsync(sql, new { ServiceProviderProfileId = profileId });
     }

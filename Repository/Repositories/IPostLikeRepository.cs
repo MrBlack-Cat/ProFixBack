@@ -14,6 +14,7 @@ namespace Repository.Repositories
         Task<int> GetLikesCountAsync(int postId);
         Task AddLikeAsync(int postId, int clientProfileId);
         Task RemoveLikeAsync(int postId, int clientProfileId);
+        Task<IEnumerable<PostLike>> GetAllPostLikesAsync();
     }
 
 }

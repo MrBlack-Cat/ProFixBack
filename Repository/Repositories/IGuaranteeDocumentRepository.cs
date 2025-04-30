@@ -12,5 +12,7 @@ namespace Repository.Repositories
     {
         Task<IEnumerable<GuaranteeDocument>> GetByClientIdAsync(int clientProfileId);
         Task<IEnumerable<GuaranteeDocument>> GetByServiceProviderIdAsync(int serviceProviderProfileId);
+        Task<IEnumerable<GuaranteeDocument>> GetByUserIdAsync(int userId);
+
     }
 }

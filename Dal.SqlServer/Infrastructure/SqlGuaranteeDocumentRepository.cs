@@ -104,5 +104,20 @@ namespace Dal.SqlServer.Infrastructure
 
             await DeleteAsync(entity);
         }
+
+        public async Task<IEnumerable<GuaranteeDocument>> GetByUserIdAsync(int userId)
+        {
+            const string sql = @"
+                SELECT g.*
+                FROM GuaranteeDocument g
+                WHERE g.ClientProfileId IN (
+                    SELECT Id FROM ClientProfile WHERE UserId = @UserId
+                )
+                AND g.IsDeleted = 0;
+            ";
+
+            return await _dbConnection.QueryAsync<GuaranteeDocument>(sql, new { UserId = userId });
+        }
+
     }
 }

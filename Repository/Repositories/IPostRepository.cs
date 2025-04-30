@@ -14,6 +14,9 @@ public interface IPostRepository : IRepository<Post>
     Task<IEnumerable<Post>> GetByServiceProviderIdAsync(int serviceProviderProfileId);
     Task<IEnumerable<Post>> GetPostsByProviderIdAsync(int serviceProviderProfileId);
     Task<IEnumerable<Post>> GetPostsByLikedAsync();
+    Task<IEnumerable<Post>> GetPostsByUserIdAsync(int userId);
+    Task<int> GetTotalLikesByUserIdAsync(int userId);
+    Task<IEnumerable<Post>> GetAllPostsAsync();
 
 
 }

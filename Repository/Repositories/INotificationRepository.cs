@@ -15,5 +15,8 @@ public interface INotificationRepository : IRepository<Notification>
     Task MarkAllFromUserAsReadAsync(int currentUserId, int senderUserId);
     Task MarkAllBookingNotificationsFromUserAsync(int currentUserId, int senderUserId);
 
+    Task<int> GetUnreadCountByUserIdAsync(int userId);
+    Task<IEnumerable<Notification>> GetAllNotificationsAsync();
+
 
 }

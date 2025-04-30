@@ -93,6 +93,24 @@ namespace Dal.SqlServer.Infrastructure
 
             await DeleteAsync(entity);
         }
+
+        public async Task<IEnumerable<Certificate>> GetByUserIdAsync(int userId)
+        {
+            const string sql = @"
+                SELECT c.*
+                FROM Certificate c
+                INNER JOIN ServiceProviderProfile spp ON c.ServiceProviderProfileId = spp.Id
+                WHERE spp.UserId = @UserId AND c.IsDeleted = 0;
+            ";
+
+            return await _dbConnection.QueryAsync<Certificate>(sql, new { UserId = userId });
+        }
+
+        public async Task<IEnumerable<Certificate>> GetAllCertificatesAsync()
+        {
+            var sql = "SELECT * FROM Certificate WHERE IsDeleted = 0";
+            return await _dbConnection.QueryAsync<Certificate>(sql);
+        }
     }
 
 }
