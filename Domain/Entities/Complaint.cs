@@ -11,7 +11,7 @@ namespace Domain.Entities;
 public class Complaint : BaseEntity
 {
     public int FromUserId { get; set; }
-    public int ToUserId { get; set; }
+    public int? ToUserId { get; set; }
     public int TypeId { get; set; }
     public string? Description { get; set; }
 

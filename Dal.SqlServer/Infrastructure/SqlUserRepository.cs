@@ -175,6 +175,13 @@ namespace DAL.SqlServer.Infrastructure
             await Task.CompletedTask;
         }
 
+        public async Task<IEnumerable<User>> GetUsersByRoleAsync(int roleId)
+        {
+            var sql = "SELECT * FROM Users WHERE RoleId = @RoleId AND IsDeleted = 0";
+            var result = await _dbConnection.QueryAsync<User>(sql, new { RoleId = roleId });
+            return result;
+        }
+
 
 
     }

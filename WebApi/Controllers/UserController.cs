@@ -6,6 +6,7 @@ using Application.CQRS.Users.Handlers;
 using Application.Common.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Common.Exceptions;
+using Application.CQRS.Admins.Queries.Requests;
 
 namespace WebApi.Controllers;
 
@@ -91,10 +92,19 @@ public class UsersController : ControllerBase
     }
 
 
+
+
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginHandlers.LoginRequest request)
     {
         var result = await _mediator.Send(request);
+        return Ok(result);
+    }
+
+    [HttpGet("admins")]
+    public async Task<IActionResult> GetAdmins()
+    {
+        var result = await _mediator.Send(new GetAdminsQuery());
         return Ok(result);
     }
 

@@ -3356,6 +3356,18 @@
           }
         }
       }
+    },
+    "/api/Users/admins": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -3462,7 +3474,8 @@
         "properties": {
           "toUserId": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "typeId": {
             "type": "integer",
